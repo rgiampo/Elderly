@@ -7,6 +7,17 @@ enum Forma: CaseIterable, Identifiable {
 
     var id: Self { self }
 
+    /// Nome letto da VoiceOver: forma e colore, così non si dipende dal solo colore.
+    var nome: String {
+        switch self {
+        case .cerchio: "Cerchio rosso"
+        case .quadrato: "Quadrato blu"
+        case .triangolo: "Triangolo giallo"
+        case .stella: "Stella verde"
+        case .cuore: "Cuore rosa"
+        }
+    }
+
     var colore: Color {
         switch self {
         case .cerchio: Color(red: 0.93, green: 0.30, blue: 0.30)

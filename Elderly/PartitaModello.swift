@@ -68,6 +68,7 @@ final class PartitaModello {
             try? await Task.sleep(for: .seconds(1))
             for forma in await self.sequenza {
                 await self.accendi(forma, durata: 0.7)
+                await AccessibilityNotification.Announcement(forma.nome).post()
                 try? await Task.sleep(for: .seconds(1))
             }
             await self.iniziaTurno()
