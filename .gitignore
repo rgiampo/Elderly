@@ -1,0 +1,25 @@
+# File locali di macOS
+.DS_Store
+
+# File generati da Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Archivi e credenziali locali
+*.xcarchive
+*.ipa
+*.dSYM/
+.env
+.env.*
+!.env.example
+*.p12
+*.mobileprovision
+AuthKey_*.p8
