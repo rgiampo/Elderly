@@ -48,19 +48,19 @@ final class Sintetizzatore {
     }
 
     private func wav(per frequenza: Double) -> Data {
-        let campioni = Int(frequenzaCampionamento * 2.0)
+        let campioni = Int(frequenzaCampionamento * 1.0)   // la nota si spegne in un secondo: nelle melodie non si accavallano
         var onda = [Float](repeating: 0, count: campioni)
         for n in 0..<campioni {
             let t = Double(n) / frequenzaCampionamento
             let attacco = min(1, t / 0.004)
             // fondamentale lunga + armoniche che svaniscono presto = timbro di legno/campanella
-            let suono = exp(-t * 2.8) * sin(2 * .pi * frequenza * t)
-                + 0.30 * exp(-t * 9) * sin(2 * .pi * frequenza * 4 * t)
-                + 0.12 * exp(-t * 18) * sin(2 * .pi * frequenza * 9.2 * t)
+            let suono = exp(-t * 5.5) * sin(2 * .pi * frequenza * t)
+                + 0.30 * exp(-t * 14) * sin(2 * .pi * frequenza * 4 * t)
+                + 0.12 * exp(-t * 26) * sin(2 * .pi * frequenza * 9.2 * t)
             onda[n] = Float(0.4 * attacco * suono)
         }
         // eco morbida per dare un po' di ambiente
-        for (ritardo, peso) in [(0.09, 0.28), (0.17, 0.16), (0.29, 0.09)] as [(Double, Float)] {
+        for (ritardo, peso) in [(0.07, 0.2), (0.14, 0.1)] as [(Double, Float)] {
             let salto = Int(ritardo * frequenzaCampionamento)
             for n in stride(from: campioni - 1, through: salto, by: -1) { onda[n] += peso * onda[n - salto] }
         }

@@ -80,10 +80,12 @@ final class PartitaModello {
         messaggio = "Guarda bene…"
         esegui {
             try? await Task.sleep(for: .seconds(1))
+            // nelle melodie le note si susseguono più svelte, come in una canzone
+            let passo = await self.melodiaCorrente != nil ? 0.6 : 1.0
             for forma in await self.sequenza {
-                await self.accendi(forma, durata: 0.7)
+                await self.accendi(forma, durata: passo * 0.7)
                 await AccessibilityNotification.Announcement(forma.nome).post()
-                try? await Task.sleep(for: .seconds(1))
+                try? await Task.sleep(for: .seconds(passo))
             }
             await self.iniziaTurno()
         }
