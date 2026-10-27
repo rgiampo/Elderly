@@ -11,9 +11,8 @@ struct ContentView: View {
                 SfondoCielo()
                 DecorazioniHome()
 
-                VStack(spacing: 40) {
+                VStack(spacing: 56) {
                     Titolo(entrato: entrato)
-                    SalutoDelGiorno().appari(entrato, ritardo: 0.2)
 
                     VStack(spacing: 20) {
                         NavigationLink(destination: ChiGiocaView()) {
@@ -50,39 +49,6 @@ extension View {
     }
 }
 
-/// Un saluto con il giorno e la data di oggi, in grande: aiuta a orientarsi nel tempo ("Buongiorno, oggi è martedì 27 ottobre").
-/// Si aggiorna da solo ogni minuto, quindi cambia anche con il passare della giornata.
-private struct SalutoDelGiorno: View {
-    var body: some View {
-        TimelineView(.everyMinute) { contesto in
-            VStack(spacing: 4) {
-                Text(saluto(contesto.date))
-                    .testo(DimensioneTesto.medio)
-                    .foregroundStyle(Tema.testo)
-                Text("Oggi è \(data(contesto.date))")
-                    .testo(DimensioneTesto.normale)
-                    .foregroundStyle(Tema.testoSecondario)
-            }
-            .lineLimit(1).minimumScaleFactor(0.5)
-            .multilineTextAlignment(.center)
-            .frame(maxWidth: 640)
-            .accessibilityElement(children: .combine)
-        }
-    }
-
-    private func saluto(_ ora: Date) -> String {
-        switch Calendar.current.component(.hour, from: ora) {
-        case 5..<13: "Buongiorno!"
-        case 13..<18: "Buon pomeriggio!"
-        default: "Buonasera!"
-        }
-    }
-
-    private func data(_ ora: Date) -> String {
-        ora.formatted(.dateTime.weekday(.wide).day().month(.wide).locale(Locale(identifier: "it_IT")))
-    }
-}
-
 /// Il nome dell'app, grande, con sotto una striscia con una piccola "v" che si disegna da sinistra a destra.
 /// È largo quanto i pulsanti. (Il logo con i due nonni resta l'icona dell'app.)
 private struct Titolo: View {
@@ -92,7 +58,7 @@ private struct Titolo: View {
         VStack(spacing: 10) {
             // il nome in San Francisco bold; sotto, la linea con la "v" e i ghirigori ai lati
             Text("Elderly")
-                .font(.system(size: 150, weight: .bold))
+                .font(.system(size: 150, weight: .regular))
                 .tracking(-3)
                 .foregroundStyle(Tema.testo)
                 .shadow(color: Tema.testo.opacity(0.22), radius: 14, y: 10)
