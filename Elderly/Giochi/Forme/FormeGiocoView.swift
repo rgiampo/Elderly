@@ -31,7 +31,7 @@ struct FormeGiocoView: View {
                     .frame(maxHeight: .infinity)
 
                 HStack(spacing: 24) {
-                    Text("Sequenza più lunga insieme: \(partita.record)")
+                    Text(partita.titoloMelodia.map { "Melodia: \($0)" } ?? "Sequenza più lunga insieme: \(partita.record)")
                         .testo(DimensioneTesto.medio)
                         .foregroundStyle(Tema.testoSecondario)
                         .lineLimit(1).minimumScaleFactor(0.5)
@@ -44,7 +44,7 @@ struct FormeGiocoView: View {
             if partita.fase == .festa { Coriandoli().allowsHitTesting(false) }
         }
         .conIndietro { BarraGiocatori(giocatori: giocatori, turno: partita.giocatoreCorrente) }
-        .bordoTurno(giocatori, turno: partita.giocatoreCorrente)
+        .coloreSfondoDelTurno(giocatori, turno: partita.giocatoreCorrente)
         .animation(.easeInOut, value: partita.messaggio)
         .animation(.spring(duration: 0.5), value: partita.giocatoreCorrente)
         .sensoryFeedback(.impact(weight: .medium), trigger: partita.formaAccesa) { _, nuova in nuova != nil }

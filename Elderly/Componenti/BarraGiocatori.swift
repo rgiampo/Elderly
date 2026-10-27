@@ -106,9 +106,3 @@ struct BannerTurno: View {
         }
     }
 }
-
-extension View {
-    /// Prima dava una cornice colorata a tutto schermo; ora non disegna niente (tagliava la barra in alto).
-    /// Il turno si vede dal banner colorato. Resta qui così i giochi non cambiano.
-    func bordoTurno(_ giocatori: [Partecipante], turno: Int?) -> some View { self }
-}

@@ -15,14 +15,17 @@ final class PartitaModello {
     private(set) var record = 0
 
     private var sequenza: [Forma] = []
+    private let melodie: [Melodia]
+    private var numeroMelodia = 0
+    private(set) var titoloMelodia: String?        // se si sta suonando una melodia conosciuta
     private var posizione = 0
     private var lunghezza = 2
-    private var erroriDiFila = 0
     private var compito: Task<Void, Never>?
 
     init(giocatori: [Partecipante], difficolta: Difficolta) {
         self.giocatori = giocatori
         self.forme = difficolta.forme
+        melodie = Melodia.perLivello(difficolta.numeroForme).shuffled()
     }
 
     func inizia() { nuovaSequenza() }
@@ -42,7 +45,14 @@ final class PartitaModello {
     // MARK: - Passi del gioco
 
     private func nuovaSequenza() {
-        sequenza = (0..<lunghezza).map { _ in forme.randomElement()! }
+        if let melodia = melodiaCorrente {
+            // si riascolta l'inizio della melodia, un po' più lungo a ogni giro
+            titoloMelodia = melodia.titolo
+            sequenza = melodia.note.prefix(lunghezza).map { forme[$0] }
+        } else {
+            titoloMelodia = nil
+            sequenza = (0..<lunghezza).map { _ in forme.randomElement()! }
+        }
         mostra()
     }
 
@@ -68,40 +78,48 @@ final class PartitaModello {
 
     private func successo() {
         fase = .festa
-        erroriDiFila = 0
         record = max(record, sequenza.count)
-        messaggio = Frasi.bravi([giocatori[giocatoreCorrente]])
+        let finita = melodiaCorrente.map { sequenza.count >= $0.note.count } ?? false
+        messaggio = finita ? "Hai suonato \(titoloMelodia ?? "la melodia")!" : Frasi.bravi([giocatori[giocatoreCorrente]])
         esegui {
             try? await Task.sleep(for: .seconds(0.4))
-            for forma in await self.forme {
-                await self.suona(forma, volume: 0.6)
-                try? await Task.sleep(for: .seconds(0.12))
+            if finita {
+                // la melodia intera, senza pause, come una canzone
+                for forma in await self.sequenza {
+                    await self.accendi(forma, durata: 0.35)
+                    try? await Task.sleep(for: .seconds(0.42))
+                }
+                try? await Task.sleep(for: .seconds(1.5))
+            } else {
+                for forma in await self.forme {
+                    await self.suona(forma, volume: 0.6)
+                    try? await Task.sleep(for: .seconds(0.12))
+                }
+                try? await Task.sleep(for: .seconds(1.8))
             }
-            try? await Task.sleep(for: .seconds(2))
-            await self.passaAlProssimo(lunghezzaNuova: await self.lunghezza + 1)
+            await self.passaAlProssimo(lunghezzaNuova: finita ? 2 : await self.lunghezza + 1, nuovaMelodia: finita)
         }
     }
 
+    /// Un errore non penalizza: si dice "Riproviamo" e tocca all'altra persona (o di nuovo a chi gioca da solo), con la stessa sequenza.
     private func errore() {
-        erroriDiFila += 1
         fase = .guarda
         messaggio = "Riproviamo insieme"
         esegui {
             try? await Task.sleep(for: .seconds(1.5))
-            if await self.erroriDiFila >= 2 {
-                await self.passaAlProssimo(lunghezzaNuova: max(2, await self.lunghezza - 1))
-            } else {
-                await self.mostra()
-            }
+            await self.passaAlProssimo(lunghezzaNuova: await self.lunghezza, nuovaMelodia: false, stessaSequenza: true)
         }
     }
 
-    private func passaAlProssimo(lunghezzaNuova: Int) {
+    /// Cambia il turno (a ogni giro, giusto o sbagliato). Dopo una melodia finita si passa alla prossima.
+    private func passaAlProssimo(lunghezzaNuova: Int, nuovaMelodia: Bool, stessaSequenza: Bool = false) {
         lunghezza = lunghezzaNuova
-        erroriDiFila = 0
         giocatoreCorrente = (giocatoreCorrente + 1) % giocatori.count
-        nuovaSequenza()
+        if nuovaMelodia, !melodie.isEmpty { numeroMelodia += 1 }
+        if stessaSequenza { mostra() } else { nuovaSequenza() }
     }
+
+    private var melodiaCorrente: Melodia? { melodie.isEmpty ? nil : melodie[numeroMelodia % melodie.count] }
 
     // MARK: - Aiuti
 

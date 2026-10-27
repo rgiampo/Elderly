@@ -26,7 +26,7 @@ struct CoppieGiocoView: View {
         .conIndietro {
             if !modello.finito { BarraGiocatori(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti) }
         }
-        .bordoTurno(modello.giocatori, turno: modello.turno)
+        .coloreSfondoDelTurno(modello.giocatori, turno: modello.turno)
         .animation(.spring(duration: 0.5), value: modello.turno)
         .sensoryFeedback(.impact(weight: .heavy), trigger: modello.turno) { _, _ in modello.giocatori.count > 1 }
         .sensoryFeedback(.success, trigger: modello.puntiTotali)

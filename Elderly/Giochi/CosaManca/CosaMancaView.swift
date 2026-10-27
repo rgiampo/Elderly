@@ -32,7 +32,7 @@ struct CosaMancaView: View {
                     .fixedSize()
             }
         }
-        .bordoTurno(modello.giocatori, turno: modello.turno)
+        .coloreSfondoDelTurno(modello.giocatori, turno: modello.turno)
         .animation(.spring(duration: 0.5), value: modello.turno)
         .animation(.spring(duration: 0.5), value: modello.fase)
         .sensoryFeedback(.impact(weight: .heavy), trigger: modello.turno) { _, _ in modello.giocatori.count > 1 }

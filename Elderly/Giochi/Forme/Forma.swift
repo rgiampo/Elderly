@@ -1,7 +1,7 @@
 import SwiftUI
 
-/// Le forme del gioco: ognuna ha un colore e una nota della scala pentatonica,
-/// così qualsiasi sequenza suona armoniosa.
+/// Le forme del gioco: ognuna ha un colore e una nota (do, re, mi, fa, sol),
+/// così si possono suonare melodie conosciute.
 enum Forma: CaseIterable, Identifiable {
     case cerchio, quadrato, triangolo, stella, cuore
 
@@ -28,14 +28,14 @@ enum Forma: CaseIterable, Identifiable {
         }
     }
 
-    /// Do, re, mi, sol, la (quinta ottava).
+    /// Do, re, mi, fa, sol (quinta ottava): bastano per l'Inno alla gioia e per Fra Martino.
     var frequenza: Double {
         switch self {
         case .cerchio: 523.25
         case .quadrato: 587.33
         case .triangolo: 659.25
-        case .stella: 783.99
-        case .cuore: 880.00
+        case .stella: 698.46
+        case .cuore: 783.99
         }
     }
 

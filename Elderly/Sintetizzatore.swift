@@ -62,7 +62,7 @@ final class Sintetizzatore {
     func buzz() {
         guard UserDefaults.standard.object(forKey: "suoniAttivi") as? Bool ?? true else { return }
         if buzzLettore == nil { buzzLettore = try? AVAudioPlayer(data: datiBuzz()) }
-        buzzLettore?.volume = 0.55
+        buzzLettore?.volume = 0.9
         buzzLettore?.currentTime = 0
         buzzLettore?.play()
     }
@@ -70,14 +70,15 @@ final class Sintetizzatore {
     private var buzzLettore: AVAudioPlayer?
 
     private func datiBuzz() -> Data {
-        let campioni = Int(frequenzaCampionamento * 0.42)
+        let durata = 0.6
+        let campioni = Int(frequenzaCampionamento * durata)
         var onda = [Float](repeating: 0, count: campioni)
         for n in 0..<campioni {
             let t = Double(n) / frequenzaCampionamento
-            let frequenza = 110 + 6 * sin(2 * .pi * 18 * t)             // vibrato
-            let quadra: Double = sin(2 * .pi * frequenza * t) >= 0 ? 1 : -1
-            let attacco = min(1, t / 0.01), coda = min(1, (0.42 - t) / 0.08)
-            onda[n] = Float(0.35 * quadra * attacco * coda)
+            // due onde a dente di sega vicine (120 e 127 Hz): il battimento è il "bzzzz" ruvido del cicalino classico
+            func sega(_ f: Double) -> Double { 2 * (t * f - floor(t * f + 0.5)) }
+            let attacco = min(1, t / 0.004), coda = min(1, (durata - t) / 0.05)
+            onda[n] = Float(0.42 * (sega(120) + sega(127)) * 0.5 * attacco * coda)
         }
         return datiWav(da: onda)
     }

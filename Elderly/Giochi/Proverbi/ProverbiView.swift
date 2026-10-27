@@ -32,7 +32,7 @@ struct ProverbiView: View {
                     .fixedSize()
             }
         }
-        .bordoTurno(modello.giocatori, turno: modello.turno)
+        .coloreSfondoDelTurno(modello.giocatori, turno: modello.turno)
         .animation(.spring(duration: 0.5), value: modello.turno)
         .sensoryFeedback(.impact(weight: .heavy), trigger: modello.turno) { _, _ in modello.giocatori.count > 1 }
         .sensoryFeedback(.success, trigger: modello.trovata) { _, nuova in nuova && modello.sbagliate.isEmpty }

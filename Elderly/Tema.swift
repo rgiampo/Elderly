@@ -12,6 +12,8 @@ enum Tema {
     // — Sfondi
     static let celeste = Color(hex: 0xA9D8FF)         // cielo: sfondo di tutte le schermate (con il testo scuro: 11:1)
     static let celesteChiaro = Color(hex: 0xC4E6FF)   // cielo più chiaro: sfumature e riquadri
+    static let celesteMenta = Color(hex: 0xA6E3D4)       // sfondo del secondo giocatore: verde acqua chiaro (testo scuro sopra: 12:1)
+    static let celesteMentaChiaro = Color(hex: 0xC2EFE3)
     static let carta = Color.white                    // schede e campi
 
     // — Azzurri (testo bianco sopra)
@@ -41,28 +43,47 @@ extension Color {
     }
 }
 
+/// Di chi è il turno: lo scrivono i giochi, lo legge lo sfondo. Con una persona sola resta `nil` e lo sfondo non cambia.
+private struct ChiaveTurno: EnvironmentKey { static let defaultValue: Int? = nil }
+extension EnvironmentValues {
+    var turnoGioco: Int? {
+        get { self[ChiaveTurno.self] }
+        set { self[ChiaveTurno.self] = newValue }
+    }
+}
+
+extension View {
+    /// Con due giocatori lo sfondo cambia colore a ogni turno: azzurro per il primo, verde acqua per il secondo.
+    func coloreSfondoDelTurno(_ giocatori: [Partecipante], turno: Int) -> some View {
+        environment(\.turnoGioco, giocatori.count > 1 ? turno : nil)
+    }
+}
+
 /// Sfondo celeste, quasi piatto: una luce morbida che si sposta lentamente.
 /// Fermo se l'utente riduce i movimenti, piatto se chiede meno trasparenza o più contrasto.
 struct SfondoCielo: View {
     @Environment(\.accessibilityReduceMotion) private var pocoMovimento
     @Environment(\.accessibilityReduceTransparency) private var pocaTrasparenza
     @Environment(\.colorSchemeContrast) private var contrasto
+    @Environment(\.turnoGioco) private var turno
+
+    private var base: Color { turno == 1 ? Tema.celesteMenta : Tema.celeste }
+    private var chiaro: Color { turno == 1 ? Tema.celesteMentaChiaro : Tema.celesteChiaro }
 
     var body: some View {
         Group {
             if pocaTrasparenza || contrasto == .increased {
-                Tema.celeste
+                base
             } else {
                 TimelineView(.animation(minimumInterval: 1 / 15, paused: pocoMovimento)) { contesto in
                     MeshGradient(width: 3, height: 3,
                                  points: punti(contesto.date.timeIntervalSinceReferenceDate),
-                                 colors: [Tema.celeste, Tema.celesteChiaro, Tema.celeste,
-                                          Tema.celesteChiaro, Tema.celeste, Tema.celesteChiaro,
-                                          Tema.celeste, Tema.celesteChiaro, Tema.celeste])
+                                 colors: [base, chiaro, base, chiaro, base, chiaro, base, chiaro, base])
                 }
             }
         }
         .ignoresSafeArea()
+        .animation(.easeInOut(duration: 0.7), value: turno)   // il cambio di colore è una dissolvenza lenta
         .accessibilityHidden(true)
     }
 

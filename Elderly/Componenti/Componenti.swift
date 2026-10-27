@@ -89,15 +89,22 @@ extension View {
 
 extension View {
     /// Sfondo delle barre in alto: pieno dove c'è il testo, poi sfuma. I contenuti che scorrono passano sotto senza toccare il titolo.
-    func barraOpaca() -> some View {
-        background {
-            LinearGradient(stops: [.init(color: Tema.celeste, location: 0),
-                                   .init(color: Tema.celeste, location: 0.72),
-                                   .init(color: Tema.celeste.opacity(0), location: 1)],
+    /// Ha lo stesso colore dello sfondo, anche quando cambia con il turno.
+    func barraOpaca() -> some View { modifier(SfondoBarra()) }
+}
+
+private struct SfondoBarra: ViewModifier {
+    @Environment(\.turnoGioco) private var turno
+
+    func body(content: Content) -> some View {
+        let colore = turno == 1 ? Tema.celesteMenta : Tema.celeste
+        content.background {
+            LinearGradient(stops: [.init(color: colore, location: 0), .init(color: colore, location: 0.72),
+                                   .init(color: colore.opacity(0), location: 1)],
                            startPoint: .top, endPoint: .bottom)
                 .padding(.bottom, -14)
                 .ignoresSafeArea(edges: .top)
+                .animation(.easeInOut(duration: 0.7), value: turno)
         }
     }
 }
-

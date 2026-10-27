@@ -33,7 +33,7 @@ struct SiNoView: View {
                     .fixedSize()
             }
         }
-        .bordoTurno(modello.giocatori, turno: modello.turno)
+        .coloreSfondoDelTurno(modello.giocatori, turno: modello.turno)
         .animation(.spring(duration: 0.5), value: modello.turno)
         .sensoryFeedback(.impact(weight: .heavy), trigger: modello.turno) { _, _ in modello.giocatori.count > 1 }
         .onChange(of: modello.messaggio) { _, nuovo in
