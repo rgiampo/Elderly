@@ -69,16 +69,23 @@ final class Sintetizzatore {
 
     private var buzzLettore: AVAudioPlayer?
 
+    /// Il cicalino dei quiz televisivi: due "BZZT" gravi e ruvidi di fila, il secondo un po' più basso (come "eh-eh!").
     private func datiBuzz() -> Data {
-        let durata = 0.6
-        let campioni = Int(frequenzaCampionamento * durata)
+        let impulsi: [(inizio: Double, durata: Double, frequenza: Double)] = [(0.0, 0.30, 150), (0.38, 0.55, 105)]
+        let totale = 0.38 + 0.55
+        let campioni = Int(frequenzaCampionamento * totale)
         var onda = [Float](repeating: 0, count: campioni)
         for n in 0..<campioni {
             let t = Double(n) / frequenzaCampionamento
-            // due onde a dente di sega vicine (120 e 127 Hz): il battimento è il "bzzzz" ruvido del cicalino classico
-            func sega(_ f: Double) -> Double { 2 * (t * f - floor(t * f + 0.5)) }
-            let attacco = min(1, t / 0.004), coda = min(1, (durata - t) / 0.05)
-            onda[n] = Float(0.42 * (sega(120) + sega(127)) * 0.5 * attacco * coda)
+            for i in impulsi where t >= i.inizio && t < i.inizio + i.durata {
+                let l = t - i.inizio
+                let f = i.frequenza * (1 - 0.06 * l / i.durata)        // scende appena, come una nota "stonata"
+                func sega(_ x: Double) -> Double { 2 * (l * x - floor(l * x + 0.5)) }
+                let quadra = sin(2 * .pi * f * l) >= 0 ? 1.0 : -1.0
+                let corpo = 0.6 * sega(f) + 0.3 * quadra + 0.1 * sega(f * 2.01)   // ruvido e pieno
+                let attacco = min(1, l / 0.005), coda = min(1, (i.durata - l) / 0.04)
+                onda[n] += Float(0.5 * corpo * attacco * coda)
+            }
         }
         return datiWav(da: onda)
     }
