@@ -1,7 +1,7 @@
 import SwiftUI
 import SwiftData
 
-/// Crea o modifica un quiz: titolo, domande e, per ogni risposta, una foto e il suo nome.
+/// Crea o modifica un quiz: titolo, domande e, per ogni domanda, due foto con il loro nome.
 struct EditorQuizView: View {
     let quiz: QuizCreato?   // nil = quiz nuovo
     var partenza: BozzaQuiz?  // per un quiz nuovo che parte da una copia di un quiz pronto
@@ -12,37 +12,34 @@ struct EditorQuizView: View {
     @State private var chiediUscita = false
 
     var body: some View {
-        Form {
-            Section("Titolo del quiz") {
-                TextField("Per esempio: Frutta e verdura", text: $bozza.titolo)
-            }
+        ModuloView(titolo: quiz == nil ? "Nuovo quiz" : "Modifica quiz",
+                   annulla: { if !bozza.titolo.isEmpty && quiz == nil { chiediUscita = true } else { chiudi() } },
+                   salva: salva, puòSalvare: bozza.problema == nil) {
+            CampoTesto(titolo: "Titolo del quiz", testo: $bozza.titolo, esempio: "Per esempio: Frutta e verdura")
 
             ForEach(bozza.domande.indices, id: \.self) { posizione in
-                SezioneDomanda(numero: posizione + 1,
-                               domanda: $bozza.domande[posizione],
-                               puòEliminare: bozza.domande.count > 1,
-                               elimina: { bozza.domande.remove(at: posizione) })
+                SchedaDomanda(numero: posizione + 1,
+                              domanda: $bozza.domande[posizione],
+                              puòEliminare: bozza.domande.count > 1,
+                              elimina: { bozza.domande.remove(at: posizione) })
             }
 
-            Section {
-                Button("Aggiungi una domanda", systemImage: "plus") { bozza.domande.append(BozzaDomanda()) }
+            Button { bozza.domande.append(BozzaDomanda()) } label: {
+                Label("Aggiungi una domanda", systemImage: "plus")
+                    .testo(DimensioneTesto.medio)
+                    .foregroundStyle(Tema.testo)
+                    .lineLimit(1).minimumScaleFactor(0.5)
+                    .frame(maxWidth: .infinity, minHeight: MisureModulo.altezzaControllo)
+                    .vetro(.white.opacity(0.78))
             }
+            .buttonStyle(StilePremuto())
 
+            // dice cosa manca per poter salvare
             if let problema = bozza.problema {
-                Section { Label(problema, systemImage: "info.circle").foregroundStyle(Tema.testoSecondario) }
-            }
-        }
-        .testo(DimensioneTesto.normale)
-        .scrollContentBackground(.hidden)
-        .background(SfondoCielo())
-        .navigationTitle(quiz == nil ? "Nuovo quiz" : "Modifica quiz")
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .cancellationAction) {
-                Button("Annulla") { if !bozza.titolo.isEmpty { chiediUscita = true } else { chiudi() } }
-            }
-            ToolbarItem(placement: .confirmationAction) {
-                Button("Salva", action: salva).disabled(bozza.problema != nil)
+                Text(problema)
+                    .testo(DimensioneTesto.normale)
+                    .foregroundStyle(Tema.testoSecondario)
+                    .padding(.top, 4)
             }
         }
         .interactiveDismissDisabled()   // toccare fuori dalla finestra non la chiude: non si perde il quiz
@@ -72,70 +69,81 @@ struct EditorQuizView: View {
     }
 }
 
-/// Una domanda con le sue risposte.
-private struct SezioneDomanda: View {
+/// Una domanda: il testo e le sue due risposte, ognuna con la foto e il nome.
+private struct SchedaDomanda: View {
     let numero: Int
     @Binding var domanda: BozzaDomanda
     let puòEliminare: Bool
     let elimina: () -> Void
 
     var body: some View {
-        Section("Domanda \(numero)") {
-            TextField("Scrivi la domanda", text: $domanda.testo, axis: .vertical)
+        VStack(alignment: .leading, spacing: 20) {
+            HStack {
+                Text("Domanda \(numero)").testo(DimensioneTesto.grande).foregroundStyle(Tema.testo)
+                    .lineLimit(1).minimumScaleFactor(0.5)
+                Spacer()
+                if puòEliminare {
+                    Button(action: elimina) {
+                        Text("Elimina")
+                            .testo(DimensioneTesto.normale)
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 28)
+                            .frame(minHeight: 64)
+                            .vetro(Tema.rosso)
+                    }
+                    .buttonStyle(StilePremuto())
+                }
+            }
+
+            CampoTesto(titolo: "Domanda", testo: $domanda.testo, esempio: "Per esempio: Quale è il gatto?")
 
             ForEach(domanda.risposte.indices, id: \.self) { posizione in
-                RigaRisposta(risposta: $domanda.risposte[posizione],
-                             èGiusta: domanda.indiceGiusta == posizione,
-                             scegliGiusta: { domanda.indiceGiusta = posizione },
-                             rimuovi: domanda.risposte.count > Configurazione.risposteMinime ? { togli(posizione) } : nil)
-            }
-
-            if domanda.risposte.count < Configurazione.risposteMassime {
-                Button("Aggiungi una risposta", systemImage: "plus") { domanda.risposte.append(BozzaRisposta()) }
-            }
-            if puòEliminare {
-                Button("Elimina questa domanda", systemImage: "trash", role: .destructive, action: elimina)
+                CampiRisposta(numero: posizione + 1,
+                              risposta: $domanda.risposte[posizione],
+                               èGiusta: domanda.indiceGiusta == posizione,
+                               scegliGiusta: { domanda.indiceGiusta = posizione })
             }
         }
-    }
-
-    private func togli(_ posizione: Int) {
-        domanda.risposte.remove(at: posizione)
-        if domanda.indiceGiusta >= domanda.risposte.count { domanda.indiceGiusta = 0 }
-        else if domanda.indiceGiusta > posizione { domanda.indiceGiusta -= 1 }
+        .padding(28)
+        .vetro(Tema.celesteChiaro, in: RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))   // così i campi bianchi si vedono
     }
 }
 
-/// Una risposta: foto, nome e il pulsante "è quella giusta".
-private struct RigaRisposta: View {
+/// Una risposta: la foto (si tocca per scegliere o scattare), il nome e il pulsante "È quella giusta".
+private struct CampiRisposta: View {
+    let numero: Int
     @Binding var risposta: BozzaRisposta
     let èGiusta: Bool
     let scegliGiusta: () -> Void
-    let rimuovi: (() -> Void)?
 
     var body: some View {
-        HStack(spacing: 18) {
+        HStack(alignment: .top, spacing: 24) {
             SelettoreFoto(foto: $risposta.foto) {
-                FotoView(foto: risposta.foto.map(FotoQuiz.dati))
-                    .frame(width: 120, height: 90)
-                    .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
-                    .overlay(alignment: .bottomTrailing) {
-                        Image(systemName: "camera.fill").padding(6).background(.white, in: Circle()).padding(4)
-                    }
+                ZStack(alignment: .bottom) {
+                    FotoView(foto: risposta.foto.map(FotoQuiz.dati))
+                    Text(risposta.foto == nil ? "Aggiungi la foto" : "Cambia la foto")
+                        .testo(DimensioneTesto.normale)
+                        .foregroundStyle(.white)
+                        .lineLimit(1).minimumScaleFactor(0.5)
+                        .frame(maxWidth: .infinity, minHeight: 56)
+                        .background(Tema.testo.opacity(0.78))
+                }
+                .frame(width: 300, height: 210)
+                .clipShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
             }
-            TextField("Nome della risposta", text: $risposta.testo)
 
-            Button(action: scegliGiusta) {
-                Label(èGiusta ? "Giusta" : "Giusta?", systemImage: èGiusta ? "checkmark.circle.fill" : "circle")
-                    .foregroundStyle(èGiusta ? Color.green : Tema.testoSecondario)
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel(èGiusta ? "Questa è la risposta giusta" : "Segna come risposta giusta")
-
-            if let rimuovi {
-                Button(role: .destructive, action: rimuovi) { Image(systemName: "minus.circle") }
-                    .buttonStyle(.plain)
-                    .accessibilityLabel("Togli questa risposta")
+            VStack(alignment: .leading, spacing: 14) {
+                CampoTesto(titolo: "Nome della risposta \(numero)", testo: $risposta.testo, esempio: "Per esempio: Gatto")
+                Button(action: scegliGiusta) {
+                    Text(èGiusta ? "È la risposta giusta" : "Segna come giusta")
+                        .testo(DimensioneTesto.normale)
+                        .foregroundStyle(èGiusta ? .white : Tema.testo)
+                        .lineLimit(1).minimumScaleFactor(0.5)
+                        .frame(maxWidth: .infinity, minHeight: 72)
+                        .vetro(èGiusta ? Tema.verde : .white.opacity(0.78), in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+                }
+                .buttonStyle(StilePremuto())
+                .accessibilityAddTraits(èGiusta ? .isSelected : [])
             }
         }
     }

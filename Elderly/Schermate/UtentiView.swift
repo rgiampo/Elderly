@@ -48,7 +48,7 @@ struct UtentiView: View {
             }
         }
         .conIndietro(titolo: "Utenti")
-        .sheet(isPresented: $nuovoUtente) {
+        .fullScreenCover(isPresented: $nuovoUtente) {
             NavigationStack { UtenteFormView(utente: nil) }
         }
     }

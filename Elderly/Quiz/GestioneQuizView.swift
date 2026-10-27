@@ -33,19 +33,17 @@ struct GestioneQuizView: View {
                     if !creati.isEmpty {
                         intestazione("I vostri quiz")
                         ForEach(creati) { creato in
-                            RigaQuiz(quiz: creato.comeQuiz) {
-                                HStack(spacing: 14) {
-                                    azione("Modifica") { daModificare = creato }
-                                    azione("Elimina", colore: Tema.rosso) { daEliminare = creato }
-                                }
+                            schedaConAzioni(creato.comeQuiz) {
+                                azione("Modifica") { daModificare = creato }
+                                azione("Elimina", colore: Tema.rosso) { daEliminare = creato }
                             }
                         }
                     }
 
                     intestazione("Quiz pronti: aggiungi le tue domande")
                     ForEach(pronti) { quiz in
-                        RigaQuiz(quiz: quiz) {
-                            azione("Aggiungi domande") {
+                        schedaConAzioni(quiz) {
+                            azione("Aggiungi le tue domande") {
                                 nuovo = BozzaQuiz(copiaDi: quiz, titolo: "\(quiz.titolo) (con le mie domande)")
                             }
                         }
@@ -57,11 +55,11 @@ struct GestioneQuizView: View {
             }
         }
         .conIndietro(titolo: "Crea o modifica quiz")
-        .sheet(isPresented: $nuovoVuoto) { NavigationStack { EditorQuizView(quiz: nil) } }
-        .sheet(item: Binding(get: { nuovo.map(Copia.init) }, set: { if $0 == nil { nuovo = nil } })) { copia in
+        .fullScreenCover(isPresented: $nuovoVuoto) { NavigationStack { EditorQuizView(quiz: nil) } }
+        .fullScreenCover(item: Binding(get: { nuovo.map(Copia.init) }, set: { if $0 == nil { nuovo = nil } })) { copia in
             NavigationStack { EditorQuizView(quiz: nil, partenza: copia.bozza) }
         }
-        .sheet(item: $daModificare) { quiz in NavigationStack { EditorQuizView(quiz: quiz) } }
+        .fullScreenCover(item: $daModificare) { quiz in NavigationStack { EditorQuizView(quiz: quiz) } }
         .confirmationDialog("Eliminare il quiz \"\(daEliminare?.titolo ?? "")\"?",
                             isPresented: Binding(get: { daEliminare != nil }, set: { if !$0 { daEliminare = nil } }),
                             titleVisibility: .visible) {
@@ -82,14 +80,21 @@ struct GestioneQuizView: View {
             .accessibilityAddTraits(.isHeader)
     }
 
+    /// Il quiz sopra e, sotto, i suoi pulsanti a tutta larghezza: ogni scheda ha la stessa forma e i testi non si riducono.
+    private func schedaConAzioni<Azioni: View>(_ quiz: Quiz, @ViewBuilder azioni: () -> Azioni) -> some View {
+        VStack(spacing: 14) {
+            RigaQuiz(quiz: quiz) { EmptyView() }
+            HStack(spacing: 14) { azioni() }
+        }
+    }
+
     private func azione(_ titolo: String, colore: Color = Tema.blu, _ fai: @escaping () -> Void) -> some View {
         Button(action: fai) {
             Text(titolo)
                 .testo(DimensioneTesto.normale)
                 .foregroundStyle(.white)
                 .lineLimit(1).minimumScaleFactor(0.6)
-                .padding(.horizontal, 22)
-                .frame(minHeight: 72)
+                .frame(maxWidth: .infinity, minHeight: MisureModulo.altezzaControllo)
                 .vetro(colore)
         }
         .buttonStyle(StilePremuto())
