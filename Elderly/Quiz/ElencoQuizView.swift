@@ -30,13 +30,14 @@ struct ElencoQuizView: View {
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
-                    ForEach(pronti + creati.map(\.comeQuiz)) { quiz in
+                    ForEach(Array((pronti + creati.map(\.comeQuiz)).enumerated()), id: \.element.id) { posizione, quiz in
                         NavigationLink(destination: modo.vista(quiz, sessione.giocatori)) {
                             RigaQuiz(quiz: quiz) {
                                 Image(systemName: "chevron.right").font(.system(size: 32, weight: .bold))
                             }
                         }
                         .buttonStyle(StilePremuto())
+                        .entraInSequenza(posizione)
                     }
                 }
                 .padding(.horizontal, 40).padding(.bottom, 40)

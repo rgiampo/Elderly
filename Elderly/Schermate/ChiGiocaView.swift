@@ -12,12 +12,13 @@ struct ChiGiocaView: View {
             SfondoCielo()
 
             VStack(spacing: 24) {
-                Text("Scegli una o due persone, oppure vai avanti per giocare senza nome")
-                    .testo(DimensioneTesto.normale)
-                    .foregroundStyle(Tema.testoSecondario)
-                    .multilineTextAlignment(.center)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(.top, 8)
+                // i due posti: si riempiono man mano che si tocca. Vuoti, invitano a scegliere.
+                HStack(spacing: 20) {
+                    ForEach(0..<Configurazione.maxGiocatori, id: \.self) { numero in
+                        PostoGiocatore(numero: numero, partecipante: sessione.scelti.indices.contains(numero) ? sessione.scelti[numero] : nil)
+                    }
+                }
+                .padding(.top, 4)
 
                 if utenti.isEmpty {
                     Text("Non ci sono ancora persone: le aggiungi nella sezione Utenti.")
@@ -29,10 +30,9 @@ struct ChiGiocaView: View {
                 } else {
                     ListaAlfabetica(utenti: utenti) { utente in
                         Button { sessione.alterna(utente) } label: {
-                            RigaUtente(utente: utente) { segno(per: utente) }
-                                .overlay(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous)
-                                    .stroke(colore(per: utente) ?? .clear, lineWidth: 8))
-                                .opacity(sessione.sceltaPiena && !sessione.èScelto(utente) ? 0.45 : 1)
+                            RigaUtente(utente: utente, evidenza: colore(per: utente)) { segno(per: utente) }
+                                .opacity(sessione.sceltaPiena && !sessione.èScelto(utente) ? 0.4 : 1)
+                                .animation(.spring(duration: 0.35, bounce: 0.35), value: posto(di: utente))
                         }
                         .buttonStyle(StilePremuto())
                         .accessibilityValue(posto(di: utente).map { "Scelto, numero \($0)" } ?? "Non scelto")
@@ -61,13 +61,44 @@ struct ChiGiocaView: View {
 
     @ViewBuilder private func segno(per utente: Utente) -> some View {
         if let posto = posto(di: utente) {
-            Text("\(posto)")
-                .testo(DimensioneTesto.grande)
-                .foregroundStyle(.white)
+            Image(systemName: "checkmark")
+                .font(.system(size: 40, weight: .black))
+                .foregroundStyle(Tema.coloreGiocatore(posto - 1))
                 .frame(width: 80, height: 80)
-                .background(Tema.coloreGiocatore(posto - 1), in: Circle())
+                .background(.white, in: Circle())
+                .transition(.scale.combined(with: .opacity))
         } else {
-            Circle().stroke(Tema.testoSecondario, lineWidth: 5).frame(width: 80, height: 80)
+            Circle().stroke(Tema.testoSecondario.opacity(0.5), lineWidth: 5).frame(width: 80, height: 80)
         }
+    }
+}
+
+
+/// Un posto in alto: "1° giocatore" / "2° giocatore". Vuoto è tratteggiato; pieno mostra foto e nome nel colore del giocatore.
+private struct PostoGiocatore: View {
+    let numero: Int
+    let partecipante: Partecipante?
+
+    var body: some View {
+        HStack(spacing: 14) {
+            if let partecipante {
+                Avatar(utente: partecipante.utente, dimensione: 64)
+                Text(partecipante.nome).testo(DimensioneTesto.normale).lineLimit(1).minimumScaleFactor(0.5)
+            } else {
+                Text("\(numero + 1)° giocatore").testo(DimensioneTesto.normale).lineLimit(1).minimumScaleFactor(0.5)
+            }
+        }
+        .foregroundStyle(partecipante == nil ? Tema.testoSecondario : .white)
+        .padding(.horizontal, 22).frame(maxWidth: .infinity, minHeight: 84)
+        .background {
+            if partecipante != nil {
+                RoundedRectangle(cornerRadius: 28, style: .continuous).fill(Tema.coloreGiocatore(numero))
+            } else {
+                RoundedRectangle(cornerRadius: 28, style: .continuous)
+                    .strokeBorder(Tema.testoSecondario.opacity(0.5), style: StrokeStyle(lineWidth: 4, dash: [12, 10]))
+            }
+        }
+        .animation(.spring(duration: 0.4, bounce: 0.35), value: partecipante?.id)
+        .accessibilityElement(children: .combine)
     }
 }

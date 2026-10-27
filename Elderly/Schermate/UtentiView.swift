@@ -53,6 +53,7 @@ struct UtentiView: View {
 /// Una persona in elenco: foto, nome e cognome su una riga, età. A destra va quello che serve alla schermata.
 struct RigaUtente<Accessorio: View>: View {
     let utente: Utente
+    var evidenza: Color? = nil          // se c'è, la riga si riempie di questo colore e il testo diventa bianco
     @ViewBuilder let accessorio: Accessorio
 
     var body: some View {
@@ -65,15 +66,20 @@ struct RigaUtente<Accessorio: View>: View {
                     .lineLimit(1).minimumScaleFactor(0.5)
                 Text("Età: \(utente.etaAttuale) anni")
                     .testo(DimensioneTesto.medio)
-                    .foregroundStyle(Tema.testoSecondario)
+                    .foregroundStyle(evidenza == nil ? Tema.testoSecondario : .white.opacity(0.9))
             }
 
             Spacer(minLength: 0)
             accessorio
         }
-        .foregroundStyle(Tema.testo)
+        .foregroundStyle(evidenza == nil ? Tema.testo : .white)
         .padding(20)
-        .scheda()
+        .background {
+            RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous)
+                .fill(evidenza ?? Tema.carta)
+                .shadow(color: (evidenza ?? Tema.testo).opacity(evidenza == nil ? 0.12 : 0.35), radius: 12, y: 6)
+        }
+        .animation(.spring(duration: 0.35, bounce: 0.3), value: evidenza == nil)
         .accessibilityElement(children: .combine)
     }
 }

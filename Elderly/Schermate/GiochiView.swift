@@ -9,11 +9,12 @@ struct GiochiView: View {
             SfondoCielo()
 
             VStack(spacing: 24) {
-                ForEach(Categoria.allCases) { categoria in
+                ForEach(Array(Categoria.allCases.enumerated()), id: \.element) { posizione, categoria in
                     NavigationLink(destination: destinazione(categoria)) {
                         RigaCategoria(categoria: categoria)
                     }
                     .buttonStyle(StilePremuto())
+                    .entraInSequenza(posizione)
                 }
             }
             .padding(.horizontal, 60).padding(.bottom, 40)
@@ -63,11 +64,12 @@ struct GiochiDellaCategoriaView: View {
             SfondoCielo()
 
             Grid(horizontalSpacing: 32, verticalSpacing: 28) {
-                ForEach(Array(righe.enumerated()), id: \.offset) { _, riga in
+                ForEach(Array(righe.enumerated()), id: \.offset) { numeroRiga, riga in
                     GridRow {
-                        ForEach(riga) { gioco in
+                        ForEach(Array(riga.enumerated()), id: \.element) { colonna, gioco in
                             NavigationLink(destination: gioco.destinazione) { SchedaGioco(gioco: gioco) }
                                 .buttonStyle(StilePremuto())
+                                .entraInSequenza(numeroRiga * 2 + colonna)
                         }
                     }
                 }
