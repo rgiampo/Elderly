@@ -30,6 +30,16 @@ final class Sintetizzatore {
         lettore.play()
     }
 
+    /// Cambio scena: i suoni in corso sfumano in 0,2 secondi e poi si fermano.
+    func fermaConDissolvenza() {
+        let inCorso = (voci.values.flatMap { $0 } + [buzzLettore].compactMap { $0 }).filter(\.isPlaying)
+        for lettore in inCorso { lettore.setVolume(0, fadeDuration: 0.2) }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+            // se nel frattempo la nuova scena ha rifatto suonare questo lettore, il volume non è più 0
+            for lettore in inCorso where lettore.volume == 0 { lettore.stop() }
+        }
+    }
+
     /// Tre note ascendenti (do, mi, sol) per festeggiare una risposta giusta.
     func accordoDiFesta() {
         for (n, nota) in [523.25, 659.25, 783.99].enumerated() {

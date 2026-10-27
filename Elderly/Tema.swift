@@ -85,6 +85,7 @@ struct SfondoCielo: View {
         .ignoresSafeArea()
         .animation(.easeInOut(duration: 0.7), value: turno)   // il cambio di colore è una dissolvenza lenta
         .accessibilityHidden(true)
+        .onDisappear { Sintetizzatore.condiviso.fermaConDissolvenza() }   // cambio scena: i suoni sfumano in 0,2 s
     }
 
     private func punti(_ t: TimeInterval) -> [SIMD2<Float>] {
