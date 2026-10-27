@@ -51,7 +51,12 @@ struct Quiz: Identifiable, Hashable {
     /// Le domande di una partita: a caso, ridotte a due risposte, e senza che due domande di fila
     /// mostrino la stessa foto.
     func domandeDellaPartita(massimo: Int = Configurazione.domandePerPartita) -> [DomandaQuiz] {
-        var rimaste = domande.shuffled().map { $0.conDueRisposte() }
+        // una sola domanda per ogni foto giusta in una partita: così non si ripete la stessa cosa
+        var viste = Set<String>()
+        var rimaste = domande.shuffled().map { $0.conDueRisposte() }.filter { d in
+            let chiave = d.rispostaGiusta?.testo ?? d.testo
+            return viste.insert(chiave).inserted
+        }
         var ordine: [DomandaQuiz] = []
         while ordine.count < massimo, !rimaste.isEmpty {
             let precedente = ordine.last?.foto ?? []

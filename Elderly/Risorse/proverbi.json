@@ -126,5 +126,149 @@
    "ha l'argento in tasca",
    "ha il sole in testa"
   ]
+ },
+ {
+  "inizio": "Ogni scarafaggio",
+  "fine": "è bello per la sua mamma",
+  "sbagliate": [
+   "è nemico della casa",
+   "scappa alla luce"
+  ]
+ },
+ {
+  "inizio": "Deve passare",
+  "fine": "la nottata",
+  "sbagliate": [
+   "la tempesta",
+   "la giornata"
+  ]
+ },
+ {
+  "inizio": "Con la bocca chiusa",
+  "fine": "non entrano mosche",
+  "sbagliate": [
+   "non si dice niente",
+   "si mangia meglio"
+  ]
+ },
+ {
+  "inizio": "L'amico è come l'ombrello:",
+  "fine": "quando piove non lo trovi mai",
+  "sbagliate": [
+   "si apre sempre al sole",
+   "si perde subito"
+  ]
+ },
+ {
+  "inizio": "I soldi",
+  "fine": "fanno tornare la vista ai ciechi",
+  "sbagliate": [
+   "crescono sugli alberi",
+   "si trovano per strada"
+  ]
+ },
+ {
+  "inizio": "Meglio arrossire una volta",
+  "fine": "che sbiancare cento volte",
+  "sbagliate": [
+   "che ridere sempre",
+   "che parlare troppo"
+  ]
+ },
+ {
+  "inizio": "Chi pecora si fa",
+  "fine": "il lupo se la mangia",
+  "sbagliate": [
+   "trova sempre un pastore",
+   "dorme tranquillo"
+  ]
+ },
+ {
+  "inizio": "La gatta per la fretta",
+  "fine": "fece i gattini ciechi",
+  "sbagliate": [
+   "perse la strada di casa",
+   "non mangiò più"
+  ]
+ },
+ {
+  "inizio": "Più la testa è vuota",
+  "fine": "più la lingua è lunga",
+  "sbagliate": [
+   "più il cuore è grande",
+   "più il passo è corto"
+  ]
+ },
+ {
+  "inizio": "La parola migliore",
+  "fine": "è quella che non si dice",
+  "sbagliate": [
+   "è quella detta per prima",
+   "è quella detta più forte"
+  ]
+ },
+ {
+  "inizio": "Chi ha il pane",
+  "fine": "non ha i denti",
+  "sbagliate": [
+   "ha sempre fame",
+   "è fortunato"
+  ]
+ },
+ {
+  "inizio": "Quando il letto è stretto,",
+  "fine": "mettiti in mezzo",
+  "sbagliate": [
+   "stendi una coperta",
+   "cambia stanza"
+  ]
+ },
+ {
+  "inizio": "Natale con i tuoi,",
+  "fine": "Pasqua con chi vuoi",
+  "sbagliate": [
+   "Capodanno con gli amici",
+   "Carnevale in famiglia"
+  ]
+ },
+ {
+  "inizio": "Fidarsi è bene,",
+  "fine": "non fidarsi è meglio",
+  "sbagliate": [
+   "ridere è meglio",
+   "aspettare è meglio"
+  ]
+ },
+ {
+  "inizio": "Chi si fa i fatti suoi",
+  "fine": "campa cent'anni",
+  "sbagliate": [
+   "non trova amici",
+   "mangia sempre bene"
+  ]
+ },
+ {
+  "inizio": "A tavola",
+  "fine": "non si invecchia",
+  "sbagliate": [
+   "si parla poco",
+   "si sta in piedi"
+  ]
+ },
+ {
+  "inizio": "Una mano",
+  "fine": "lava l'altra",
+  "sbagliate": [
+   "scrive meglio",
+   "tiene l'ombrello"
+  ]
+ },
+ {
+  "inizio": "Chi semina vento",
+  "fine": "raccoglie tempesta",
+  "sbagliate": [
+   "raccoglie grano",
+   "raccoglie fiori"
+  ]
  }
 ]

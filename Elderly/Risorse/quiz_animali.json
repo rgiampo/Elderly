@@ -1,95 +1,185 @@
 {
-  "titolo": "Animali",
-  "domande": [
+ "titolo": "Animali",
+ "domande": [
+  {
+   "testo": "Quale è il gatto?",
+   "risposte": [
     {
-      "testo": "Quale è il gatto?",
-      "risposte": [
-        {
-          "testo": "1. foto di un piccolo felino domestico con i baffi",
-          "foto": "foto_gatto",
-          "giusta": true
-        },
-        {
-          "testo": "2. foto di un quadrupede domestico che abbaia",
-          "foto": "foto_cane",
-          "giusta": false
-        }
-      ]
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": true
     },
     {
-      "testo": "Quale è il cane?",
-      "risposte": [
-        {
-          "testo": "1. foto di un quadrupede domestico che abbaia",
-          "foto": "foto_cane",
-          "giusta": true
-        },
-        {
-          "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
-          "foto": "foto_gallina",
-          "giusta": false
-        }
-      ]
-    },
-    {
-      "testo": "Quali sono le galline?",
-      "risposte": [
-        {
-          "testo": "1. foto di volatili da cortile con cresta e piume",
-          "foto": "foto_gallina",
-          "giusta": true
-        },
-        {
-          "testo": "2. foto di un grande animale con la criniera",
-          "foto": "foto_cavallo",
-          "giusta": false
-        }
-      ]
-    },
-    {
-      "testo": "Quale è il cavallo?",
-      "risposte": [
-        {
-          "testo": "1. foto di un grande animale con la criniera",
-          "foto": "foto_cavallo",
-          "giusta": true
-        },
-        {
-          "testo": "2. foto di un piccolo felino domestico con i baffi",
-          "foto": "foto_gatto",
-          "giusta": false
-        }
-      ]
-    },
-    {
-      "testo": "Quale animale fa miao?",
-      "risposte": [
-        {
-          "testo": "1. foto di un piccolo felino domestico con i baffi",
-          "foto": "foto_gatto",
-          "giusta": true
-        },
-        {
-          "testo": "2. foto di un quadrupede domestico che abbaia",
-          "foto": "foto_cane",
-          "giusta": false
-        }
-      ]
-    },
-    {
-      "testo": "Quale animale fa bau?",
-      "risposte": [
-        {
-          "testo": "1. foto di un quadrupede domestico che abbaia",
-          "foto": "foto_cane",
-          "giusta": true
-        },
-        {
-          "testo": "2. foto di un grande animale con la criniera",
-          "foto": "foto_cavallo",
-          "giusta": false
-        }
-      ]
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": false
     }
-  ]
+   ]
+  },
+  {
+   "testo": "Quale è il gatto?",
+   "risposte": [
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il gatto?",
+   "risposte": [
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cane?",
+   "risposte": [
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cane?",
+   "risposte": [
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cane?",
+   "risposte": [
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le galline?",
+   "risposte": [
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le galline?",
+   "risposte": [
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le galline?",
+   "risposte": [
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cavallo?",
+   "risposte": [
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cavallo?",
+   "risposte": [
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cavallo?",
+   "risposte": [
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": false
+    }
+   ]
+  }
+ ]
 }
