@@ -61,7 +61,6 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | foto_girasole | Sunflower Fields.jpg | Wenchieh Yang | CC0 | https://commons.wikimedia.org/wiki/File:Sunflower_Fields.jpg |
 | foto_margherita | Daisy Flower Variety.jpg | Alabama Extension | CC0 | https://commons.wikimedia.org/wiki/File:Daisy_Flower_Variety.jpg |
 | foto_mare | Komos site baie Crète.jpg | Jebulon | CC0 | https://commons.wikimedia.org/wiki/File:Komos_site_baie_Cr%C3%A8te.jpg |
-| foto_spiaggia | Sandy path leading to the sea shore.jpg | Irina Yankovaya | CC0 | https://commons.wikimedia.org/wiki/File:Sandy_path_leading_to_the_sea_shore.jpg |
 | foto_montagna | Snow-capped mountain range.jpg | Mshuang2 | CC0 | https://commons.wikimedia.org/wiki/File:Snow-capped_mountain_range.jpg |
 | foto_mucca | A Cow Grazing Nonchalantly in a Field of Wildflowers.jpg | Bánhmỳchảo | CC0 | https://commons.wikimedia.org/wiki/File:A_Cow_Grazing_Nonchalantly_in_a_Field_of_Wildflowers.jpg |
 | foto_maiale | Sus scrofa domesticus, miniature pig, juvenile.jpg | Johan Spaedtke | CC0 | https://commons.wikimedia.org/wiki/File:Sus_scrofa_domesticus,_miniature_pig,_juvenile.jpg |
