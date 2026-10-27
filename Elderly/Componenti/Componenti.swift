@@ -101,25 +101,3 @@ extension View {
     }
 }
 
-extension View {
-    /// Appare dal basso con un piccolo ritardo che dipende dalla posizione: gli elementi di una schermata entrano uno dopo l'altro.
-    /// Con "Riduci movimento" compare subito.
-    func entraInSequenza(_ posizione: Int) -> some View { modifier(EntraInSequenza(posizione: posizione)) }
-}
-
-private struct EntraInSequenza: ViewModifier {
-    let posizione: Int
-    @Environment(\.accessibilityReduceMotion) private var pocoMovimento
-    @State private var visibile = false
-
-    func body(content: Content) -> some View {
-        content
-            .opacity(visibile ? 1 : 0)
-            .offset(y: visibile ? 0 : 36)
-            .scaleEffect(visibile ? 1 : 0.96)
-            .onAppear {
-                if pocoMovimento { visibile = true }
-                else { withAnimation(.spring(duration: 0.55, bounce: 0.3).delay(Double(posizione) * 0.08)) { visibile = true } }
-            }
-    }
-}

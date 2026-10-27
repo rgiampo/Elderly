@@ -37,7 +37,6 @@ struct ElencoQuizView: View {
                             }
                         }
                         .buttonStyle(StilePremuto())
-                        .entraInSequenza(posizione)
                     }
                 }
                 .padding(.horizontal, 40).padding(.bottom, 40)
