@@ -33,18 +33,19 @@ struct ContentView: View {
                 .padding(40)
             }
         }
-        .onAppear {
+        .task {
+            // si aspetta che la schermata sia disposta: se no le cose "volano" dalla posizione iniziale
+            try? await Task.sleep(for: .seconds(0.3))
             entrato = true   // ogni elemento ha la sua animazione con il suo ritardo
         }
     }
 }
 
 extension View {
-    /// Scende dall'alto e diventa visibile, con un piccolo ritardo (per far comparire le cose una dopo l'altra).
+    /// Compare a dissolvenza, con un piccolo ritardo (per far comparire le cose una dopo l'altra).
     fileprivate func appari(_ entrato: Bool, ritardo: Double) -> some View {
         opacity(entrato ? 1 : 0)
-            .offset(y: entrato ? 0 : -30)
-            .animation(.spring(duration: 0.7, bounce: 0.3).delay(ritardo), value: entrato)
+            .animation(.easeIn(duration: 0.6).delay(ritardo), value: entrato)
     }
 }
 
@@ -63,23 +64,14 @@ private struct Titolo: View {
                 .shadow(color: Tema.testo.opacity(0.22), radius: 14, y: 10)
                 .lineLimit(1).minimumScaleFactor(0.4)
                 .opacity(entrato ? 1 : 0)
-                .offset(y: entrato ? 0 : -30)
-                .animation(.spring(duration: 0.7, bounce: 0.3), value: entrato)
+                .animation(.easeIn(duration: 0.6), value: entrato)
                 .accessibilityAddTraits(.isHeader)
 
             Ghirigoro()
+                .trim(from: 0, to: entrato ? 1 : 0)
                 .stroke(Tema.blu, style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .round))
                 .frame(height: 80)
-                // compare da sinistra verso destra: una tendina scopre la linea (non la si disegna lungo il tracciato)
-                .mask {
-                    GeometryReader { spazio in
-                        // più alta della linea: i riccioli escono dai suoi bordi e non devono essere tagliati
-                        Rectangle()
-                            .frame(width: entrato ? spazio.size.width : 0, height: spazio.size.height + 240)
-                            .offset(y: -120)
-                            .animation(.easeInOut(duration: 1.0).delay(0.4), value: entrato)
-                    }
-                }
+                .animation(.easeInOut(duration: 0.9).delay(0.4), value: entrato)
                 .accessibilityHidden(true)
         }
         .frame(maxWidth: 640)   // la stessa larghezza dei pulsanti
