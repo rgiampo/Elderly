@@ -43,8 +43,6 @@ struct CosaMancaView: View {
 
     private var partita: some View {
         VStack(spacing: 16) {
-            BannerTurno(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
-
             Text(titolo)
                 .testo(DimensioneTesto.grande)
                 .foregroundStyle(Tema.testo)

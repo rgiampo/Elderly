@@ -8,8 +8,10 @@ struct BarraGiocatori: View {
     var punti: [Int] = []
 
     var body: some View {
-        // Con due persone in partita il turno e i punti stanno nel grande banner (BannerTurno): qui sarebbero doppi.
-        if giocatori.contains(where: \.haNome) && !(turno != nil && giocatori.count > 1) {
+        if let turno, giocatori.count > 1, giocatori.indices.contains(turno), giocatori[turno].haNome {
+            // con due persone in partita: un grande banner colorato nella barra in alto, con chi tocca e i punti di tutti
+            BannerTurno(giocatori: giocatori, turno: turno, punti: punti, altezza: 92)
+        } else if giocatori.contains(where: \.haNome) {
             HStack(spacing: 16) {
                 ForEach(Array(giocatori.enumerated()), id: \.element.id) { posizione, giocatore in
                     Pedina(giocatore: giocatore,

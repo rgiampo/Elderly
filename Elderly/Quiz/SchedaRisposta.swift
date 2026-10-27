@@ -9,8 +9,7 @@ struct SchedaRisposta: View {
     let stato: Stato
 
     var body: some View {
-        FotoView(foto: risposta.foto, intera: true)
-            .aspectRatio(Configurazione.formaFoto, contentMode: .fit)
+        FotoView(foto: risposta.foto, intera: false)   // riempie la scheda, ritagliando un po' ai lati
             .overlay(alignment: .bottom) { if stato == .giusta { nomeSulla } }
             .overlay(alignment: .topTrailing) { if stato == .giusta { spunta } else if stato == .sbagliata { croce } }
             .overlay { if stato == .sbagliata { Tema.rosso.opacity(0.5).allowsHitTesting(false) } }

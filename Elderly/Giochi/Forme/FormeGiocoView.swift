@@ -17,8 +17,6 @@ struct FormeGiocoView: View {
             SfondoCielo()
 
             VStack(spacing: 16) {
-                BannerTurno(giocatori: giocatori, turno: partita.giocatoreCorrente)
-
                 Text(partita.messaggio)
                     .testo(DimensioneTesto.titolo)
                     .foregroundStyle(Tema.testo)

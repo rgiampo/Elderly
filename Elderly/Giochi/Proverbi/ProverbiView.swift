@@ -42,8 +42,6 @@ struct ProverbiView: View {
 
     private var partita: some View {
         VStack(spacing: 20) {
-            BannerTurno(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
-
             // l'inizio del proverbio, e dopo la risposta giusta il proverbio intero
             VStack(spacing: 8) {
                 Text(modello.trovata ? modello.proverbio.completo : modello.proverbio.inizio + " …")

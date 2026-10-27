@@ -45,8 +45,6 @@ struct SiNoView: View {
     /// Foto e pulsanti hanno la stessa altezza: il bordo in alto e quello in basso sono sulla stessa linea.
     private var partita: some View {
         VStack(spacing: 16) {
-            BannerTurno(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
-
             GeometryReader { spazio in
                 let colonna: CGFloat = 520, distanza: CGFloat = 28
                 let larghezzaMassima = spazio.size.width - colonna - distanza

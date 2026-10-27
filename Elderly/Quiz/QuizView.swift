@@ -48,8 +48,6 @@ struct QuizView: View {
 
     private var partita: some View {
         VStack(spacing: 16) {
-            BannerTurno(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
-
             Text(modello.domanda.testo)
                 .testo(DimensioneTesto.grande)
                 .foregroundStyle(Tema.testo)
@@ -57,15 +55,22 @@ struct QuizView: View {
                 .lineLimit(2).minimumScaleFactor(0.5)
                 .accessibilityAddTraits(.isHeader)
 
-            // le foto prendono tutto lo spazio che resta
-            HStack(spacing: 24) {
-                ForEach(modello.risposte) { risposta in
-                    Button { modello.scegli(risposta) } label: {
-                        SchedaRisposta(risposta: risposta, stato: stato(di: risposta))
+            // le foto prendono tutto lo spazio che resta: più alte che larghe (4:3, ritagliate ai lati) per essere il più grandi possibile
+            GeometryReader { spazio in
+                let distanza: CGFloat = 24
+                let larghezza = (spazio.size.width - distanza * CGFloat(modello.risposte.count - 1)) / CGFloat(modello.risposte.count)
+                let altezza = min(spazio.size.height, larghezza * 0.9)
+                HStack(spacing: distanza) {
+                    ForEach(modello.risposte) { risposta in
+                        Button { modello.scegli(risposta) } label: {
+                            SchedaRisposta(risposta: risposta, stato: stato(di: risposta))
+                                .frame(width: larghezza, height: altezza)
+                        }
+                        .buttonStyle(StilePremuto())
+                        .accessibilityLabel(risposta.testo)
                     }
-                    .buttonStyle(StilePremuto())
-                    .accessibilityLabel(risposta.testo)
                 }
+                .frame(width: spazio.size.width, height: spazio.size.height)
             }
             .grandezzaFoto()
 

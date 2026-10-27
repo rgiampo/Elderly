@@ -38,8 +38,6 @@ struct CoppieGiocoView: View {
 
     private var partita: some View {
         VStack(spacing: 16) {
-            BannerTurno(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
-
             GeometryReader { spazio in
                 let distanza: CGFloat = 20
                 let larghezza = (spazio.size.width - distanza * CGFloat(modello.colonne - 1)) / CGFloat(modello.colonne)
@@ -93,7 +91,7 @@ private struct CartaView: View {
     }
 
     private var fronte: some View {
-        FotoView(foto: carta.foto, intera: true)
+        FotoView(foto: carta.foto, intera: false)
             .clipShape(forma)
             .overlay(forma.stroke(Tema.verde, lineWidth: carta.trovata ? 8 : 0))
             .overlay(alignment: .topTrailing) {
