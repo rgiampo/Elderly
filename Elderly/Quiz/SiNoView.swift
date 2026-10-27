@@ -50,7 +50,7 @@ struct SiNoView: View {
                 FotoView(foto: modello.quesito.foto)
                     .clipShape(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
                     .shadow(color: Tema.testo.opacity(0.2), radius: 12, y: 6)
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .grandezzaFoto()
                     .id(modello.quesito.id)
                     .transition(.opacity)
                     .accessibilityHidden(true)

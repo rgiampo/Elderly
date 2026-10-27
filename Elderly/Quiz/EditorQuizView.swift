@@ -9,6 +9,7 @@ struct EditorQuizView: View {
     @Environment(\.modelContext) private var contesto
     @Environment(\.dismiss) private var chiudi
     @State private var bozza = BozzaQuiz()
+    @State private var chiediUscita = false
 
     var body: some View {
         Form {
@@ -37,10 +38,19 @@ struct EditorQuizView: View {
         .navigationTitle(quiz == nil ? "Nuovo quiz" : "Modifica quiz")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .cancellationAction) { Button("Annulla") { chiudi() } }
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Annulla") { if !bozza.titolo.isEmpty { chiediUscita = true } else { chiudi() } }
+            }
             ToolbarItem(placement: .confirmationAction) {
                 Button("Salva", action: salva).disabled(bozza.problema != nil)
             }
+        }
+        .interactiveDismissDisabled()   // toccare fuori dalla finestra non la chiude: non si perde il quiz
+        .confirmationDialog("Uscire senza salvare?", isPresented: $chiediUscita, titleVisibility: .visible) {
+            Button("Esci senza salvare", role: .destructive) { chiudi() }
+            Button("Continua a scrivere", role: .cancel) {}
+        } message: {
+            Text("Quello che hai scritto andrà perso.")
         }
         .onAppear {
             if let quiz { bozza = BozzaQuiz(quiz) } else if let partenza { bozza = partenza }

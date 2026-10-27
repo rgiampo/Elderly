@@ -4,6 +4,8 @@ import AVFoundation
 /// Poche scelte, per chi accompagna il gioco.
 struct OpzioniView: View {
     @AppStorage("suoniAttivi") private var suoniAttivi = true
+    @AppStorage(Grandezza.chiaveTesto) private var grandezzaTesto = Grandezza.media.rawValue
+    @AppStorage(Grandezza.chiaveFoto) private var grandezzaFoto = Grandezza.grande.rawValue
     @AppStorage(Voce.chiaveVoceScelta) private var voceScelta = ""
     @State private var voce = Voce()
 
@@ -14,6 +16,9 @@ struct OpzioniView: View {
             SfondoCielo()
 
             Form {
+                Section("Grandezza dei testi") { scelta($grandezzaTesto) }
+                Section("Grandezza delle foto") { scelta($grandezzaFoto) }
+
                 Section {
                     Toggle("Suoni", isOn: $suoniAttivi)
                 } footer: {
@@ -37,6 +42,27 @@ struct OpzioniView: View {
         }
         .conIndietro(titolo: "Opzioni")
         .onDisappear { voce.ferma() }
+    }
+}
+
+extension OpzioniView {
+    /// Tre pulsanti grandi: Piccola, Media, Grande. Quello scelto è pieno di colore.
+    fileprivate func scelta(_ valore: Binding<String>) -> some View {
+        HStack(spacing: 12) {
+            ForEach(Grandezza.allCases) { opzione in
+                Button { valore.wrappedValue = opzione.rawValue } label: {
+                    Text(opzione.nome)
+                        .testo(DimensioneTesto.normale)
+                        .foregroundStyle(valore.wrappedValue == opzione.rawValue ? .white : Tema.testo)
+                        .lineLimit(1).minimumScaleFactor(0.5)
+                        .frame(maxWidth: .infinity, minHeight: 76)
+                        .background(valore.wrappedValue == opzione.rawValue ? Tema.blu : Tema.celeste.opacity(0.45),
+                                    in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+                }
+                .buttonStyle(.plain)
+                .accessibilityAddTraits(valore.wrappedValue == opzione.rawValue ? .isSelected : [])
+            }
+        }
     }
 }
 

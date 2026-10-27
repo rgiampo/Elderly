@@ -16,6 +16,7 @@ struct UtenteFormView: View {
     @State private var dataDiNascita = Calendar.current.date(from: DateComponents(year: 1950, month: 1, day: 1)) ?? .now
     @State private var foto: Data?
     @State private var chiediEliminazione = false
+    @State private var chiediUscita = false
 
     var body: some View {
         Form {
@@ -78,7 +79,9 @@ struct UtenteFormView: View {
         .navigationTitle(utente == nil ? "Nuova persona" : "Modifica")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .cancellationAction) { Button("Annulla") { chiudi() } }
+            ToolbarItem(placement: .cancellationAction) {
+                Button("Annulla") { if !nome.isEmpty || foto != nil { chiediUscita = true } else { chiudi() } }
+            }
             ToolbarItem(placement: .confirmationAction) {
                 Button("Salva", action: salva).disabled(nome.trimmingCharacters(in: .whitespaces).isEmpty)
             }
@@ -87,6 +90,13 @@ struct UtenteFormView: View {
             Button("Elimina", role: .destructive, action: elimina)
         } message: {
             Text("La persona e la sua foto verranno cancellate.")
+        }
+        .interactiveDismissDisabled()   // toccare fuori dalla finestra non la chiude: non si perde quello che hai scritto
+        .confirmationDialog("Uscire senza salvare?", isPresented: $chiediUscita, titleVisibility: .visible) {
+            Button("Esci senza salvare", role: .destructive) { chiudi() }
+            Button("Continua a scrivere", role: .cancel) {}
+        } message: {
+            Text("Quello che hai scritto andrà perso.")
         }
         .onAppear(perform: carica)
     }

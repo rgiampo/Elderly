@@ -67,7 +67,7 @@ struct QuizView: View {
                     .accessibilityLabel(risposta.testo)
                 }
             }
-            .frame(maxHeight: .infinity)
+            .grandezzaFoto()
 
             HStack(spacing: 24) {
                 Text(modello.messaggio)

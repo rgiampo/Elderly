@@ -31,13 +31,15 @@ struct UtentiView: View {
 
                     Button { nuovoUtente = true } label: {
                         Label("Aggiungi una persona", systemImage: "plus")
-                            .testo(DimensioneTesto.grande)
+                            .testo(DimensioneTesto.medio)
                             .foregroundStyle(.white)
                             .lineLimit(1).minimumScaleFactor(0.5)
-                            .frame(maxWidth: .infinity, minHeight: 110)
+                            .padding(.horizontal, 44)
+                            .frame(minHeight: 76)
                             .vetro(Tema.blu)
                     }
                     .buttonStyle(StilePremuto())
+                    .frame(maxWidth: .infinity)
                     .padding(.top, 8)
                 }
                 .padding(.horizontal, 40).padding(.bottom, 40)

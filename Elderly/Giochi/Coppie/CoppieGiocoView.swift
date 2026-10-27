@@ -56,6 +56,7 @@ struct CoppieGiocoView: View {
                 }
                 .frame(width: spazio.size.width, height: spazio.size.height)
             }
+            .grandezzaFoto()
 
             HStack(spacing: 24) {
                 Text(modello.messaggio)

@@ -72,13 +72,15 @@ enum DimensioneTesto {
 /// Tutto il testo dell'app è San Francisco (il font di sistema) in grassetto: si legge meglio da lontano.
 private struct StileTesto: ViewModifier {
     @ScaledMetric private var dimensione: CGFloat
+    @AppStorage(Grandezza.chiaveTesto) private var scelta = Grandezza.media.rawValue
 
     init(_ base: CGFloat) {
         _dimensione = ScaledMetric(wrappedValue: base, relativeTo: .title)
     }
 
     func body(content: Content) -> some View {
-        content.font(.system(size: dimensione, weight: .bold))
+        let fattore = (Grandezza(rawValue: scelta) ?? .media).fattoreTesto
+        content.font(.system(size: dimensione * fattore, weight: .bold))
     }
 }
 
