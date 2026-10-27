@@ -40,7 +40,7 @@ enum Gioco: CaseIterable, Identifiable {
         }
     }
 
-    /// L'immagine che dà l'idea del gioco.
+    /// L'immagine che dà l'idea del gioco. Riempie tutta la parte alta della scheda, bordo a bordo.
     @ViewBuilder var anteprima: some View {
         switch self {
         case .forme:
@@ -48,24 +48,39 @@ enum Gioco: CaseIterable, Identifiable {
                 ForEach([Forma.cerchio, .quadrato, .triangolo, .stella]) { forma in
                     forma.sagoma.fill(forma.colore).aspectRatio(1, contentMode: .fit)
                 }
-            }.padding(22)
+            }
+            .padding(28)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Tema.celeste.opacity(0.35))
         case .coppie:
             HStack(spacing: 12) {
                 carta(.risorsa("foto_marinara"))
                 carta(nil)
                 carta(.risorsa("foto_marinara"))
-            }.padding(16)
+            }
+            .padding(20)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Tema.celeste.opacity(0.35))
         case .quiz:
-            HStack(spacing: 12) {
-                carta(.risorsa("foto_gatto"))
-                carta(.risorsa("foto_cane"))
-            }.padding(16)
+            // due metà una sopra l'altra, ognuna in orizzontale come una foto vera
+            VStack(spacing: 4) {
+                metà(.risorsa("foto_gatto"))
+                metà(.risorsa("foto_cane"))
+            }
         case .sìNo:
-            HStack(spacing: 40) {
-                Circle().fill(Tema.verde).aspectRatio(1, contentMode: .fit)
-                SagomaTriangolo().fill(Tema.rosso).aspectRatio(1, contentMode: .fit)
-            }.padding(22)
+            VStack(spacing: 4) {
+                Tema.verde.overlay(
+                    Circle().fill(.white).aspectRatio(1, contentMode: .fit).padding(36)
+                        .overlay(Image(systemName: "checkmark").font(.system(size: 80, weight: .black)).foregroundStyle(Tema.verde)))
+                Tema.rosso.overlay(
+                    SagomaTriangolo().fill(.white).aspectRatio(1, contentMode: .fit).padding(36)
+                        .overlay(Image(systemName: "xmark").font(.system(size: 70, weight: .black)).foregroundStyle(Tema.rosso).offset(y: 14)))
+            }
         }
+    }
+
+    private func metà(_ foto: FotoQuiz) -> some View {
+        Color.clear.overlay { FotoView(foto: foto, intera: false) }.clipped()
     }
 
     @ViewBuilder private func carta(_ foto: FotoQuiz?) -> some View {

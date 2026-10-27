@@ -11,36 +11,34 @@ struct ChiGiocaView: View {
         ZStack {
             SfondoCielo()
 
-            VStack(spacing: 20) {
+            VStack(spacing: 24) {
                 Text("Scegli una o due persone, oppure vai avanti per giocare senza nome")
                     .testo(DimensioneTesto.normale)
                     .foregroundStyle(Tema.testoSecondario)
                     .multilineTextAlignment(.center)
                     .fixedSize(horizontal: false, vertical: true)
+                    .padding(.top, 8)
 
-                ScrollView {
-                    VStack(spacing: 16) {
-                        ForEach(utenti) { utente in
-                            Button { sessione.alterna(utente) } label: {
-                                RigaUtente(utente: utente) { segno(per: utente) }
-                                    .overlay(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous)
-                                        .stroke(colore(per: utente) ?? .clear, lineWidth: 8))
-                                    .opacity(sessione.sceltaPiena && !sessione.èScelto(utente) ? 0.45 : 1)
-                            }
-                            .buttonStyle(StilePremuto())
-                            .accessibilityValue(posto(di: utente).map { "Scelto, numero \($0)" } ?? "Non scelto")
-                            .accessibilityHint(sessione.sceltaPiena && !sessione.èScelto(utente)
-                                               ? "Sono già state scelte due persone" : "Tocca per scegliere")
+                if utenti.isEmpty {
+                    Text("Non ci sono ancora persone: le aggiungi nella sezione Utenti.")
+                        .testo(DimensioneTesto.medio)
+                        .foregroundStyle(Tema.testo)
+                        .multilineTextAlignment(.center)
+                        .padding(.vertical, 24)
+                    Spacer(minLength: 0)
+                } else {
+                    ListaAlfabetica(utenti: utenti) { utente in
+                        Button { sessione.alterna(utente) } label: {
+                            RigaUtente(utente: utente) { segno(per: utente) }
+                                .overlay(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous)
+                                    .stroke(colore(per: utente) ?? .clear, lineWidth: 8))
+                                .opacity(sessione.sceltaPiena && !sessione.èScelto(utente) ? 0.45 : 1)
                         }
-                        if utenti.isEmpty {
-                            Text("Non ci sono ancora persone: le aggiungi nella sezione Utenti.")
-                                .testo(DimensioneTesto.medio)
-                                .foregroundStyle(Tema.testo)
-                                .multilineTextAlignment(.center)
-                                .padding(.vertical, 24)
-                        }
+                        .buttonStyle(StilePremuto())
+                        .accessibilityValue(posto(di: utente).map { "Scelto, numero \($0)" } ?? "Non scelto")
+                        .accessibilityHint(sessione.sceltaPiena && !sessione.èScelto(utente)
+                                           ? "Sono già state scelte due persone" : "Tocca per scegliere")
                     }
-                    .padding(.vertical, 8)
                 }
 
                 NavigationLink(destination: GiochiView()) {
@@ -48,8 +46,8 @@ struct ChiGiocaView: View {
                 }
                 .buttonStyle(StilePremuto())
             }
-            .padding(.horizontal, 40).padding(.bottom, 24)
-            .frame(maxWidth: 1000)
+            .padding(.horizontal, 40).padding(.bottom, 32)
+            .frame(maxWidth: 1100)
         }
         .conIndietro(titolo: "Chi gioca?")
     }

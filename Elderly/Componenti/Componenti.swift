@@ -41,7 +41,7 @@ struct PulsanteSecondario: View {
     }
 }
 
-/// Barra in alto con un grande "Indietro" (il pulsante piccolo di sistema è difficile da toccare).
+/// Barra in alto: la freccia per tornare indietro (tonda e grande), il titolo e, a destra, quello che serve alla schermata.
 /// Si usa su tutte le schermate tranne la prima.
 struct BarraIndietro<Destra: View>: ViewModifier {
     var titolo: String?
@@ -55,12 +55,11 @@ struct BarraIndietro<Destra: View>: ViewModifier {
             .safeAreaInset(edge: .top, spacing: 0) {
                 HStack(spacing: 24) {
                     Button { chiudi() } label: {
-                        Label("Indietro", systemImage: "chevron.left")
-                            .testo(DimensioneTesto.medio)
+                        Image(systemName: "chevron.left")
+                            .font(.system(size: 38, weight: .bold))
                             .foregroundStyle(Tema.testo)
-                            .padding(.horizontal, 32)
-                            .frame(minHeight: 84)
-                            .vetro(.white.opacity(0.78))
+                            .frame(width: 88, height: 88)
+                            .vetro(.white.opacity(0.85), in: Circle())
                     }
                     .buttonStyle(StilePremuto())
                     .accessibilityLabel("Indietro")
@@ -75,7 +74,7 @@ struct BarraIndietro<Destra: View>: ViewModifier {
                     Spacer(minLength: 0)
                     destra
                 }
-                .padding(.horizontal, 40).padding(.top, 12).padding(.bottom, 12)
+                .padding(.horizontal, 40).padding(.top, 10).padding(.bottom, 18)
                 .barraOpaca()
             }
     }
@@ -89,11 +88,14 @@ extension View {
 }
 
 extension View {
-    /// Sfondo pieno per le barre in alto: quando la lista scorre, i contenuti passano sotto la barra senza sovrapporsi al titolo.
+    /// Sfondo delle barre in alto: pieno dove c'è il testo, poi sfuma. I contenuti che scorrono passano sotto senza toccare il titolo.
     func barraOpaca() -> some View {
         background {
-            Tema.celeste
-                .shadow(color: Tema.testo.opacity(0.12), radius: 8, y: 4)
+            LinearGradient(stops: [.init(color: Tema.celeste, location: 0),
+                                   .init(color: Tema.celeste, location: 0.72),
+                                   .init(color: Tema.celeste.opacity(0), location: 1)],
+                           startPoint: .top, endPoint: .bottom)
+                .padding(.bottom, -14)
                 .ignoresSafeArea(edges: .top)
         }
     }

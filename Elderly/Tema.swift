@@ -1,27 +1,44 @@
 import SwiftUI
 
-/// Colori dell'app. Sempre in modalità chiara: i contrasti sono stati misurati per questa.
+/// LA PALETTE DELL'APP. Tutti i colori vengono da qui: si cambia un valore e cambia ovunque.
+///
+/// Famiglia degli azzurri, dal più chiaro al più scuro:
+///   cielo (sfondo)  ·  azzurro (pulsanti vivaci)  ·  azzurro scuro (azione principale)  ·  notte (rari accenti)
+/// Due colori "di significato", usati solo quando serve dire sì/no o giusto/sbagliato:
+///   verde (sì, giusto)  ·  rosso (no)
+/// Più il petrolio, un azzurro-verde scuro, per il secondo giocatore. Il testo è marrone scuro quasi nero.
+/// Tutti i colori con il testo bianco sopra hanno un contrasto di almeno 5:1.
 enum Tema {
-    /// Celeste di sfondo (#A9D8FF): chiaro e riposante per gli occhi.
-    /// Con il testo blu notte il contrasto è 10:1 (la soglia AAA è 7:1). Mai testo bianco direttamente sul celeste.
-    static let celeste = Color(red: 0.66, green: 0.85, blue: 1.0)
-    static let celesteChiaro = Color(red: 0.76, green: 0.90, blue: 1.0)
+    // — Sfondi
+    static let celeste = Color(hex: 0xA9D8FF)         // cielo: sfondo di tutte le schermate (con il testo scuro: 11:1)
+    static let celesteChiaro = Color(hex: 0xC4E6FF)   // cielo più chiaro: sfumature e riquadri
+    static let carta = Color.white                    // schede e campi
 
-    /// Marrone scuro quasi nero (#2A1A12): contrasto 12:1 sul celeste e 16:1 sul bianco.
-    static let testo = Color(red: 0.165, green: 0.10, blue: 0.07)
-    static let testoSecondario = Color(red: 0.30, green: 0.20, blue: 0.14)
+    // — Azzurri (testo bianco sopra)
+    static let azzurro = Color(hex: 0x1C6FBF)         // pulsanti vivaci, per esempio "Ascolta" (5,2:1)
+    static let blu = Color(hex: 0x0A4595)             // azione principale e primo giocatore (9,1:1)
+    static let notte = Color(hex: 0x072B5B)           // accenti rari e molto scuri (13,9:1)
+    static let petrolio = Color(hex: 0x0B6E86)        // secondo giocatore: azzurro-verde scuro (5,9:1)
 
-    static let carta = Color.white
-    static let blu = Color(red: 0.04, green: 0.27, blue: 0.62)         // testo bianco sopra: 8,9:1
-    static let arancione = Color(red: 0.72, green: 0.30, blue: 0.04)   // testo bianco sopra: 5,1:1
-    static let verde = Color(red: 0.05, green: 0.45, blue: 0.22)       // testo bianco sopra: 6,6:1
-    static let rosso = Color(red: 0.75, green: 0.12, blue: 0.12)       // testo bianco sopra: 6,5:1
-    static let giallo = Color(red: 1.0, green: 0.80, blue: 0.20)       // testo scuro sopra
+    // — Colori di significato
+    static let verde = Color(hex: 0x0B7A54)           // sì, giusto (5,3:1)
+    static let rosso = Color(hex: 0xB3261E)           // no (6,5:1)
 
-    /// Il colore di ogni giocatore: il primo blu, il secondo arancione.
-    static func coloreGiocatore(_ posizione: Int) -> Color { posizione == 0 ? blu : arancione }
+    // — Testo (marrone scuro quasi nero: 11:1 sul cielo, 16,7:1 sul bianco)
+    static let testo = Color(hex: 0x2A1A12)
+    static let testoSecondario = Color(hex: 0x4B3326)
+
+    /// Il colore di ogni giocatore: il primo azzurro scuro, il secondo petrolio.
+    static func coloreGiocatore(_ posizione: Int) -> Color { posizione == 0 ? blu : petrolio }
 
     static let raggio: CGFloat = 40   // angoli di schede e pulsanti (morbidi, come nelle app Apple)
+}
+
+extension Color {
+    /// Un colore da un numero esadecimale, per esempio `Color(hex: 0xA9D8FF)`.
+    init(hex: UInt32) {
+        self.init(red: Double((hex >> 16) & 0xFF) / 255, green: Double((hex >> 8) & 0xFF) / 255, blue: Double(hex & 0xFF) / 255)
+    }
 }
 
 /// Sfondo celeste, quasi piatto: una luce morbida che si sposta lentamente.

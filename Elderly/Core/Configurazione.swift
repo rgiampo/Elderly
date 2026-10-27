@@ -25,7 +25,7 @@ enum Configurazione {
     static let pausaDopoRispostaGiusta = 2.5
 
     /// Velocità della voce che legge: 1 = normale, meno di 1 = più lenta (meglio per chi ascolta con calma).
-    static let velocitaVoce: Float = 0.9
+    static let velocitaVoce: Float = 0.88
 
     /// Forma (larghezza / altezza) delle schede con la foto nei quiz: quella delle foto più comuni, così si vedono intere.
     static let formaFoto: CGFloat = 3.0 / 2.0

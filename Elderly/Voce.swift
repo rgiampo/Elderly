@@ -22,11 +22,17 @@ final class Voce: NSObject, AVSpeechSynthesizerDelegate {
             return
         }
         try? AVAudioSession.sharedInstance().setCategory(.playback, options: .duckOthers)
-        let frase = AVSpeechUtterance(string: testo)
-        frase.voice = Self.voceDaUsare()
-        frase.rate = AVSpeechUtteranceDefaultSpeechRate * Configurazione.velocitaVoce
-        frase.preUtteranceDelay = 0.2
-        sintetizzatore.speak(frase)
+        // Una frase alla volta, con una piccola pausa in mezzo: suona più naturale che leggere tutto di fila.
+        let frasi = testo.split(whereSeparator: { ".?!".contains($0) }).map { $0.trimmingCharacters(in: .whitespaces) }.filter { !$0.isEmpty }
+        let voce = Self.voceDaUsare()
+        for frase in frasi {
+            let battuta = AVSpeechUtterance(string: frase)
+            battuta.voice = voce
+            battuta.rate = AVSpeechUtteranceDefaultSpeechRate * Configurazione.velocitaVoce
+            battuta.pitchMultiplier = 0.95
+            battuta.postUtteranceDelay = 0.35
+            sintetizzatore.speak(battuta)
+        }
     }
 
     func ferma() { sintetizzatore.stopSpeaking(at: .immediate) }
@@ -49,6 +55,9 @@ final class Voce: NSObject, AVSpeechSynthesizerDelegate {
         default: voce.name
         }
     }
+
+    /// C'è sul tablet una voce italiana di qualità alta o migliorata? Se no, la voce suona più "robotica".
+    static var èVoceDiQualitàInstallata: Bool { vociItaliane().contains { $0.quality != .default } }
 
     /// La voce scelta nelle Opzioni; se non c'è, la migliore tra quelle installate.
     static func voceDaUsare() -> AVSpeechSynthesisVoice? {
@@ -85,10 +94,10 @@ struct BottoneVoce: View {
                     .testo(DimensioneTesto.medio)
                     .lineLimit(1).minimumScaleFactor(0.5)
             }
-            .foregroundStyle(Tema.testo)
+            .foregroundStyle(.white)
             .padding(.horizontal, 32)
             .frame(minHeight: altezza)
-            .vetro(Tema.giallo)
+            .vetro(Tema.azzurro)
         }
         .buttonStyle(StilePremuto())
         .accessibilityLabel(voce.staParlando ? "Ferma la lettura" : etichetta)

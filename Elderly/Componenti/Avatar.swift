@@ -10,7 +10,7 @@ struct Avatar: View {
             if let dati = utente?.foto, let immagine = Immagini.ridotta(da: dati, latoMassimo: dimensione * 3) {
                 Image(uiImage: immagine).resizable().scaledToFill()
             } else {
-                Circle().fill(Tema.carta)
+                Circle().fill(Tema.celeste.opacity(0.6))
                 if let utente, !utente.iniziali.isEmpty {
                     Text(utente.iniziali)
                         .font(.system(size: dimensione * 0.4, weight: .bold))

@@ -10,9 +10,16 @@ struct UtentiView: View {
         ZStack {
             SfondoCielo()
 
-            ScrollView {
-                VStack(spacing: 18) {
-                    ForEach(utenti) { utente in
+            VStack(spacing: 24) {
+                if utenti.isEmpty {
+                    Text("Non c'è nessuna persona.\nTocca il pulsante qui sotto per aggiungerne una.")
+                        .testo(DimensioneTesto.medio)
+                        .foregroundStyle(Tema.testo)
+                        .multilineTextAlignment(.center)
+                        .padding(.vertical, 40)
+                    Spacer(minLength: 0)
+                } else {
+                    ListaAlfabetica(utenti: utenti) { utente in
                         NavigationLink(destination: UtenteFormView(utente: utente)) {
                             RigaUtente(utente: utente) {
                                 Image(systemName: "chevron.right").font(.system(size: 32, weight: .bold))
@@ -20,32 +27,21 @@ struct UtentiView: View {
                         }
                         .buttonStyle(StilePremuto())
                     }
-
-                    if utenti.isEmpty {
-                        Text("Non c'è nessuna persona.\nTocca il pulsante qui sotto per aggiungerne una.")
-                            .testo(DimensioneTesto.medio)
-                            .foregroundStyle(Tema.testo)
-                            .multilineTextAlignment(.center)
-                            .padding(.vertical, 40)
-                    }
-
-                    Button { nuovoUtente = true } label: {
-                        Label("Aggiungi una persona", systemImage: "plus")
-                            .testo(DimensioneTesto.medio)
-                            .foregroundStyle(.white)
-                            .lineLimit(1).minimumScaleFactor(0.5)
-                            .padding(.horizontal, 44)
-                            .frame(minHeight: 76)
-                            .vetro(Tema.blu)
-                    }
-                    .buttonStyle(StilePremuto())
-                    .frame(maxWidth: .infinity)
-                    .padding(.top, 8)
                 }
-                .padding(.horizontal, 40).padding(.bottom, 40)
-                .frame(maxWidth: 1000)
-                .frame(maxWidth: .infinity)
+
+                Button { nuovoUtente = true } label: {
+                    Label("Aggiungi una persona", systemImage: "plus")
+                        .testo(DimensioneTesto.medio)
+                        .foregroundStyle(.white)
+                        .lineLimit(1).minimumScaleFactor(0.5)
+                        .padding(.horizontal, 44)
+                        .frame(minHeight: 76)
+                        .vetro(Tema.blu)
+                }
+                .buttonStyle(StilePremuto())
             }
+            .padding(.horizontal, 40).padding(.bottom, 32)
+            .frame(maxWidth: 1100)
         }
         .conIndietro(titolo: "Utenti")
         .fullScreenCover(isPresented: $nuovoUtente) {

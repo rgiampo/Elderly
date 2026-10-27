@@ -82,9 +82,9 @@ private struct SchedaGioco: View {
         VStack(spacing: 0) {
             gioco.anteprima
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background(Tema.celeste.opacity(0.35))
+                .clipped()
 
-            VStack(spacing: 6) {
+            VStack(spacing: 10) {
                 Text(gioco.titolo).testo(DimensioneTesto.grande)
                     .lineLimit(1).minimumScaleFactor(0.5)
                 Text(gioco.descrizione).testo(DimensioneTesto.normale)
@@ -92,7 +92,7 @@ private struct SchedaGioco: View {
                     .lineLimit(1).minimumScaleFactor(0.5)
             }
             .foregroundStyle(Tema.testo)
-            .padding(.vertical, 22).padding(.horizontal, 12)
+            .padding(.vertical, 28).padding(.horizontal, 24)
             .frame(maxWidth: .infinity)
         }
         .frame(maxHeight: .infinity)
