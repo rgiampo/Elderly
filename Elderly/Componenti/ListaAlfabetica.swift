@@ -39,24 +39,25 @@ struct ListaAlfabetica<Riga: View>: View {
         }
     }
 
-    /// La barra delle lettere. Si può toccare una lettera oppure trascinare il dito lungo la barra.
+    /// La barra delle lettere, alta quanto l'elenco e allineata in alto con la prima riga. Le lettere si distribuiscono
+    /// in parti uguali (al massimo 72 punti l'una, per toccarle bene). Si tocca una lettera o si trascina il dito lungo la barra.
     private func barra(_ proxy: ScrollViewProxy) -> some View {
         let lettere = gruppi.map(\.lettera)
         return GeometryReader { spazio in
-            let altezza = min(72, spazio.size.height / CGFloat(lettere.count))
+            let altezza = min(72, (spazio.size.height - 12) / CGFloat(lettere.count))
             VStack(spacing: 0) {
                 ForEach(lettere, id: \.self) { lettera in
                     Text(lettera)
-                        .testo(DimensioneTesto.normale)
+                        .testo(altezza < 56 ? 28 : DimensioneTesto.normale)
                         .foregroundStyle(letteraAttiva == lettera ? .white : Tema.blu)
-                        .frame(width: 64, height: altezza)
-                        .background(letteraAttiva == lettera ? Tema.blu : .clear, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        .frame(width: 60, height: altezza)
+                        .background(letteraAttiva == lettera ? Tema.blu : .clear, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
                         .accessibilityHidden(true)
                 }
             }
+            .padding(.vertical, 6).padding(.horizontal, 6)
             .frame(width: 72)
-            .padding(.vertical, 6)
-            .vetro(.white.opacity(0.78), in: RoundedRectangle(cornerRadius: 24, style: .continuous))
+            .vetro(.white.opacity(0.85), in: RoundedRectangle(cornerRadius: 24, style: .continuous))
             .contentShape(Rectangle())
             .gesture(DragGesture(minimumDistance: 0).onChanged { valore in
                 let posizione = Int((valore.location.y - 6) / altezza)
@@ -67,6 +68,7 @@ struct ListaAlfabetica<Riga: View>: View {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { letteraAttiva = nil }
             })
             .sensoryFeedback(.selection, trigger: letteraAttiva)
+            .frame(maxHeight: .infinity, alignment: .top)
         }
         .frame(width: 72)
         .accessibilityHidden(true)   // con VoiceOver si scorre l'elenco normalmente

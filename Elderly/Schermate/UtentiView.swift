@@ -52,13 +52,15 @@ struct UtentiView: View {
 
 /// Una persona in elenco: foto, nome e cognome su una riga, età. A destra va quello che serve alla schermata.
 struct RigaUtente<Accessorio: View>: View {
+    @AppStorage(Grandezza.chiaveTesto) private var grandezzaTesto = Grandezza.media.rawValue
+    private var fattore: CGFloat { (Grandezza(rawValue: grandezzaTesto) ?? .media).fattoreTesto }
     let utente: Utente
     var evidenza: Color? = nil          // se c'è, la riga si riempie di questo colore e il testo diventa bianco
     @ViewBuilder let accessorio: Accessorio
 
     var body: some View {
         HStack(spacing: 28) {
-            Avatar(utente: utente, dimensione: 110)
+            Avatar(utente: utente, dimensione: 110 * fattore)
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(utente.nomeCompleto)
@@ -73,7 +75,7 @@ struct RigaUtente<Accessorio: View>: View {
             accessorio
         }
         .foregroundStyle(evidenza == nil ? Tema.testo : .white)
-        .padding(20)
+        .padding(20 * fattore)
         .background {
             RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous)
                 .fill(evidenza ?? Tema.carta)
