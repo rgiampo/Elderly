@@ -3,10 +3,14 @@ import SwiftData
 
 @main
 struct ElderlyApp: App {
+    @State private var sessione = Sessione()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(sessione)
         }
-        .modelContainer(for: Utente.self) // crea e gestisce il database delle persone
+        // crea e gestisce il database: persone e quiz creati
+        .modelContainer(for: [Utente.self, QuizCreato.self])
     }
 }

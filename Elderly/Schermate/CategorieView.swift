@@ -2,6 +2,8 @@ import SwiftUI
 
 /// Scelta della categoria di gioco. Ogni categoria è una scheda grande.
 struct CategorieView: View {
+    @Environment(Sessione.self) private var sessione
+
     var body: some View {
         ZStack {
             SfondoCielo()
@@ -14,7 +16,7 @@ struct CategorieView: View {
                             .foregroundStyle(Tema.testo)
                             .accessibilityAddTraits(.isHeader)
                         Spacer()
-                        ChipUtente()
+                        BarraGiocatori(giocatori: sessione.giocatori)
                     }
 
                     NavigationLink(destination: FormeImpostazioniView()) {
@@ -27,10 +29,15 @@ struct CategorieView: View {
                         }
                     }
 
-                    NavigationLink(destination: QuizCucinaView()) {
+                    NavigationLink(destination: ElencoQuizView()) {
                         SchedaCategoria(titolo: "Cucina") {
                             HStack(spacing: 10) {
-                                ForEach(["🍕", "🍝", "🧀"], id: \.self) { Text($0).font(.system(size: 56)) }
+                                ForEach(["foto_pizza", "foto_spaghetti", "foto_pomodori"], id: \.self) { nome in
+                                    FotoView(foto: .risorsa(nome))
+                                        .frame(width: 84, height: 84)
+                                        .clipShape(Circle())
+                                        .overlay(Circle().stroke(.white, lineWidth: 3))
+                                }
                             }
                         }
                     }
@@ -67,4 +74,5 @@ struct SchedaCategoria<Anteprima: View>: View {
 
 #Preview(traits: .landscapeLeft) {
     NavigationStack { CategorieView() }
+        .environment(Sessione())
 }

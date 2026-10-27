@@ -11,7 +11,7 @@ struct ContentView: View {
                     Logo()
 
                     VStack(spacing: 24) {
-                        NavigationLink(destination: CategorieView()) {
+                        NavigationLink(destination: ChiGiocaView()) {
                             EtichettaMenu(italiano: "Gioca", inglese: "Play", colore: .white)
                         }
                         .buttonStyle(.glassProminent)

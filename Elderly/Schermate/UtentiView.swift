@@ -1,10 +1,9 @@
 import SwiftUI
 import SwiftData
 
-/// Elenco delle persone. Si tocca una riga per modificarla o sceglierla, "+" per aggiungerne una.
+/// Elenco delle persone. Si tocca una riga per modificarla, "+" per aggiungerne una.
 struct UtentiView: View {
     @Query(sort: \Utente.nome) private var utenti: [Utente]
-    @AppStorage("utenteAttivo") private var attivo = ""
     @State private var nuovoUtente = false
 
     var body: some View {
@@ -15,7 +14,7 @@ struct UtentiView: View {
                 VStack(spacing: 20) {
                     ForEach(utenti) { utente in
                         NavigationLink(destination: UtenteFormView(utente: utente)) {
-                            RigaUtente(utente: utente, inGioco: utente.id.uuidString == attivo)
+                            RigaUtente(utente: utente)
                         }
                         .buttonStyle(StilePremuto())
                     }
@@ -52,7 +51,6 @@ struct UtentiView: View {
 
 struct RigaUtente: View {
     let utente: Utente
-    let inGioco: Bool
 
     var body: some View {
         HStack(spacing: 28) {
@@ -66,18 +64,13 @@ struct RigaUtente: View {
 
             Spacer()
 
-            if inGioco {
-                Label("In gioco", systemImage: "checkmark.circle.fill")
-                    .font(.system(.title3, design: .rounded, weight: .bold))
-                    .foregroundStyle(Color(red: 0.05, green: 0.40, blue: 0.20))
-            }
             Image(systemName: "chevron.right").font(.system(size: 32, weight: .bold))
         }
         .foregroundStyle(Tema.testo)
         .padding(24)
         .scheda()
         .accessibilityElement(children: .combine)
-        .accessibilityHint("Tocca per modificare o scegliere")
+        .accessibilityHint("Tocca per modificare")
     }
 }
 

@@ -5,8 +5,11 @@ struct GiocoView: View {
     @ScaledMetric(relativeTo: .largeTitle) private var messaggio = 72
     @ScaledMetric(relativeTo: .largeTitle) private var lato = 230
 
-    init(giocatori: Int, difficolta: Difficolta) {
-        _partita = State(initialValue: PartitaModello(giocatori: giocatori, difficolta: difficolta))
+    private let giocatori: [Partecipante]
+
+    init(giocatori: [Partecipante], difficolta: Difficolta) {
+        self.giocatori = giocatori
+        _partita = State(initialValue: PartitaModello(giocatori: giocatori.count, difficolta: difficolta))
     }
 
     var body: some View {
@@ -15,11 +18,7 @@ struct GiocoView: View {
 
             ScrollView {
                 VStack(spacing: 28) {
-                    if partita.giocatori > 1 {
-                        Text("Tocca a: Giocatore \(partita.giocatoreCorrente + 1)")
-                            .font(.system(.title, design: .rounded, weight: .bold))
-                            .foregroundStyle(Tema.testoSecondario)
-                    }
+                    BarraGiocatori(giocatori: giocatori, turno: partita.giocatoreCorrente)
 
                     Text(partita.messaggio)
                         .font(.system(size: messaggio, weight: .heavy, design: .rounded))
@@ -115,5 +114,5 @@ struct Coriandoli: View {
 }
 
 #Preview(traits: .landscapeLeft) {
-    GiocoView(giocatori: 3, difficolta: .medio)
+    GiocoView(giocatori: [.senzaNome], difficolta: .medio)
 }

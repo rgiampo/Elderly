@@ -1,6 +1,5 @@
 import SwiftUI
 import SwiftData
-import PhotosUI
 
 /// Aggiunge o modifica una persona. Con `utente == nil` crea una persona nuova.
 struct UtenteFormView: View {
@@ -8,13 +7,11 @@ struct UtenteFormView: View {
 
     @Environment(\.modelContext) private var contesto
     @Environment(\.dismiss) private var chiudi
-    @AppStorage("utenteAttivo") private var attivo = ""
 
     @State private var nome = ""
     @State private var cognome = ""
     @State private var eta = 75
     @State private var foto: Data?
-    @State private var sceltaFoto: PhotosPickerItem?
     @State private var chiediEliminazione = false
 
     var body: some View {
@@ -22,7 +19,7 @@ struct UtenteFormView: View {
             Section {
                 HStack(spacing: 24) {
                     Avatar(utente: anteprima, dimensione: 110)
-                    PhotosPicker(selection: $sceltaFoto, matching: .images) {
+                    SelettoreFoto(foto: $foto, latoMassimo: Configurazione.latoFotoProfilo) {
                         Label(foto == nil ? "Scegli una foto" : "Cambia foto", systemImage: "photo")
                     }
                 }
@@ -34,12 +31,8 @@ struct UtenteFormView: View {
                 Stepper("Età: \(eta)", value: $eta, in: 40...120)
             }
 
-            if let utente {
+            if utente != nil {
                 Section {
-                    Button("Gioca con \(utente.nome)") {
-                        attivo = utente.id.uuidString
-                        chiudi()
-                    }
                     Button("Elimina questa persona", role: .destructive) { chiediEliminazione = true }
                 }
             }
@@ -63,9 +56,6 @@ struct UtenteFormView: View {
             Text("La persona e la sua foto verranno cancellate.")
         }
         .onAppear(perform: carica)
-        .onChange(of: sceltaFoto) { _, nuova in
-            Task { foto = await ridimensiona(nuova) }
-        }
     }
 
     /// Una persona "di prova" solo per mostrare la foto o le iniziali mentre si scrive.
@@ -83,29 +73,14 @@ struct UtenteFormView: View {
         if let utente {
             utente.nome = nomePulito; utente.cognome = cognome; utente.eta = eta; utente.foto = foto
         } else {
-            let nuovo = Utente(nome: nomePulito, cognome: cognome, eta: eta, foto: foto)
-            contesto.insert(nuovo)
-            if attivo.isEmpty { attivo = nuovo.id.uuidString } // la prima persona è subito "in gioco"
+            contesto.insert(Utente(nome: nomePulito, cognome: cognome, eta: eta, foto: foto))
         }
         chiudi()
     }
 
     private func elimina() {
         guard let utente else { return }
-        if attivo == utente.id.uuidString { attivo = "" }
         contesto.delete(utente)
         chiudi()
-    }
-
-    /// Foto piccole (400 px): bastano per il cerchio e tengono leggero il database.
-    private func ridimensiona(_ elemento: PhotosPickerItem?) async -> Data? {
-        guard let dati = try? await elemento?.loadTransferable(type: Data.self),
-              let immagine = UIImage(data: dati) else { return nil }
-        let lato = min(immagine.size.width, immagine.size.height)
-        let scala = 400 / lato
-        let nuovaDimensione = CGSize(width: immagine.size.width * scala, height: immagine.size.height * scala)
-        return UIGraphicsImageRenderer(size: nuovaDimensione).jpegData(withCompressionQuality: 0.8) { _ in
-            immagine.draw(in: CGRect(origin: .zero, size: nuovaDimensione))
-        }
     }
 }

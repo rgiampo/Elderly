@@ -1,5 +1,4 @@
 import SwiftUI
-import SwiftData
 
 /// Foto tonda della persona, oppure le iniziali se non c'è la foto.
 struct Avatar: View {
@@ -27,26 +26,5 @@ struct Avatar: View {
         .clipShape(Circle())
         .overlay(Circle().stroke(.white, lineWidth: 3))
         .accessibilityHidden(true)
-    }
-}
-
-/// Mostra chi sta giocando (la persona scelta nella schermata Utenti).
-struct ChipUtente: View {
-    @AppStorage("utenteAttivo") private var attivo = ""
-    @Query private var utenti: [Utente]
-
-    var body: some View {
-        if let utente = utenti.first(where: { $0.id.uuidString == attivo }) {
-            HStack(spacing: 14) {
-                Avatar(utente: utente, dimensione: 64)
-                Text(utente.nomeCompleto)
-                    .font(.system(.title2, design: .rounded, weight: .bold))
-                    .foregroundStyle(Tema.testo)
-            }
-            .padding(10).padding(.trailing, 14)
-            .glassEffect(.regular, in: .capsule)
-            .accessibilityElement(children: .combine)
-            .accessibilityLabel("Gioca \(utente.nomeCompleto)")
-        }
     }
 }
