@@ -6,7 +6,7 @@ struct SchedaRisposta: View {
 
     let risposta: RispostaQuiz
     let stato: Stato
-    @ScaledMetric(relativeTo: .title) private var altezzaFoto = 340
+    @ScaledMetric(relativeTo: .title) private var altezzaFoto = 460
 
     private let raggio: CGFloat = 36
     fileprivate let verde = Color(red: 0.05, green: 0.45, blue: 0.22)
@@ -39,7 +39,7 @@ extension SchedaRisposta {
     fileprivate var nomeSeGiusta: some View {
         if stato == .giusta {
             Text(risposta.testo)
-                .font(.system(.title, design: .rounded, weight: .heavy))
+                .testo(DimensioneTesto.grande, .heavy)
                 .foregroundStyle(.white)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 18)

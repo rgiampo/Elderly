@@ -14,17 +14,17 @@ struct ChiGiocaView: View {
                 VStack(spacing: 32) {
                     VStack(spacing: 8) {
                         Text("Chi gioca?")
-                            .font(.system(size: 64, weight: .heavy, design: .rounded))
+                            .font(.system(size: 80, weight: .heavy, design: .rounded))
                             .accessibilityAddTraits(.isHeader)
                         Text("Scegli una o due persone")
-                            .font(.system(.title, design: .rounded, weight: .medium))
+                            .testo(DimensioneTesto.grande, .medium)
                             .foregroundStyle(Tema.testoSecondario)
                     }
                     .foregroundStyle(Tema.testo)
 
                     if utenti.isEmpty {
                         Text("Non ci sono ancora persone. Le aggiungi nella sezione Utenti, oppure puoi giocare senza nome.")
-                            .font(.system(.title3, design: .rounded))
+                            .testo(DimensioneTesto.normale)
                             .foregroundStyle(Tema.testo)
                             .multilineTextAlignment(.center)
                             .padding(24)
@@ -44,7 +44,7 @@ struct ChiGiocaView: View {
 
                     NavigationLink(destination: CategorieView()) {
                         Text("Avanti")
-                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                            .testo(DimensioneTesto.titolo, .heavy)
                             .foregroundStyle(.white)
                             .frame(maxWidth: 560, minHeight: 110)
                     }
@@ -76,14 +76,14 @@ private struct CartaPersona: View {
                 .overlay(alignment: .topTrailing) {
                     if let posto {
                         Text("\(posto)")
-                            .font(.system(.title2, design: .rounded, weight: .heavy))
+                            .testo(DimensioneTesto.medio, .heavy)
                             .foregroundStyle(.white)
                             .frame(width: 48, height: 48)
                             .background(Tema.azzurroProfondo, in: Circle())
                     }
                 }
             Text(utente.nome)
-                .font(.system(.title, design: .rounded, weight: .heavy))
+                .testo(DimensioneTesto.grande, .heavy)
         }
         .foregroundStyle(Tema.testo)
         .frame(maxWidth: .infinity)

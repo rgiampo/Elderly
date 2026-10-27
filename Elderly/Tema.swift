@@ -63,3 +63,34 @@ struct SfondoCielo: View {
         ]
     }
 }
+
+
+/// Scala dei testi. Tutta l'app usa questi: per cambiare la grandezza si cambiano solo questi numeri.
+enum DimensioneTesto {
+    static let enorme: CGFloat = 96
+    static let titolo: CGFloat = 72
+    static let grande: CGFloat = 56
+    static let medio: CGFloat = 44
+    static let normale: CGFloat = 36
+}
+
+private struct StileTesto: ViewModifier {
+    @ScaledMetric private var dimensione: CGFloat
+    let peso: Font.Weight
+
+    init(_ base: CGFloat, _ peso: Font.Weight) {
+        _dimensione = ScaledMetric(wrappedValue: base, relativeTo: .title)
+        self.peso = peso
+    }
+
+    func body(content: Content) -> some View {
+        content.font(.system(size: dimensione, weight: peso, design: .rounded))
+    }
+}
+
+extension View {
+    /// Testo in SF Rounded che segue la grandezza scelta dall'utente nelle impostazioni di iOS.
+    func testo(_ dimensione: CGFloat, _ peso: Font.Weight = .regular) -> some View {
+        modifier(StileTesto(dimensione, peso))
+    }
+}

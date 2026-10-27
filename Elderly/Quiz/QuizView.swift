@@ -4,7 +4,7 @@ import SwiftUI
 struct QuizView: View {
     @State private var modello: QuizModello
     @Environment(\.dismiss) private var chiudi
-    @ScaledMetric(relativeTo: .largeTitle) private var testoDomanda = 52
+    @ScaledMetric(relativeTo: .largeTitle) private var testoDomanda = 68
 
     init(quiz: Quiz, giocatori: [Partecipante]) {
         _modello = State(initialValue: QuizModello(quiz: quiz, giocatori: giocatori))
@@ -33,7 +33,7 @@ struct QuizView: View {
                 BarraGiocatori(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
                 Spacer()
                 Text("Domanda \(modello.indice + 1) di \(modello.totale)")
-                    .font(.system(.title3, design: .rounded, weight: .semibold))
+                    .testo(DimensioneTesto.normale, .semibold)
                     .foregroundStyle(Tema.testoSecondario)
             }
 
@@ -45,7 +45,7 @@ struct QuizView: View {
                 .frame(maxWidth: .infinity)
                 .accessibilityAddTraits(.isHeader)
 
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: 300), spacing: 28)], spacing: 28) {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: 360), spacing: 28)], spacing: 28) {
                 ForEach(modello.risposte) { risposta in
                     Button { modello.scegli(risposta) } label: {
                         SchedaRisposta(risposta: risposta, stato: stato(di: risposta))
@@ -56,7 +56,7 @@ struct QuizView: View {
             }
 
             Text(modello.messaggio.isEmpty ? " " : modello.messaggio)
-                .font(.system(.title, design: .rounded, weight: .bold))
+                .testo(DimensioneTesto.grande, .bold)
                 .foregroundStyle(Tema.testo)
 
             BottoneVoce(testo: modello.testoParlato, etichetta: "Ascolta la domanda")

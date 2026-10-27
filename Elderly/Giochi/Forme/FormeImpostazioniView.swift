@@ -19,7 +19,7 @@ struct FormeImpostazioniView: View {
                             .minimumScaleFactor(0.5)
                             .accessibilityAddTraits(.isHeader)
                         Text("Ripetiamo insieme la melodia")
-                            .font(.system(.title, design: .rounded, weight: .medium))
+                            .testo(DimensioneTesto.grande, .medium)
                             .foregroundStyle(Tema.testoSecondario)
                     }
                     .multilineTextAlignment(.center)
@@ -41,21 +41,27 @@ struct FormeImpostazioniView: View {
                         GiocoView(giocatori: sessione.giocatori, difficolta: difficolta)
                     } label: {
                         Text("Giochiamo!")
-                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                            .testo(DimensioneTesto.titolo, .heavy)
                             .foregroundStyle(.white)
                             .frame(maxWidth: 560, minHeight: 110)
                     }
                     .buttonStyle(.glassProminent)
                     .tint(Tema.azzurroProfondo)
 
-                    Picker("Difficoltà", selection: $difficolta) {
-                        ForEach(Difficolta.allCases) { Text($0.nome).tag($0) }
+                    // tre pulsanti grandi al posto del selettore piccolo di sistema
+                    HStack(spacing: 20) {
+                        ForEach(Difficolta.allCases) { livello in
+                            Button { difficolta = livello } label: {
+                                Text(livello.nome)
+                                    .testo(DimensioneTesto.medio, .heavy)
+                                    .foregroundStyle(difficolta == livello ? .white : Tema.testo)
+                                    .frame(minWidth: 200, minHeight: 80)
+                            }
+                            .buttonStyle(.glassProminent)
+                            .tint(difficolta == livello ? Tema.azzurroProfondo : .white)
+                            .accessibilityAddTraits(difficolta == livello ? .isSelected : [])
+                        }
                     }
-                    .pickerStyle(.segmented)
-                    .controlSize(.extraLarge)
-                    .padding(28)
-                    .frame(maxWidth: 600)
-                    .glassEffect(.regular, in: .rect(cornerRadius: 36))
                 }
                 .padding(40)
                 .frame(maxWidth: .infinity)

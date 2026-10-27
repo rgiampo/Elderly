@@ -20,7 +20,7 @@ struct ElencoQuizView: View {
                 VStack(alignment: .leading, spacing: 24) {
                     HStack {
                         Text("Quiz con le foto")
-                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                            .testo(DimensioneTesto.titolo, .heavy)
                             .foregroundStyle(Tema.testo)
                             .accessibilityAddTraits(.isHeader)
                         Spacer()
@@ -33,7 +33,7 @@ struct ElencoQuizView: View {
 
                     if !creati.isEmpty {
                         Text("I vostri quiz")
-                            .font(.system(.title2, design: .rounded, weight: .bold))
+                            .testo(DimensioneTesto.medio, .bold)
                             .foregroundStyle(Tema.testoSecondario)
                             .padding(.top, 12)
                     }
@@ -44,7 +44,7 @@ struct ElencoQuizView: View {
 
                     Button { nuovoQuiz = true } label: {
                         Label("Crea un quiz", systemImage: "plus")
-                            .font(.system(.title2, design: .rounded, weight: .heavy))
+                            .testo(DimensioneTesto.medio, .heavy)
                             .foregroundStyle(.white)
                             .frame(maxWidth: .infinity, minHeight: 84)
                     }
@@ -99,8 +99,8 @@ private struct RigaQuiz: View {
                     .frame(minWidth: 150, alignment: .leading)
 
                     VStack(alignment: .leading, spacing: 4) {
-                        Text(quiz.titolo).font(.system(.title, design: .rounded, weight: .heavy))
-                        Text("\(quiz.domande.count) domande").font(.system(.title3, design: .rounded))
+                        Text(quiz.titolo).testo(DimensioneTesto.grande, .heavy)
+                        Text("\(quiz.domande.count) domande").testo(DimensioneTesto.normale)
                             .foregroundStyle(Tema.testoSecondario)
                     }
                     Spacer()

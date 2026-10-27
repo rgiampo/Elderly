@@ -37,7 +37,7 @@ struct UtenteFormView: View {
                 }
             }
         }
-        .font(.system(.title3, design: .rounded))
+        .testo(DimensioneTesto.normale)
         .scrollContentBackground(.hidden)
         .background(SfondoCielo())
         .navigationTitle(utente == nil ? "Nuova persona" : "Modifica")

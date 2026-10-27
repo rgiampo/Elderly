@@ -30,7 +30,7 @@ struct EditorQuizView: View {
                 Section { Label(problema, systemImage: "info.circle").foregroundStyle(Tema.testoSecondario) }
             }
         }
-        .font(.system(.title3, design: .rounded))
+        .testo(DimensioneTesto.normale)
         .scrollContentBackground(.hidden)
         .background(SfondoCielo())
         .navigationTitle(quiz == nil ? "Nuovo quiz" : "Modifica quiz")

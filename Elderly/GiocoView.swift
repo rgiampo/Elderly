@@ -2,7 +2,7 @@ import SwiftUI
 
 struct GiocoView: View {
     @State private var partita: PartitaModello
-    @ScaledMetric(relativeTo: .largeTitle) private var messaggio = 72
+    @ScaledMetric(relativeTo: .largeTitle) private var messaggio = 84
     @ScaledMetric(relativeTo: .largeTitle) private var lato = 230
 
     private let giocatori: [Partecipante]
@@ -30,13 +30,10 @@ struct GiocoView: View {
                         .contentTransition(.opacity)
                         .accessibilityAddTraits(.isHeader)
 
-                    ViewThatFits(in: .horizontal) {
-                        riga
-                        ScrollView(.horizontal) { riga.padding(.horizontal) }
-                    }
+                    riga
 
                     Text("Sequenza più lunga insieme: \(partita.record)")
-                        .font(.system(.title2, design: .rounded, weight: .semibold))
+                        .testo(DimensioneTesto.medio, .semibold)
                         .foregroundStyle(Tema.testoSecondario)
 
                     BottoneVoce(testo: Istruzioni.comeSiGioca)
@@ -58,18 +55,26 @@ struct GiocoView: View {
         .onDisappear { partita.ferma() }
     }
 
+    /// Le forme stanno sempre tutte in una riga: se manca spazio diventano più piccole, non scorrono.
     private var riga: some View {
-        HStack(spacing: 36) {
-            ForEach(partita.forme) { forma in
-                FormaBottone(forma: forma, accesa: partita.formaAccesa == forma, lato: lato) {
-                    partita.tocca(forma)
+        GeometryReader { spazio in
+            let quante = CGFloat(partita.forme.count)
+            let distanza: CGFloat = 28
+            let latoForma = min(lato, (spazio.size.width - distanza * (quante - 1)) / quante)
+            HStack(spacing: distanza) {
+                ForEach(partita.forme) { forma in
+                    FormaBottone(forma: forma, accesa: partita.formaAccesa == forma, lato: latoForma) {
+                        partita.tocca(forma)
+                    }
                 }
             }
+            .frame(width: spazio.size.width, height: spazio.size.height)
         }
+        .frame(height: lato + 40)
     }
 }
 
-/// Pezzo di gioco in vetro colorato: reagisce al tocco e, quando suona, si illumina e cresce.
+/// Pezzo di gioco: quando suona si illumina e cresce. Tutta la sagoma è sensibile al tocco.
 struct FormaBottone: View {
     let forma: Forma
     let accesa: Bool
@@ -78,14 +83,16 @@ struct FormaBottone: View {
 
     var body: some View {
         Button(action: azione) {
-            Color.clear.frame(width: lato, height: lato)
+            forma.sagoma
+                .fill(forma.colore)
+                .overlay(forma.sagoma.stroke(.white.opacity(0.55), lineWidth: 6))
+                .frame(width: lato, height: lato)
+                .contentShape(forma.sagoma)
         }
-        .buttonStyle(.plain)
-        .glassEffect(.regular.tint(forma.colore).interactive(), in: forma.sagoma)
+        .buttonStyle(StilePremuto())
         .brightness(accesa ? 0.15 : 0)
         .scaleEffect(accesa ? 1.1 : 1)
-        .shadow(color: forma.colore.opacity(accesa ? 0.8 : 0), radius: 40)
-        .contentShape(forma.sagoma)
+        .shadow(color: forma.colore.opacity(accesa ? 0.8 : 0.25), radius: accesa ? 40 : 10, y: 6)
         .accessibilityLabel(forma.nome)
         .accessibilityHint("Tocca per suonare")
     }

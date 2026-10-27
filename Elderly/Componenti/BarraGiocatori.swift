@@ -33,16 +33,16 @@ private struct Pedina: View {
             Avatar(utente: giocatore.utente, dimensione: 68)
             VStack(alignment: .leading, spacing: 2) {
                 Text(giocatore.nome)
-                    .font(.system(.title2, design: .rounded, weight: .bold))
+                    .testo(DimensioneTesto.medio, .bold)
                 if mostraTurno && attivo {
                     Text("Tocca a te")
-                        .font(.system(.headline, design: .rounded, weight: .semibold))
+                        .testo(DimensioneTesto.normale, .semibold)
                         .foregroundStyle(Tema.azzurroProfondo)
                 }
             }
             if let punti {
                 Label("\(punti)", systemImage: "star.fill")
-                    .font(.system(.title3, design: .rounded, weight: .bold))
+                    .testo(DimensioneTesto.normale, .bold)
                     .foregroundStyle(Tema.testo)
             }
         }

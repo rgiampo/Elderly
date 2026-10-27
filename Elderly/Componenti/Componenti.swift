@@ -25,8 +25,8 @@ struct EtichettaMenu: View {
 
     var body: some View {
         VStack(spacing: 2) {
-            Text(italiano).font(.system(.largeTitle, design: .rounded, weight: .heavy))
-            Text(inglese).font(.system(.title3, design: .rounded, weight: .medium)).opacity(0.85)
+            Text(italiano).testo(DimensioneTesto.titolo, .heavy)
+            Text(inglese).testo(DimensioneTesto.normale, .medium).opacity(0.85)
         }
         .foregroundStyle(colore)
         .frame(maxWidth: .infinity, minHeight: 120)

@@ -42,7 +42,7 @@ enum Forma: CaseIterable, Identifiable {
     var sagoma: AnyShape {
         switch self {
         case .cerchio: AnyShape(Circle())
-        case .quadrato: AnyShape(RoundedRectangle(cornerRadius: 36))
+        case .quadrato: AnyShape(Rectangle())
         case .triangolo: AnyShape(SagomaTriangolo())
         case .stella: AnyShape(SagomaStella())
         case .cuore: AnyShape(SagomaCuore())

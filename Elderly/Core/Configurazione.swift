@@ -15,6 +15,9 @@ enum Configurazione {
     /// Secondi di pausa dopo una risposta giusta, prima della domanda successiva.
     static let pausaDopoRispostaGiusta = 2.5
 
+    /// Velocità della voce che legge: 1 = normale, meno di 1 = più lenta (meglio per chi ascolta con calma).
+    static let velocitaVoce: Float = 0.9
+
     /// Lato massimo (in pixel) delle foto salvate: abbastanza per lo schermo, leggero per il database.
     static let latoFotoSalvata: CGFloat = 900
     static let latoFotoProfilo: CGFloat = 400

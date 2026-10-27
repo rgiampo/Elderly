@@ -12,6 +12,12 @@ struct UtentiView: View {
 
             ScrollView {
                 VStack(spacing: 20) {
+                    Text("Utenti")
+                        .testo(DimensioneTesto.titolo, .heavy)
+                        .foregroundStyle(Tema.testo)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .accessibilityAddTraits(.isHeader)
+
                     ForEach(utenti) { utente in
                         NavigationLink(destination: UtenteFormView(utente: utente)) {
                             RigaUtente(utente: utente)
@@ -21,7 +27,7 @@ struct UtentiView: View {
 
                     if utenti.isEmpty {
                         Text("Nessuna persona. Tocca + per aggiungerne una.")
-                            .font(.system(.title, design: .rounded, weight: .semibold))
+                            .testo(DimensioneTesto.grande, .semibold)
                             .foregroundStyle(Tema.testo)
                             .padding(.vertical, 40)
                     }
@@ -42,7 +48,7 @@ struct UtentiView: View {
                 .frame(maxWidth: .infinity)
             }
         }
-        .navigationTitle("Utenti")
+        .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $nuovoUtente) {
             NavigationStack { UtenteFormView(utente: nil) }
         }
@@ -57,9 +63,9 @@ struct RigaUtente: View {
             Avatar(utente: utente, dimensione: 100)
 
             VStack(alignment: .leading, spacing: 4) {
-                Text(utente.nome).font(.system(.title, design: .rounded, weight: .heavy))
-                Text(utente.cognome).font(.system(.title, design: .rounded, weight: .heavy))
-                Text("Età: \(utente.eta)").font(.system(.title2, design: .rounded))
+                Text(utente.nome).testo(DimensioneTesto.grande, .heavy)
+                Text(utente.cognome).testo(DimensioneTesto.grande, .heavy)
+                Text("Età: \(utente.eta)").testo(DimensioneTesto.medio)
             }
 
             Spacer()

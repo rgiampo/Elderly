@@ -12,7 +12,7 @@ struct CategorieView: View {
                 VStack(spacing: 28) {
                     HStack {
                         Text("Scegli un gioco")
-                            .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                            .testo(DimensioneTesto.titolo, .heavy)
                             .foregroundStyle(Tema.testo)
                             .accessibilityAddTraits(.isHeader)
                         Spacer()
@@ -61,7 +61,7 @@ struct SchedaCategoria<Anteprima: View>: View {
         HStack(spacing: 32) {
             anteprima.frame(width: 260)
             Text(titolo)
-                .font(.system(.largeTitle, design: .rounded, weight: .heavy))
+                .testo(DimensioneTesto.titolo, .heavy)
                 .frame(maxWidth: .infinity, alignment: .leading)
             Image(systemName: "chevron.right").font(.system(size: 40, weight: .bold))
         }
