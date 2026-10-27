@@ -58,7 +58,7 @@ final class Sintetizzatore {
         return datiWav(da: onda)
     }
 
-    /// Un "buzz" breve e grave (onda quadra a 110 Hz con un po' di vibrato) per dire "sbagliato" senza spaventare.
+    /// Un "buzz" breve e grave (due note discendenti, nel registro che gli altoparlanti dell'iPad riproducono bene) per dire "sbagliato" senza spaventare.
     func buzz() {
         guard UserDefaults.standard.object(forKey: "suoniAttivi") as? Bool ?? true else { return }
         if buzzLettore == nil { buzzLettore = try? AVAudioPlayer(data: datiBuzz()) }
@@ -69,10 +69,10 @@ final class Sintetizzatore {
 
     private var buzzLettore: AVAudioPlayer?
 
-    /// Il cicalino dei quiz televisivi: due "BZZT" gravi e ruvidi di fila, il secondo un po' più basso (come "eh-eh!").
+    /// Il cicalino dei quiz televisivi: due "BZZT" ruvidi di fila, il secondo più basso (sotto i 150 Hz l'iPad quasi non suona) (come "eh-eh!").
     private func datiBuzz() -> Data {
-        let impulsi: [(inizio: Double, durata: Double, frequenza: Double)] = [(0.0, 0.30, 150), (0.38, 0.55, 105)]
-        let totale = 0.38 + 0.55
+        let impulsi: [(inizio: Double, durata: Double, frequenza: Double)] = [(0.0, 0.28, 262), (0.34, 0.50, 196)]
+        let totale = 0.34 + 0.50
         let campioni = Int(frequenzaCampionamento * totale)
         var onda = [Float](repeating: 0, count: campioni)
         for n in 0..<campioni {
@@ -82,7 +82,7 @@ final class Sintetizzatore {
                 let f = i.frequenza * (1 - 0.06 * l / i.durata)        // scende appena, come una nota "stonata"
                 func sega(_ x: Double) -> Double { 2 * (l * x - floor(l * x + 0.5)) }
                 let quadra = sin(2 * .pi * f * l) >= 0 ? 1.0 : -1.0
-                let corpo = 0.6 * sega(f) + 0.3 * quadra + 0.1 * sega(f * 2.01)   // ruvido e pieno
+                let corpo = 0.5 * sega(f) + 0.3 * quadra + 0.2 * sega(f * 2.01)   // ruvido e pieno
                 let attacco = min(1, l / 0.005), coda = min(1, (i.durata - l) / 0.04)
                 onda[n] += Float(0.5 * corpo * attacco * coda)
             }
