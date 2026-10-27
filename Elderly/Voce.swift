@@ -42,6 +42,7 @@ final class Voce: NSObject, AVSpeechSynthesizerDelegate {
 /// Bottone enorme: si preme e una voce spiega a chi non sa leggere.
 struct BottoneVoce: View {
     let testo: String
+    var etichetta = "Ascolta come si gioca"
     @State private var voce = Voce()
     @ScaledMetric(relativeTo: .title) private var icona = 64
     @ScaledMetric(relativeTo: .title) private var altezza = 130
@@ -52,7 +53,7 @@ struct BottoneVoce: View {
                 Image(systemName: "speaker.wave.3.fill")
                     .font(.system(size: icona))
                     .symbolEffect(.variableColor.iterative, isActive: voce.staParlando)
-                Text(voce.staParlando ? "Sto parlando…" : "Ascolta come si gioca")
+                Text(voce.staParlando ? "Sto parlando…" : etichetta)
                     .font(.system(.title, design: .rounded, weight: .heavy))
                     .minimumScaleFactor(0.6)
             }
@@ -61,7 +62,7 @@ struct BottoneVoce: View {
         }
         .buttonStyle(.glassProminent)
         .tint(Tema.sole)
-        .accessibilityLabel(voce.staParlando ? "Ferma la spiegazione" : "Ascolta come si gioca")
+        .accessibilityLabel(voce.staParlando ? "Ferma la lettura" : etichetta)
         .accessibilityHint("Una voce spiega le regole")
         .onDisappear { voce.ferma() }
     }

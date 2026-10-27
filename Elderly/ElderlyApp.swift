@@ -1,11 +1,5 @@
-//
-//  ElderlyApp.swift
-//  Elderly
-//
-//  Created by Giovanni Paolo on 22/10/2026.
-//
-
 import SwiftUI
+import SwiftData
 
 @main
 struct ElderlyApp: App {
@@ -13,5 +7,6 @@ struct ElderlyApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: Utente.self) // crea e gestisce il database delle persone
     }
 }

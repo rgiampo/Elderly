@@ -13,6 +13,8 @@ final class Sintetizzatore {
     }
 
     func suona(_ frequenza: Double, volume: Float = 0.8) {
+        // L'interruttore "Suoni" è nelle Opzioni; di base è acceso.
+        guard UserDefaults.standard.object(forKey: "suoniAttivi") as? Bool ?? true else { return }
         if voci[frequenza] == nil {
             // due lettori per nota: la stessa nota può risuonare mentre l'eco della precedente svanisce
             let dati = wav(per: frequenza)
@@ -26,6 +28,13 @@ final class Sintetizzatore {
         lettore.volume = volume
         lettore.currentTime = 0
         lettore.play()
+    }
+
+    /// Tre note ascendenti (do, mi, sol) per festeggiare una risposta giusta.
+    func accordoDiFesta() {
+        for (n, nota) in [523.25, 659.25, 783.99].enumerated() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(n) * 0.12) { self.suona(nota, volume: 0.6) }
+        }
     }
 
     private func wav(per frequenza: Double) -> Data {

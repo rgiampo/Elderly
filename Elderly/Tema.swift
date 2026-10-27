@@ -6,12 +6,15 @@ enum Tema {
         Color(uiColor: UIColor { $0.userInterfaceStyle == .dark ? scuro : chiaro })
     }
 
+    /// Celeste dei mockup (#5EB6FF). Testo blu notte: contrasto 6,4:1 (soglia AA 4,5:1). Mai testo bianco direttamente sul celeste.
+    static let celeste = Color(red: 0.37, green: 0.71, blue: 1.0)
+
     /// Blu notte sul cielo chiaro, bianco sul cielo scuro: contrasto oltre 7:1.
     static let testo = dinamico(chiaro: UIColor(red: 0.07, green: 0.17, blue: 0.30, alpha: 1), scuro: .white)
-    static let testoSecondario = dinamico(chiaro: UIColor(red: 0.16, green: 0.30, blue: 0.46, alpha: 1),
+    static let testoSecondario = dinamico(chiaro: UIColor(red: 0.08, green: 0.20, blue: 0.34, alpha: 1),
                                           scuro: UIColor(white: 1, alpha: 0.85))
     static let sole = Color(red: 1.0, green: 0.80, blue: 0.20)
-    static let azzurroProfondo = Color(red: 0.07, green: 0.36, blue: 0.75)
+    static let azzurroProfondo = Color(red: 0.04, green: 0.27, blue: 0.62)
 }
 
 /// Cielo con nuvole morbide. Si muove pianissimo; fermo se l'utente riduce i movimenti,
@@ -25,7 +28,7 @@ struct SfondoCielo: View {
     var body: some View {
         Group {
             if pocaTrasparenza || contrasto == .increased {
-                (schema == .dark ? Color(red: 0.05, green: 0.12, blue: 0.26) : Color(red: 0.80, green: 0.92, blue: 1.0))
+                (schema == .dark ? Color(red: 0.05, green: 0.12, blue: 0.26) : Tema.celeste)
             } else {
                 TimelineView(.animation(minimumInterval: 1 / 15, paused: pocoMovimento)) { contesto in
                     MeshGradient(width: 3, height: 3,
@@ -43,11 +46,11 @@ struct SfondoCielo: View {
             let notte = Color(red: 0.05, green: 0.12, blue: 0.28), alba = Color(red: 0.16, green: 0.30, blue: 0.55)
             return [notte, alba, notte, alba, notte, alba, notte, alba, notte]
         }
-        let cielo = Color(red: 0.55, green: 0.80, blue: 0.98), nuvola = Color(red: 0.97, green: 0.99, blue: 1.0)
-        let chiaro = Color(red: 0.78, green: 0.91, blue: 0.99)
-        return [cielo, chiaro, cielo,
-                nuvola, chiaro, nuvola,
-                chiaro, nuvola, chiaro]
+        // Varia di pochissimo attorno al celeste dei mockup: abbastanza per sembrare cielo, non per perdere contrasto.
+        let base = Tema.celeste, chiaro = Color(red: 0.50, green: 0.78, blue: 1.0)
+        return [base, chiaro, base,
+                chiaro, base, chiaro,
+                base, chiaro, base]
     }
 
     private func punti(_ t: TimeInterval) -> [SIMD2<Float>] {
