@@ -49,19 +49,19 @@ extension View {
     }
 }
 
-/// Il logo, che respira piano, e il nome dell'app in San Francisco bold con un'ombra leggera.
+/// Logo e nome in una riga larga quanto i pulsanti: il logo è allineato a sinistra con i pulsanti e il nome a destra.
 private struct Titolo: View {
     let entrato: Bool
     @Environment(\.accessibilityReduceMotion) private var pocoMovimento
     @State private var respira = false
 
     var body: some View {
-        VStack(spacing: 14) {
+        HStack(spacing: 28) {
             Image("Logo")
                 .resizable().scaledToFill()
-                .frame(width: 190, height: 190)
-                .clipShape(RoundedRectangle(cornerRadius: 44, style: .continuous))
-                .shadow(color: Tema.testo.opacity(0.3), radius: 18, y: 12)
+                .frame(width: 170, height: 170)
+                .clipShape(RoundedRectangle(cornerRadius: 40, style: .continuous))
+                .shadow(color: Tema.testo.opacity(0.3), radius: 16, y: 10)
                 .scaleEffect(entrato ? (respira ? 1.04 : 1) : 0.4)
                 .rotationEffect(.degrees(entrato ? 0 : -12))
                 .opacity(entrato ? 1 : 0)
@@ -70,16 +70,18 @@ private struct Titolo: View {
                 .accessibilityHidden(true)
 
             Text("Elderly")
-                .font(.system(size: 130, weight: .bold))
+                .font(.system(size: 110, weight: .bold))
                 .tracking(-2)
                 .foregroundStyle(Tema.testo)
-                .shadow(color: Tema.testo.opacity(0.22), radius: 14, y: 10)
-                .lineLimit(1).minimumScaleFactor(0.5)
+                .shadow(color: Tema.testo.opacity(0.22), radius: 12, y: 8)
+                .lineLimit(1).minimumScaleFactor(0.4)
+                .frame(maxWidth: .infinity, alignment: .center)
                 .opacity(entrato ? 1 : 0)
                 .offset(y: entrato ? 0 : 30)
                 .animation(.spring(duration: 0.7, bounce: 0.3).delay(0.2), value: entrato)
                 .accessibilityAddTraits(.isHeader)
         }
+        .frame(maxWidth: 640)   // la stessa larghezza dei pulsanti
         .onAppear { respira = true }
     }
 }
