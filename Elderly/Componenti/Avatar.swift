@@ -7,7 +7,7 @@ struct Avatar: View {
 
     var body: some View {
         ZStack {
-            if let dati = utente?.foto, let immagine = UIImage(data: dati) {
+            if let dati = utente?.foto, let immagine = Immagini.ridotta(da: dati, latoMassimo: dimensione * 3) {
                 Image(uiImage: immagine).resizable().scaledToFill()
             } else {
                 Circle().fill(.white)

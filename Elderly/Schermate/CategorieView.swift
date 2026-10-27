@@ -13,7 +13,7 @@ struct CategorieView: View {
                     IntestazioneConGiocatori(titolo: "Scegli un gioco", giocatori: sessione.giocatori)
 
                     NavigationLink(destination: FormeImpostazioniView()) {
-                        SchedaCategoria(titolo: "Abilità mentali") {
+                        SchedaCategoria(titolo: "Quiz di memoria") {
                             HStack(spacing: 10) {
                                 ForEach([Forma.triangolo, .cerchio, .quadrato], id: \.self) { forma in
                                     forma.sagoma.fill(forma.colore).frame(width: 56, height: 56)

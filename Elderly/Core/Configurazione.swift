@@ -18,7 +18,7 @@ enum Configurazione {
     /// Velocità della voce che legge: 1 = normale, meno di 1 = più lenta (meglio per chi ascolta con calma).
     static let velocitaVoce: Float = 0.9
 
-    /// Lato massimo (in pixel) delle foto salvate: abbastanza per lo schermo, leggero per il database.
-    static let latoFotoSalvata: CGFloat = 900
-    static let latoFotoProfilo: CGFloat = 400
+    /// Lato più lungo (in pixel) delle foto salvate: abbastanza per lo schermo, leggero per il database.
+    static let latoFotoSalvata: CGFloat = 1600   // foto delle risposte (sullo schermo sono circa 450 punti, cioè 1350 pixel)
+    static let latoFotoProfilo: CGFloat = 600    // foto delle persone (si vedono in cerchi piccoli)
 }

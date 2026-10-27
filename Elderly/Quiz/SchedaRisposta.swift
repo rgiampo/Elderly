@@ -6,7 +6,7 @@ struct SchedaRisposta: View {
 
     let risposta: RispostaQuiz
     let stato: Stato
-    @ScaledMetric(relativeTo: .title) private var altezzaFoto = 460
+    let altezzaFoto: CGFloat   // la decide QuizView, in base allo spazio che c'è sullo schermo
 
     private let raggio: CGFloat = 36
     fileprivate let verde = Color(red: 0.05, green: 0.45, blue: 0.22)
@@ -66,7 +66,7 @@ struct FotoView: View {
 
     @ViewBuilder
     private func immagine(_ dati: Data) -> some View {
-        if let uiImage = UIImage(data: dati) { Image(uiImage: uiImage).resizable().scaledToFill() }
+        if let uiImage = Immagini.ridotta(da: dati, latoMassimo: Configurazione.latoFotoSalvata) { Image(uiImage: uiImage).resizable().scaledToFill() }
         else { Image(systemName: "photo").font(.system(size: 60)).foregroundStyle(.secondary) }
     }
 }

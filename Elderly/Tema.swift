@@ -15,6 +15,10 @@ enum Tema {
                                           scuro: UIColor(white: 1, alpha: 0.85))
     static let sole = Color(red: 1.0, green: 0.80, blue: 0.20)
     static let azzurroProfondo = Color(red: 0.04, green: 0.27, blue: 0.62)
+    static let arancione = Color(red: 0.72, green: 0.30, blue: 0.04)
+
+    /// Il colore di ogni giocatore (primo = blu, secondo = arancione). Testo bianco: contrasto oltre 5:1.
+    static func coloreGiocatore(_ posizione: Int) -> Color { posizione == 0 ? azzurroProfondo : arancione }
 }
 
 /// Cielo con nuvole morbide. Si muove pianissimo; fermo se l'utente riduce i movimenti,

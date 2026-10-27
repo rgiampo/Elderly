@@ -19,6 +19,7 @@ struct GiocoView: View {
             ScrollView {
                 VStack(spacing: 28) {
                     BarraGiocatori(giocatori: giocatori, turno: partita.giocatoreCorrente)
+                    BannerTurno(giocatori: giocatori, turno: partita.giocatoreCorrente)
 
                     Text(partita.messaggio)
                         .font(.system(size: messaggio, weight: .heavy, design: .rounded))
@@ -51,6 +52,8 @@ struct GiocoView: View {
         .onChange(of: partita.messaggio) { _, nuovo in
             AccessibilityNotification.Announcement(nuovo).post()
         }
+        .animation(.spring(duration: 0.5), value: partita.giocatoreCorrente)
+        .sensoryFeedback(.impact(weight: .heavy), trigger: partita.giocatoreCorrente) { _, _ in giocatori.count > 1 }
         .onAppear { partita.inizia() }
         .onDisappear { partita.ferma() }
     }
@@ -60,7 +63,8 @@ struct GiocoView: View {
         GeometryReader { spazio in
             let quante = CGFloat(partita.forme.count)
             let distanza: CGFloat = 28
-            let latoForma = min(lato, (spazio.size.width - distanza * (quante - 1)) / quante)
+            // 0.9: la forma illuminata cresce del 10% e non deve uscire dallo schermo
+            let latoForma = min(lato, (spazio.size.width - distanza * (quante - 1)) / quante * 0.9)
             HStack(spacing: distanza) {
                 ForEach(partita.forme) { forma in
                     FormaBottone(forma: forma, accesa: partita.formaAccesa == forma, lato: latoForma) {
@@ -71,6 +75,7 @@ struct GiocoView: View {
             .frame(width: spazio.size.width, height: spazio.size.height)
         }
         .frame(height: lato + 40)
+        .padding(.horizontal, 40)
     }
 }
 

@@ -79,7 +79,7 @@ private struct CartaPersona: View {
                             .testo(DimensioneTesto.medio, .heavy)
                             .foregroundStyle(.white)
                             .frame(width: 48, height: 48)
-                            .background(Tema.azzurroProfondo, in: Circle())
+                            .background(Tema.coloreGiocatore(posto - 1), in: Circle())
                     }
                 }
             Text(utente.nome)
@@ -89,7 +89,7 @@ private struct CartaPersona: View {
         .frame(maxWidth: .infinity)
         .padding(.vertical, 24)
         .scheda()
-        .overlay(RoundedRectangle(cornerRadius: 32).stroke(Tema.azzurroProfondo, lineWidth: posto == nil ? 0 : 6))
+        .overlay(RoundedRectangle(cornerRadius: 32).stroke(posto.map { Tema.coloreGiocatore($0 - 1) } ?? .clear, lineWidth: posto == nil ? 0 : 6))
         .opacity(bloccata ? 0.45 : 1)
         .accessibilityElement(children: .combine)
         .accessibilityLabel(utente.nomeCompleto)
