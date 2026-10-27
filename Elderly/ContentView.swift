@@ -2,7 +2,6 @@ import SwiftUI
 
 /// La prima schermata: il logo, il titolo e tre pulsanti enormi. All'apertura tutto entra in sequenza.
 struct ContentView: View {
-    @Environment(\.accessibilityReduceMotion) private var pocoMovimento
     @State private var entrato = false
 
     var body: some View {
@@ -35,7 +34,7 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            if pocoMovimento { entrato = true } else { withAnimation { entrato = true } }
+            entrato = true   // ogni elemento ha la sua animazione con il suo ritardo
         }
     }
 }
@@ -69,10 +68,18 @@ private struct Titolo: View {
                 .accessibilityAddTraits(.isHeader)
 
             Ghirigoro()
-                .trim(from: 0, to: entrato ? 1 : 0)
                 .stroke(Tema.blu, style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .round))
                 .frame(height: 80)
-                .animation(.easeInOut(duration: 0.9).delay(0.4), value: entrato)
+                // compare da sinistra verso destra: una tendina scopre la linea (non la si disegna lungo il tracciato)
+                .mask {
+                    GeometryReader { spazio in
+                        // più alta della linea: i riccioli escono dai suoi bordi e non devono essere tagliati
+                        Rectangle()
+                            .frame(width: entrato ? spazio.size.width : 0, height: spazio.size.height + 240)
+                            .offset(y: -120)
+                            .animation(.easeInOut(duration: 1.0).delay(0.4), value: entrato)
+                    }
+                }
                 .accessibilityHidden(true)
         }
         .frame(maxWidth: 640)   // la stessa larghezza dei pulsanti
