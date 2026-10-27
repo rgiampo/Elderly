@@ -18,7 +18,7 @@ struct DecorazioniHome: View {
     }
 
     /// Quanto si muovono rispetto ai valori dei pezzi (più alto = più evidente).
-    private let ampiezza: CGFloat = 2.6
+    private let ampiezza: CGFloat = 1.6
 
     private let pezzi: [Pezzo] = [
         Pezzo(forma: .cerchio,    x: 0.10, y: 0.18, lato: 220, rotazione: 0,   spostamento: CGSize(width: 24, height: 38),  durata: 7),
