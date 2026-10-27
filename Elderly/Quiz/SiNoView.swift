@@ -71,11 +71,6 @@ struct SiNoView: View {
                         pulsante(sì: true)
                         pulsante(sì: false)
                     }
-                    Text(modello.messaggio.isEmpty ? " " : modello.messaggio)
-                        .testo(DimensioneTesto.medio)
-                        .foregroundStyle(Tema.testo)
-                        .lineLimit(2).minimumScaleFactor(0.5)
-                        .multilineTextAlignment(.center)
                     BottoneVoce(testo: modello.testoParlato, etichetta: "Ascolta", altezza: 76)
                 }
                 .frame(width: 520)
@@ -85,22 +80,23 @@ struct SiNoView: View {
         .padding(.horizontal, 40).padding(.bottom, 24)
     }
 
-    /// Un pulsante pieno di colore: la forma bianca (cerchio o triangolo) e la parola. Tutta la superficie risponde al tocco.
+    /// Un pulsante pieno di colore con dentro solo la forma bianca (cerchio o triangolo). Tutta la superficie risponde al tocco.
     private func pulsante(sì: Bool) -> some View {
         let colore = sì ? Tema.verde : Tema.rosso
-        let scelto = modello.rispostaData == sì
+        // dopo la risposta resta in evidenza il pulsante giusto (con il bordo scuro), l'altro si spegne
+        let giusto = modello.quesito.èGiusto == sì
         return Button { modello.rispondi(sì: sì) } label: {
-            VStack(spacing: 14) {
-                (sì ? AnyShape(Circle()) : AnyShape(SagomaTriangolo()))
-                    .fill(.white)
-                    .frame(width: 150, height: 150)
-                Text(sì ? "SÌ" : "NO").testo(DimensioneTesto.titolo).foregroundStyle(.white)
-            }
+            // solo la forma e il colore: cerchio verde per sì, triangolo rosso per no
+            (sì ? AnyShape(Circle()) : AnyShape(SagomaTriangolo()))
+                .fill(.white)
+                .frame(width: 190, height: 190)
             .frame(maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
             .background(colore, in: RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous)
-                .stroke(Tema.testo, lineWidth: scelto ? 8 : 0))
-            .opacity(modello.inAttesa && !scelto ? 0.35 : 1)
+                .stroke(Tema.testo, lineWidth: modello.inAttesa && giusto ? 10 : 0))
+            .opacity(modello.inAttesa && !giusto ? 0.3 : 1)
+            .scaleEffect(modello.inAttesa && giusto ? 1.03 : 1)
+            .animation(.spring(duration: 0.4, bounce: 0.3), value: modello.inAttesa)
         }
         .buttonStyle(StilePremuto())
         .disabled(modello.inAttesa)
