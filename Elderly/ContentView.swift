@@ -11,8 +11,9 @@ struct ContentView: View {
                 SfondoCielo()
                 DecorazioniHome()
 
-                VStack(spacing: 56) {
+                VStack(spacing: 40) {
                     Titolo(entrato: entrato)
+                    SalutoDelGiorno().appari(entrato, ritardo: 0.2)
 
                     VStack(spacing: 20) {
                         NavigationLink(destination: ChiGiocaView()) {
@@ -46,6 +47,39 @@ extension View {
         opacity(entrato ? 1 : 0)
             .offset(y: entrato ? 0 : 40)
             .animation(.spring(duration: 0.7, bounce: 0.3).delay(ritardo), value: entrato)
+    }
+}
+
+/// Un saluto con il giorno e la data di oggi, in grande: aiuta a orientarsi nel tempo ("Buongiorno, oggi è martedì 27 ottobre").
+/// Si aggiorna da solo ogni minuto, quindi cambia anche con il passare della giornata.
+private struct SalutoDelGiorno: View {
+    var body: some View {
+        TimelineView(.everyMinute) { contesto in
+            VStack(spacing: 4) {
+                Text(saluto(contesto.date))
+                    .testo(DimensioneTesto.medio)
+                    .foregroundStyle(Tema.testo)
+                Text("Oggi è \(data(contesto.date))")
+                    .testo(DimensioneTesto.normale)
+                    .foregroundStyle(Tema.testoSecondario)
+            }
+            .lineLimit(1).minimumScaleFactor(0.5)
+            .multilineTextAlignment(.center)
+            .frame(maxWidth: 640)
+            .accessibilityElement(children: .combine)
+        }
+    }
+
+    private func saluto(_ ora: Date) -> String {
+        switch Calendar.current.component(.hour, from: ora) {
+        case 5..<13: "Buongiorno!"
+        case 13..<18: "Buon pomeriggio!"
+        default: "Buonasera!"
+        }
+    }
+
+    private func data(_ ora: Date) -> String {
+        ora.formatted(.dateTime.weekday(.wide).day().month(.wide).locale(Locale(identifier: "it_IT")))
     }
 }
 
