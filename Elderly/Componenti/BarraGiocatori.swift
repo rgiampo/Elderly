@@ -8,7 +8,8 @@ struct BarraGiocatori: View {
     var punti: [Int] = []
 
     var body: some View {
-        if giocatori.contains(where: \.haNome) {
+        // Con due persone in partita il turno e i punti stanno nel grande banner (BannerTurno): qui sarebbero doppi.
+        if giocatori.contains(where: \.haNome) && !(turno != nil && giocatori.count > 1) {
             HStack(spacing: 16) {
                 ForEach(Array(giocatori.enumerated()), id: \.element.id) { posizione, giocatore in
                     Pedina(giocatore: giocatore,
@@ -62,25 +63,27 @@ private struct Pedina: View {
     }
 }
 
-/// Il banner grande del turno: dice chiaramente di chi tocca, con la sua foto e il suo colore.
-/// Compare solo se giocano due persone con il nome.
+/// Il banner grande del turno: dice chiaramente di chi tocca, con la sua foto e il suo colore,
+/// e a destra i punti di tutti. Compare solo se giocano due persone con il nome.
 struct BannerTurno: View {
     let giocatori: [Partecipante]
     let turno: Int
-    var altezza: CGFloat = 96
+    var punti: [Int] = []
+    var altezza: CGFloat = 120
 
     var body: some View {
         if giocatori.count > 1, giocatori.indices.contains(turno), giocatori[turno].haNome {
             let giocatore = giocatori[turno]
-            HStack(spacing: 20) {
+            HStack(spacing: 24) {
                 Avatar(utente: giocatore.utente, dimensione: altezza - 24)
                 Text("Tocca a \(giocatore.nome)")
-                    .testo(DimensioneTesto.grande)
+                    .testo(DimensioneTesto.titolo)
                     .lineLimit(1).minimumScaleFactor(0.5)
-                Spacer(minLength: 0)
+                Spacer(minLength: 12)
+                if !punti.isEmpty { puntiDiTutti }
             }
             .foregroundStyle(.white)
-            .padding(12).padding(.trailing, 24)
+            .padding(12).padding(.trailing, 28)
             .frame(maxWidth: .infinity, minHeight: altezza)
             .vetro(Tema.coloreGiocatore(turno))
             .id(turno)   // a ogni cambio di turno il banner scivola via e ne entra uno nuovo
@@ -89,5 +92,34 @@ struct BannerTurno: View {
             .accessibilityLabel("Tocca a \(giocatore.nome)")
             .accessibilityAddTraits(.isHeader)
         }
+    }
+
+    /// "Pino 2   Rosa 1": i punti di ognuno, con il nome.
+    private var puntiDiTutti: some View {
+        HStack(spacing: 22) {
+            ForEach(Array(giocatori.enumerated()), id: \.element.id) { posizione, g in
+                Label("\(g.nome) \(posizione < punti.count ? punti[posizione] : 0)", systemImage: "star.fill")
+                    .testo(DimensioneTesto.medio)
+                    .lineLimit(1)
+                    .opacity(posizione == turno ? 1 : 0.7)
+            }
+        }
+    }
+}
+
+extension View {
+    /// Con due giocatori, tutto lo schermo ha una cornice nel colore di chi ha il turno: si vede anche da lontano.
+    func bordoTurno(_ giocatori: [Partecipante], turno: Int?) -> some View {
+        overlay {
+            if let turno, giocatori.count > 1, giocatori.indices.contains(turno), giocatori[turno].haNome {
+                Rectangle()
+                    .strokeBorder(Tema.coloreGiocatore(turno), lineWidth: 18)
+                    .ignoresSafeArea()
+                    .allowsHitTesting(false)
+                    .id(turno)
+                    .transition(.opacity)
+            }
+        }
+        .animation(.easeInOut(duration: 0.45), value: turno)
     }
 }

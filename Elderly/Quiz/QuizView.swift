@@ -30,6 +30,7 @@ struct QuizView: View {
                 contatoreDomande
             }
         }
+        .bordoTurno(modello.giocatori, turno: modello.turno)
         .animation(.spring(duration: 0.5), value: modello.turno)
         .sensoryFeedback(.success, trigger: modello.rivelata) { _, nuova in nuova != nil }
         .sensoryFeedback(.warning, trigger: modello.sbagliate.count) { prima, dopo in dopo > prima }
@@ -47,7 +48,7 @@ struct QuizView: View {
 
     private var partita: some View {
         VStack(spacing: 16) {
-            BannerTurno(giocatori: modello.giocatori, turno: modello.turno, altezza: 84)
+            BannerTurno(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
 
             Text(modello.domanda.testo)
                 .testo(DimensioneTesto.grande)

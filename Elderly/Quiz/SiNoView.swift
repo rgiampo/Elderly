@@ -33,6 +33,7 @@ struct SiNoView: View {
                     .fixedSize()
             }
         }
+        .bordoTurno(modello.giocatori, turno: modello.turno)
         .animation(.spring(duration: 0.5), value: modello.turno)
         .sensoryFeedback(.impact(weight: .heavy), trigger: modello.turno) { _, _ in modello.giocatori.count > 1 }
         .onChange(of: modello.messaggio) { _, nuovo in
@@ -43,7 +44,7 @@ struct SiNoView: View {
 
     private var partita: some View {
         VStack(spacing: 16) {
-            BannerTurno(giocatori: modello.giocatori, turno: modello.turno, altezza: 84)
+            BannerTurno(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
 
             HStack(spacing: 28) {
                 FotoView(foto: modello.quesito.foto)
@@ -77,33 +78,34 @@ struct SiNoView: View {
                         .multilineTextAlignment(.center)
                     BottoneVoce(testo: modello.testoParlato, etichetta: "Ascolta", altezza: 76)
                 }
-                .frame(width: 440)
+                .frame(width: 520)
             }
             .frame(maxHeight: .infinity)
         }
         .padding(.horizontal, 40).padding(.bottom, 24)
     }
 
+    /// Un pulsante pieno di colore: la forma bianca (cerchio o triangolo) e la parola. Tutta la superficie risponde al tocco.
     private func pulsante(sì: Bool) -> some View {
         let colore = sì ? Tema.verde : Tema.rosso
         let scelto = modello.rispostaData == sì
         return Button { modello.rispondi(sì: sì) } label: {
-            VStack(spacing: 10) {
+            VStack(spacing: 14) {
                 ZStack {
-                    (sì ? AnyShape(Circle()) : AnyShape(SagomaTriangolo())).fill(colore)
+                    (sì ? AnyShape(Circle()) : AnyShape(SagomaTriangolo())).fill(.white)
                     Image(systemName: sì ? "checkmark" : "xmark")
-                        .font(.system(size: 54, weight: .black))
-                        .foregroundStyle(.white)
-                        .offset(y: sì ? 0 : 14)
+                        .font(.system(size: 60, weight: .black))
+                        .foregroundStyle(colore)
+                        .offset(y: sì ? 0 : 16)
                 }
-                .frame(width: 160, height: 160)
-                Text(sì ? "Sì" : "No").testo(DimensioneTesto.grande).foregroundStyle(Tema.testo)
+                .frame(width: 150, height: 150)
+                Text(sì ? "SÌ" : "NO").testo(DimensioneTesto.titolo).foregroundStyle(.white)
             }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 16)
-            .scheda()
-            .overlay(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous).stroke(colore, lineWidth: scelto ? 8 : 0))
-            .opacity(modello.inAttesa && !scelto ? 0.4 : 1)
+            .frame(maxWidth: .infinity, minHeight: 280)
+            .background(colore, in: RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
+            .overlay(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous)
+                .stroke(Tema.testo, lineWidth: scelto ? 8 : 0))
+            .opacity(modello.inAttesa && !scelto ? 0.35 : 1)
         }
         .buttonStyle(StilePremuto())
         .disabled(modello.inAttesa)

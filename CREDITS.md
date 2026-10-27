@@ -23,4 +23,9 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | foto_polpette | Polpette Al Sugo - Nanninella.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Polpette_Al_Sugo_-_Nanninella.jpg |
 | foto_vongole | Pasta alle Vongole - Wiki Loves Sicilia.jpg | 8w9d | CC0 | https://commons.wikimedia.org/wiki/File:Pasta_alle_Vongole_-_Wiki_Loves_Sicilia.jpg |
 
+| foto_gatto | Domestic shorthair cat portrait in grass.jpg | vedi pagina del file | CC0 | https://commons.wikimedia.org/wiki/File:Domestic_shorthair_cat_portrait_in_grass.jpg |
+| foto_cane | Portrait of a labrador retriever.jpg | Dktue | CC0 | https://commons.wikimedia.org/wiki/File:Portrait_of_a_labrador_retriever.jpg |
+| foto_gallina | Blue andalusian Hens.jpg | France01100 | CC0 | https://commons.wikimedia.org/wiki/File:Blue_andalusian_Hens.jpg |
+| foto_cavallo | Horse in Tárcoles River.jpg | Bernard Gagnon | CC0 | https://commons.wikimedia.org/wiki/File:Horse_in_T%C3%A1rcoles_River.jpg |
+
 Prima di aggiungere una foto nuova: controllare la licenza nella pagina del file e aggiungere qui una riga.

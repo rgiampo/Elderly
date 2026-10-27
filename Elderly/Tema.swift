@@ -91,10 +91,12 @@ extension View {
     /// Scheda in vetro (Liquid Glass) schiarito di bianco: i testi scuri restano leggibilissimi sul celeste.
     func scheda(raggio: CGFloat = Tema.raggio) -> some View {
         glassEffect(.regular.tint(.white.opacity(0.78)), in: RoundedRectangle(cornerRadius: raggio, style: .continuous))
+            .contentShape(RoundedRectangle(cornerRadius: raggio, style: .continuous))
     }
 
     /// Pulsante in vetro colorato, con il testo bianco o scuro a seconda del colore.
     func vetro(_ colore: Color, in forma: some Shape = Capsule()) -> some View {
         glassEffect(.regular.tint(colore), in: forma)
+            .contentShape(forma)   // senza questo il tocco funziona solo sopra le lettere
     }
 }

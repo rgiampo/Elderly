@@ -4,6 +4,7 @@ import SwiftUI
 struct StilePremuto: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
+            .contentShape(Rectangle())   // tutta l'area del pulsante risponde, non solo il testo
             .scaleEffect(configuration.isPressed ? 0.97 : 1)
             .animation(.spring(duration: 0.2), value: configuration.isPressed)
     }

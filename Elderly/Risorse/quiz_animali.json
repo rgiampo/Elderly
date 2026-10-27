@@ -1,0 +1,95 @@
+{
+  "titolo": "Animali",
+  "domande": [
+    {
+      "testo": "Quale è il gatto?",
+      "risposte": [
+        {
+          "testo": "Gatto",
+          "foto": "foto_gatto",
+          "giusta": true
+        },
+        {
+          "testo": "Cane",
+          "foto": "foto_cane",
+          "giusta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale è il cane?",
+      "risposte": [
+        {
+          "testo": "Cane",
+          "foto": "foto_cane",
+          "giusta": true
+        },
+        {
+          "testo": "Gallina",
+          "foto": "foto_gallina",
+          "giusta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quali sono le galline?",
+      "risposte": [
+        {
+          "testo": "Galline",
+          "foto": "foto_gallina",
+          "giusta": true
+        },
+        {
+          "testo": "Cavallo",
+          "foto": "foto_cavallo",
+          "giusta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale è il cavallo?",
+      "risposte": [
+        {
+          "testo": "Cavallo",
+          "foto": "foto_cavallo",
+          "giusta": true
+        },
+        {
+          "testo": "Gatto",
+          "foto": "foto_gatto",
+          "giusta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale animale fa miao?",
+      "risposte": [
+        {
+          "testo": "Gatto",
+          "foto": "foto_gatto",
+          "giusta": true
+        },
+        {
+          "testo": "Cane",
+          "foto": "foto_cane",
+          "giusta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale animale fa bau?",
+      "risposte": [
+        {
+          "testo": "Cane",
+          "foto": "foto_cane",
+          "giusta": true
+        },
+        {
+          "testo": "Cavallo",
+          "foto": "foto_cavallo",
+          "giusta": false
+        }
+      ]
+    }
+  ]
+}

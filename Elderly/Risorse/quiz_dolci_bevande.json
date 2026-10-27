@@ -1,0 +1,95 @@
+{
+  "titolo": "Dolci e bevande",
+  "domande": [
+    {
+      "testo": "Quale è il gelato?",
+      "risposte": [
+        {
+          "testo": "Gelato",
+          "foto": "foto_gelato",
+          "giusta": true
+        },
+        {
+          "testo": "Caffè",
+          "foto": "foto_caffe",
+          "giusta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale è il caffè?",
+      "risposte": [
+        {
+          "testo": "Caffè",
+          "foto": "foto_caffe",
+          "giusta": true
+        },
+        {
+          "testo": "Gelato",
+          "foto": "foto_gelato",
+          "giusta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale è il cappuccino?",
+      "risposte": [
+        {
+          "testo": "Cappuccino",
+          "foto": "foto_cappuccino",
+          "giusta": true
+        },
+        {
+          "testo": "Gelato",
+          "foto": "foto_gelato",
+          "giusta": false
+        }
+      ]
+    },
+    {
+      "testo": "Cosa si beve a colazione?",
+      "risposte": [
+        {
+          "testo": "Cappuccino",
+          "foto": "foto_cappuccino",
+          "giusta": true
+        },
+        {
+          "testo": "Pane",
+          "foto": "foto_pane",
+          "giusta": false
+        }
+      ]
+    },
+    {
+      "testo": "Cosa è freddo e dolce?",
+      "risposte": [
+        {
+          "testo": "Gelato",
+          "foto": "foto_gelato",
+          "giusta": true
+        },
+        {
+          "testo": "Caffè",
+          "foto": "foto_caffe",
+          "giusta": false
+        }
+      ]
+    },
+    {
+      "testo": "Quale è il pane?",
+      "risposte": [
+        {
+          "testo": "Pane",
+          "foto": "foto_pane",
+          "giusta": true
+        },
+        {
+          "testo": "Cappuccino",
+          "foto": "foto_cappuccino",
+          "giusta": false
+        }
+      ]
+    }
+  ]
+}

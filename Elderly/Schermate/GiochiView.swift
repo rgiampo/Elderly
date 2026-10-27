@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Scelta del gioco. Due colonne, una per categoria, con schede grandi: tutto visibile, niente scorrimento.
+/// Prima scelta: tre grandi pulsanti, uno sotto l'altro. Niente altro sullo schermo.
 struct GiochiView: View {
     @Environment(Sessione.self) private var sessione
 
@@ -8,42 +8,73 @@ struct GiochiView: View {
         ZStack {
             SfondoCielo()
 
-            HStack(alignment: .top, spacing: 32) {
-                ForEach(Gioco.Categoria.allCases, id: \.self) { categoria in
-                    VStack(spacing: 20) {
-                        Text(categoria.rawValue)
-                            .testo(DimensioneTesto.medio)
-                            .foregroundStyle(Tema.testoSecondario)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .accessibilityAddTraits(.isHeader)
-
-                        ForEach(Gioco.allCases.filter { $0.categoria == categoria }) { gioco in
-                            NavigationLink(destination: gioco.destinazione) { SchedaGioco(gioco: gioco) }
-                                .buttonStyle(StilePremuto())
-                        }
+            VStack(spacing: 24) {
+                ForEach(Categoria.allCases) { categoria in
+                    NavigationLink(destination: destinazione(categoria)) {
+                        RigaCategoria(categoria: categoria)
                     }
+                    .buttonStyle(StilePremuto())
                 }
             }
-            .padding(.horizontal, 40)
-            .safeAreaPadding(.bottom, 130)
-            .overlay(alignment: .bottom) {
-                NavigationLink(destination: GestioneQuizView()) {
-                    Text("Crea o modifica quiz")
-                        .testo(DimensioneTesto.medio)
-                        .foregroundStyle(Tema.testo)
-                        .lineLimit(1).minimumScaleFactor(0.5)
-                        .frame(maxWidth: .infinity, minHeight: 84)
-                        .scheda()
-                }
-                .buttonStyle(StilePremuto())
-                .padding(.horizontal, 40).padding(.bottom, 28)
-            }
+            .padding(.horizontal, 60).padding(.bottom, 40)
+            .frame(maxWidth: 1100)
         }
-        .conIndietro(titolo: "Scegli un gioco") { BarraGiocatori(giocatori: sessione.giocatori) }
+        .conIndietro(titolo: "Scegli") { BarraGiocatori(giocatori: sessione.giocatori) }
+    }
+
+    @ViewBuilder private func destinazione(_ categoria: Categoria) -> some View {
+        switch categoria {
+        case .crea: GestioneQuizView()
+        default: GiochiDellaCategoriaView(categoria: categoria)
+        }
     }
 }
 
-/// Anteprima in alto, titolo e descrizione sotto. Le due schede di una colonna si dividono lo spazio.
+/// Un pulsante: le immagini a sinistra, il titolo grande e la freccia. Tutta la riga si tocca.
+private struct RigaCategoria: View {
+    let categoria: Categoria
+
+    var body: some View {
+        HStack(spacing: 32) {
+            categoria.anteprima
+                .frame(width: 330, height: 130)
+            Text(categoria.titolo)
+                .testo(DimensioneTesto.grande)
+                .lineLimit(2).minimumScaleFactor(0.5)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Image(systemName: "chevron.right").font(.system(size: 40, weight: .bold))
+        }
+        .foregroundStyle(Tema.testo)
+        .padding(.horizontal, 32).padding(.vertical, 20)
+        .frame(maxHeight: .infinity)
+        .scheda()
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(categoria.titolo)
+    }
+}
+
+/// Seconda scelta: i giochi di una categoria, due schede grandi affiancate.
+struct GiochiDellaCategoriaView: View {
+    let categoria: Categoria
+    @Environment(Sessione.self) private var sessione
+
+    var body: some View {
+        ZStack {
+            SfondoCielo()
+
+            HStack(spacing: 32) {
+                ForEach(categoria.giochi) { gioco in
+                    NavigationLink(destination: gioco.destinazione) { SchedaGioco(gioco: gioco) }
+                        .buttonStyle(StilePremuto())
+                }
+            }
+            .padding(.horizontal, 60).padding(.bottom, 40)
+        }
+        .conIndietro(titolo: categoria.titolo) { BarraGiocatori(giocatori: sessione.giocatori) }
+    }
+}
+
+/// Anteprima in alto, titolo e descrizione sotto. Tutta la scheda si tocca.
 private struct SchedaGioco: View {
     let gioco: Gioco
 
@@ -53,7 +84,7 @@ private struct SchedaGioco: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(Tema.celeste.opacity(0.35))
 
-            VStack(spacing: 4) {
+            VStack(spacing: 6) {
                 Text(gioco.titolo).testo(DimensioneTesto.grande)
                     .lineLimit(1).minimumScaleFactor(0.5)
                 Text(gioco.descrizione).testo(DimensioneTesto.normale)
@@ -61,7 +92,7 @@ private struct SchedaGioco: View {
                     .lineLimit(1).minimumScaleFactor(0.5)
             }
             .foregroundStyle(Tema.testo)
-            .padding(.vertical, 16).padding(.horizontal, 12)
+            .padding(.vertical, 22).padding(.horizontal, 12)
             .frame(maxWidth: .infinity)
         }
         .frame(maxHeight: .infinity)

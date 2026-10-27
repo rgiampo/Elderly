@@ -17,7 +17,7 @@ struct FormeGiocoView: View {
             SfondoCielo()
 
             VStack(spacing: 16) {
-                BannerTurno(giocatori: giocatori, turno: partita.giocatoreCorrente, altezza: 84)
+                BannerTurno(giocatori: giocatori, turno: partita.giocatoreCorrente)
 
                 Text(partita.messaggio)
                     .testo(DimensioneTesto.titolo)
@@ -44,6 +44,7 @@ struct FormeGiocoView: View {
             if partita.fase == .festa { Coriandoli().allowsHitTesting(false) }
         }
         .conIndietro { BarraGiocatori(giocatori: giocatori, turno: partita.giocatoreCorrente) }
+        .bordoTurno(giocatori, turno: partita.giocatoreCorrente)
         .animation(.easeInOut, value: partita.messaggio)
         .animation(.spring(duration: 0.5), value: partita.giocatoreCorrente)
         .sensoryFeedback(.impact(weight: .medium), trigger: partita.formaAccesa) { _, nuova in nuova != nil }
