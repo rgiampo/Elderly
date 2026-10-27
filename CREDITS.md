@@ -42,4 +42,33 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | foto_castel_ovo | Castel dell'Ovo, Naples - 2021.jpg | stefygo54 | CC0 | https://commons.wikimedia.org/wiki/File:Castel_dell%27Ovo,_Naples_-_2021.jpg |
 | foto_gelato | Ice Cream Dessert (Unsplash).jpg | Alex Jones alexjones | CC0 | https://commons.wikimedia.org/wiki/File:Ice_Cream_Dessert_(Unsplash).jpg |
 
+| Nome nell'app | File | Autore | Licenza | Pagina |
+|---|---|---|---|---|
+| foto_rosa | Rose 729509.jpg | Bessi | CC0 | https://commons.wikimedia.org/wiki/File:Rose_729509.jpg |
+| foto_tulipano | Tulip blossom1.jpg | A. G. Erdogan | CC0 | https://commons.wikimedia.org/wiki/File:Tulip_blossom1.jpg |
+| foto_papavero | Papaver rhoeas 2025 - Papaver rhoeas.jpg | Publicdomainmoon | CC0 | https://commons.wikimedia.org/wiki/File:Papaver_rhoeas_2025_-_Papaver_rhoeas.jpg |
+| foto_albero | Pear tree in bloom, Orlen.jpg | Gerda Arendt | CC0 | https://commons.wikimedia.org/wiki/File:Pear_tree_in_bloom,_Orlen.jpg |
+| foto_tazza | Coffee Mug (Unsplash).jpg | Ryan Holloway hollowaykryan | CC0 | https://commons.wikimedia.org/wiki/File:Coffee_Mug_(Unsplash).jpg |
+| foto_chiavi | Photo of a key.jpg | Mikael Häggström | CC0 | https://commons.wikimedia.org/wiki/File:Photo_of_a_key.jpg |
+| foto_occhiali | Black Titanium Frame Eyeglasses, JINS MTF-16S-151B, 1.jpg | Yapparina | CC0 | https://commons.wikimedia.org/wiki/File:Black_Titanium_Frame_Eyeglasses,_JINS_MTF-16S-151B,_1.jpg |
+| foto_forbici | Scissors - public domain 01.jpg | Oto Zapletal | CC0 | https://commons.wikimedia.org/wiki/File:Scissors_-_public_domain_01.jpg |
+| foto_teiera | Teapot MET DP156033.jpg | Joseph Richardson Jr. / Nathaniel Richardson | CC0 | https://commons.wikimedia.org/wiki/File:Teapot_MET_DP156033.jpg |
+| foto_ciliegie | Cherries cherry branch fruit red 826113.jpg | Schueler-Design | CC0 | https://commons.wikimedia.org/wiki/File:Cherries_cherry_branch_fruit_red_826113.jpg |
+| foto_peperoni | Colorful Bell Peppers (Unsplash).jpg | Gabriel Ghnassia gabrielghnassia | CC0 | https://commons.wikimedia.org/wiki/File:Colorful_Bell_Peppers_(Unsplash).jpg |
+| foto_torta | Piece of chocolate cake on a white plate decorated with chocolate sauce.jpg | Daria Yakovleva | CC0 | https://commons.wikimedia.org/wiki/File:Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg |
+| foto_biscotti | Cookie stack.jpg | Lisa Fotios | CC0 | https://commons.wikimedia.org/wiki/File:Cookie_stack.jpg |
+| foto_latte | Milk-2474993 1920.jpg | Couleur | CC0 | https://commons.wikimedia.org/wiki/File:Milk-2474993_1920.jpg |
+| foto_girasole | Sunflower Fields.jpg | Wenchieh Yang | CC0 | https://commons.wikimedia.org/wiki/File:Sunflower_Fields.jpg |
+| foto_margherita | Daisy Flower Variety.jpg | Alabama Extension | CC0 | https://commons.wikimedia.org/wiki/File:Daisy_Flower_Variety.jpg |
+| foto_mare | Komos site baie Crète.jpg | Jebulon | CC0 | https://commons.wikimedia.org/wiki/File:Komos_site_baie_Cr%C3%A8te.jpg |
+| foto_spiaggia | Sandy path leading to the sea shore.jpg | Irina Yankovaya | CC0 | https://commons.wikimedia.org/wiki/File:Sandy_path_leading_to_the_sea_shore.jpg |
+| foto_montagna | Snow-capped mountain range.jpg | Mshuang2 | CC0 | https://commons.wikimedia.org/wiki/File:Snow-capped_mountain_range.jpg |
+| foto_mucca | A Cow Grazing Nonchalantly in a Field of Wildflowers.jpg | Bánhmỳchảo | CC0 | https://commons.wikimedia.org/wiki/File:A_Cow_Grazing_Nonchalantly_in_a_Field_of_Wildflowers.jpg |
+| foto_maiale | Sus scrofa domesticus, miniature pig, juvenile.jpg | Johan Spaedtke | CC0 | https://commons.wikimedia.org/wiki/File:Sus_scrofa_domesticus,_miniature_pig,_juvenile.jpg |
+| foto_pesce | Carassius auratus 197778318.jpg | Jackson Kusack | CC0 | https://commons.wikimedia.org/wiki/File:Carassius_auratus_197778318.jpg |
+| foto_cipolla | Red onions - San Francisco, CA.jpg | Daderot | CC0 | https://commons.wikimedia.org/wiki/File:Red_onions_-_San_Francisco,_CA.jpg |
+| foto_candela | Candle-Vela.jpg | ViajeroExtraviado | CC0 | https://commons.wikimedia.org/wiki/File:Candle-Vela.jpg |
+| foto_lampada | Light bulb on Sagano SK200-1.jpg | Hahifuheho | CC0 | https://commons.wikimedia.org/wiki/File:Light_bulb_on_Sagano_SK200-1.jpg |
+| foto_posate | Fork, knife and spoon made of bamboo on a plate.jpg | Cupofjoy | CC0 | https://commons.wikimedia.org/wiki/File:Fork,_knife_and_spoon_made_of_bamboo_on_a_plate.jpg |
+
 Tutte le foto sono ritagliate al centro in formato 16:9. Prima di aggiungere una foto nuova: controllare la licenza nella pagina del file e aggiungere qui una riga.

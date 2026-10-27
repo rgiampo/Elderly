@@ -1,0 +1,1085 @@
+{
+ "titolo": "Fiori e natura",
+ "domande": [
+  {
+   "testo": "Quale è la rosa?",
+   "risposte": [
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": true
+    },
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la rosa?",
+   "risposte": [
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": true
+    },
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la rosa?",
+   "risposte": [
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": true
+    },
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la rosa?",
+   "risposte": [
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": true
+    },
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la rosa?",
+   "risposte": [
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": true
+    },
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la rosa?",
+   "risposte": [
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": true
+    },
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la rosa?",
+   "risposte": [
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": true
+    },
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la rosa?",
+   "risposte": [
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": true
+    },
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il girasole?",
+   "risposte": [
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": true
+    },
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il girasole?",
+   "risposte": [
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": true
+    },
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il girasole?",
+   "risposte": [
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": true
+    },
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il girasole?",
+   "risposte": [
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": true
+    },
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il girasole?",
+   "risposte": [
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": true
+    },
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il girasole?",
+   "risposte": [
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": true
+    },
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il girasole?",
+   "risposte": [
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": true
+    },
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il girasole?",
+   "risposte": [
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": true
+    },
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le margherite?",
+   "risposte": [
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": true
+    },
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le margherite?",
+   "risposte": [
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": true
+    },
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le margherite?",
+   "risposte": [
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": true
+    },
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le margherite?",
+   "risposte": [
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": true
+    },
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le margherite?",
+   "risposte": [
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": true
+    },
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le margherite?",
+   "risposte": [
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": true
+    },
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le margherite?",
+   "risposte": [
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": true
+    },
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le margherite?",
+   "risposte": [
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": true
+    },
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il tulipano?",
+   "risposte": [
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": true
+    },
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il tulipano?",
+   "risposte": [
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": true
+    },
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il tulipano?",
+   "risposte": [
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": true
+    },
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il tulipano?",
+   "risposte": [
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": true
+    },
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il tulipano?",
+   "risposte": [
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": true
+    },
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il tulipano?",
+   "risposte": [
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": true
+    },
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il tulipano?",
+   "risposte": [
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": true
+    },
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il tulipano?",
+   "risposte": [
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": true
+    },
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i papaveri?",
+   "risposte": [
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": true
+    },
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i papaveri?",
+   "risposte": [
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": true
+    },
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i papaveri?",
+   "risposte": [
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": true
+    },
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i papaveri?",
+   "risposte": [
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": true
+    },
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i papaveri?",
+   "risposte": [
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": true
+    },
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i papaveri?",
+   "risposte": [
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": true
+    },
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i papaveri?",
+   "risposte": [
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": true
+    },
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i papaveri?",
+   "risposte": [
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": true
+    },
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il mare?",
+   "risposte": [
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": true
+    },
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il mare?",
+   "risposte": [
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": true
+    },
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il mare?",
+   "risposte": [
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": true
+    },
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il mare?",
+   "risposte": [
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": true
+    },
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il mare?",
+   "risposte": [
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": true
+    },
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il mare?",
+   "risposte": [
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": true
+    },
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il mare?",
+   "risposte": [
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": true
+    },
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il mare?",
+   "risposte": [
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": true
+    },
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la spiaggia?",
+   "risposte": [
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": true
+    },
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la spiaggia?",
+   "risposte": [
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": true
+    },
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la spiaggia?",
+   "risposte": [
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": true
+    },
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la spiaggia?",
+   "risposte": [
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": true
+    },
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la spiaggia?",
+   "risposte": [
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": true
+    },
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la spiaggia?",
+   "risposte": [
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": true
+    },
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la spiaggia?",
+   "risposte": [
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": true
+    },
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la spiaggia?",
+   "risposte": [
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": true
+    },
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la montagna?",
+   "risposte": [
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": true
+    },
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la montagna?",
+   "risposte": [
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": true
+    },
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la montagna?",
+   "risposte": [
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": true
+    },
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la montagna?",
+   "risposte": [
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": true
+    },
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la montagna?",
+   "risposte": [
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": true
+    },
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la montagna?",
+   "risposte": [
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": true
+    },
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la montagna?",
+   "risposte": [
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": true
+    },
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la montagna?",
+   "risposte": [
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": true
+    },
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'albero?",
+   "risposte": [
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": true
+    },
+    {
+     "testo": "Rosa",
+     "foto": "foto_rosa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'albero?",
+   "risposte": [
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": true
+    },
+    {
+     "testo": "Girasole",
+     "foto": "foto_girasole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'albero?",
+   "risposte": [
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": true
+    },
+    {
+     "testo": "Margherite",
+     "foto": "foto_margherita",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'albero?",
+   "risposte": [
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": true
+    },
+    {
+     "testo": "Tulipano",
+     "foto": "foto_tulipano",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'albero?",
+   "risposte": [
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": true
+    },
+    {
+     "testo": "Papaveri",
+     "foto": "foto_papavero",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'albero?",
+   "risposte": [
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": true
+    },
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'albero?",
+   "risposte": [
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": true
+    },
+    {
+     "testo": "Spiaggia",
+     "foto": "foto_spiaggia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'albero?",
+   "risposte": [
+    {
+     "testo": "Albero",
+     "foto": "foto_albero",
+     "giusta": true
+    },
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": false
+    }
+   ]
+  }
+ ]
+}

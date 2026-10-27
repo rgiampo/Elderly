@@ -3,7 +3,7 @@ import SwiftUI
 /// Le forme del gioco: ognuna ha un colore e una nota (do, re, mi, fa, sol),
 /// così si possono suonare melodie conosciute.
 enum Forma: CaseIterable, Identifiable {
-    case cerchio, quadrato, triangolo, stella, cuore, rombo, esagono, pentagono
+    case cerchio, quadrato, triangolo, stella, cuore, rombo, esagono, pentagono, ottagono, croce, ovale, semicerchio
 
     var id: Self { self }
 
@@ -18,6 +18,10 @@ enum Forma: CaseIterable, Identifiable {
         case .rombo: "Rombo arancione"
         case .esagono: "Esagono viola"
         case .pentagono: "Pentagono azzurro"
+        case .ottagono: "Ottagono marrone"
+        case .croce: "Croce rosa scuro"
+        case .ovale: "Ovale verde chiaro"
+        case .semicerchio: "Semicerchio blu scuro"
         }
     }
 
@@ -31,10 +35,14 @@ enum Forma: CaseIterable, Identifiable {
         case .rombo: Color(red: 0.98, green: 0.55, blue: 0.15)
         case .esagono: Color(red: 0.55, green: 0.38, blue: 0.85)
         case .pentagono: Color(red: 0.10, green: 0.70, blue: 0.78)
+        case .ottagono: Color(red: 0.62, green: 0.40, blue: 0.25)
+        case .croce: Color(red: 0.80, green: 0.20, blue: 0.50)
+        case .ovale: Color(red: 0.55, green: 0.80, blue: 0.20)
+        case .semicerchio: Color(red: 0.15, green: 0.30, blue: 0.70)
         }
     }
 
-    /// Tutta la scala, dal do al do alto: le prime cinque (do–sol) bastano per l'Inno alla gioia e per Fra Martino.
+    /// Le dodici note della scala di do (do re mi fa sol la si do re mi fa sol): le prime cinque bastano per le melodie più semplici.
     var frequenza: Double {
         switch self {
         case .cerchio: 523.25
@@ -45,6 +53,10 @@ enum Forma: CaseIterable, Identifiable {
         case .rombo: 880.00
         case .esagono: 987.77
         case .pentagono: 1046.50
+        case .ottagono: 1174.66
+        case .croce: 1318.51
+        case .ovale: 1396.91
+        case .semicerchio: 1567.98
         }
     }
 
@@ -58,7 +70,34 @@ enum Forma: CaseIterable, Identifiable {
         case .rombo: AnyShape(SagomaPoligono(lati: 4))
         case .esagono: AnyShape(SagomaPoligono(lati: 6))
         case .pentagono: AnyShape(SagomaPoligono(lati: 5))
+        case .ottagono: AnyShape(SagomaPoligono(lati: 8))
+        case .croce: AnyShape(SagomaCroce())
+        case .ovale: AnyShape(Ellipse().scale(x: 0.62, y: 1))
+        case .semicerchio: AnyShape(SagomaSemicerchio())
         }
+    }
+}
+
+struct SagomaCroce: Shape {
+    func path(in rect: CGRect) -> Path {
+        let t = rect.width / 3
+        var p = Path()
+        p.addRect(CGRect(x: rect.minX + t, y: rect.minY, width: t, height: rect.height))
+        p.addRect(CGRect(x: rect.minX, y: rect.minY + t, width: rect.width, height: t))
+        return p
+    }
+}
+
+/// Mezzo cerchio con la parte piatta in basso, centrato nel riquadro.
+struct SagomaSemicerchio: Shape {
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        let r = rect.width / 2
+        let base = rect.midY + r / 2
+        p.move(to: CGPoint(x: rect.minX, y: base))
+        p.addArc(center: CGPoint(x: rect.midX, y: base), radius: r, startAngle: .degrees(180), endAngle: .degrees(0), clockwise: false)
+        p.closeSubpath()
+        return p
     }
 }
 

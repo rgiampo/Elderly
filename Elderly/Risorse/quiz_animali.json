@@ -1080,6 +1080,906 @@
      "giusta": false
     }
    ]
+  },
+  {
+   "testo": "Quale è la mucca?",
+   "risposte": [
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": true
+    },
+    {
+     "testo": "Gatto",
+     "foto": "foto_gatto",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mucca?",
+   "risposte": [
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": true
+    },
+    {
+     "testo": "Cane",
+     "foto": "foto_cane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mucca?",
+   "risposte": [
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": true
+    },
+    {
+     "testo": "Galline",
+     "foto": "foto_gallina",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mucca?",
+   "risposte": [
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": true
+    },
+    {
+     "testo": "Cavallo",
+     "foto": "foto_cavallo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mucca?",
+   "risposte": [
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": true
+    },
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mucca?",
+   "risposte": [
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": true
+    },
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mucca?",
+   "risposte": [
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": true
+    },
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mucca?",
+   "risposte": [
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": true
+    },
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mucca?",
+   "risposte": [
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": true
+    },
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mucca?",
+   "risposte": [
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": true
+    },
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mucca?",
+   "risposte": [
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": true
+    },
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il maiale?",
+   "risposte": [
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": true
+    },
+    {
+     "testo": "Gatto",
+     "foto": "foto_gatto",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il maiale?",
+   "risposte": [
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": true
+    },
+    {
+     "testo": "Cane",
+     "foto": "foto_cane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il maiale?",
+   "risposte": [
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": true
+    },
+    {
+     "testo": "Galline",
+     "foto": "foto_gallina",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il maiale?",
+   "risposte": [
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": true
+    },
+    {
+     "testo": "Cavallo",
+     "foto": "foto_cavallo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il maiale?",
+   "risposte": [
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": true
+    },
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il maiale?",
+   "risposte": [
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": true
+    },
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il maiale?",
+   "risposte": [
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": true
+    },
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il maiale?",
+   "risposte": [
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": true
+    },
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il maiale?",
+   "risposte": [
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": true
+    },
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il maiale?",
+   "risposte": [
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": true
+    },
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il maiale?",
+   "risposte": [
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": true
+    },
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pesce rosso?",
+   "risposte": [
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": true
+    },
+    {
+     "testo": "Gatto",
+     "foto": "foto_gatto",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pesce rosso?",
+   "risposte": [
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": true
+    },
+    {
+     "testo": "Cane",
+     "foto": "foto_cane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pesce rosso?",
+   "risposte": [
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": true
+    },
+    {
+     "testo": "Galline",
+     "foto": "foto_gallina",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pesce rosso?",
+   "risposte": [
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": true
+    },
+    {
+     "testo": "Cavallo",
+     "foto": "foto_cavallo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pesce rosso?",
+   "risposte": [
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": true
+    },
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pesce rosso?",
+   "risposte": [
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": true
+    },
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pesce rosso?",
+   "risposte": [
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": true
+    },
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pesce rosso?",
+   "risposte": [
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": true
+    },
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pesce rosso?",
+   "risposte": [
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": true
+    },
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pesce rosso?",
+   "risposte": [
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": true
+    },
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pesce rosso?",
+   "risposte": [
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": true
+    },
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il gatto?",
+   "risposte": [
+    {
+     "testo": "Gatto",
+     "foto": "foto_gatto",
+     "giusta": true
+    },
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il gatto?",
+   "risposte": [
+    {
+     "testo": "Gatto",
+     "foto": "foto_gatto",
+     "giusta": true
+    },
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il gatto?",
+   "risposte": [
+    {
+     "testo": "Gatto",
+     "foto": "foto_gatto",
+     "giusta": true
+    },
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cane?",
+   "risposte": [
+    {
+     "testo": "Cane",
+     "foto": "foto_cane",
+     "giusta": true
+    },
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cane?",
+   "risposte": [
+    {
+     "testo": "Cane",
+     "foto": "foto_cane",
+     "giusta": true
+    },
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cane?",
+   "risposte": [
+    {
+     "testo": "Cane",
+     "foto": "foto_cane",
+     "giusta": true
+    },
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le galline?",
+   "risposte": [
+    {
+     "testo": "Galline",
+     "foto": "foto_gallina",
+     "giusta": true
+    },
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le galline?",
+   "risposte": [
+    {
+     "testo": "Galline",
+     "foto": "foto_gallina",
+     "giusta": true
+    },
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le galline?",
+   "risposte": [
+    {
+     "testo": "Galline",
+     "foto": "foto_gallina",
+     "giusta": true
+    },
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cavallo?",
+   "risposte": [
+    {
+     "testo": "Cavallo",
+     "foto": "foto_cavallo",
+     "giusta": true
+    },
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cavallo?",
+   "risposte": [
+    {
+     "testo": "Cavallo",
+     "foto": "foto_cavallo",
+     "giusta": true
+    },
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cavallo?",
+   "risposte": [
+    {
+     "testo": "Cavallo",
+     "foto": "foto_cavallo",
+     "giusta": true
+    },
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pecore?",
+   "risposte": [
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": true
+    },
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pecore?",
+   "risposte": [
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": true
+    },
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pecore?",
+   "risposte": [
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": true
+    },
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anatra?",
+   "risposte": [
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": true
+    },
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anatra?",
+   "risposte": [
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": true
+    },
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anatra?",
+   "risposte": [
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": true
+    },
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il coniglio?",
+   "risposte": [
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": true
+    },
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il coniglio?",
+   "risposte": [
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": true
+    },
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il coniglio?",
+   "risposte": [
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": true
+    },
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la capra?",
+   "risposte": [
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": true
+    },
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la capra?",
+   "risposte": [
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": true
+    },
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la capra?",
+   "risposte": [
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": true
+    },
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la farfalla?",
+   "risposte": [
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": true
+    },
+    {
+     "testo": "Mucca",
+     "foto": "foto_mucca",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la farfalla?",
+   "risposte": [
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": true
+    },
+    {
+     "testo": "Maiale",
+     "foto": "foto_maiale",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la farfalla?",
+   "risposte": [
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": true
+    },
+    {
+     "testo": "Pesce rosso",
+     "foto": "foto_pesce",
+     "giusta": false
+    }
+   ]
   }
  ]
 }

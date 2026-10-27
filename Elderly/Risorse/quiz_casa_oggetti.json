@@ -1,0 +1,845 @@
+{
+ "titolo": "Casa e oggetti",
+ "domande": [
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    }
+   ]
+  }
+ ]
+}

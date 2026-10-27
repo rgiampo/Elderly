@@ -19,13 +19,19 @@ final class PartitaModello {
     private var numeroMelodia = 0
     private(set) var titoloMelodia: String?        // se si sta suonando una melodia conosciuta
     private var posizione = 0
-    private var lunghezza = 2
+    private let passo: Int
+    private let lunghezzaIniziale: Int
+    private var lunghezza: Int
     private var compito: Task<Void, Never>?
 
     init(giocatori: [Partecipante], difficolta: Difficolta) {
         self.giocatori = giocatori
         self.forme = difficolta.forme
-        melodie = difficolta == .maestro ? [] : Melodia.perLivello(difficolta.numeroForme).shuffled()
+        passo = difficolta.passoForme
+        lunghezzaIniziale = max(2, passo)
+        lunghezza = max(2, passo)
+        // le melodie intere ci sono solo nel livello Maestro; negli altri le sequenze sono a caso
+        melodie = difficolta == .maestro ? Melodia.tutte : []
     }
 
     func inizia() { nuovaSequenza() }
@@ -37,9 +43,21 @@ final class PartitaModello {
         if forma == sequenza[posizione] {
             posizione += 1
             if posizione == sequenza.count { successo() }
+        } else if melodiaCorrente != nil {
+            aiuta()
         } else {
             errore()
         }
+    }
+
+    /// Nelle melodie un errore non fa ricominciare: si accende la forma giusta, si dice "Questa!" e si va avanti da lì,
+    /// così chi sta imparando una canzone la ascolta e la impara tocco dopo tocco.
+    private func aiuta() {
+        let giusta = sequenza[posizione]
+        messaggio = "Questa! Continua"
+        accendi(giusta, durata: 0.8)
+        posizione += 1
+        if posizione == sequenza.count { successo() }
     }
 
     // MARK: - Passi del gioco
@@ -97,7 +115,7 @@ final class PartitaModello {
                 }
                 try? await Task.sleep(for: .seconds(1.8))
             }
-            await self.passaAlProssimo(lunghezzaNuova: finita ? 2 : await self.lunghezza + 1, nuovaMelodia: finita)
+            await self.passaAlProssimo(lunghezzaNuova: finita ? self.lunghezzaIniziale : await self.lunghezza + self.passo, nuovaMelodia: finita)
         }
     }
 

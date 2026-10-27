@@ -25,6 +25,16 @@ enum Difficolta: CaseIterable, Identifiable {
         }
     }
 
+    /// Di quante note cresce la sequenza a ogni giro.
+    var passoForme: Int {
+        switch self {
+        case .facile: Configurazione.passoFacile
+        case .medio: Configurazione.passoMedio
+        case .difficile: Configurazione.passoDifficile
+        case .maestro: Configurazione.passoMaestro
+        }
+    }
+
     /// Quante coppie di carte ci sono nel gioco delle coppie.
     var numeroCoppie: Int {
         switch self {

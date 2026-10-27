@@ -60,8 +60,8 @@ private struct RigaForme: View {
 
     var body: some View {
         GeometryReader { spazio in
-            // più di cinque forme vanno su due righe: restano grandi
-            let righe = partita.forme.count > 5 ? 2 : 1
+            // più di cinque forme vanno su più righe: restano grandi
+            let righe = partita.forme.count > 8 ? 3 : (partita.forme.count > 5 ? 2 : 1)
             let perRiga = (partita.forme.count + righe - 1) / righe
             let distanza: CGFloat = 32
             // 0.88: la forma illuminata cresce un po' e non deve uscire dallo schermo
@@ -123,29 +123,45 @@ struct FormaBottone: View {
     }
 }
 
-/// Piccola festa: forme colorate che cadono una volta sola.
+/// Piccola festa: forme colorate che cadono dall'alto una volta sola, dondolando e ruotando.
 struct Coriandoli: View {
-    @State private var cadi = false
-    private let pezzi = (0..<36).map { _ in
-        (x: CGFloat.random(in: 0...1), ritardo: Double.random(in: 0...0.6),
-         dimensione: CGFloat.random(in: 18...36), forma: Forma.allCases.randomElement()!)
+    private struct Pezzo {
+        let x = CGFloat.random(in: 0.03...0.97)
+        let ritardo = Double.random(in: 0...0.8)
+        let durata = Double.random(in: 2.2...3.4)
+        let lato = CGFloat.random(in: 24...46)
+        let dondolio = Double.random(in: 0.8...1.6)
+        let ampiezza = CGFloat.random(in: 14...40)
+        let giri = Double.random(in: -300...300)         // gradi al secondo
+        let forma = Forma.allCases.randomElement()!
     }
+
+    // @State: i valori a caso si scelgono una volta sola (con `let` cambiavano a ogni ridisegno e i pezzi saltavano)
+    @State private var pezzi = (0..<40).map { _ in Pezzo() }
+    @State private var inizio = Date()
 
     var body: some View {
         GeometryReader { geo in
-            ForEach(pezzi.indices, id: \.self) { i in
-                pezzi[i].forma.sagoma
-                    .fill(pezzi[i].forma.colore)
-                    .frame(width: pezzi[i].dimensione, height: pezzi[i].dimensione)
-                    .rotationEffect(.degrees(cadi ? Double(pezzi[i].x) * 360 : 0))
-                    .position(x: pezzi[i].x * geo.size.width, y: cadi ? geo.size.height + 40 : -40)
-                    .animation(.easeIn(duration: 2).delay(pezzi[i].ritardo), value: cadi)
+            TimelineView(.animation) { contesto in
+                let t = contesto.date.timeIntervalSince(inizio)
+                ZStack {
+                    ForEach(pezzi.indices, id: \.self) { i in
+                        let p = pezzi[i]
+                        let avanzamento = (t - p.ritardo) / p.durata
+                        if avanzamento >= 0, avanzamento <= 1 {
+                            p.forma.sagoma
+                                .fill(p.forma.colore)
+                                .frame(width: p.lato, height: p.lato)
+                                .rotationEffect(.degrees(p.giri * t))
+                                .position(x: p.x * geo.size.width + p.ampiezza * CGFloat(sin(t * p.dondolio * 3)),
+                                          y: -50 + (geo.size.height + 100) * CGFloat(avanzamento))
+                                .opacity(avanzamento > 0.85 ? (1 - avanzamento) / 0.15 : 1)
+                        }
+                    }
+                }
             }
         }
-        .onAppear { cadi = true }
+        .ignoresSafeArea()
+        .accessibilityHidden(true)
     }
-}
-
-#Preview(traits: .landscapeLeft) {
-    NavigationStack { FormeGiocoView(giocatori: [.senzaNome], difficolta: .medio) }
 }

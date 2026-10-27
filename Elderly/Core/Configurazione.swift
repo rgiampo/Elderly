@@ -13,7 +13,10 @@ enum Configurazione {
     static let risposteMassime = 2
 
     /// Quante forme ci sono nel gioco delle forme, per ogni difficoltà.
-    static let formeFacile = 3, formeMedio = 4, formeDifficile = 5, formeMaestro = 8   // maestro: tutta la scala, senza melodia
+    static let formeFacile = 3, formeMedio = 4, formeDifficile = 5, formeMaestro = 12   // maestro: tutta la scala, con melodie intere
+
+    /// Di quante note si allunga la sequenza a ogni giro riuscito, per ogni difficoltà.
+    static let passoFacile = 1, passoMedio = 2, passoDifficile = 2, passoMaestro = 3
 
     /// Quante coppie di foto ci sono nel gioco delle coppie, per ogni difficoltà.
     static let coppieFacile = 3, coppieMedio = 4, coppieDifficile = 6

@@ -59,7 +59,7 @@ struct SiNoView: View {
                         .accessibilityHidden(true)
 
                     Text("Nella foto c'è:")
-                        .testo(DimensioneTesto.medio)
+                        .testo(DimensioneTesto.titolo)
                         .foregroundStyle(Tema.testoSecondario)
                     Text(modello.quesito.nome)
                         .testo(DimensioneTesto.enorme)

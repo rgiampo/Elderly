@@ -68,33 +68,30 @@ final class Sintetizzatore {
         return datiWav(da: onda)
     }
 
-    /// Un "buzz" breve e grave (due note discendenti, nel registro che gli altoparlanti dell'iPad riproducono bene) per dire "sbagliato" senza spaventare.
+    /// Il suono dello sbaglio: due note morbide che scendono ("uh-oh" gentile), senza ruvidità, così non spaventa.
     func buzz() {
         guard UserDefaults.standard.object(forKey: "suoniAttivi") as? Bool ?? true else { return }
         if buzzLettore == nil { buzzLettore = try? AVAudioPlayer(data: datiBuzz()) }
-        buzzLettore?.volume = 0.9
+        buzzLettore?.volume = 0.55
         buzzLettore?.currentTime = 0
         buzzLettore?.play()
     }
 
     private var buzzLettore: AVAudioPlayer?
 
-    /// Il cicalino dei quiz televisivi: due "BZZT" ruvidi di fila, il secondo più basso (sotto i 150 Hz l'iPad quasi non suona) (come "eh-eh!").
     private func datiBuzz() -> Data {
-        let impulsi: [(inizio: Double, durata: Double, frequenza: Double)] = [(0.0, 0.28, 262), (0.34, 0.50, 196)]
-        let totale = 0.34 + 0.50
+        let note: [(inizio: Double, durata: Double, frequenza: Double)] = [(0.0, 0.32, 392), (0.26, 0.5, 311)]
+        let totale = 0.26 + 0.5
         let campioni = Int(frequenzaCampionamento * totale)
         var onda = [Float](repeating: 0, count: campioni)
         for n in 0..<campioni {
             let t = Double(n) / frequenzaCampionamento
-            for i in impulsi where t >= i.inizio && t < i.inizio + i.durata {
+            for i in note where t >= i.inizio && t < i.inizio + i.durata {
                 let l = t - i.inizio
-                let f = i.frequenza * (1 - 0.06 * l / i.durata)        // scende appena, come una nota "stonata"
-                func sega(_ x: Double) -> Double { 2 * (l * x - floor(l * x + 0.5)) }
-                let quadra = sin(2 * .pi * f * l) >= 0 ? 1.0 : -1.0
-                let corpo = 0.5 * sega(f) + 0.3 * quadra + 0.2 * sega(f * 2.01)   // ruvido e pieno
-                let attacco = min(1, l / 0.005), coda = min(1, (i.durata - l) / 0.04)
-                onda[n] += Float(0.5 * corpo * attacco * coda)
+                let attacco = min(1, l / 0.03)                       // attacco dolce
+                let coda = min(1, (i.durata - l) / 0.12)             // sfuma piano
+                let corpo = sin(2 * .pi * i.frequenza * l) + 0.25 * sin(2 * .pi * i.frequenza * 2 * l)
+                onda[n] += Float(0.35 * corpo * attacco * coda)
             }
         }
         return datiWav(da: onda)

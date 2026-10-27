@@ -300,6 +300,546 @@
      "giusta": false
     }
    ]
+  },
+  {
+   "testo": "Quale è la torta?",
+   "risposte": [
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": true
+    },
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la torta?",
+   "risposte": [
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": true
+    },
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la torta?",
+   "risposte": [
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": true
+    },
+    {
+     "testo": "Cappuccino",
+     "foto": "foto_cappuccino",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la torta?",
+   "risposte": [
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": true
+    },
+    {
+     "testo": "Pane",
+     "foto": "foto_pane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la torta?",
+   "risposte": [
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": true
+    },
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la torta?",
+   "risposte": [
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": true
+    },
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la torta?",
+   "risposte": [
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": true
+    },
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i biscotti?",
+   "risposte": [
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": true
+    },
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i biscotti?",
+   "risposte": [
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": true
+    },
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i biscotti?",
+   "risposte": [
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": true
+    },
+    {
+     "testo": "Cappuccino",
+     "foto": "foto_cappuccino",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i biscotti?",
+   "risposte": [
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": true
+    },
+    {
+     "testo": "Pane",
+     "foto": "foto_pane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i biscotti?",
+   "risposte": [
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": true
+    },
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i biscotti?",
+   "risposte": [
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": true
+    },
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i biscotti?",
+   "risposte": [
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": true
+    },
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il latte?",
+   "risposte": [
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": true
+    },
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il latte?",
+   "risposte": [
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": true
+    },
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il latte?",
+   "risposte": [
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": true
+    },
+    {
+     "testo": "Cappuccino",
+     "foto": "foto_cappuccino",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il latte?",
+   "risposte": [
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": true
+    },
+    {
+     "testo": "Pane",
+     "foto": "foto_pane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il latte?",
+   "risposte": [
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": true
+    },
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il latte?",
+   "risposte": [
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": true
+    },
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il latte?",
+   "risposte": [
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": true
+    },
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il gelato?",
+   "risposte": [
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": true
+    },
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il gelato?",
+   "risposte": [
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": true
+    },
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il gelato?",
+   "risposte": [
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": true
+    },
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il caffè?",
+   "risposte": [
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": true
+    },
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il caffè?",
+   "risposte": [
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": true
+    },
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il caffè?",
+   "risposte": [
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": true
+    },
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cappuccino?",
+   "risposte": [
+    {
+     "testo": "Cappuccino",
+     "foto": "foto_cappuccino",
+     "giusta": true
+    },
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cappuccino?",
+   "risposte": [
+    {
+     "testo": "Cappuccino",
+     "foto": "foto_cappuccino",
+     "giusta": true
+    },
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cappuccino?",
+   "risposte": [
+    {
+     "testo": "Cappuccino",
+     "foto": "foto_cappuccino",
+     "giusta": true
+    },
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pane?",
+   "risposte": [
+    {
+     "testo": "Pane",
+     "foto": "foto_pane",
+     "giusta": true
+    },
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pane?",
+   "risposte": [
+    {
+     "testo": "Pane",
+     "foto": "foto_pane",
+     "giusta": true
+    },
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pane?",
+   "risposte": [
+    {
+     "testo": "Pane",
+     "foto": "foto_pane",
+     "giusta": true
+    },
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i cannoli?",
+   "risposte": [
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": true
+    },
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i cannoli?",
+   "risposte": [
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": true
+    },
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i cannoli?",
+   "risposte": [
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": true
+    },
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": false
+    }
+   ]
   }
  ]
 }

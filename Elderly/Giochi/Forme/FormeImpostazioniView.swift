@@ -11,7 +11,8 @@ struct FormeImpostazioniView: View {
             istruzioni: Istruzioni.forme,
             livelli: Difficolta.allCases,
             anteprima: { difficolta in
-                HStack(spacing: 28) {
+                // fino a 5 forme in una riga, di più su più righe da 4
+                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 28), count: min(difficolta.numeroForme, difficolta.numeroForme > 5 ? 4 : 5)), spacing: 28) {
                     ForEach(difficolta.forme) { forma in
                         forma.sagoma.fill(forma.colore)
                             .aspectRatio(1, contentMode: .fit)
