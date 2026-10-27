@@ -39,7 +39,7 @@ struct IntestazioneModulo: View {
                 .accessibilityAddTraits(.isHeader)
 
             Button(action: salva) {
-                Text("Salva")
+                Text("Fatto")
                     .testo(DimensioneTesto.medio)
                     .foregroundStyle(.white)
                     .lineLimit(1).minimumScaleFactor(0.5)
