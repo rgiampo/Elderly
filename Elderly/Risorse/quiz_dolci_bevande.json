@@ -47,6 +47,21 @@
    ]
   },
   {
+   "testo": "Quale è il gelato?",
+   "risposte": [
+    {
+     "testo": "1. foto di un cono con palline fredde e colorate",
+     "foto": "foto_gelato",
+     "giusta": true
+    },
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": false
+    }
+   ]
+  },
+  {
    "testo": "Quale è il caffè?",
    "risposte": [
     {
@@ -87,6 +102,21 @@
     {
      "testo": "2. foto di una pagnotta dorata a fette",
      "foto": "foto_pane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il caffè?",
+   "risposte": [
+    {
+     "testo": "2. foto di una tazzina con un liquido scuro",
+     "foto": "foto_caffe",
+     "giusta": true
+    },
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
      "giusta": false
     }
    ]
@@ -137,6 +167,21 @@
    ]
   },
   {
+   "testo": "Quale è il cappuccino?",
+   "risposte": [
+    {
+     "testo": "1. foto di una tazza con schiuma di latte e cacao",
+     "foto": "foto_cappuccino",
+     "giusta": true
+    },
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": false
+    }
+   ]
+  },
+  {
    "testo": "Quale è il pane?",
    "risposte": [
     {
@@ -177,6 +222,81 @@
     {
      "testo": "1. foto di una tazza con schiuma di latte e cacao",
      "foto": "foto_cappuccino",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il pane?",
+   "risposte": [
+    {
+     "testo": "2. foto di una pagnotta dorata a fette",
+     "foto": "foto_pane",
+     "giusta": true
+    },
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i cannoli?",
+   "risposte": [
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un cono con palline fredde e colorate",
+     "foto": "foto_gelato",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i cannoli?",
+   "risposte": [
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di una tazzina con un liquido scuro",
+     "foto": "foto_caffe",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i cannoli?",
+   "risposte": [
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di una tazza con schiuma di latte e cacao",
+     "foto": "foto_cappuccino",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i cannoli?",
+   "risposte": [
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di una pagnotta dorata a fette",
+     "foto": "foto_pane",
      "giusta": false
     }
    ]

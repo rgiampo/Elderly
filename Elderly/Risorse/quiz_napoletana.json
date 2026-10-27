@@ -92,6 +92,36 @@
    ]
   },
   {
+   "testo": "Quale di queste è la pizza marinara?",
+   "risposte": [
+    {
+     "testo": "1. foto di una pizza rossa con pomodoro, aglio e origano",
+     "foto": "foto_marinara",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale di queste è la pizza marinara?",
+   "risposte": [
+    {
+     "testo": "1. foto di una pizza rossa con pomodoro, aglio e origano",
+     "foto": "foto_marinara",
+     "giusta": true
+    },
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": false
+    }
+   ]
+  },
+  {
    "testo": "Quali sono le polpette al sugo?",
    "risposte": [
     {
@@ -177,6 +207,36 @@
     {
      "testo": "1. foto di una tazzina fumante con liquido scuro",
      "foto": "foto_caffe",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le polpette al sugo?",
+   "risposte": [
+    {
+     "testo": "2. foto di sfere di carne immerse nel sugo rosso",
+     "foto": "foto_polpette",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le polpette al sugo?",
+   "risposte": [
+    {
+     "testo": "2. foto di sfere di carne immerse nel sugo rosso",
+     "foto": "foto_polpette",
+     "giusta": true
+    },
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
      "giusta": false
     }
    ]
@@ -272,6 +332,36 @@
    ]
   },
   {
+   "testo": "Quale è il calzone?",
+   "risposte": [
+    {
+     "testo": "1. foto di una pizza piegata a mezzaluna",
+     "foto": "foto_calzone",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il calzone?",
+   "risposte": [
+    {
+     "testo": "1. foto di una pizza piegata a mezzaluna",
+     "foto": "foto_calzone",
+     "giusta": true
+    },
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": false
+    }
+   ]
+  },
+  {
    "testo": "Quale è la pasta e patate?",
    "risposte": [
     {
@@ -362,6 +452,36 @@
    ]
   },
   {
+   "testo": "Quale è la pasta e patate?",
+   "risposte": [
+    {
+     "testo": "2. foto di un piatto di pasta cremosa con patate",
+     "foto": "foto_patate",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pasta e patate?",
+   "risposte": [
+    {
+     "testo": "2. foto di un piatto di pasta cremosa con patate",
+     "foto": "foto_patate",
+     "giusta": true
+    },
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": false
+    }
+   ]
+  },
+  {
    "testo": "Quale è la pasta alle vongole?",
    "risposte": [
     {
@@ -452,6 +572,36 @@
    ]
   },
   {
+   "testo": "Quale è la pasta alle vongole?",
+   "risposte": [
+    {
+     "testo": "2. foto di un piatto di spaghetti con molluschi nel guscio",
+     "foto": "foto_vongole",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pasta alle vongole?",
+   "risposte": [
+    {
+     "testo": "2. foto di un piatto di spaghetti con molluschi nel guscio",
+     "foto": "foto_vongole",
+     "giusta": true
+    },
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": false
+    }
+   ]
+  },
+  {
    "testo": "Quale è il polpo arrosto?",
    "risposte": [
     {
@@ -542,6 +692,36 @@
    ]
   },
   {
+   "testo": "Quale è il polpo arrosto?",
+   "risposte": [
+    {
+     "testo": "2. foto di un tentacolo grigliato sul piatto",
+     "foto": "foto_polpo",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il polpo arrosto?",
+   "risposte": [
+    {
+     "testo": "2. foto di un tentacolo grigliato sul piatto",
+     "foto": "foto_polpo",
+     "giusta": true
+    },
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": false
+    }
+   ]
+  },
+  {
    "testo": "Quale è il caffè?",
    "risposte": [
     {
@@ -627,6 +807,276 @@
     {
      "testo": "2. foto di un tentacolo grigliato sul piatto",
      "foto": "foto_polpo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il caffè?",
+   "risposte": [
+    {
+     "testo": "1. foto di una tazzina fumante con liquido scuro",
+     "foto": "foto_caffe",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il caffè?",
+   "risposte": [
+    {
+     "testo": "1. foto di una tazzina fumante con liquido scuro",
+     "foto": "foto_caffe",
+     "giusta": true
+    },
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le lasagne?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di una pizza rossa con pomodoro, aglio e origano",
+     "foto": "foto_marinara",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le lasagne?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di sfere di carne immerse nel sugo rosso",
+     "foto": "foto_polpette",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le lasagne?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di una pizza piegata a mezzaluna",
+     "foto": "foto_calzone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le lasagne?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un piatto di pasta cremosa con patate",
+     "foto": "foto_patate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le lasagne?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un piatto di spaghetti con molluschi nel guscio",
+     "foto": "foto_vongole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le lasagne?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un tentacolo grigliato sul piatto",
+     "foto": "foto_polpo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le lasagne?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di una tazzina fumante con liquido scuro",
+     "foto": "foto_caffe",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le lasagne?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": true
+    },
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il Castel dell'Ovo, a Napoli?",
+   "risposte": [
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di una pizza rossa con pomodoro, aglio e origano",
+     "foto": "foto_marinara",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il Castel dell'Ovo, a Napoli?",
+   "risposte": [
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di sfere di carne immerse nel sugo rosso",
+     "foto": "foto_polpette",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il Castel dell'Ovo, a Napoli?",
+   "risposte": [
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di una pizza piegata a mezzaluna",
+     "foto": "foto_calzone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il Castel dell'Ovo, a Napoli?",
+   "risposte": [
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un piatto di pasta cremosa con patate",
+     "foto": "foto_patate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il Castel dell'Ovo, a Napoli?",
+   "risposte": [
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un piatto di spaghetti con molluschi nel guscio",
+     "foto": "foto_vongole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il Castel dell'Ovo, a Napoli?",
+   "risposte": [
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un tentacolo grigliato sul piatto",
+     "foto": "foto_polpo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il Castel dell'Ovo, a Napoli?",
+   "risposte": [
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di una tazzina fumante con liquido scuro",
+     "foto": "foto_caffe",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il Castel dell'Ovo, a Napoli?",
+   "risposte": [
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
      "giusta": false
     }
    ]

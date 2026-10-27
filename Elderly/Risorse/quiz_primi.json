@@ -1,0 +1,185 @@
+{
+ "titolo": "Primi piatti",
+ "domande": [
+  {
+   "testo": "Quali sono gli spaghetti?",
+   "risposte": [
+    {
+     "testo": "Spaghetti",
+     "foto": "foto_spaghetti",
+     "giusta": true
+    },
+    {
+     "testo": "Pasta alle vongole",
+     "foto": "foto_vongole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli spaghetti?",
+   "risposte": [
+    {
+     "testo": "Spaghetti",
+     "foto": "foto_spaghetti",
+     "giusta": true
+    },
+    {
+     "testo": "Pasta e patate",
+     "foto": "foto_patate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli spaghetti?",
+   "risposte": [
+    {
+     "testo": "Spaghetti",
+     "foto": "foto_spaghetti",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pasta alle vongole?",
+   "risposte": [
+    {
+     "testo": "Pasta alle vongole",
+     "foto": "foto_vongole",
+     "giusta": true
+    },
+    {
+     "testo": "Spaghetti",
+     "foto": "foto_spaghetti",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pasta alle vongole?",
+   "risposte": [
+    {
+     "testo": "Pasta alle vongole",
+     "foto": "foto_vongole",
+     "giusta": true
+    },
+    {
+     "testo": "Pasta e patate",
+     "foto": "foto_patate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pasta alle vongole?",
+   "risposte": [
+    {
+     "testo": "Pasta alle vongole",
+     "foto": "foto_vongole",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pasta e patate?",
+   "risposte": [
+    {
+     "testo": "Pasta e patate",
+     "foto": "foto_patate",
+     "giusta": true
+    },
+    {
+     "testo": "Spaghetti",
+     "foto": "foto_spaghetti",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pasta e patate?",
+   "risposte": [
+    {
+     "testo": "Pasta e patate",
+     "foto": "foto_patate",
+     "giusta": true
+    },
+    {
+     "testo": "Pasta alle vongole",
+     "foto": "foto_vongole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pasta e patate?",
+   "risposte": [
+    {
+     "testo": "Pasta e patate",
+     "foto": "foto_patate",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le lasagne?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": true
+    },
+    {
+     "testo": "Spaghetti",
+     "foto": "foto_spaghetti",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le lasagne?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": true
+    },
+    {
+     "testo": "Pasta alle vongole",
+     "foto": "foto_vongole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le lasagne?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": true
+    },
+    {
+     "testo": "Pasta e patate",
+     "foto": "foto_patate",
+     "giusta": false
+    }
+   ]
+  }
+ ]
+}

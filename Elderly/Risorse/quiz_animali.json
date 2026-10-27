@@ -47,6 +47,81 @@
    ]
   },
   {
+   "testo": "Quale è il gatto?",
+   "risposte": [
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": true
+    },
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il gatto?",
+   "risposte": [
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": true
+    },
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il gatto?",
+   "risposte": [
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": true
+    },
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il gatto?",
+   "risposte": [
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": true
+    },
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il gatto?",
+   "risposte": [
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": true
+    },
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": false
+    }
+   ]
+  },
+  {
    "testo": "Quale è il cane?",
    "risposte": [
     {
@@ -87,6 +162,81 @@
     {
      "testo": "2. foto di un grande animale con la criniera",
      "foto": "foto_cavallo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cane?",
+   "risposte": [
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": true
+    },
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cane?",
+   "risposte": [
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": true
+    },
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cane?",
+   "risposte": [
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": true
+    },
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cane?",
+   "risposte": [
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": true
+    },
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cane?",
+   "risposte": [
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": true
+    },
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
      "giusta": false
     }
    ]
@@ -137,6 +287,81 @@
    ]
   },
   {
+   "testo": "Quali sono le galline?",
+   "risposte": [
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": true
+    },
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le galline?",
+   "risposte": [
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": true
+    },
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le galline?",
+   "risposte": [
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": true
+    },
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le galline?",
+   "risposte": [
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": true
+    },
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le galline?",
+   "risposte": [
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": true
+    },
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": false
+    }
+   ]
+  },
+  {
    "testo": "Quale è il cavallo?",
    "risposte": [
     {
@@ -177,6 +402,681 @@
     {
      "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
      "foto": "foto_gallina",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cavallo?",
+   "risposte": [
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": true
+    },
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cavallo?",
+   "risposte": [
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": true
+    },
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cavallo?",
+   "risposte": [
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": true
+    },
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cavallo?",
+   "risposte": [
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": true
+    },
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il cavallo?",
+   "risposte": [
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": true
+    },
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pecore?",
+   "risposte": [
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pecore?",
+   "risposte": [
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pecore?",
+   "risposte": [
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pecore?",
+   "risposte": [
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pecore?",
+   "risposte": [
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": true
+    },
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pecore?",
+   "risposte": [
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": true
+    },
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pecore?",
+   "risposte": [
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": true
+    },
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pecore?",
+   "risposte": [
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": true
+    },
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anatra?",
+   "risposte": [
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anatra?",
+   "risposte": [
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anatra?",
+   "risposte": [
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anatra?",
+   "risposte": [
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anatra?",
+   "risposte": [
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": true
+    },
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anatra?",
+   "risposte": [
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": true
+    },
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anatra?",
+   "risposte": [
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": true
+    },
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anatra?",
+   "risposte": [
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": true
+    },
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il coniglio?",
+   "risposte": [
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il coniglio?",
+   "risposte": [
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il coniglio?",
+   "risposte": [
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il coniglio?",
+   "risposte": [
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il coniglio?",
+   "risposte": [
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": true
+    },
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il coniglio?",
+   "risposte": [
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": true
+    },
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il coniglio?",
+   "risposte": [
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": true
+    },
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il coniglio?",
+   "risposte": [
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": true
+    },
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la capra?",
+   "risposte": [
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la capra?",
+   "risposte": [
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la capra?",
+   "risposte": [
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la capra?",
+   "risposte": [
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la capra?",
+   "risposte": [
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": true
+    },
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la capra?",
+   "risposte": [
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": true
+    },
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la capra?",
+   "risposte": [
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": true
+    },
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la capra?",
+   "risposte": [
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
+     "giusta": true
+    },
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la farfalla?",
+   "risposte": [
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "foto": "foto_gatto",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la farfalla?",
+   "risposte": [
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "foto": "foto_cane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la farfalla?",
+   "risposte": [
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "foto": "foto_gallina",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la farfalla?",
+   "risposte": [
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un grande animale con la criniera",
+     "foto": "foto_cavallo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la farfalla?",
+   "risposte": [
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": true
+    },
+    {
+     "testo": "Pecore",
+     "foto": "foto_pecora",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la farfalla?",
+   "risposte": [
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": true
+    },
+    {
+     "testo": "Anatra",
+     "foto": "foto_anatra",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la farfalla?",
+   "risposte": [
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": true
+    },
+    {
+     "testo": "Coniglio",
+     "foto": "foto_coniglio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la farfalla?",
+   "risposte": [
+    {
+     "testo": "Farfalla",
+     "foto": "foto_farfalla",
+     "giusta": true
+    },
+    {
+     "testo": "Capra",
+     "foto": "foto_capra",
      "giusta": false
     }
    ]

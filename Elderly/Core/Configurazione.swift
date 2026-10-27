@@ -36,8 +36,8 @@ enum Configurazione {
     /// Velocità della voce che legge: 1 = normale, meno di 1 = più lenta (meglio per chi ascolta con calma).
     static let velocitaVoce: Float = 0.88
 
-    /// Forma (larghezza / altezza) delle schede con la foto nei quiz: quella delle foto più comuni, così si vedono intere.
-    static let formaFoto: CGFloat = 3.0 / 2.0
+    /// Forma (larghezza / altezza) delle schede con la foto nei quiz: tutte le foto dell'app sono ritagliate così.
+    static let formaFoto: CGFloat = 16.0 / 9.0
 
     /// Lato più lungo (in pixel) delle foto salvate: abbastanza per lo schermo, leggero per il database.
     static let latoFotoSalvata: CGFloat = 1600   // foto delle risposte (sullo schermo sono circa 450 punti, cioè 1350 pixel)

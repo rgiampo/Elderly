@@ -62,6 +62,81 @@
    ]
   },
   {
+   "testo": "Quale è l'arancia?",
+   "risposte": [
+    {
+     "testo": "1. foto di un frutto arancione",
+     "foto": "foto_arancia",
+     "giusta": true
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'arancia?",
+   "risposte": [
+    {
+     "testo": "1. foto di un frutto arancione",
+     "foto": "foto_arancia",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'arancia?",
+   "risposte": [
+    {
+     "testo": "1. foto di un frutto arancione",
+     "foto": "foto_arancia",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'arancia?",
+   "risposte": [
+    {
+     "testo": "1. foto di un frutto arancione",
+     "foto": "foto_arancia",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'arancia?",
+   "risposte": [
+    {
+     "testo": "1. foto di un frutto arancione",
+     "foto": "foto_arancia",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
    "testo": "Quale è la melanzana?",
    "risposte": [
     {
@@ -117,6 +192,81 @@
     {
      "testo": "1. foto di tanti ortaggi rossi",
      "foto": "foto_pomodori",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "2. foto di un ortaggio viola",
+     "foto": "foto_melanzana",
+     "giusta": true
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "2. foto di un ortaggio viola",
+     "foto": "foto_melanzana",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "2. foto di un ortaggio viola",
+     "foto": "foto_melanzana",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "2. foto di un ortaggio viola",
+     "foto": "foto_melanzana",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "2. foto di un ortaggio viola",
+     "foto": "foto_melanzana",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
      "giusta": false
     }
    ]
@@ -182,6 +332,81 @@
    ]
   },
   {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "1. foto di un frutto giallo",
+     "foto": "foto_limone",
+     "giusta": true
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "1. foto di un frutto giallo",
+     "foto": "foto_limone",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "1. foto di un frutto giallo",
+     "foto": "foto_limone",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "1. foto di un frutto giallo",
+     "foto": "foto_limone",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "1. foto di un frutto giallo",
+     "foto": "foto_limone",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
    "testo": "Quale è l'uva?",
    "risposte": [
     {
@@ -242,6 +467,81 @@
    ]
   },
   {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "2. foto di un frutto viola",
+     "foto": "foto_uva",
+     "giusta": true
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "2. foto di un frutto viola",
+     "foto": "foto_uva",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "2. foto di un frutto viola",
+     "foto": "foto_uva",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "2. foto di un frutto viola",
+     "foto": "foto_uva",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "2. foto di un frutto viola",
+     "foto": "foto_uva",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
    "testo": "Quali sono i pomodori?",
    "risposte": [
     {
@@ -297,6 +597,756 @@
     {
      "testo": "2. foto di un frutto viola",
      "foto": "foto_uva",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "1. foto di tanti ortaggi rossi",
+     "foto": "foto_pomodori",
+     "giusta": true
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "1. foto di tanti ortaggi rossi",
+     "foto": "foto_pomodori",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "1. foto di tanti ortaggi rossi",
+     "foto": "foto_pomodori",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "1. foto di tanti ortaggi rossi",
+     "foto": "foto_pomodori",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "1. foto di tanti ortaggi rossi",
+     "foto": "foto_pomodori",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un frutto arancione",
+     "foto": "foto_arancia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un ortaggio viola",
+     "foto": "foto_melanzana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un frutto giallo",
+     "foto": "foto_limone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un frutto viola",
+     "foto": "foto_uva",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di tanti ortaggi rossi",
+     "foto": "foto_pomodori",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un frutto arancione",
+     "foto": "foto_arancia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un ortaggio viola",
+     "foto": "foto_melanzana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un frutto giallo",
+     "foto": "foto_limone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un frutto viola",
+     "foto": "foto_uva",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di tanti ortaggi rossi",
+     "foto": "foto_pomodori",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un frutto arancione",
+     "foto": "foto_arancia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un ortaggio viola",
+     "foto": "foto_melanzana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un frutto giallo",
+     "foto": "foto_limone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un frutto viola",
+     "foto": "foto_uva",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di tanti ortaggi rossi",
+     "foto": "foto_pomodori",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un frutto arancione",
+     "foto": "foto_arancia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un ortaggio viola",
+     "foto": "foto_melanzana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un frutto giallo",
+     "foto": "foto_limone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un frutto viola",
+     "foto": "foto_uva",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di tanti ortaggi rossi",
+     "foto": "foto_pomodori",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un frutto arancione",
+     "foto": "foto_arancia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un ortaggio viola",
+     "foto": "foto_melanzana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di un frutto giallo",
+     "foto": "foto_limone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "2. foto di un frutto viola",
+     "foto": "foto_uva",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "1. foto di tanti ortaggi rossi",
+     "foto": "foto_pomodori",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
      "giusta": false
     }
    ]
