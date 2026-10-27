@@ -7,18 +7,18 @@ struct ContentView: View {
             ZStack {
                 SfondoCielo()
 
-                VStack(spacing: 60) {
+                VStack(spacing: 40) {
                     Titolo()
 
-                    VStack(spacing: 24) {
+                    VStack(spacing: 20) {
                         NavigationLink(destination: ChiGiocaView()) {
-                            PulsantePrincipale(titolo: "Gioca", altezza: 140)
+                            PulsantePrincipale(titolo: "Gioca", altezza: 130)
                         }
                         NavigationLink(destination: UtentiView()) {
-                            PulsanteSecondario(titolo: "Utenti", altezza: 120)
+                            PulsanteSecondario(titolo: "Utenti", altezza: 110)
                         }
                         NavigationLink(destination: OpzioniView()) {
-                            PulsanteSecondario(titolo: "Opzioni", altezza: 120)
+                            PulsanteSecondario(titolo: "Opzioni", altezza: 110)
                         }
                     }
                     .buttonStyle(StilePremuto())
@@ -30,23 +30,26 @@ struct ContentView: View {
     }
 }
 
-/// "Elderly" in San Francisco Pro grassetto: una copia bianca sotto dà rilievo alle lettere, con un'ombra morbida.
+/// Logo e nome dell'app: il logo è un quadrato morbido come un'icona, il nome è San Francisco bold con un'ombra leggera.
 private struct Titolo: View {
     var body: some View {
-        Text("Elderly")
-            .font(.system(size: 150, weight: .bold))
-            .tracking(-2)
-            .foregroundStyle(Tema.testo)
-            .background(alignment: .center) {
-                Text("Elderly")
-                    .font(.system(size: 150, weight: .bold))
-                    .tracking(-2)
-                    .foregroundStyle(.white.opacity(0.85))
-                    .offset(y: 7)
-            }
-            .shadow(color: Tema.testo.opacity(0.28), radius: 16, y: 14)
-            .lineLimit(1).minimumScaleFactor(0.5)
-            .accessibilityAddTraits(.isHeader)
+        VStack(spacing: 14) {
+            Image("Logo")
+                .resizable().scaledToFill()
+                .frame(width: 190, height: 190)
+                .clipShape(RoundedRectangle(cornerRadius: 44, style: .continuous))
+                .shadow(color: Tema.testo.opacity(0.3), radius: 18, y: 12)
+                .accessibilityHidden(true)
+
+            Text("Elderly")
+                .font(.system(size: 130, weight: .bold))
+                .tracking(-2)
+                .foregroundStyle(LinearGradient(colors: [Color(red: 0.26, green: 0.16, blue: 0.11), Tema.testo],
+                                                startPoint: .top, endPoint: .bottom))
+                .shadow(color: Tema.testo.opacity(0.22), radius: 14, y: 10)
+                .lineLimit(1).minimumScaleFactor(0.5)
+                .accessibilityAddTraits(.isHeader)
+        }
     }
 }
 
