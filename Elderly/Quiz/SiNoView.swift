@@ -67,7 +67,7 @@ struct SiNoView: View {
                                 .testo(DimensioneTesto.medio)
                                 .foregroundStyle(Tema.testoSecondario)
                             Text(modello.quesito.nome)
-                                .testo(DimensioneTesto.titolo)
+                                .testo(DimensioneTesto.enorme)
                                 .foregroundStyle(Tema.testo)
                                 .multilineTextAlignment(.center)
                                 .lineLimit(2).minimumScaleFactor(0.5)

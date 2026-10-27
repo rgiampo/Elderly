@@ -44,7 +44,7 @@ struct CosaMancaView: View {
     private var partita: some View {
         VStack(spacing: 16) {
             Text(titolo)
-                .testo(DimensioneTesto.grande)
+                .testo(DimensioneTesto.enorme)
                 .foregroundStyle(Tema.testo)
                 .lineLimit(1).minimumScaleFactor(0.5)
                 .accessibilityAddTraits(.isHeader)

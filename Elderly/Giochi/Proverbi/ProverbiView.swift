@@ -45,7 +45,7 @@ struct ProverbiView: View {
             // l'inizio del proverbio, e dopo la risposta giusta il proverbio intero
             VStack(spacing: 8) {
                 Text(modello.trovata ? modello.proverbio.completo : modello.proverbio.inizio + " …")
-                    .testo(DimensioneTesto.titolo)
+                    .testo(DimensioneTesto.enorme)
                     .foregroundStyle(Tema.testo)
                     .multilineTextAlignment(.center)
                     .lineLimit(3).minimumScaleFactor(0.5)

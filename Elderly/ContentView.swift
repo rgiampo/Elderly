@@ -18,15 +18,15 @@ struct ContentView: View {
                         NavigationLink(destination: ChiGiocaView()) {
                             PulsantePrincipale(titolo: "Gioca", altezza: 130)
                         }
-                        .appari(entrato, ritardo: 0.3)
+                        .appari(entrato, ritardo: 0.4)
                         NavigationLink(destination: UtentiView()) {
                             PulsanteSecondario(titolo: "Utenti", altezza: 110)
                         }
-                        .appari(entrato, ritardo: 0.45)
+                        .appari(entrato, ritardo: 0.6)
                         NavigationLink(destination: OpzioniView()) {
                             PulsanteSecondario(titolo: "Opzioni", altezza: 110)
                         }
-                        .appari(entrato, ritardo: 0.6)
+                        .appari(entrato, ritardo: 0.8)
                     }
                     .buttonStyle(StilePremuto())
                     .frame(maxWidth: 640)
@@ -41,10 +41,10 @@ struct ContentView: View {
 }
 
 extension View {
-    /// Entra dal basso e diventa visibile, con un piccolo ritardo (per far comparire le cose una dopo l'altra).
+    /// Scende dall'alto e diventa visibile, con un piccolo ritardo (per far comparire le cose una dopo l'altra).
     fileprivate func appari(_ entrato: Bool, ritardo: Double) -> some View {
         opacity(entrato ? 1 : 0)
-            .offset(y: entrato ? 0 : 40)
+            .offset(y: entrato ? 0 : -60)
             .animation(.spring(duration: 0.7, bounce: 0.3).delay(ritardo), value: entrato)
     }
 }
@@ -64,7 +64,7 @@ private struct Titolo: View {
                 .shadow(color: Tema.testo.opacity(0.22), radius: 14, y: 10)
                 .lineLimit(1).minimumScaleFactor(0.4)
                 .opacity(entrato ? 1 : 0)
-                .offset(y: entrato ? 0 : 30)
+                .offset(y: entrato ? 0 : -60)
                 .animation(.spring(duration: 0.7, bounce: 0.3), value: entrato)
                 .accessibilityAddTraits(.isHeader)
 
@@ -72,7 +72,7 @@ private struct Titolo: View {
                 .trim(from: 0, to: entrato ? 1 : 0)
                 .stroke(Tema.blu, style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .round))
                 .frame(height: 80)
-                .animation(.easeInOut(duration: 0.9).delay(0.4), value: entrato)
+                .animation(.easeInOut(duration: 0.9).delay(0.2), value: entrato)
                 .accessibilityHidden(true)
         }
         .frame(maxWidth: 640)   // la stessa larghezza dei pulsanti

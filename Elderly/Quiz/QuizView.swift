@@ -49,10 +49,10 @@ struct QuizView: View {
     private var partita: some View {
         VStack(spacing: 16) {
             Text(modello.domanda.testo)
-                .testo(DimensioneTesto.grande)
+                .testo(DimensioneTesto.enorme)
                 .foregroundStyle(Tema.testo)
                 .multilineTextAlignment(.center)
-                .lineLimit(2).minimumScaleFactor(0.5)
+                .lineLimit(2).minimumScaleFactor(0.4)
                 .accessibilityAddTraits(.isHeader)
 
             // le foto prendono tutto lo spazio che resta: più alte che larghe (4:3, ritagliate ai lati) per essere il più grandi possibile
