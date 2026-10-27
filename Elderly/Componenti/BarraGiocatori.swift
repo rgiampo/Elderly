@@ -108,18 +108,7 @@ struct BannerTurno: View {
 }
 
 extension View {
-    /// Con due giocatori, tutto lo schermo ha una cornice nel colore di chi ha il turno: si vede anche da lontano.
-    func bordoTurno(_ giocatori: [Partecipante], turno: Int?) -> some View {
-        overlay {
-            if let turno, giocatori.count > 1, giocatori.indices.contains(turno), giocatori[turno].haNome {
-                Rectangle()
-                    .strokeBorder(Tema.coloreGiocatore(turno), lineWidth: 18)
-                    .ignoresSafeArea()
-                    .allowsHitTesting(false)
-                    .id(turno)
-                    .transition(.opacity)
-            }
-        }
-        .animation(.easeInOut(duration: 0.45), value: turno)
-    }
+    /// Prima dava una cornice colorata a tutto schermo; ora non disegna niente (tagliava la barra in alto).
+    /// Il turno si vede dal banner colorato. Resta qui così i giochi non cambiano.
+    func bordoTurno(_ giocatori: [Partecipante], turno: Int?) -> some View { self }
 }
