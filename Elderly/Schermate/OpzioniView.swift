@@ -10,40 +10,49 @@ struct OpzioniView: View {
     private let voci = Voce.vociItaliane()
 
     var body: some View {
-        Form {
-            Section {
-                Toggle("Suoni", isOn: $suoniAttivi)
-            } footer: {
-                Text("Spegne le note e i suoni di festa. La voce che legge le domande resta attiva.")
-            }
+        ZStack {
+            SfondoCielo()
 
-            Section {
-                Picker("Voce", selection: $voceScelta) {
-                    Text("Automatica (la migliore)").tag("")
-                    ForEach(voci, id: \.identifier) { Text(Voce.descrizione(della: $0)).tag($0.identifier) }
+            Form {
+                Section {
+                    Toggle("Suoni", isOn: $suoniAttivi)
+                } footer: {
+                    Text("Spegne le note e i suoni di festa. La voce che legge le domande resta attiva.")
                 }
-                Button("Prova la voce", systemImage: "speaker.wave.2") {
-                    voce.leggi("Ciao! Questa è la voce che leggerà le domande del quiz.")
+
+                Section {
+                    Picker("Voce", selection: $voceScelta) {
+                        Text("Automatica (la migliore)").tag("")
+                        ForEach(voci, id: \.identifier) { Text(Voce.descrizione(della: $0)).tag($0.identifier) }
+                    }
+                    BottoneVoceProva(voce: voce)
+                } header: {
+                    Text("Voce che legge")
+                } footer: {
+                    Text("Per una voce più naturale: Impostazioni, Accessibilità, Contenuto letto, Voci, Italiano. Scarica una voce di qualità alta, poi torna qui.")
                 }
-            } header: {
-                Text("Voce che legge")
-            } footer: {
-                Text("Per una voce più naturale: Impostazioni, Accessibilità, Contenuto letto, Voci, Italiano. Scarica una voce con qualità alta o migliorata, poi torna qui.")
             }
+            .testo(DimensioneTesto.normale)
+            .scrollContentBackground(.hidden)
         }
-        .testo(DimensioneTesto.medio)
-        .scrollContentBackground(.hidden)
-        .background(SfondoCielo())
-        .safeAreaInset(edge: .top) {
-            Text("Opzioni")
-                .testo(DimensioneTesto.titolo, .heavy)
-                .foregroundStyle(Tema.testo)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 40).padding(.top, 8)
-                .accessibilityAddTraits(.isHeader)
-        }
-        .navigationBarTitleDisplayMode(.inline)
+        .conIndietro(titolo: "Opzioni")
         .onDisappear { voce.ferma() }
+    }
+}
+
+/// "Prova la voce": un pulsante come gli altri dell'app (senza icone di sistema nelle liste, che si vedevano male).
+private struct BottoneVoceProva: View {
+    let voce: Voce
+
+    var body: some View {
+        Button {
+            voce.leggi("Ciao! Questa è la voce che leggerà le domande del quiz.")
+        } label: {
+            Text(voce.staParlando ? "Ferma la voce" : "Prova la voce")
+                .testo(DimensioneTesto.normale)
+                .foregroundStyle(Tema.blu)
+                .frame(maxWidth: .infinity, minHeight: 64, alignment: .leading)
+        }
     }
 }
 

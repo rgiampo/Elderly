@@ -1,6 +1,6 @@
 # Crediti delle foto
 
-Le foto del quiz sono tutte con licenza **CC0** (pubblico dominio, uso commerciale ammesso, nessun obbligo di citazione).
+Tutte le foto dei quiz sono con licenza **CC0** (pubblico dominio, uso commerciale ammesso, nessun obbligo di citazione).
 Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 
 | Nome nell'app | File | Autore | Licenza | Pagina |
@@ -15,5 +15,12 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | foto_melanzana | Round eggplant (1).jpg | Fumikas Sagisavas | CC0 | https://commons.wikimedia.org/wiki/File:Round_eggplant_(1).jpg |
 | foto_arancia | Oranges a fruit.jpg | safaritravelplus | CC0 | https://commons.wikimedia.org/wiki/File:Oranges_a_fruit.jpg |
 | foto_uva | Grapes 1.jpg | Couleur | CC0 | https://commons.wikimedia.org/wiki/File:Grapes_1.jpg |
+| foto_marinara | Pizza marinara (Napoli).jpg | Ruthven | CC0 | https://commons.wikimedia.org/wiki/File:Pizza_marinara_(Napoli).jpg |
+| foto_polpo | Purpo arrustuto - Naples.jpg | Ruthven | CC0 | https://commons.wikimedia.org/wiki/File:Purpo_arrustuto_-_Naples.jpg |
+| foto_patate | Pasta Patate e Provola.jpg | Mojmir Churavy | CC0 | https://commons.wikimedia.org/wiki/File:Pasta_Patate_e_Provola.jpg |
+| foto_caffe | CaffèNapoletano.jpg | AnticoMu90 | CC0 | https://commons.wikimedia.org/wiki/File:Caff%C3%A8Napoletano.jpg |
+| foto_calzone | Pizzeria Bella Italia (Crépieux-la-Pape) - Calzone (octobre 2022).jpg | Benoît Prieur | CC0 | https://commons.wikimedia.org/wiki/File:Pizzeria_Bella_Italia_(Cr%C3%A9pieux-la-Pape)_-_Calzone_(octobre_2022).jpg |
+| foto_polpette | Polpette Al Sugo - Nanninella.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Polpette_Al_Sugo_-_Nanninella.jpg |
+| foto_vongole | Pasta alle Vongole - Wiki Loves Sicilia.jpg | 8w9d | CC0 | https://commons.wikimedia.org/wiki/File:Pasta_alle_Vongole_-_Wiki_Loves_Sicilia.jpg |
 
 Prima di aggiungere una foto nuova: controllare la licenza nella pagina del file e aggiungere qui una riga.

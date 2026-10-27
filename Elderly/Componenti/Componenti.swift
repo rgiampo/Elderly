@@ -1,13 +1,5 @@
 import SwiftUI
 
-/// Scheda bianca grande con testo scuro: sempre leggibile sul celeste.
-extension View {
-    func scheda(raggio: CGFloat = 32) -> some View {
-        background(.white.opacity(0.94), in: RoundedRectangle(cornerRadius: raggio))
-            .shadow(color: Tema.testo.opacity(0.18), radius: 12, y: 6)
-    }
-}
-
 /// Il tocco "affonda" leggermente, così si capisce che il bottone ha risposto.
 struct StilePremuto: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
@@ -17,34 +9,79 @@ struct StilePremuto: ButtonStyle {
     }
 }
 
-/// Testo del menu: italiano grande, inglese piccolo sotto.
-struct EtichettaMenu: View {
-    let italiano: String
-    let inglese: String
-    var colore: Color = Tema.testo
+/// Pulsante principale: vetro colorato a pillola, testo bianco enorme, testo centrato.
+struct PulsantePrincipale: View {
+    let titolo: String
+    var colore: Color = Tema.blu
+    var altezza: CGFloat = 120
 
     var body: some View {
-        VStack(spacing: 2) {
-            Text(italiano).testo(DimensioneTesto.titolo, .heavy)
-            Text(inglese).testo(DimensioneTesto.normale, .medium).opacity(0.85)
-        }
-        .foregroundStyle(colore)
-        .frame(maxWidth: .infinity, minHeight: 120)
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel(italiano)
+        Text(titolo)
+            .testo(DimensioneTesto.grande)
+            .foregroundStyle(.white)
+            .lineLimit(1).minimumScaleFactor(0.5)
+            .frame(maxWidth: .infinity, minHeight: altezza)
+            .vetro(colore)
     }
 }
 
-/// Logo provvisorio: le cinque forme del gioco.
-struct Logo: View {
+/// Pulsante secondario: vetro chiaro a pillola, testo scuro enorme, testo centrato.
+struct PulsanteSecondario: View {
+    let titolo: String
+    var altezza: CGFloat = 120
+
     var body: some View {
-        HStack(spacing: -10) {
-            ForEach(Forma.allCases) { forma in
-                forma.sagoma.fill(forma.colore).frame(width: 54, height: 54)
+        Text(titolo)
+            .testo(DimensioneTesto.grande)
+            .foregroundStyle(Tema.testo)
+            .lineLimit(1).minimumScaleFactor(0.5)
+            .frame(maxWidth: .infinity, minHeight: altezza)
+            .vetro(.white.opacity(0.78))
+    }
+}
+
+/// Barra in alto con un grande "Indietro" (il pulsante piccolo di sistema è difficile da toccare).
+/// Si usa su tutte le schermate tranne la prima.
+struct BarraIndietro<Destra: View>: ViewModifier {
+    var titolo: String?
+    let destra: Destra
+    @Environment(\.dismiss) private var chiudi
+
+    func body(content: Content) -> some View {
+        content
+            .navigationBarBackButtonHidden(true)
+            .toolbar(.hidden, for: .navigationBar)
+            .safeAreaInset(edge: .top, spacing: 0) {
+                HStack(spacing: 24) {
+                    Button { chiudi() } label: {
+                        Label("Indietro", systemImage: "chevron.left")
+                            .testo(DimensioneTesto.medio)
+                            .foregroundStyle(Tema.testo)
+                            .padding(.horizontal, 32)
+                            .frame(minHeight: 84)
+                            .vetro(.white.opacity(0.78))
+                    }
+                    .buttonStyle(StilePremuto())
+                    .accessibilityLabel("Indietro")
+
+                    if let titolo {
+                        Text(titolo)
+                            .testo(DimensioneTesto.grande)
+                            .foregroundStyle(Tema.testo)
+                            .lineLimit(1).minimumScaleFactor(0.5)
+                            .accessibilityAddTraits(.isHeader)
+                    }
+                    Spacer(minLength: 0)
+                    destra
+                }
+                .padding(.horizontal, 40).padding(.top, 12).padding(.bottom, 12)
             }
-        }
-        .padding(24)
-        .glassEffect(.regular, in: .rect(cornerRadius: 36))
-        .accessibilityHidden(true)
+    }
+}
+
+extension View {
+    /// Aggiunge in alto il grande "Indietro", un titolo e, a destra, quello che serve alla schermata (per esempio i giocatori).
+    func conIndietro<Destra: View>(titolo: String? = nil, @ViewBuilder destra: () -> Destra = { EmptyView() }) -> some View {
+        modifier(BarraIndietro(titolo: titolo, destra: destra()))
     }
 }

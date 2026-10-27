@@ -1,7 +1,7 @@
 import SwiftUI
 import SwiftData
 
-/// Elenco delle persone. Si tocca una riga per modificarla, "+" per aggiungerne una.
+/// Elenco delle persone. Si tocca una riga per modificarla.
 struct UtentiView: View {
     @Query(sort: \Utente.nome) private var utenti: [Utente]
     @State private var nuovoUtente = false
@@ -11,72 +11,72 @@ struct UtentiView: View {
             SfondoCielo()
 
             ScrollView {
-                VStack(spacing: 20) {
-                    Text("Utenti")
-                        .testo(DimensioneTesto.titolo, .heavy)
-                        .foregroundStyle(Tema.testo)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .accessibilityAddTraits(.isHeader)
-
+                VStack(spacing: 18) {
                     ForEach(utenti) { utente in
                         NavigationLink(destination: UtenteFormView(utente: utente)) {
-                            RigaUtente(utente: utente)
+                            RigaUtente(utente: utente) {
+                                Image(systemName: "chevron.right").font(.system(size: 32, weight: .bold))
+                            }
                         }
                         .buttonStyle(StilePremuto())
                     }
 
                     if utenti.isEmpty {
-                        Text("Nessuna persona. Tocca + per aggiungerne una.")
-                            .testo(DimensioneTesto.grande, .semibold)
+                        Text("Non c'è nessuna persona.\nTocca il pulsante qui sotto per aggiungerne una.")
+                            .testo(DimensioneTesto.medio)
                             .foregroundStyle(Tema.testo)
+                            .multilineTextAlignment(.center)
                             .padding(.vertical, 40)
                     }
 
                     Button { nuovoUtente = true } label: {
-                        Image(systemName: "plus")
-                            .font(.system(size: 44, weight: .bold))
-                            .frame(width: 100, height: 100)
+                        Label("Aggiungi una persona", systemImage: "plus")
+                            .testo(DimensioneTesto.grande)
+                            .foregroundStyle(.white)
+                            .lineLimit(1).minimumScaleFactor(0.5)
+                            .frame(maxWidth: .infinity, minHeight: 110)
+                            .vetro(Tema.blu)
                     }
-                    .buttonStyle(.glassProminent)
-                    .tint(Tema.azzurroProfondo)
-                    .buttonBorderShape(.circle)
-                    .accessibilityLabel("Aggiungi una persona")
-                    .padding(.top, 12)
+                    .buttonStyle(StilePremuto())
+                    .padding(.top, 8)
                 }
-                .padding(40)
-                .frame(maxWidth: 900)
+                .padding(.horizontal, 40).padding(.bottom, 40)
+                .frame(maxWidth: 1000)
                 .frame(maxWidth: .infinity)
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
+        .conIndietro(titolo: "Utenti")
         .sheet(isPresented: $nuovoUtente) {
             NavigationStack { UtenteFormView(utente: nil) }
         }
     }
 }
 
-struct RigaUtente: View {
+/// Una persona in elenco: foto, nome e cognome su una riga, età. A destra va quello che serve alla schermata.
+struct RigaUtente<Accessorio: View>: View {
     let utente: Utente
+    @ViewBuilder let accessorio: Accessorio
 
     var body: some View {
         HStack(spacing: 28) {
-            Avatar(utente: utente, dimensione: 100)
+            Avatar(utente: utente, dimensione: 110)
 
             VStack(alignment: .leading, spacing: 4) {
-                Text(utente.nome).testo(DimensioneTesto.grande, .heavy)
-                Text(utente.cognome).testo(DimensioneTesto.grande, .heavy)
-                Text("Età: \(utente.etaAttuale)").testo(DimensioneTesto.medio)
+                Text(utente.nomeCompleto)
+                    .testo(DimensioneTesto.grande)
+                    .lineLimit(1).minimumScaleFactor(0.5)
+                Text("Età: \(utente.etaAttuale) anni")
+                    .testo(DimensioneTesto.medio)
+                    .foregroundStyle(Tema.testoSecondario)
             }
 
-            Spacer()
-
-            Image(systemName: "chevron.right").font(.system(size: 32, weight: .bold))
+            Spacer(minLength: 0)
+            accessorio
         }
         .foregroundStyle(Tema.testo)
-        .padding(24)
+        .padding(20)
         .scheda()
         .accessibilityElement(children: .combine)
-        .accessibilityHint("Tocca per modificare")
     }
 }
 

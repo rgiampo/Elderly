@@ -1,10 +1,10 @@
 import SwiftUI
 
-/// Mostra chi gioca (una o due persone), chi ha il turno (colorato) e quanti punti ha.
+/// Mostra chi gioca (una o due persone), chi ha il turno (nel suo colore) e quanti punti ha.
 /// Se nessuno ha un nome non mostra niente.
 struct BarraGiocatori: View {
     let giocatori: [Partecipante]
-    var turno: Int?            // chi ha il turno; nil quando non si sta giocando (es. nei menu)
+    var turno: Int?            // chi ha il turno; nil quando non si sta giocando
     var punti: [Int] = []
 
     var body: some View {
@@ -34,19 +34,21 @@ private struct Pedina: View {
 
     var body: some View {
         HStack(spacing: 14) {
-            Avatar(utente: giocatore.utente, dimensione: 68)
+            Avatar(utente: giocatore.utente, dimensione: 64)
             Text(giocatore.nome)
-                .testo(DimensioneTesto.normale, .bold)
+                .testo(DimensioneTesto.normale)
                 .lineLimit(1)
             if let punti {
                 Label("\(punti)", systemImage: "star.fill")
-                    .testo(DimensioneTesto.normale, .bold)
+                    .testo(DimensioneTesto.normale)
             }
         }
         .foregroundStyle(inEvidenza ? .white : Tema.testo)
-        .padding(10).padding(.trailing, 16)
-        .background(inEvidenza ? Tema.coloreGiocatore(posizione) : .white.opacity(mostraTurno ? 0.45 : 0.95), in: .capsule)
-        .scaleEffect(inEvidenza ? 1.05 : 1)
+        .fixedSize()
+        .layoutPriority(1)
+        .padding(10).padding(.trailing, 14)
+        .vetro(inEvidenza ? Tema.coloreGiocatore(posizione) : .white.opacity(mostraTurno ? 0.45 : 0.78))
+        .scaleEffect(inEvidenza ? 1.04 : 1)
         .animation(.spring(duration: 0.35, bounce: 0.3), value: attivo)
         .accessibilityElement(children: .combine)
         .accessibilityLabel(etichetta)
@@ -65,55 +67,27 @@ private struct Pedina: View {
 struct BannerTurno: View {
     let giocatori: [Partecipante]
     let turno: Int
+    var altezza: CGFloat = 96
 
     var body: some View {
         if giocatori.count > 1, giocatori.indices.contains(turno), giocatori[turno].haNome {
             let giocatore = giocatori[turno]
-            HStack(spacing: 24) {
-                Avatar(utente: giocatore.utente, dimensione: 104)
+            HStack(spacing: 20) {
+                Avatar(utente: giocatore.utente, dimensione: altezza - 24)
                 Text("Tocca a \(giocatore.nome)")
-                    .testo(DimensioneTesto.grande, .heavy)
-                    .lineLimit(1)
-                    .minimumScaleFactor(0.5)
+                    .testo(DimensioneTesto.grande)
+                    .lineLimit(1).minimumScaleFactor(0.5)
                 Spacer(minLength: 0)
             }
             .foregroundStyle(.white)
-            .padding(14).padding(.trailing, 28)
-            .frame(maxWidth: .infinity)
-            .background(Tema.coloreGiocatore(turno), in: .capsule)
-            .shadow(color: Tema.coloreGiocatore(turno).opacity(0.4), radius: 16, y: 8)
+            .padding(12).padding(.trailing, 24)
+            .frame(maxWidth: .infinity, minHeight: altezza)
+            .vetro(Tema.coloreGiocatore(turno))
             .id(turno)   // a ogni cambio di turno il banner scivola via e ne entra uno nuovo
             .transition(.asymmetric(insertion: .push(from: .trailing), removal: .push(from: .leading).combined(with: .opacity)))
             .accessibilityElement(children: .combine)
             .accessibilityLabel("Tocca a \(giocatore.nome)")
             .accessibilityAddTraits(.isHeader)
         }
-    }
-}
-
-/// Titolo della schermata e, a destra, chi gioca. Se non entrano affiancati, vanno uno sotto l'altro.
-struct IntestazioneConGiocatori: View {
-    let titolo: String
-    let giocatori: [Partecipante]
-
-    var body: some View {
-        ViewThatFits(in: .horizontal) {
-            HStack {
-                testoTitolo.fixedSize(horizontal: true, vertical: false)
-                Spacer(minLength: 24)
-                BarraGiocatori(giocatori: giocatori)
-            }
-            VStack(alignment: .leading, spacing: 16) {
-                testoTitolo
-                BarraGiocatori(giocatori: giocatori)
-            }
-        }
-    }
-
-    private var testoTitolo: some View {
-        Text(titolo)
-            .testo(DimensioneTesto.titolo, .heavy)
-            .foregroundStyle(Tema.testo)
-            .accessibilityAddTraits(.isHeader)
     }
 }

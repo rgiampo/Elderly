@@ -34,6 +34,18 @@ struct BozzaQuiz {
 }
 
 extension BozzaQuiz {
+    /// Parte da un quiz pronto: serve a creare una copia a cui aggiungere le proprie domande.
+    init(copiaDi quiz: Quiz, titolo: String) {
+        self.titolo = titolo
+        domande = quiz.domande.map { domanda in
+            var bozza = BozzaDomanda()
+            bozza.testo = domanda.testo
+            bozza.risposte = domanda.risposte.map { BozzaRisposta(testo: $0.testo, foto: $0.foto?.comeDati) }
+            bozza.indiceGiusta = domanda.risposte.firstIndex(where: \.giusta) ?? 0
+            return bozza
+        }
+    }
+
     init(_ quiz: QuizCreato) {
         titolo = quiz.titolo
         domande = quiz.domande.sorted { $0.posizione < $1.posizione }.map { domanda in

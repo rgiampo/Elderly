@@ -1,34 +1,25 @@
 import SwiftUI
 
-/// Schermata principale: Gioca, Utenti, Opzioni.
+/// La prima schermata: Gioca, Utenti, Opzioni. Tre pulsanti enormi, al centro.
 struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
                 SfondoCielo()
 
-                VStack(spacing: 40) {
-                    Logo()
-
-                    VStack(spacing: 24) {
-                        NavigationLink(destination: ChiGiocaView()) {
-                            EtichettaMenu(italiano: "Gioca", inglese: "Play", colore: .white)
-                        }
-                        .buttonStyle(.glassProminent)
-                        .tint(Tema.azzurroProfondo)
-
-                        NavigationLink(destination: UtentiView()) {
-                            EtichettaMenu(italiano: "Utenti", inglese: "Users")
-                        }
-                        .buttonStyle(.glass)
-
-                        NavigationLink(destination: OpzioniView()) {
-                            EtichettaMenu(italiano: "Opzioni", inglese: "Options")
-                        }
-                        .buttonStyle(.glass)
+                VStack(spacing: 28) {
+                    NavigationLink(destination: ChiGiocaView()) {
+                        PulsantePrincipale(titolo: "Gioca", altezza: 150)
                     }
-                    .frame(maxWidth: 640)
+                    NavigationLink(destination: UtentiView()) {
+                        PulsanteSecondario(titolo: "Utenti", altezza: 150)
+                    }
+                    NavigationLink(destination: OpzioniView()) {
+                        PulsanteSecondario(titolo: "Opzioni", altezza: 150)
+                    }
                 }
+                .buttonStyle(StilePremuto())
+                .frame(maxWidth: 720)
                 .padding(40)
             }
         }

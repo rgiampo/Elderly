@@ -1,6 +1,13 @@
 import SwiftData
 import Foundation
 
+/// Serve a parlare alla persona al maschile o al femminile ("Bravissimo", "Bravissima").
+enum Genere: String, CaseIterable, Identifiable {
+    case maschio, femmina
+    var id: String { rawValue }
+    var nome: String { self == .maschio ? "Uomo" : "Donna" }
+}
+
 /// Una persona che gioca. SwiftData la salva da solo sul dispositivo.
 @Model
 final class Utente {
@@ -11,9 +18,17 @@ final class Utente {
     var dataDiNascita: Date?
     /// Età scritta a mano: serve solo se non conosciamo la data di nascita.
     var eta: Int
+    /// Salvato come testo (opzionale): le persone create prima di questa scelta restano valide.
+    var genereSalvato: String?
     @Attribute(.externalStorage) var foto: Data?
 
-    init(nome: String, cognome: String, eta: Int, dataDiNascita: Date? = nil, foto: Data? = nil) {
+    var genere: Genere? {
+        get { genereSalvato.flatMap(Genere.init(rawValue:)) }
+        set { genereSalvato = newValue?.rawValue }
+    }
+
+    init(nome: String, cognome: String, eta: Int, dataDiNascita: Date? = nil, genere: Genere? = nil, foto: Data? = nil) {
+        self.genereSalvato = genere?.rawValue
         self.nome = nome
         self.cognome = cognome
         self.eta = eta

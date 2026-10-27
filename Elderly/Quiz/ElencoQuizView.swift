@@ -1,125 +1,83 @@
 import SwiftUI
 import SwiftData
 
-/// L'elenco dei quiz: quelli pronti e quelli creati. Da qui si gioca e si crea.
+/// In che modo si gioca il quiz scelto.
+enum ModoQuiz {
+    case foto, sìNo
+
+    var titolo: String { self == .foto ? "Scegli la foto" : "Sì o no" }
+
+    @ViewBuilder func vista(_ quiz: Quiz, _ giocatori: [Partecipante]) -> some View {
+        switch self {
+        case .foto: QuizView(quiz: quiz, giocatori: giocatori)
+        case .sìNo: SiNoView(quiz: quiz, giocatori: giocatori)
+        }
+    }
+}
+
+/// L'elenco dei quiz con cui giocare: quelli pronti e quelli creati da voi.
 struct ElencoQuizView: View {
+    let modo: ModoQuiz
+
     @Environment(Sessione.self) private var sessione
-    @Environment(\.modelContext) private var contesto
     @Query(sort: \QuizCreato.creatoIl) private var creati: [QuizCreato]
 
     private let pronti = CatalogoQuiz.pronti()
-    @State private var bozzaInModifica: QuizCreato?
-    @State private var nuovoQuiz = false
-    @State private var daEliminare: QuizCreato?
 
     var body: some View {
         ZStack {
             SfondoCielo()
 
             ScrollView {
-                VStack(alignment: .leading, spacing: 24) {
-                    IntestazioneConGiocatori(titolo: "Quiz con le foto", giocatori: sessione.giocatori)
-
-                    ForEach(pronti) { quiz in
-                        RigaQuiz(quiz: quiz, giocatori: sessione.giocatori, azioni: nil)
+                VStack(alignment: .leading, spacing: 18) {
+                    ForEach(pronti + creati.map(\.comeQuiz)) { quiz in
+                        NavigationLink(destination: modo.vista(quiz, sessione.giocatori)) {
+                            RigaQuiz(quiz: quiz) {
+                                Image(systemName: "chevron.right").font(.system(size: 32, weight: .bold))
+                            }
+                        }
+                        .buttonStyle(StilePremuto())
                     }
-
-                    if !creati.isEmpty {
-                        Text("I vostri quiz")
-                            .testo(DimensioneTesto.medio, .bold)
-                            .foregroundStyle(Tema.testoSecondario)
-                            .padding(.top, 12)
-                    }
-                    ForEach(creati) { creato in
-                        RigaQuiz(quiz: creato.comeQuiz, giocatori: sessione.giocatori,
-                                 azioni: Azioni(modifica: { bozzaInModifica = creato }, elimina: { daEliminare = creato }))
-                    }
-
-                    Button { nuovoQuiz = true } label: {
-                        Label("Crea un quiz", systemImage: "plus")
-                            .testo(DimensioneTesto.medio, .heavy)
-                            .foregroundStyle(.white)
-                            .frame(maxWidth: .infinity, minHeight: 84)
-                    }
-                    .buttonStyle(.glassProminent)
-                    .tint(Tema.azzurroProfondo)
-                    .padding(.top, 12)
                 }
-                .padding(40)
-                .frame(maxWidth: 1000)
+                .padding(.horizontal, 40).padding(.bottom, 40)
+                .frame(maxWidth: 1100)
                 .frame(maxWidth: .infinity)
             }
         }
-        .navigationBarTitleDisplayMode(.inline)
-        .sheet(isPresented: $nuovoQuiz) { NavigationStack { EditorQuizView(quiz: nil) } }
-        .sheet(item: $bozzaInModifica) { quiz in NavigationStack { EditorQuizView(quiz: quiz) } }
-        .confirmationDialog("Eliminare il quiz \"\(daEliminare?.titolo ?? "")\"?",
-                            isPresented: Binding(get: { daEliminare != nil }, set: { if !$0 { daEliminare = nil } }),
-                            titleVisibility: .visible) {
-            Button("Elimina", role: .destructive) {
-                if let quiz = daEliminare { contesto.delete(quiz) }
-                daEliminare = nil
-            }
-        } message: {
-            Text("Le domande e le foto del quiz verranno cancellate.")
-        }
+        .conIndietro(titolo: modo.titolo) { BarraGiocatori(giocatori: sessione.giocatori) }
     }
 }
 
-/// Cosa si può fare con un quiz creato da noi.
-private struct Azioni {
-    let modifica: () -> Void
-    let elimina: () -> Void
-}
-
-private struct RigaQuiz: View {
+/// Un quiz in elenco: tre foto, titolo e numero di domande. A destra va quello che serve alla schermata.
+struct RigaQuiz<Accessorio: View>: View {
     let quiz: Quiz
-    let giocatori: [Partecipante]
-    let azioni: Azioni?
+    @ViewBuilder let accessorio: Accessorio
 
     var body: some View {
-        HStack(spacing: 16) {
-            NavigationLink(destination: QuizView(quiz: quiz, giocatori: giocatori)) {
-                HStack(spacing: 24) {
-                    HStack(spacing: -28) {
-                        ForEach(Array(quiz.fotoAnteprima.enumerated()), id: \.offset) { _, foto in
-                            FotoView(foto: foto)
-                                .frame(width: 96, height: 96)
-                                .clipShape(Circle())
-                                .overlay(Circle().stroke(.white, lineWidth: 4))
-                        }
-                    }
-                    .frame(minWidth: 150, alignment: .leading)
-
-                    VStack(alignment: .leading, spacing: 4) {
-                        Text(quiz.titolo).testo(DimensioneTesto.grande, .heavy)
-                        Text("\(quiz.domande.count) domande").testo(DimensioneTesto.normale)
-                            .foregroundStyle(Tema.testoSecondario)
-                    }
-                    Spacer()
-                    Image(systemName: "chevron.right").font(.system(size: 32, weight: .bold))
+        HStack(spacing: 24) {
+            HStack(spacing: -28) {
+                ForEach(Array(quiz.fotoAnteprima.enumerated()), id: \.offset) { _, foto in
+                    FotoView(foto: foto)
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
                 }
-                .foregroundStyle(Tema.testo)
-                .padding(24)
-                .frame(minHeight: 150)
-                .scheda(raggio: 36)
             }
-            .buttonStyle(StilePremuto())
+            .frame(minWidth: 160, alignment: .leading)
 
-            if let azioni {
-                Menu {
-                    Button("Modifica", systemImage: "pencil", action: azioni.modifica)
-                    Button("Elimina", systemImage: "trash", role: .destructive, action: azioni.elimina)
-                } label: {
-                    Image(systemName: "ellipsis")
-                        .font(.system(size: 30, weight: .bold))
-                        .frame(width: 72, height: 72)
-                }
-                .buttonStyle(.glass)
-                .buttonBorderShape(.circle)
-                .accessibilityLabel("Modifica o elimina il quiz \(quiz.titolo)")
+            VStack(alignment: .leading, spacing: 4) {
+                Text(quiz.titolo).testo(DimensioneTesto.grande)
+                    .lineLimit(1).minimumScaleFactor(0.5)
+                Text("\(quiz.domande.count) domande").testo(DimensioneTesto.medio)
+                    .foregroundStyle(Tema.testoSecondario)
             }
+            Spacer(minLength: 0)
+            accessorio
         }
+        .foregroundStyle(Tema.testo)
+        .padding(20)
+        .frame(minHeight: 140)
+        .scheda()
+        .accessibilityElement(children: .combine)
     }
 }
 

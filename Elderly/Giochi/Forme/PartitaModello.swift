@@ -1,26 +1,12 @@
 import SwiftUI
 
-enum Difficolta: Int, CaseIterable, Identifiable {
-    case facile = 3, medio = 4, difficile = 5
-
-    var id: Int { rawValue }
-    var nome: String {
-        switch self {
-        case .facile: "Facile"
-        case .medio: "Medio"
-        case .difficile: "Difficile"
-        }
-    }
-    var forme: [Forma] { Array(Forma.allCases.prefix(rawValue)) }
-}
-
 enum Fase { case guarda, tocca, festa }
 
 /// Logica del gioco: si ripete insieme una sequenza di forme, a turno, senza penalità.
 @MainActor @Observable
 final class PartitaModello {
     let forme: [Forma]
-    let giocatori: Int
+    let giocatori: [Partecipante]
 
     private(set) var giocatoreCorrente = 0
     private(set) var fase = Fase.guarda
@@ -34,7 +20,7 @@ final class PartitaModello {
     private var erroriDiFila = 0
     private var compito: Task<Void, Never>?
 
-    init(giocatori: Int, difficolta: Difficolta) {
+    init(giocatori: [Partecipante], difficolta: Difficolta) {
         self.giocatori = giocatori
         self.forme = difficolta.forme
     }
@@ -84,7 +70,7 @@ final class PartitaModello {
         fase = .festa
         erroriDiFila = 0
         record = max(record, sequenza.count)
-        messaggio = "Bravissimo!"
+        messaggio = Frasi.bravi([giocatori[giocatoreCorrente]])
         esegui {
             try? await Task.sleep(for: .seconds(0.4))
             for forma in await self.forme {
@@ -113,7 +99,7 @@ final class PartitaModello {
     private func passaAlProssimo(lunghezzaNuova: Int) {
         lunghezza = lunghezzaNuova
         erroriDiFila = 0
-        giocatoreCorrente = (giocatoreCorrente + 1) % giocatori
+        giocatoreCorrente = (giocatoreCorrente + 1) % giocatori.count
         nuovaSequenza()
     }
 

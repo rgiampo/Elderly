@@ -10,6 +10,7 @@ struct UtenteFormView: View {
 
     @State private var nome = ""
     @State private var cognome = ""
+    @State private var genere: Genere?
     @State private var eta = 75
     @State private var conosceNascita = false
     @State private var dataDiNascita = Calendar.current.date(from: DateComponents(year: 1950, month: 1, day: 1)) ?? .now
@@ -19,10 +20,12 @@ struct UtenteFormView: View {
     var body: some View {
         Form {
             Section {
-                HStack(spacing: 24) {
-                    Avatar(utente: anteprima, dimensione: 110)
+                HStack(spacing: 28) {
+                    Avatar(utente: anteprima, dimensione: 120)
                     SelettoreFoto(foto: $foto, latoMassimo: Configurazione.latoFotoProfilo) {
-                        Label(foto == nil ? "Scegli una foto" : "Cambia foto", systemImage: "photo")
+                        Label(foto == nil ? "Aggiungi una foto" : "Cambia la foto", systemImage: "camera")
+                            .testo(DimensioneTesto.normale)
+                            .foregroundStyle(Tema.blu)
                     }
                 }
             }
@@ -30,6 +33,23 @@ struct UtenteFormView: View {
             Section {
                 TextField("Nome", text: $nome)
                 TextField("Cognome", text: $cognome)
+            }
+
+            Section("Come ci rivolgiamo a questa persona") {
+                HStack(spacing: 16) {
+                    ForEach(Genere.allCases) { opzione in
+                        Button { genere = opzione } label: {
+                            Text(opzione.nome)
+                                .testo(DimensioneTesto.medio)
+                                .foregroundStyle(genere == opzione ? .white : Tema.testo)
+                                .frame(maxWidth: .infinity, minHeight: 80)
+                                .background(genere == opzione ? Tema.blu : Tema.celeste.opacity(0.5),
+                                            in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityAddTraits(genere == opzione ? .isSelected : [])
+                    }
+                }
             }
 
             Section {
@@ -58,9 +78,7 @@ struct UtenteFormView: View {
         .navigationTitle(utente == nil ? "Nuova persona" : "Modifica")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            if utente == nil {
-                ToolbarItem(placement: .cancellationAction) { Button("Annulla") { chiudi() } }
-            }
+            ToolbarItem(placement: .cancellationAction) { Button("Annulla") { chiudi() } }
             ToolbarItem(placement: .confirmationAction) {
                 Button("Salva", action: salva).disabled(nome.trimmingCharacters(in: .whitespaces).isEmpty)
             }
@@ -75,25 +93,24 @@ struct UtenteFormView: View {
 
     /// Una persona "di prova" solo per mostrare la foto o le iniziali mentre si scrive.
     private var anteprima: Utente {
-        Utente(nome: nome, cognome: cognome, eta: eta, dataDiNascita: conosceNascita ? dataDiNascita : nil, foto: foto)
+        Utente(nome: nome, cognome: cognome, eta: eta, genere: genere, foto: foto)
     }
 
     private func carica() {
         guard let utente else { return }
-        nome = utente.nome; cognome = utente.cognome; eta = utente.eta; foto = utente.foto
+        nome = utente.nome; cognome = utente.cognome; genere = utente.genere; eta = utente.eta; foto = utente.foto
         if let nascita = utente.dataDiNascita { conosceNascita = true; dataDiNascita = nascita }
     }
 
     private func salva() {
         let nomePulito = nome.trimmingCharacters(in: .whitespaces)
+        let nascita = conosceNascita ? dataDiNascita : nil
         if let utente {
-            utente.nome = nomePulito; utente.cognome = cognome; utente.foto = foto
-            utente.dataDiNascita = conosceNascita ? dataDiNascita : nil
-            utente.eta = Utente.età(da: utente.dataDiNascita) ?? eta
+            utente.nome = nomePulito; utente.cognome = cognome; utente.genere = genere; utente.foto = foto
+            utente.dataDiNascita = nascita
+            utente.eta = Utente.età(da: nascita) ?? eta
         } else {
-            let nuovo = Utente(nome: nomePulito, cognome: cognome, eta: eta,
-                               dataDiNascita: conosceNascita ? dataDiNascita : nil, foto: foto)
-            contesto.insert(nuovo)
+            contesto.insert(Utente(nome: nomePulito, cognome: cognome, eta: eta, dataDiNascita: nascita, genere: genere, foto: foto))
         }
         chiudi()
     }

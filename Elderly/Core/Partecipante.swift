@@ -5,6 +5,7 @@ struct Partecipante: Identifiable, Hashable {
     let id: UUID
     let nome: String
     let utente: Utente?
+    var genere: Genere? { utente?.genere }
 
     init(utente: Utente) {
         id = utente.id

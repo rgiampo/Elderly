@@ -4,6 +4,7 @@ import SwiftData
 /// Crea o modifica un quiz: titolo, domande e, per ogni risposta, una foto e il suo nome.
 struct EditorQuizView: View {
     let quiz: QuizCreato?   // nil = quiz nuovo
+    var partenza: BozzaQuiz?  // per un quiz nuovo che parte da una copia di un quiz pronto
 
     @Environment(\.modelContext) private var contesto
     @Environment(\.dismiss) private var chiudi
@@ -41,7 +42,9 @@ struct EditorQuizView: View {
                 Button("Salva", action: salva).disabled(bozza.problema != nil)
             }
         }
-        .onAppear { if let quiz { bozza = BozzaQuiz(quiz) } }
+        .onAppear {
+            if let quiz { bozza = BozzaQuiz(quiz) } else if let partenza { bozza = partenza }
+        }
     }
 
     private func salva() {
@@ -105,7 +108,7 @@ private struct RigaRisposta: View {
             SelettoreFoto(foto: $risposta.foto) {
                 FotoView(foto: risposta.foto.map(FotoQuiz.dati))
                     .frame(width: 120, height: 90)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
+                    .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
                     .overlay(alignment: .bottomTrailing) {
                         Image(systemName: "camera.fill").padding(6).background(.white, in: Circle()).padding(4)
                     }

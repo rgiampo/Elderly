@@ -67,37 +67,41 @@ final class Voce: NSObject, AVSpeechSynthesizerDelegate {
     }
 }
 
-/// Bottone enorme: si preme e una voce spiega a chi non sa leggere.
+/// Bottone che legge ad alta voce un testo, per chi non sa leggere. Un secondo tocco ferma la voce.
 struct BottoneVoce: View {
     let testo: String
-    var etichetta = "Ascolta come si gioca"
+    var etichetta = "Ascolta"
+    var altezza: CGFloat = 84
     @State private var voce = Voce()
-    @ScaledMetric(relativeTo: .title) private var icona = 40
-    @ScaledMetric(relativeTo: .title) private var altezza = 88
 
     var body: some View {
         Button { voce.leggi(testo) } label: {
-            HStack(spacing: 16) {
-                Image(systemName: "speaker.wave.3.fill")
-                    .font(.system(size: icona))
-                    .symbolEffect(.variableColor.iterative, isActive: voce.staParlando)
-                Text(voce.staParlando ? "Sto parlando…" : etichetta)
-                    .testo(DimensioneTesto.medio, .heavy)
-                    .minimumScaleFactor(0.6)
+            HStack(spacing: 14) {
+                // Icone semplici e ferme: niente animazioni che possono scattare
+                Image(systemName: voce.staParlando ? "stop.fill" : "speaker.wave.2.fill")
+                    .font(.system(size: 34, weight: .bold))
+                    .frame(width: 44)
+                Text(voce.staParlando ? "Ferma" : etichetta)
+                    .testo(DimensioneTesto.medio)
+                    .lineLimit(1).minimumScaleFactor(0.5)
             }
-            .foregroundStyle(.black.opacity(0.85))
-            .frame(maxWidth: 560, minHeight: altezza)
+            .foregroundStyle(Tema.testo)
+            .padding(.horizontal, 32)
+            .frame(minHeight: altezza)
+            .vetro(Tema.giallo)
         }
-        .buttonStyle(.glassProminent)
-        .tint(Tema.sole)
+        .buttonStyle(StilePremuto())
         .accessibilityLabel(voce.staParlando ? "Ferma la lettura" : etichetta)
-        .accessibilityHint("Una voce spiega le regole")
         .onDisappear { voce.ferma() }
     }
 }
 
+/// I testi che la voce legge per spiegare ogni gioco.
 enum Istruzioni {
-    static let comeSiGioca = "Ciao! Guarda le forme colorate: si accendono e suonano una dopo l'altra. "
-        + "Poi tocca le forme nello stesso ordine. Se sbagli non c'è problema: riproviamo insieme. "
-        + "Giochiamo!"
+    static let forme = "Guarda le forme colorate: si accendono e suonano una dopo l'altra. "
+        + "Poi tocca le forme nello stesso ordine. Se sbagli non c'è problema: riproviamo insieme."
+    static let coppie = "Tocca due carte per girarle. Se le due foto sono uguali, hai trovato una coppia. "
+        + "Se sono diverse, si rigirano: prova a ricordare dove sono."
+    static let sìNo = "Guarda la foto e rispondi alla domanda. "
+        + "Tocca il cerchio verde per dire sì, il triangolo rosso per dire no."
 }

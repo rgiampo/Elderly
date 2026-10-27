@@ -10,8 +10,7 @@ final class QuizModello {
     private(set) var domande: [DomandaQuiz] = []
     private(set) var indice = 0
     private(set) var punti: [Int]
-    private(set) var risposte: [RispostaQuiz] = []   // le risposte della domanda corrente, mescolate
-    private(set) var sbagliate: Set<UUID> = []       // quelle già provate e non giuste
+    private(set) var sbagliate: Set<UUID> = []       // risposte già provate e non giuste
     private(set) var rivelata: UUID?                 // la risposta giusta, dopo averla trovata
     private(set) var messaggio = ""
 
@@ -29,6 +28,7 @@ final class QuizModello {
     var finito: Bool { indice >= domande.count }
     var turno: Int { indice % giocatori.count }
     var domanda: DomandaQuiz { domande[min(indice, domande.count - 1)] }
+    var risposte: [RispostaQuiz] { domanda.risposte }
     var puntiTotali: Int { punti.reduce(0, +) }
 
     /// Il testo che la voce legge: di chi è il turno, la domanda e le risposte.
@@ -64,15 +64,13 @@ final class QuizModello {
     // MARK: - Passi
 
     private func iniziaPartita() {
-        domande = Array(quiz.domande.shuffled().prefix(Configurazione.domandePerPartita))
+        domande = quiz.domandeDellaPartita()
         indice = 0
         punti = Array(repeating: 0, count: giocatori.count)
-        caricaDomanda()
+        reimposta()
     }
 
-    private func caricaDomanda() {
-        guard !finito else { return }
-        risposte = domande[indice].risposte.shuffled()
+    private func reimposta() {
         sbagliate = []
         rivelata = nil
         errori = 0
@@ -84,7 +82,7 @@ final class QuizModello {
             try? await Task.sleep(for: .seconds(Configurazione.pausaDopoRispostaGiusta))
             guard !Task.isCancelled else { return }
             indice += 1
-            caricaDomanda()
+            reimposta()
         }
     }
 }

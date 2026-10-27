@@ -10,10 +10,10 @@ struct Avatar: View {
             if let dati = utente?.foto, let immagine = Immagini.ridotta(da: dati, latoMassimo: dimensione * 3) {
                 Image(uiImage: immagine).resizable().scaledToFill()
             } else {
-                Circle().fill(.white)
+                Circle().fill(Tema.carta)
                 if let utente, !utente.iniziali.isEmpty {
                     Text(utente.iniziali)
-                        .font(.system(size: dimensione * 0.4, weight: .bold, design: .rounded))
+                        .font(.system(size: dimensione * 0.4, weight: .bold))
                         .foregroundStyle(Tema.testo)
                 } else {
                     Image(systemName: "person.fill")
@@ -24,7 +24,6 @@ struct Avatar: View {
         }
         .frame(width: dimensione, height: dimensione)
         .clipShape(Circle())
-        .overlay(Circle().stroke(.white, lineWidth: 3))
         .accessibilityHidden(true)
     }
 }

@@ -8,9 +8,18 @@ enum Configurazione {
     /// Quante domande ha una partita al quiz (le altre restano per la prossima volta).
     static let domandePerPartita = 6
 
-    /// Quante risposte (foto) può avere una domanda, quando si crea un quiz.
+    /// Quante risposte (foto) ha una domanda: due, così le foto stanno grandi sullo schermo.
     static let risposteMinime = 2
-    static let risposteMassime = 3
+    static let risposteMassime = 2
+
+    /// Quante forme ci sono nel gioco delle forme, per ogni difficoltà.
+    static let formeFacile = 3, formeMedio = 4, formeDifficile = 5
+
+    /// Quante coppie di foto ci sono nel gioco delle coppie, per ogni difficoltà.
+    static let coppieFacile = 3, coppieMedio = 4, coppieDifficile = 6
+
+    /// Secondi in cui due carte diverse restano scoperte, prima di girarsi di nuovo.
+    static let pausaCarteDiverse = 1.6
 
     /// Secondi di pausa dopo una risposta giusta, prima della domanda successiva.
     static let pausaDopoRispostaGiusta = 2.5
