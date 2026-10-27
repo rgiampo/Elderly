@@ -10,14 +10,7 @@ struct CategorieView: View {
 
             ScrollView {
                 VStack(spacing: 28) {
-                    HStack {
-                        Text("Scegli un gioco")
-                            .testo(DimensioneTesto.titolo, .heavy)
-                            .foregroundStyle(Tema.testo)
-                            .accessibilityAddTraits(.isHeader)
-                        Spacer()
-                        BarraGiocatori(giocatori: sessione.giocatori)
-                    }
+                    IntestazioneConGiocatori(titolo: "Scegli un gioco", giocatori: sessione.giocatori)
 
                     NavigationLink(destination: FormeImpostazioniView()) {
                         SchedaCategoria(titolo: "Abilità mentali") {

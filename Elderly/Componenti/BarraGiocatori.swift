@@ -33,10 +33,12 @@ private struct Pedina: View {
             Avatar(utente: giocatore.utente, dimensione: 68)
             VStack(alignment: .leading, spacing: 2) {
                 Text(giocatore.nome)
-                    .testo(DimensioneTesto.medio, .bold)
+                    .testo(DimensioneTesto.normale, .bold)
+                    .lineLimit(1)
                 if mostraTurno && attivo {
                     Text("Tocca a te")
-                        .testo(DimensioneTesto.normale, .semibold)
+                        .testo(28, .semibold)
+                        .lineLimit(1)
                         .foregroundStyle(Tema.azzurroProfondo)
                 }
             }
@@ -60,5 +62,33 @@ private struct Pedina: View {
         if mostraTurno && attivo { testo += ", tocca a te" }
         if let punti { testo += ", \(punti) punti" }
         return testo
+    }
+}
+
+
+/// Titolo della schermata e, a destra, chi gioca. Se non entrano affiancati, vanno uno sotto l'altro.
+struct IntestazioneConGiocatori: View {
+    let titolo: String
+    let giocatori: [Partecipante]
+
+    var body: some View {
+        ViewThatFits(in: .horizontal) {
+            HStack {
+                testoTitolo.fixedSize(horizontal: true, vertical: false)
+                Spacer(minLength: 24)
+                BarraGiocatori(giocatori: giocatori)
+            }
+            VStack(alignment: .leading, spacing: 16) {
+                testoTitolo
+                BarraGiocatori(giocatori: giocatori)
+            }
+        }
+    }
+
+    private var testoTitolo: some View {
+        Text(titolo)
+            .testo(DimensioneTesto.titolo, .heavy)
+            .foregroundStyle(Tema.testo)
+            .accessibilityAddTraits(.isHeader)
     }
 }

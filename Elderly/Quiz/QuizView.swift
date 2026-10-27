@@ -29,12 +29,16 @@ struct QuizView: View {
 
     private var partita: some View {
         VStack(spacing: 28) {
-            HStack(alignment: .center) {
-                BarraGiocatori(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
-                Spacer()
-                Text("Domanda \(modello.indice + 1) di \(modello.totale)")
-                    .testo(DimensioneTesto.normale, .semibold)
-                    .foregroundStyle(Tema.testoSecondario)
+            ViewThatFits(in: .horizontal) {
+                HStack {
+                    BarraGiocatori(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
+                    Spacer(minLength: 24)
+                    contatoreDomande
+                }
+                VStack(alignment: .leading, spacing: 12) {
+                    BarraGiocatori(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
+                    contatoreDomande
+                }
             }
 
             Text(modello.domanda.testo)
@@ -66,9 +70,17 @@ struct QuizView: View {
         .frame(maxWidth: .infinity)
     }
 
+    private var contatoreDomande: some View {
+        Text("Domanda \(modello.indice + 1) di \(modello.totale)")
+            .testo(DimensioneTesto.normale, .semibold)
+            .foregroundStyle(Tema.testoSecondario)
+            .fixedSize()
+    }
+
     private func stato(di risposta: RispostaQuiz) -> SchedaRisposta.Stato {
         if modello.rivelata == risposta.id { return .giusta }
         if modello.sbagliate.contains(risposta.id) { return .sbagliata }
         return .normale
     }
 }
+

@@ -65,7 +65,7 @@ struct RigaUtente: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(utente.nome).testo(DimensioneTesto.grande, .heavy)
                 Text(utente.cognome).testo(DimensioneTesto.grande, .heavy)
-                Text("Età: \(utente.eta)").testo(DimensioneTesto.medio)
+                Text("Età: \(utente.etaAttuale)").testo(DimensioneTesto.medio)
             }
 
             Spacer()

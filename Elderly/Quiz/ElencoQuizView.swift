@@ -18,14 +18,7 @@ struct ElencoQuizView: View {
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
-                    HStack {
-                        Text("Quiz con le foto")
-                            .testo(DimensioneTesto.titolo, .heavy)
-                            .foregroundStyle(Tema.testo)
-                            .accessibilityAddTraits(.isHeader)
-                        Spacer()
-                        BarraGiocatori(giocatori: sessione.giocatori)
-                    }
+                    IntestazioneConGiocatori(titolo: "Quiz con le foto", giocatori: sessione.giocatori)
 
                     ForEach(pronti) { quiz in
                         RigaQuiz(quiz: quiz, giocatori: sessione.giocatori, azioni: nil)
