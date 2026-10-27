@@ -76,6 +76,7 @@ struct BarraIndietro<Destra: View>: ViewModifier {
                     destra
                 }
                 .padding(.horizontal, 40).padding(.top, 12).padding(.bottom, 12)
+                .barraOpaca()
             }
     }
 }
@@ -84,5 +85,16 @@ extension View {
     /// Aggiunge in alto il grande "Indietro", un titolo e, a destra, quello che serve alla schermata (per esempio i giocatori).
     func conIndietro<Destra: View>(titolo: String? = nil, @ViewBuilder destra: () -> Destra = { EmptyView() }) -> some View {
         modifier(BarraIndietro(titolo: titolo, destra: destra()))
+    }
+}
+
+extension View {
+    /// Sfondo pieno per le barre in alto: quando la lista scorre, i contenuti passano sotto la barra senza sovrapporsi al titolo.
+    func barraOpaca() -> some View {
+        background {
+            Tema.celeste
+                .shadow(color: Tema.testo.opacity(0.12), radius: 8, y: 4)
+                .ignoresSafeArea(edges: .top)
+        }
     }
 }

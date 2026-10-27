@@ -93,7 +93,7 @@ private struct CartaView: View {
     }
 
     private var fronte: some View {
-        FotoView(foto: carta.foto)
+        FotoView(foto: carta.foto, intera: true)
             .clipShape(forma)
             .overlay(forma.stroke(Tema.verde, lineWidth: carta.trovata ? 8 : 0))
             .overlay(alignment: .topTrailing) {

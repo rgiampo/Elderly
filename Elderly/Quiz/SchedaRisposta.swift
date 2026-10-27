@@ -9,7 +9,8 @@ struct SchedaRisposta: View {
     let stato: Stato
 
     var body: some View {
-        FotoView(foto: risposta.foto)
+        FotoView(foto: risposta.foto, intera: true)
+            .aspectRatio(Configurazione.formaFoto, contentMode: .fit)
             .overlay(alignment: .bottom) { if stato == .giusta { nomeSulla } }
             .overlay(alignment: .topTrailing) { if stato == .giusta { spunta } }
             .clipShape(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
@@ -40,26 +41,39 @@ struct SchedaRisposta: View {
 }
 
 /// Mostra una foto del quiz, che sia nell'app o scelta dall'utente. Riempie tutto lo spazio che ha.
+/// Con `intera` la foto si vede tutta, senza tagli: i bordi vuoti si riempiono con la stessa foto sfocata.
 struct FotoView: View {
     let foto: FotoQuiz?
+    var intera = false
 
     var body: some View {
         Color(white: 0.92)
             .overlay {
-                switch foto {
-                case .risorsa(let nome): Image(nome).resizable().scaledToFill()
-                case .dati(let dati): immagine(dati)
-                case nil: segnaposto
+                if intera {
+                    ZStack {
+                        // lo sfondo sfocato sta in un riquadro che non cambia la misura (altrimenti la foto "fit" si allargherebbe)
+                        Color.clear
+                            .overlay { immagine(.fill).blur(radius: 28).scaleEffect(1.15).opacity(0.9) }
+                            .clipped()
+                        immagine(.fit)
+                    }
+                } else {
+                    immagine(.fill)
                 }
             }
             .clipped()
     }
 
     @ViewBuilder
-    private func immagine(_ dati: Data) -> some View {
-        if let uiImage = Immagini.ridotta(da: dati, latoMassimo: Configurazione.latoFotoSalvata) {
-            Image(uiImage: uiImage).resizable().scaledToFill()
-        } else {
+    private func immagine(_ modo: ContentMode) -> some View {
+        switch foto {
+        case .risorsa(let nome):
+            Image(nome).resizable().aspectRatio(contentMode: modo)
+        case .dati(let dati):
+            if let uiImage = Immagini.ridotta(da: dati, latoMassimo: Configurazione.latoFotoSalvata) {
+                Image(uiImage: uiImage).resizable().aspectRatio(contentMode: modo)
+            } else { segnaposto }
+        case nil:
             segnaposto
         }
     }

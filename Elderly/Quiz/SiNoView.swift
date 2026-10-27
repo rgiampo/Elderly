@@ -47,7 +47,8 @@ struct SiNoView: View {
             BannerTurno(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
 
             HStack(spacing: 28) {
-                FotoView(foto: modello.quesito.foto)
+                FotoView(foto: modello.quesito.foto, intera: true)
+                    .aspectRatio(Configurazione.formaFoto, contentMode: .fit)
                     .clipShape(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
                     .shadow(color: Tema.testo.opacity(0.2), radius: 12, y: 6)
                     .grandezzaFoto()

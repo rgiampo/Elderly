@@ -52,6 +52,7 @@ struct IntestazioneModulo: View {
             .opacity(puòSalvare ? 1 : 0.4)
         }
         .padding(.horizontal, MisureModulo.margine).padding(.vertical, 12)
+        .barraOpaca()
     }
 }
 
@@ -155,6 +156,7 @@ struct ModuloView<Contenuto: View>: View {
             SfondoCielo()
             VStack(spacing: 0) {
                 IntestazioneModulo(titolo: titolo, annulla: annulla, salva: salva, puòSalvare: puòSalvare)
+                    .zIndex(1)
                 ScrollView {
                     VStack(alignment: .leading, spacing: MisureModulo.spazio) { contenuto }
                         .padding(.horizontal, MisureModulo.margine).padding(.bottom, 60)
