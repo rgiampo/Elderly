@@ -66,6 +66,9 @@ struct Quiz: Identifiable, Hashable {
         return ordine
     }
 
+    /// Quante foto diverse ha il quiz (le domande sono tutte le combinazioni, quindi sono molte di più).
+    var numeroFoto: Int { Set(domande.flatMap(\.risposte).compactMap(\.foto)).count }
+
     /// Le prime foto, per l'anteprima nell'elenco.
     var fotoAnteprima: [FotoQuiz] {
         var viste = Set<FotoQuiz>()

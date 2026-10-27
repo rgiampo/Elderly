@@ -55,19 +55,15 @@ struct RigaQuiz<Accessorio: View>: View {
 
     var body: some View {
         HStack(spacing: 24) {
-            HStack(spacing: -28) {
-                ForEach(Array(quiz.fotoAnteprima.enumerated()), id: \.offset) { _, foto in
-                    FotoView(foto: foto)
-                        .frame(width: 100, height: 100)
-                        .clipShape(Circle())
-                }
-            }
-            .frame(minWidth: 160, alignment: .leading)
+            // una sola foto, in 16:9, come copertina del quiz
+            FotoView(foto: quiz.fotoAnteprima.first, intera: true)
+                .frame(width: 224, height: 126)
+                .clipShape(RoundedRectangle(cornerRadius: 22, style: .continuous))
 
             VStack(alignment: .leading, spacing: 4) {
                 Text(quiz.titolo).testo(DimensioneTesto.grande)
                     .lineLimit(1).minimumScaleFactor(0.5)
-                Text("\(quiz.domande.count) domande").testo(DimensioneTesto.medio)
+                Text("\(quiz.numeroFoto) foto").testo(DimensioneTesto.medio)
                     .foregroundStyle(Tema.testoSecondario)
             }
             Spacer(minLength: 0)

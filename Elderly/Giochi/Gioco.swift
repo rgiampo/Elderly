@@ -83,15 +83,13 @@ enum Gioco: CaseIterable, Identifiable {
             .padding(24)
             .sfondoAnteprima()
         case .quiz:
-            // due metà una sopra l'altra, ognuna in orizzontale come una foto vera
-            VStack(spacing: 4) {
-                metà(.risorsa("foto_gatto"))
-                metà(.risorsa("foto_cane"))
-            }
+            // una sola foto, grande
+            metà(.risorsa("foto_gatto"))
         case .sìNo:
-            VStack(spacing: 4) {
-                Tema.verde.overlay(Circle().fill(.white).aspectRatio(1, contentMode: .fit).padding(36))
-                Tema.rosso.overlay(SagomaTriangolo().fill(.white).aspectRatio(1, contentMode: .fit).padding(36))
+            // una sola immagine: a sinistra il cerchio verde (sì), a destra il triangolo rosso (no)
+            HStack(spacing: 0) {
+                Tema.verde.overlay(Circle().fill(.white).aspectRatio(1, contentMode: .fit).padding(40))
+                Tema.rosso.overlay(SagomaTriangolo().fill(.white).aspectRatio(1, contentMode: .fit).padding(40))
             }
         }
     }
