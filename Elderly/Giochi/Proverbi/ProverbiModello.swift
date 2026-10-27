@@ -56,8 +56,17 @@ final class ProverbiModello {
                 prepara()
             }
         } else {
+            // sbagliato: buzz, si vede il proverbio giusto e si va avanti da soli
             errori += 1
             sbagliate.insert(opzione.id)
+            trovata = true
+            Sintetizzatore.condiviso.buzz()
+            attesa = Task {
+                try? await Task.sleep(for: .seconds(Configurazione.pausaProverbio))
+                guard !Task.isCancelled else { return }
+                indice += 1
+                prepara()
+            }
         }
     }
 

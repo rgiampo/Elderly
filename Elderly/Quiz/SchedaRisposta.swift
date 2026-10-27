@@ -12,12 +12,12 @@ struct SchedaRisposta: View {
         FotoView(foto: risposta.foto, intera: true)
             .aspectRatio(Configurazione.formaFoto, contentMode: .fit)
             .overlay(alignment: .bottom) { if stato == .giusta { nomeSulla } }
-            .overlay(alignment: .topTrailing) { if stato == .giusta { spunta } }
+            .overlay(alignment: .topTrailing) { if stato == .giusta { spunta } else if stato == .sbagliata { croce } }
+            .overlay { if stato == .sbagliata { Tema.rosso.opacity(0.5).allowsHitTesting(false) } }
             .clipShape(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
-            .overlay(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous).stroke(Tema.verde, lineWidth: stato == .giusta ? 10 : 0))
+            .overlay(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous).stroke(stato == .sbagliata ? Tema.rosso : Tema.verde, lineWidth: stato == .normale ? 0 : 10))
             .shadow(color: Tema.testo.opacity(0.2), radius: 12, y: 6)
-            .saturation(stato == .sbagliata ? 0 : 1)
-            .opacity(stato == .sbagliata ? 0.45 : 1)
+
             .scaleEffect(stato == .giusta ? 1.02 : 1)
             .animation(.spring(duration: 0.35, bounce: 0.3), value: stato)
     }
@@ -30,6 +30,13 @@ struct SchedaRisposta: View {
             .frame(maxWidth: .infinity)
             .padding(.vertical, 16)
             .background(Tema.verde)
+    }
+
+    private var croce: some View {
+        Image(systemName: "xmark.circle.fill")
+            .font(.system(size: 64))
+            .foregroundStyle(.white, Tema.rosso)
+            .padding(16)
     }
 
     private var spunta: some View {

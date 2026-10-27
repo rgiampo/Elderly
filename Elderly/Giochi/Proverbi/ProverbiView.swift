@@ -35,7 +35,7 @@ struct ProverbiView: View {
         .bordoTurno(modello.giocatori, turno: modello.turno)
         .animation(.spring(duration: 0.5), value: modello.turno)
         .sensoryFeedback(.impact(weight: .heavy), trigger: modello.turno) { _, _ in modello.giocatori.count > 1 }
-        .sensoryFeedback(.success, trigger: modello.trovata) { _, nuova in nuova }
+        .sensoryFeedback(.success, trigger: modello.trovata) { _, nuova in nuova && modello.sbagliate.isEmpty }
         .sensoryFeedback(.warning, trigger: modello.sbagliate.count) { prima, dopo in dopo > prima }
         .onDisappear { modello.ferma() }
     }
@@ -92,20 +92,20 @@ private struct SchedaOpzione: View {
     var body: some View {
         Text(opzione.testo)
             .testo(DimensioneTesto.grande)
-            .foregroundStyle(stato == .giusta ? .white : Tema.testo)
+            .foregroundStyle(stato == .normale ? Tema.testo : .white)
             .multilineTextAlignment(.center)
             .lineLimit(2).minimumScaleFactor(0.5)
             .padding(.horizontal, 32)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(stato == .giusta ? Tema.verde : Tema.carta, in: RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
+            .background(stato == .giusta ? Tema.verde : (stato == .sbagliata ? Tema.rosso : Tema.carta), in: RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
             .shadow(color: Tema.testo.opacity(0.12), radius: 10, y: 5)
             .overlay(alignment: .trailing) {
-                if stato == .giusta {
-                    Image(systemName: "checkmark.circle.fill").font(.system(size: 56)).foregroundStyle(.white).padding(.trailing, 28)
+                if stato != .normale {
+                    Image(systemName: stato == .giusta ? "checkmark.circle.fill" : "xmark.circle.fill")
+                        .font(.system(size: 56)).foregroundStyle(.white).padding(.trailing, 28)
                 }
             }
-            .opacity(stato == .sbagliata ? 0.35 : 1)
-            .scaleEffect(stato == .giusta ? 1.02 : 1)
+                        .scaleEffect(stato == .giusta ? 1.02 : 1)
             .animation(.spring(duration: 0.35, bounce: 0.3), value: stato)
     }
 }

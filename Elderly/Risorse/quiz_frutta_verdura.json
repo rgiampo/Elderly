@@ -5,12 +5,12 @@
    "testo": "Quale è l'arancia?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": true
     },
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": false
     }
@@ -20,12 +20,12 @@
    "testo": "Quale è l'arancia?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": false
     }
@@ -35,12 +35,12 @@
    "testo": "Quale è l'arancia?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": true
     },
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": false
     }
@@ -50,12 +50,12 @@
    "testo": "Quale è l'arancia?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": true
     },
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": false
     }
@@ -65,7 +65,7 @@
    "testo": "Quale è l'arancia?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": true
     },
@@ -80,7 +80,7 @@
    "testo": "Quale è l'arancia?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": true
     },
@@ -95,7 +95,7 @@
    "testo": "Quale è l'arancia?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": true
     },
@@ -110,7 +110,7 @@
    "testo": "Quale è l'arancia?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": true
     },
@@ -125,7 +125,7 @@
    "testo": "Quale è l'arancia?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": true
     },
@@ -140,12 +140,12 @@
    "testo": "Quale è la melanzana?",
    "risposte": [
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": false
     }
@@ -155,12 +155,12 @@
    "testo": "Quale è la melanzana?",
    "risposte": [
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": false
     }
@@ -170,12 +170,12 @@
    "testo": "Quale è la melanzana?",
    "risposte": [
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": true
     },
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": false
     }
@@ -185,12 +185,12 @@
    "testo": "Quale è la melanzana?",
    "risposte": [
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": true
     },
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": false
     }
@@ -200,7 +200,7 @@
    "testo": "Quale è la melanzana?",
    "risposte": [
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": true
     },
@@ -215,7 +215,7 @@
    "testo": "Quale è la melanzana?",
    "risposte": [
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": true
     },
@@ -230,7 +230,7 @@
    "testo": "Quale è la melanzana?",
    "risposte": [
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": true
     },
@@ -245,7 +245,7 @@
    "testo": "Quale è la melanzana?",
    "risposte": [
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": true
     },
@@ -260,7 +260,7 @@
    "testo": "Quale è la melanzana?",
    "risposte": [
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": true
     },
@@ -275,12 +275,12 @@
    "testo": "Quale è il limone?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": false
     }
@@ -290,12 +290,12 @@
    "testo": "Quale è il limone?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": true
     },
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": false
     }
@@ -305,12 +305,12 @@
    "testo": "Quale è il limone?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": true
     },
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": false
     }
@@ -320,12 +320,12 @@
    "testo": "Quale è il limone?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": true
     },
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": false
     }
@@ -335,7 +335,7 @@
    "testo": "Quale è il limone?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": true
     },
@@ -350,7 +350,7 @@
    "testo": "Quale è il limone?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": true
     },
@@ -365,7 +365,7 @@
    "testo": "Quale è il limone?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": true
     },
@@ -380,7 +380,7 @@
    "testo": "Quale è il limone?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": true
     },
@@ -395,7 +395,7 @@
    "testo": "Quale è il limone?",
    "risposte": [
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": true
     },
@@ -410,12 +410,12 @@
    "testo": "Quale è l'uva?",
    "risposte": [
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": false
     }
@@ -425,12 +425,12 @@
    "testo": "Quale è l'uva?",
    "risposte": [
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": true
     },
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": false
     }
@@ -440,12 +440,12 @@
    "testo": "Quale è l'uva?",
    "risposte": [
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": false
     }
@@ -455,12 +455,12 @@
    "testo": "Quale è l'uva?",
    "risposte": [
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": true
     },
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": false
     }
@@ -470,7 +470,7 @@
    "testo": "Quale è l'uva?",
    "risposte": [
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": true
     },
@@ -485,7 +485,7 @@
    "testo": "Quale è l'uva?",
    "risposte": [
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": true
     },
@@ -500,7 +500,7 @@
    "testo": "Quale è l'uva?",
    "risposte": [
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": true
     },
@@ -515,7 +515,7 @@
    "testo": "Quale è l'uva?",
    "risposte": [
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": true
     },
@@ -530,7 +530,7 @@
    "testo": "Quale è l'uva?",
    "risposte": [
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": true
     },
@@ -545,12 +545,12 @@
    "testo": "Quali sono i pomodori?",
    "risposte": [
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": false
     }
@@ -560,12 +560,12 @@
    "testo": "Quali sono i pomodori?",
    "risposte": [
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": true
     },
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": false
     }
@@ -575,12 +575,12 @@
    "testo": "Quali sono i pomodori?",
    "risposte": [
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": false
     }
@@ -590,12 +590,12 @@
    "testo": "Quali sono i pomodori?",
    "risposte": [
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": true
     },
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": false
     }
@@ -605,7 +605,7 @@
    "testo": "Quali sono i pomodori?",
    "risposte": [
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": true
     },
@@ -620,7 +620,7 @@
    "testo": "Quali sono i pomodori?",
    "risposte": [
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": true
     },
@@ -635,7 +635,7 @@
    "testo": "Quali sono i pomodori?",
    "risposte": [
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": true
     },
@@ -650,7 +650,7 @@
    "testo": "Quali sono i pomodori?",
    "risposte": [
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": true
     },
@@ -665,7 +665,7 @@
    "testo": "Quali sono i pomodori?",
    "risposte": [
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": true
     },
@@ -685,7 +685,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": false
     }
@@ -700,7 +700,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": false
     }
@@ -715,7 +715,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": false
     }
@@ -730,7 +730,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": false
     }
@@ -745,7 +745,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": false
     }
@@ -820,7 +820,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": false
     }
@@ -835,7 +835,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": false
     }
@@ -850,7 +850,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": false
     }
@@ -865,7 +865,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": false
     }
@@ -880,7 +880,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": false
     }
@@ -955,7 +955,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": false
     }
@@ -970,7 +970,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": false
     }
@@ -985,7 +985,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": false
     }
@@ -1000,7 +1000,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": false
     }
@@ -1015,7 +1015,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": false
     }
@@ -1090,7 +1090,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": false
     }
@@ -1105,7 +1105,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": false
     }
@@ -1120,7 +1120,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": false
     }
@@ -1135,7 +1135,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": false
     }
@@ -1150,7 +1150,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": false
     }
@@ -1225,7 +1225,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto arancione",
+     "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": false
     }
@@ -1240,7 +1240,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un ortaggio viola",
+     "testo": "Melanzana",
      "foto": "foto_melanzana",
      "giusta": false
     }
@@ -1255,7 +1255,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un frutto giallo",
+     "testo": "Limone",
      "foto": "foto_limone",
      "giusta": false
     }
@@ -1270,7 +1270,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un frutto viola",
+     "testo": "Uva",
      "foto": "foto_uva",
      "giusta": false
     }
@@ -1285,7 +1285,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di tanti ortaggi rossi",
+     "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": false
     }

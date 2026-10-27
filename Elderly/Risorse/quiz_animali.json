@@ -5,12 +5,12 @@
    "testo": "Quale è il gatto?",
    "risposte": [
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": true
     },
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": false
     }
@@ -20,12 +20,12 @@
    "testo": "Quale è il gatto?",
    "risposte": [
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": true
     },
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": false
     }
@@ -35,12 +35,12 @@
    "testo": "Quale è il gatto?",
    "risposte": [
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": true
     },
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": false
     }
@@ -50,7 +50,7 @@
    "testo": "Quale è il gatto?",
    "risposte": [
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": true
     },
@@ -65,7 +65,7 @@
    "testo": "Quale è il gatto?",
    "risposte": [
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": true
     },
@@ -80,7 +80,7 @@
    "testo": "Quale è il gatto?",
    "risposte": [
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": true
     },
@@ -95,7 +95,7 @@
    "testo": "Quale è il gatto?",
    "risposte": [
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": true
     },
@@ -110,7 +110,7 @@
    "testo": "Quale è il gatto?",
    "risposte": [
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": true
     },
@@ -125,12 +125,12 @@
    "testo": "Quale è il cane?",
    "risposte": [
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": true
     },
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": false
     }
@@ -140,12 +140,12 @@
    "testo": "Quale è il cane?",
    "risposte": [
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": true
     },
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": false
     }
@@ -155,12 +155,12 @@
    "testo": "Quale è il cane?",
    "risposte": [
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": true
     },
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": false
     }
@@ -170,7 +170,7 @@
    "testo": "Quale è il cane?",
    "risposte": [
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": true
     },
@@ -185,7 +185,7 @@
    "testo": "Quale è il cane?",
    "risposte": [
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": true
     },
@@ -200,7 +200,7 @@
    "testo": "Quale è il cane?",
    "risposte": [
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": true
     },
@@ -215,7 +215,7 @@
    "testo": "Quale è il cane?",
    "risposte": [
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": true
     },
@@ -230,7 +230,7 @@
    "testo": "Quale è il cane?",
    "risposte": [
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": true
     },
@@ -245,12 +245,12 @@
    "testo": "Quali sono le galline?",
    "risposte": [
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": true
     },
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": false
     }
@@ -260,12 +260,12 @@
    "testo": "Quali sono le galline?",
    "risposte": [
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": true
     },
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": false
     }
@@ -275,12 +275,12 @@
    "testo": "Quali sono le galline?",
    "risposte": [
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": true
     },
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": false
     }
@@ -290,7 +290,7 @@
    "testo": "Quali sono le galline?",
    "risposte": [
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": true
     },
@@ -305,7 +305,7 @@
    "testo": "Quali sono le galline?",
    "risposte": [
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": true
     },
@@ -320,7 +320,7 @@
    "testo": "Quali sono le galline?",
    "risposte": [
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": true
     },
@@ -335,7 +335,7 @@
    "testo": "Quali sono le galline?",
    "risposte": [
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": true
     },
@@ -350,7 +350,7 @@
    "testo": "Quali sono le galline?",
    "risposte": [
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": true
     },
@@ -365,12 +365,12 @@
    "testo": "Quale è il cavallo?",
    "risposte": [
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": true
     },
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": false
     }
@@ -380,12 +380,12 @@
    "testo": "Quale è il cavallo?",
    "risposte": [
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": true
     },
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": false
     }
@@ -395,12 +395,12 @@
    "testo": "Quale è il cavallo?",
    "risposte": [
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": true
     },
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": false
     }
@@ -410,7 +410,7 @@
    "testo": "Quale è il cavallo?",
    "risposte": [
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": true
     },
@@ -425,7 +425,7 @@
    "testo": "Quale è il cavallo?",
    "risposte": [
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": true
     },
@@ -440,7 +440,7 @@
    "testo": "Quale è il cavallo?",
    "risposte": [
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": true
     },
@@ -455,7 +455,7 @@
    "testo": "Quale è il cavallo?",
    "risposte": [
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": true
     },
@@ -470,7 +470,7 @@
    "testo": "Quale è il cavallo?",
    "risposte": [
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": true
     },
@@ -490,7 +490,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": false
     }
@@ -505,7 +505,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": false
     }
@@ -520,7 +520,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": false
     }
@@ -535,7 +535,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": false
     }
@@ -610,7 +610,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": false
     }
@@ -625,7 +625,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": false
     }
@@ -640,7 +640,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": false
     }
@@ -655,7 +655,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": false
     }
@@ -730,7 +730,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": false
     }
@@ -745,7 +745,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": false
     }
@@ -760,7 +760,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": false
     }
@@ -775,7 +775,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": false
     }
@@ -850,7 +850,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": false
     }
@@ -865,7 +865,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": false
     }
@@ -880,7 +880,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": false
     }
@@ -895,7 +895,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": false
     }
@@ -970,7 +970,7 @@
      "giusta": true
     },
     {
-     "testo": "1. foto di un piccolo felino domestico con i baffi",
+     "testo": "Gatto",
      "foto": "foto_gatto",
      "giusta": false
     }
@@ -985,7 +985,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un quadrupede domestico che abbaia",
+     "testo": "Cane",
      "foto": "foto_cane",
      "giusta": false
     }
@@ -1000,7 +1000,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
+     "testo": "Galline",
      "foto": "foto_gallina",
      "giusta": false
     }
@@ -1015,7 +1015,7 @@
      "giusta": true
     },
     {
-     "testo": "2. foto di un grande animale con la criniera",
+     "testo": "Cavallo",
      "foto": "foto_cavallo",
      "giusta": false
     }

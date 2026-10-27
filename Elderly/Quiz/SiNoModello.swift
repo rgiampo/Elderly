@@ -52,6 +52,7 @@ final class SiNoModello {
         } else {
             // nessuna penalità: si dice com'era e si va avanti
             messaggio = quesito.èGiusto ? "Era proprio così: sì!" : "No, qui c'era un'altra cosa."
+            Sintetizzatore.condiviso.buzz()
         }
         attesa = Task {
             try? await Task.sleep(for: .seconds(Configurazione.pausaDopoRispostaGiusta))

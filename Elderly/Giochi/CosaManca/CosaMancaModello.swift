@@ -52,8 +52,17 @@ final class CosaMancaModello {
                 nuovoRound()
             }
         } else {
+            // sbagliato: buzz, si vede la foto che mancava e si va avanti da soli
             errori += 1
             sbagliate.insert(risposta)
+            fase = .trovata
+            Sintetizzatore.condiviso.buzz()
+            attesa = Task {
+                try? await Task.sleep(for: .seconds(Configurazione.pausaDopoRispostaGiusta))
+                guard !Task.isCancelled else { return }
+                indice += 1
+                nuovoRound()
+            }
         }
     }
 

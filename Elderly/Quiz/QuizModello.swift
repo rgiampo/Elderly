@@ -48,9 +48,13 @@ final class QuizModello {
             Sintetizzatore.condiviso.accordoDiFesta()
             vaiAvanti()
         } else {
+            // sbagliato: buzz, si vede la risposta giusta e si va avanti da soli (nessun punto)
             errori += 1
             sbagliate.insert(risposta.id)
-            messaggio = "Non è questa. Riprova!"
+            rivelata = domanda.rispostaGiusta?.id
+            messaggio = "Non è questa"
+            Sintetizzatore.condiviso.buzz()
+            vaiAvanti()
         }
     }
 

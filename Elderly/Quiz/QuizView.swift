@@ -32,7 +32,7 @@ struct QuizView: View {
         }
         .bordoTurno(modello.giocatori, turno: modello.turno)
         .animation(.spring(duration: 0.5), value: modello.turno)
-        .sensoryFeedback(.success, trigger: modello.rivelata) { _, nuova in nuova != nil }
+        .sensoryFeedback(.success, trigger: modello.rivelata) { _, nuova in nuova != nil && modello.sbagliate.isEmpty }
         .sensoryFeedback(.warning, trigger: modello.sbagliate.count) { prima, dopo in dopo > prima }
         .sensoryFeedback(.impact(weight: .heavy), trigger: modello.turno) { _, _ in modello.giocatori.count > 1 }
         .onChange(of: modello.messaggio) { _, nuovo in

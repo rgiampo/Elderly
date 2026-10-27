@@ -36,7 +36,7 @@ struct CosaMancaView: View {
         .animation(.spring(duration: 0.5), value: modello.turno)
         .animation(.spring(duration: 0.5), value: modello.fase)
         .sensoryFeedback(.impact(weight: .heavy), trigger: modello.turno) { _, _ in modello.giocatori.count > 1 }
-        .sensoryFeedback(.success, trigger: modello.fase) { _, nuova in nuova == .trovata }
+        .sensoryFeedback(.success, trigger: modello.fase) { _, nuova in nuova == .trovata && modello.sbagliate.isEmpty }
         .sensoryFeedback(.warning, trigger: modello.sbagliate.count) { prima, dopo in dopo > prima }
         .onDisappear { modello.ferma() }
     }
@@ -54,7 +54,7 @@ struct CosaMancaView: View {
             griglia.frame(maxHeight: .infinity)
 
             HStack(spacing: 24) {
-                if modello.fase == .scegli { scelte } else if modello.fase == .guarda { pulsanteGuardato }
+                if modello.fase == .scegli || (modello.fase == .trovata && !modello.sbagliate.isEmpty) { scelte } else if modello.fase == .guarda { pulsanteGuardato }
                 else { Spacer() }
                 BottoneVoce(testo: modello.testoParlato, etichetta: "Ascolta", altezza: 76)
                     .fixedSize()
@@ -125,8 +125,12 @@ struct CosaMancaView: View {
                         .aspectRatio(Configurazione.formaFoto, contentMode: .fit)
                         .clipShape(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
                         .shadow(color: Tema.testo.opacity(0.2), radius: 8, y: 4)
-                        .saturation(modello.sbagliate.contains(foto) ? 0 : 1)
-                        .opacity(modello.sbagliate.contains(foto) ? 0.4 : 1)
+                        .overlay {
+                            if modello.sbagliate.contains(foto) {
+                                RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous).stroke(Tema.rosso, lineWidth: 10)
+                                    .background(Tema.rosso.opacity(0.5), in: RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
+                            }
+                        }
                 }
                 .buttonStyle(StilePremuto())
                 .accessibilityLabel("Foto")

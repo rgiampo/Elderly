@@ -55,6 +55,35 @@ final class Sintetizzatore {
             for n in stride(from: campioni - 1, through: salto, by: -1) { onda[n] += peso * onda[n - salto] }
         }
 
+        return datiWav(da: onda)
+    }
+
+    /// Un "buzz" breve e grave (onda quadra a 110 Hz con un po' di vibrato) per dire "sbagliato" senza spaventare.
+    func buzz() {
+        guard UserDefaults.standard.object(forKey: "suoniAttivi") as? Bool ?? true else { return }
+        if buzzLettore == nil { buzzLettore = try? AVAudioPlayer(data: datiBuzz()) }
+        buzzLettore?.volume = 0.55
+        buzzLettore?.currentTime = 0
+        buzzLettore?.play()
+    }
+
+    private var buzzLettore: AVAudioPlayer?
+
+    private func datiBuzz() -> Data {
+        let campioni = Int(frequenzaCampionamento * 0.42)
+        var onda = [Float](repeating: 0, count: campioni)
+        for n in 0..<campioni {
+            let t = Double(n) / frequenzaCampionamento
+            let frequenza = 110 + 6 * sin(2 * .pi * 18 * t)             // vibrato
+            let quadra: Double = sin(2 * .pi * frequenza * t) >= 0 ? 1 : -1
+            let attacco = min(1, t / 0.01), coda = min(1, (0.42 - t) / 0.08)
+            onda[n] = Float(0.35 * quadra * attacco * coda)
+        }
+        return datiWav(da: onda)
+    }
+
+    private func datiWav(da onda: [Float]) -> Data {
+        let campioni = onda.count
         var dati = Data()
         func aggiungi<T: FixedWidthInteger>(_ v: T) { withUnsafeBytes(of: v.littleEndian) { dati.append(contentsOf: $0) } }
         let byte = UInt32(campioni * 2)
