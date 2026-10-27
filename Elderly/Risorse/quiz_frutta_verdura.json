@@ -5,12 +5,12 @@
       "testo": "Quale è l'arancia?",
       "risposte": [
         {
-          "testo": "Arancia",
+          "testo": "1. foto di un frutto arancione",
           "foto": "foto_arancia",
           "giusta": true
         },
         {
-          "testo": "Melanzana",
+          "testo": "2. foto di un ortaggio viola",
           "foto": "foto_melanzana",
           "giusta": false
         }
@@ -20,12 +20,12 @@
       "testo": "Quale è il limone?",
       "risposte": [
         {
-          "testo": "Limone",
+          "testo": "1. foto di un frutto giallo",
           "foto": "foto_limone",
           "giusta": true
         },
         {
-          "testo": "Uva",
+          "testo": "2. foto di un frutto viola",
           "foto": "foto_uva",
           "giusta": false
         }
@@ -35,12 +35,12 @@
       "testo": "Quale è l'uva?",
       "risposte": [
         {
-          "testo": "Uva",
+          "testo": "1. foto di un frutto giallo/verde",
           "foto": "foto_uva",
           "giusta": true
         },
         {
-          "testo": "Arancia",
+          "testo": "2. foto di un frutto arancione",
           "foto": "foto_arancia",
           "giusta": false
         }
@@ -50,12 +50,12 @@
       "testo": "Quali sono i pomodori?",
       "risposte": [
         {
-          "testo": "Pomodori",
+          "testo": "1. foto di tanti ortaggi rossi",
           "foto": "foto_pomodori",
           "giusta": true
         },
         {
-          "testo": "Limone",
+          "testo": "2. foto di un frutto giallo",
           "foto": "foto_limone",
           "giusta": false
         }
@@ -65,12 +65,12 @@
       "testo": "Quale è la melanzana?",
       "risposte": [
         {
-          "testo": "Melanzana",
+          "testo": "1. foto di un ortaggio viola",
           "foto": "foto_melanzana",
           "giusta": true
         },
         {
-          "testo": "Pomodori",
+          "testo": "2. foto di tanti ortaggi rossi",
           "foto": "foto_pomodori",
           "giusta": false
         }
@@ -80,12 +80,12 @@
       "testo": "Quale frutto è giallo?",
       "risposte": [
         {
-          "testo": "Limone",
+          "testo": "1. Limone",
           "foto": "foto_limone",
           "giusta": true
         },
         {
-          "testo": "Uva",
+          "testo": "2. Uva",
           "foto": "foto_uva",
           "giusta": false
         }

@@ -5,12 +5,12 @@
       "testo": "Quale è il gatto?",
       "risposte": [
         {
-          "testo": "Gatto",
+          "testo": "1. foto di un piccolo felino domestico con i baffi",
           "foto": "foto_gatto",
           "giusta": true
         },
         {
-          "testo": "Cane",
+          "testo": "2. foto di un quadrupede domestico che abbaia",
           "foto": "foto_cane",
           "giusta": false
         }
@@ -20,12 +20,12 @@
       "testo": "Quale è il cane?",
       "risposte": [
         {
-          "testo": "Cane",
+          "testo": "1. foto di un quadrupede domestico che abbaia",
           "foto": "foto_cane",
           "giusta": true
         },
         {
-          "testo": "Gallina",
+          "testo": "2. foto di un volatile da cortile con il contagocce e cresta",
           "foto": "foto_gallina",
           "giusta": false
         }
@@ -35,12 +35,12 @@
       "testo": "Quali sono le galline?",
       "risposte": [
         {
-          "testo": "Galline",
+          "testo": "1. foto di volatili da cortile con cresta e piume",
           "foto": "foto_gallina",
           "giusta": true
         },
         {
-          "testo": "Cavallo",
+          "testo": "2. foto di un grande animale con la criniera",
           "foto": "foto_cavallo",
           "giusta": false
         }
@@ -50,12 +50,12 @@
       "testo": "Quale è il cavallo?",
       "risposte": [
         {
-          "testo": "Cavallo",
+          "testo": "1. foto di un grande animale con la criniera",
           "foto": "foto_cavallo",
           "giusta": true
         },
         {
-          "testo": "Gatto",
+          "testo": "2. foto di un piccolo felino domestico con i baffi",
           "foto": "foto_gatto",
           "giusta": false
         }
@@ -65,12 +65,12 @@
       "testo": "Quale animale fa miao?",
       "risposte": [
         {
-          "testo": "Gatto",
+          "testo": "1. foto di un piccolo felino domestico con i baffi",
           "foto": "foto_gatto",
           "giusta": true
         },
         {
-          "testo": "Cane",
+          "testo": "2. foto di un quadrupede domestico che abbaia",
           "foto": "foto_cane",
           "giusta": false
         }
@@ -80,12 +80,12 @@
       "testo": "Quale animale fa bau?",
       "risposte": [
         {
-          "testo": "Cane",
+          "testo": "1. foto di un quadrupede domestico che abbaia",
           "foto": "foto_cane",
           "giusta": true
         },
         {
-          "testo": "Cavallo",
+          "testo": "2. foto di un grande animale con la criniera",
           "foto": "foto_cavallo",
           "giusta": false
         }

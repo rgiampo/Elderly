@@ -5,12 +5,12 @@
       "testo": "Quale è il gelato?",
       "risposte": [
         {
-          "testo": "Gelato",
+          "testo": "1. foto di un cono con palline fredde e colorate",
           "foto": "foto_gelato",
           "giusta": true
         },
         {
-          "testo": "Caffè",
+          "testo": "2. foto di una tazzina con un liquido scuro",
           "foto": "foto_caffe",
           "giusta": false
         }
@@ -20,12 +20,12 @@
       "testo": "Quale è il caffè?",
       "risposte": [
         {
-          "testo": "Caffè",
+          "testo": "1. foto di una tazzina con un liquido scuro",
           "foto": "foto_caffe",
           "giusta": true
         },
         {
-          "testo": "Gelato",
+          "testo": "2. foto di un cono con palline fredde e colorate",
           "foto": "foto_gelato",
           "giusta": false
         }
@@ -35,12 +35,12 @@
       "testo": "Quale è il cappuccino?",
       "risposte": [
         {
-          "testo": "Cappuccino",
+          "testo": "1. foto di una tazza con schiuma di latte e cacao",
           "foto": "foto_cappuccino",
           "giusta": true
         },
         {
-          "testo": "Gelato",
+          "testo": "2. foto di un cono con palline fredde e colorate",
           "foto": "foto_gelato",
           "giusta": false
         }
@@ -50,12 +50,12 @@
       "testo": "Cosa si beve a colazione?",
       "risposte": [
         {
-          "testo": "Cappuccino",
+          "testo": "1. foto di una tazza con schiuma di latte e cacao",
           "foto": "foto_cappuccino",
           "giusta": true
         },
         {
-          "testo": "Pane",
+          "testo": "2. foto di una pagnotta dorata a fette",
           "foto": "foto_pane",
           "giusta": false
         }
@@ -65,12 +65,12 @@
       "testo": "Cosa è freddo e dolce?",
       "risposte": [
         {
-          "testo": "Gelato",
+          "testo": "1. foto di un cono con palline fredde e colorate",
           "foto": "foto_gelato",
           "giusta": true
         },
         {
-          "testo": "Caffè",
+          "testo": "2. foto di una tazzina con un liquido scuro",
           "foto": "foto_caffe",
           "giusta": false
         }
@@ -80,12 +80,12 @@
       "testo": "Quale è il pane?",
       "risposte": [
         {
-          "testo": "Pane",
+          "testo": "1. foto di una pagnotta dorata a fette",
           "foto": "foto_pane",
           "giusta": true
         },
         {
-          "testo": "Cappuccino",
+          "testo": "2. foto di una tazza con schiuma di latte e cacao",
           "foto": "foto_cappuccino",
           "giusta": false
         }

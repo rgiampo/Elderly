@@ -5,12 +5,12 @@
       "testo": "Quale di queste è la pizza marinara?",
       "risposte": [
         {
-          "testo": "Pizza marinara",
+          "testo": "1. foto di una pizza rossa con pomodoro, aglio e origano",
           "foto": "foto_marinara",
           "giusta": true
         },
         {
-          "testo": "Polpette al sugo",
+          "testo": "2. foto di sfere di carne immerse nel sugo rosso",
           "foto": "foto_polpette",
           "giusta": false
         }
@@ -20,12 +20,12 @@
       "testo": "Quale è il calzone?",
       "risposte": [
         {
-          "testo": "Calzone",
+          "testo": "1. foto di una pizza piegata a mezzaluna",
           "foto": "foto_calzone",
           "giusta": true
         },
         {
-          "testo": "Pasta e patate",
+          "testo": "2. foto di un piatto di pasta cremosa con patate",
           "foto": "foto_patate",
           "giusta": false
         }
@@ -35,12 +35,12 @@
       "testo": "Quale è la pasta e patate?",
       "risposte": [
         {
-          "testo": "Pasta e patate",
+          "testo": "1. foto di un piatto di pasta cremosa con patate",
           "foto": "foto_patate",
           "giusta": true
         },
         {
-          "testo": "Pasta alle vongole",
+          "testo": "2. foto di un piatto di spaghetti con molluschi nel guscio",
           "foto": "foto_vongole",
           "giusta": false
         }
@@ -50,12 +50,12 @@
       "testo": "Quali sono le polpette al sugo?",
       "risposte": [
         {
-          "testo": "Polpette al sugo",
+          "testo": "1. foto di sfere di carne immerse nel sugo rosso",
           "foto": "foto_polpette",
           "giusta": true
         },
         {
-          "testo": "Polpo arrosto",
+          "testo": "2. foto di un tentacolo grigliato sul piatto",
           "foto": "foto_polpo",
           "giusta": false
         }
@@ -65,12 +65,12 @@
       "testo": "Quale è il polpo arrosto?",
       "risposte": [
         {
-          "testo": "Polpo arrosto",
+          "testo": "1. foto di un tentacolo grigliato sul piatto",
           "foto": "foto_polpo",
           "giusta": true
         },
         {
-          "testo": "Pasta e patate",
+          "testo": "2. foto di un piatto di pasta cremosa con patate",
           "foto": "foto_patate",
           "giusta": false
         }
@@ -80,12 +80,12 @@
       "testo": "Quale è la pasta alle vongole?",
       "risposte": [
         {
-          "testo": "Pasta alle vongole",
+          "testo": "1. foto di un piatto di spaghetti con molluschi nel guscio",
           "foto": "foto_vongole",
           "giusta": true
         },
         {
-          "testo": "Pizza marinara",
+          "testo": "2. foto di una pizza rossa con pomodoro, aglio e origano",
           "foto": "foto_marinara",
           "giusta": false
         }
@@ -95,12 +95,12 @@
       "testo": "Quale è il caffè?",
       "risposte": [
         {
-          "testo": "Caffè",
+          "testo": "1. foto di una tazzina fumante con liquido scuro",
           "foto": "foto_caffe",
           "giusta": true
         },
         {
-          "testo": "Polpette al sugo",
+          "testo": "2. foto di sfere di carne immerse nel sugo rosso",
           "foto": "foto_polpette",
           "giusta": false
         }
