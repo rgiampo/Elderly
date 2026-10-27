@@ -67,7 +67,6 @@ struct SiNoView: View {
                         .lineLimit(3).minimumScaleFactor(0.5)
                         .accessibilityAddTraits(.isHeader)
 
-                    Spacer(minLength: 0)
                     HStack(spacing: 20) {
                         pulsante(sì: true)
                         pulsante(sì: false)
@@ -92,17 +91,12 @@ struct SiNoView: View {
         let scelto = modello.rispostaData == sì
         return Button { modello.rispondi(sì: sì) } label: {
             VStack(spacing: 14) {
-                ZStack {
-                    (sì ? AnyShape(Circle()) : AnyShape(SagomaTriangolo())).fill(.white)
-                    Image(systemName: sì ? "checkmark" : "xmark")
-                        .font(.system(size: 60, weight: .black))
-                        .foregroundStyle(colore)
-                        .offset(y: sì ? 0 : 16)
-                }
-                .frame(width: 150, height: 150)
+                (sì ? AnyShape(Circle()) : AnyShape(SagomaTriangolo()))
+                    .fill(.white)
+                    .frame(width: 150, height: 150)
                 Text(sì ? "SÌ" : "NO").testo(DimensioneTesto.titolo).foregroundStyle(.white)
             }
-            .frame(maxWidth: .infinity, minHeight: 280)
+            .frame(maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
             .background(colore, in: RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous)
                 .stroke(Tema.testo, lineWidth: scelto ? 8 : 0))

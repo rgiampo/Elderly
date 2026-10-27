@@ -69,12 +69,8 @@ enum Gioco: CaseIterable, Identifiable {
             }
         case .sìNo:
             VStack(spacing: 4) {
-                Tema.verde.overlay(
-                    Circle().fill(.white).aspectRatio(1, contentMode: .fit).padding(36)
-                        .overlay(Image(systemName: "checkmark").font(.system(size: 80, weight: .black)).foregroundStyle(Tema.verde)))
-                Tema.rosso.overlay(
-                    SagomaTriangolo().fill(.white).aspectRatio(1, contentMode: .fit).padding(36)
-                        .overlay(Image(systemName: "xmark").font(.system(size: 70, weight: .black)).foregroundStyle(Tema.rosso).offset(y: 14)))
+                Tema.verde.overlay(Circle().fill(.white).aspectRatio(1, contentMode: .fit).padding(36))
+                Tema.rosso.overlay(SagomaTriangolo().fill(.white).aspectRatio(1, contentMode: .fit).padding(36))
             }
         }
     }
