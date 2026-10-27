@@ -3,7 +3,7 @@ import SwiftUI
 /// Le forme del gioco: ognuna ha un colore e una nota (do, re, mi, fa, sol),
 /// così si possono suonare melodie conosciute.
 enum Forma: CaseIterable, Identifiable {
-    case cerchio, quadrato, triangolo, stella, cuore
+    case cerchio, quadrato, triangolo, stella, cuore, rombo, esagono, pentagono
 
     var id: Self { self }
 
@@ -15,6 +15,9 @@ enum Forma: CaseIterable, Identifiable {
         case .triangolo: "Triangolo giallo"
         case .stella: "Stella verde"
         case .cuore: "Cuore rosa"
+        case .rombo: "Rombo arancione"
+        case .esagono: "Esagono viola"
+        case .pentagono: "Pentagono azzurro"
         }
     }
 
@@ -25,10 +28,13 @@ enum Forma: CaseIterable, Identifiable {
         case .triangolo: Color(red: 0.98, green: 0.75, blue: 0.15)
         case .stella: Color(red: 0.25, green: 0.72, blue: 0.40)
         case .cuore: Color(red: 0.95, green: 0.45, blue: 0.70)
+        case .rombo: Color(red: 0.98, green: 0.55, blue: 0.15)
+        case .esagono: Color(red: 0.55, green: 0.38, blue: 0.85)
+        case .pentagono: Color(red: 0.10, green: 0.70, blue: 0.78)
         }
     }
 
-    /// Do, re, mi, fa, sol (quinta ottava): bastano per l'Inno alla gioia e per Fra Martino.
+    /// Tutta la scala, dal do al do alto: le prime cinque (do–sol) bastano per l'Inno alla gioia e per Fra Martino.
     var frequenza: Double {
         switch self {
         case .cerchio: 523.25
@@ -36,6 +42,9 @@ enum Forma: CaseIterable, Identifiable {
         case .triangolo: 659.25
         case .stella: 698.46
         case .cuore: 783.99
+        case .rombo: 880.00
+        case .esagono: 987.77
+        case .pentagono: 1046.50
         }
     }
 
@@ -46,7 +55,26 @@ enum Forma: CaseIterable, Identifiable {
         case .triangolo: AnyShape(SagomaTriangolo())
         case .stella: AnyShape(SagomaStella())
         case .cuore: AnyShape(SagomaCuore())
+        case .rombo: AnyShape(SagomaPoligono(lati: 4))
+        case .esagono: AnyShape(SagomaPoligono(lati: 6))
+        case .pentagono: AnyShape(SagomaPoligono(lati: 5))
         }
+    }
+}
+
+/// Poligono regolare con la punta in alto (4 lati = rombo).
+struct SagomaPoligono: Shape {
+    let lati: Int
+    func path(in rect: CGRect) -> Path {
+        let raggio = min(rect.width, rect.height) / 2
+        var p = Path()
+        for i in 0..<lati {
+            let angolo = Double(i) * 2 * .pi / Double(lati) - .pi / 2
+            let punto = CGPoint(x: rect.midX + raggio * cos(angolo), y: rect.midY + raggio * sin(angolo))
+            i == 0 ? p.move(to: punto) : p.addLine(to: punto)
+        }
+        p.closeSubpath()
+        return p
     }
 }
 

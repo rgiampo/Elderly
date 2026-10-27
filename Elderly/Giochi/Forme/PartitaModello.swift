@@ -25,7 +25,7 @@ final class PartitaModello {
     init(giocatori: [Partecipante], difficolta: Difficolta) {
         self.giocatori = giocatori
         self.forme = difficolta.forme
-        melodie = Melodia.perLivello(difficolta.numeroForme).shuffled()
+        melodie = difficolta == .maestro ? [] : Melodia.perLivello(difficolta.numeroForme).shuffled()
     }
 
     func inizia() { nuovaSequenza() }

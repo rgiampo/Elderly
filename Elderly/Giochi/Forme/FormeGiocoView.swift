@@ -60,14 +60,21 @@ private struct RigaForme: View {
 
     var body: some View {
         GeometryReader { spazio in
-            let quante = CGFloat(partita.forme.count)
+            // più di cinque forme vanno su due righe: restano grandi
+            let righe = partita.forme.count > 5 ? 2 : 1
+            let perRiga = (partita.forme.count + righe - 1) / righe
             let distanza: CGFloat = 32
             // 0.88: la forma illuminata cresce un po' e non deve uscire dallo schermo
-            let lato = min(spazio.size.height, (spazio.size.width - distanza * (quante - 1)) / quante) * 0.88
-            HStack(spacing: distanza) {
-                ForEach(partita.forme) { forma in
-                    FormaBottone(forma: forma, accesa: partita.formaAccesa == forma, lato: lato) {
-                        partita.tocca(forma)
+            let lato = min((spazio.size.height - distanza * CGFloat(righe - 1)) / CGFloat(righe),
+                           (spazio.size.width - distanza * CGFloat(perRiga - 1)) / CGFloat(perRiga)) * 0.88
+            VStack(spacing: distanza) {
+                ForEach(0..<righe, id: \.self) { r in
+                    HStack(spacing: distanza) {
+                        ForEach(Array(partita.forme.dropFirst(r * perRiga).prefix(perRiga))) { forma in
+                            FormaBottone(forma: forma, accesa: partita.formaAccesa == forma, lato: lato) {
+                                partita.tocca(forma)
+                            }
+                        }
                     }
                 }
             }

@@ -31,7 +31,7 @@ enum Gioco: CaseIterable, Identifiable {
         case .cosaManca: "Quale foto è sparita?"
         case .proverbi: "Completa il proverbio"
         case .quiz: "Trova la foto giusta"
-        case .sìNo: "Rispondi con una forma"
+        case .sìNo: "Rispondi con un segno"
         }
     }
 
@@ -86,10 +86,10 @@ enum Gioco: CaseIterable, Identifiable {
             // una sola foto, grande
             metà(.risorsa("foto_gatto"))
         case .sìNo:
-            // una sola immagine: a sinistra il cerchio verde (sì), a destra il triangolo rosso (no)
+            // una sola immagine: a sinistra la spunta verde (sì), a destra la X rossa (no)
             HStack(spacing: 0) {
-                Tema.verde.overlay(Circle().fill(.white).aspectRatio(1, contentMode: .fit).padding(40))
-                Tema.rosso.overlay(SagomaTriangolo().fill(.white).aspectRatio(1, contentMode: .fit).padding(40))
+                Tema.verde.overlay(Image(systemName: "checkmark").font(.system(size: 120, weight: .heavy)).foregroundStyle(.white))
+                Tema.rosso.overlay(Image(systemName: "xmark").font(.system(size: 120, weight: .heavy)).foregroundStyle(.white))
             }
         }
     }

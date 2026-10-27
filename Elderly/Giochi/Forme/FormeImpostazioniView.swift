@@ -9,6 +9,7 @@ struct FormeImpostazioniView: View {
             titolo: "Suona le forme",
             descrizione: "Guarda le forme che si accendono e suonano, poi ripetile nello stesso ordine.",
             istruzioni: Istruzioni.forme,
+            livelli: Difficolta.allCases,
             anteprima: { difficolta in
                 HStack(spacing: 28) {
                     ForEach(difficolta.forme) { forma in

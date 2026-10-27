@@ -6,6 +6,7 @@ struct ImpostazioniGiocoView<Anteprima: View, Partita: View>: View {
     let titolo: String
     let descrizione: String
     let istruzioni: String
+    var livelli: [Difficolta] = [.facile, .medio, .difficile]
     @ViewBuilder let anteprima: (Difficolta) -> Anteprima
     @ViewBuilder let partita: (Difficolta) -> Partita
 
@@ -35,7 +36,7 @@ struct ImpostazioniGiocoView<Anteprima: View, Partita: View>: View {
                     Text("Difficoltà")
                         .testo(DimensioneTesto.medio)
                         .foregroundStyle(Tema.testoSecondario)
-                    ForEach(Difficolta.allCases) { livello in
+                    ForEach(livelli) { livello in
                         Button { difficolta = livello } label: {
                             Text(livello.nome)
                                 .testo(DimensioneTesto.grande)

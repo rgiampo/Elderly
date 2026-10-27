@@ -2,7 +2,7 @@ import Foundation
 
 /// I tre livelli, uguali per tutti i giochi. Quanto è difficile lo decidono i numeri in `Configurazione`.
 enum Difficolta: CaseIterable, Identifiable {
-    case facile, medio, difficile
+    case facile, medio, difficile, maestro   // il maestro esiste solo nel gioco delle forme
 
     var id: Self { self }
 
@@ -11,6 +11,7 @@ enum Difficolta: CaseIterable, Identifiable {
         case .facile: "Facile"
         case .medio: "Medio"
         case .difficile: "Difficile"
+        case .maestro: "Maestro"
         }
     }
 
@@ -20,6 +21,7 @@ enum Difficolta: CaseIterable, Identifiable {
         case .facile: Configurazione.formeFacile
         case .medio: Configurazione.formeMedio
         case .difficile: Configurazione.formeDifficile
+        case .maestro: Configurazione.formeMaestro
         }
     }
 
@@ -28,7 +30,7 @@ enum Difficolta: CaseIterable, Identifiable {
         switch self {
         case .facile: Configurazione.coppieFacile
         case .medio: Configurazione.coppieMedio
-        case .difficile: Configurazione.coppieDifficile
+        case .difficile, .maestro: Configurazione.coppieDifficile
         }
     }
 
@@ -37,7 +39,7 @@ enum Difficolta: CaseIterable, Identifiable {
         switch self {
         case .facile: Configurazione.turniProverbiFacile
         case .medio: Configurazione.turniProverbiMedio
-        case .difficile: Configurazione.turniProverbiDifficile
+        case .difficile, .maestro: Configurazione.turniProverbiDifficile
         }
     }
 
@@ -46,7 +48,7 @@ enum Difficolta: CaseIterable, Identifiable {
         switch self {
         case .facile: Configurazione.opzioniProverbiFacile
         case .medio: Configurazione.opzioniProverbiMedio
-        case .difficile: Configurazione.opzioniProverbiDifficile
+        case .difficile, .maestro: Configurazione.opzioniProverbiDifficile
         }
     }
 
@@ -55,7 +57,7 @@ enum Difficolta: CaseIterable, Identifiable {
         switch self {
         case .facile: Configurazione.fotoCosaMancaFacile
         case .medio: Configurazione.fotoCosaMancaMedio
-        case .difficile: Configurazione.fotoCosaMancaDifficile
+        case .difficile, .maestro: Configurazione.fotoCosaMancaDifficile
         }
     }
 

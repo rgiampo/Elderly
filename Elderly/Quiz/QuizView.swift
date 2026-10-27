@@ -47,7 +47,7 @@ struct QuizView: View {
     }
 
     private var partita: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: 8) {
             Text(modello.domanda.testo)
                 .testo(DimensioneTesto.enorme)
                 .foregroundStyle(Tema.testo)
@@ -55,11 +55,11 @@ struct QuizView: View {
                 .lineLimit(2).minimumScaleFactor(0.4)
                 .accessibilityAddTraits(.isHeader)
 
-            // le foto prendono tutto lo spazio che resta: più alte che larghe (4:3, ritagliate ai lati) per essere il più grandi possibile
+            // le foto prendono tutto lo spazio che resta: 16:9, affiancate a tutta larghezza per essere il più grandi possibile
             GeometryReader { spazio in
-                let distanza: CGFloat = 24
+                let distanza: CGFloat = 16
                 let larghezza = (spazio.size.width - distanza * CGFloat(modello.risposte.count - 1)) / CGFloat(modello.risposte.count)
-                let altezza = min(spazio.size.height, larghezza * 0.9)
+                let altezza = min(spazio.size.height, larghezza / Configurazione.formaFoto)
                 HStack(spacing: distanza) {
                     ForEach(modello.risposte) { risposta in
                         Button { modello.scegli(risposta) } label: {
@@ -83,7 +83,7 @@ struct QuizView: View {
                 BottoneVoce(testo: modello.testoParlato, etichetta: "Ascolta la domanda")
             }
         }
-        .padding(.horizontal, 40).padding(.bottom, 24)
+        .padding(.horizontal, 24).padding(.bottom, 16)
     }
 
     private var contatoreDomande: some View {

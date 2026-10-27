@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// "Sì o no": a sinistra una foto grandissima, a destra il nome e due pulsanti enormi:
-/// cerchio verde per sì, triangolo rosso per no (si distinguono anche per la forma, non solo per il colore).
+/// spunta verde per sì, X rossa per no (si distinguono anche per il segno, non solo per il colore).
 struct SiNoView: View {
     @State private var modello: SiNoModello
     @Environment(\.dismiss) private var chiudi
@@ -42,69 +42,58 @@ struct SiNoView: View {
         .onDisappear { modello.ferma() }
     }
 
-    /// Foto e pulsanti hanno la stessa altezza: il bordo in alto e quello in basso sono sulla stessa linea.
+    /// A sinistra la foto 16:9 e sotto il nome; a destra i due pulsanti uno sopra l'altro, alti quanto lo schermo.
     private var partita: some View {
-        VStack(spacing: 16) {
-            GeometryReader { spazio in
-                let colonna: CGFloat = 520, distanza: CGFloat = 28
-                let larghezzaMassima = spazio.size.width - colonna - distanza
-                // la foto è 3:2: l'altezza comune è quella che ci sta in larghezza, o tutta quella libera
-                let altezza = min(spazio.size.height - 100, larghezzaMassima / Configurazione.formaFoto)
-                let larghezza = altezza * Configurazione.formaFoto
+        GeometryReader { spazio in
+            let colonna: CGFloat = 380, distanza: CGFloat = 28
+            let larghezza = min(spazio.size.width - colonna - distanza, spazio.size.height * 0.62 * Configurazione.formaFoto)
 
-                HStack(alignment: .top, spacing: distanza) {
-                    FotoView(foto: modello.quesito.foto, intera: true)
-                        .frame(width: larghezza, height: altezza)
+            HStack(alignment: .top, spacing: distanza) {
+                VStack(spacing: 16) {
+                    FotoView(foto: modello.quesito.foto)
+                        .frame(width: larghezza, height: larghezza / Configurazione.formaFoto)
                         .clipShape(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
                         .shadow(color: Tema.testo.opacity(0.2), radius: 12, y: 6)
                         .id(modello.quesito.id)
                         .transition(.opacity)
                         .accessibilityHidden(true)
 
-                    VStack(spacing: 16) {
-                        VStack(spacing: 12) {
-                            Text("Nella foto c'è:")
-                                .testo(DimensioneTesto.medio)
-                                .foregroundStyle(Tema.testoSecondario)
-                            Text(modello.quesito.nome)
-                                .testo(DimensioneTesto.enorme)
-                                .foregroundStyle(Tema.testo)
-                                .multilineTextAlignment(.center)
-                                .lineLimit(2).minimumScaleFactor(0.5)
-                                .accessibilityAddTraits(.isHeader)
-                        }
-                        .frame(height: 190)
-
-                        HStack(spacing: 20) {
-                            pulsante(sì: true)
-                            pulsante(sì: false)
-                        }
-                        .frame(maxHeight: .infinity)
-                    }
-                    .frame(width: colonna, height: altezza)
-                }
-                .frame(maxWidth: .infinity)
-                .overlay(alignment: .bottomTrailing) {
+                    Text("Nella foto c'è:")
+                        .testo(DimensioneTesto.medio)
+                        .foregroundStyle(Tema.testoSecondario)
+                    Text(modello.quesito.nome)
+                        .testo(DimensioneTesto.enorme)
+                        .foregroundStyle(Tema.testo)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(2).minimumScaleFactor(0.5)
+                        .accessibilityAddTraits(.isHeader)
+                    Spacer(minLength: 0)
                     BottoneVoce(testo: modello.testoParlato, etichetta: "Ascolta", altezza: 76)
-                        .frame(width: colonna)
-                        .offset(y: 92)
                 }
+                .frame(width: larghezza, height: spazio.size.height)
+
+                VStack(spacing: 20) {
+                    pulsante(sì: true)
+                    pulsante(sì: false)
+                }
+                .frame(width: colonna, height: spazio.size.height)
             }
+            .frame(maxWidth: .infinity)
         }
         .padding(.horizontal, 40).padding(.bottom, 24)
     }
 
-    /// Un pulsante pieno di colore con dentro solo la forma bianca (cerchio o triangolo). Tutta la superficie risponde al tocco.
+    /// Un pulsante pieno di colore con dentro solo il segno bianco (spunta o X). Tutta la superficie risponde al tocco.
     private func pulsante(sì: Bool) -> some View {
         let colore = sì ? Tema.verde : Tema.rosso
         // dopo la risposta resta in evidenza il pulsante giusto (con il bordo scuro), l'altro si spegne
         let giusto = modello.quesito.èGiusto == sì
         return Button { modello.rispondi(sì: sì) } label: {
-            // solo la forma e il colore: cerchio verde per sì, triangolo rosso per no
-            (sì ? AnyShape(Circle()) : AnyShape(SagomaTriangolo()))
-                .fill(.white)
-                .frame(width: 190, height: 190)
-            .frame(maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
+            // solo il segno e il colore: spunta verde per sì, X rossa per no
+            Image(systemName: sì ? "checkmark" : "xmark")
+                .font(.system(size: 190, weight: .heavy))
+                .foregroundStyle(.white)
+            .frame(maxWidth: .infinity, minHeight: 200, maxHeight: .infinity)
             .background(colore, in: RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous)
                 .stroke(Tema.testo, lineWidth: modello.inAttesa && giusto ? 10 : 0))
