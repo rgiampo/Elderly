@@ -2,13 +2,13 @@ import SwiftUI
 
 /// L'elenco dei giochi. Per aggiungerne uno: un nuovo caso qui, e la sua schermata.
 enum Gioco: CaseIterable, Identifiable {
-    case forme, coppie, quiz, sìNo
+    case forme, coppie, cosaManca, proverbi, quiz, sìNo
 
     var id: Self { self }
 
     var categoria: Categoria {
         switch self {
-        case .forme, .coppie: .memoria
+        case .forme, .coppie, .cosaManca, .proverbi: .memoria
         case .quiz, .sìNo: .foto
         }
     }
@@ -17,6 +17,8 @@ enum Gioco: CaseIterable, Identifiable {
         switch self {
         case .forme: "Suona le forme"
         case .coppie: "Trova le coppie"
+        case .cosaManca: "Cosa manca?"
+        case .proverbi: "Proverbi"
         case .quiz: "Scegli la foto"
         case .sìNo: "Sì o no"
         }
@@ -26,6 +28,8 @@ enum Gioco: CaseIterable, Identifiable {
         switch self {
         case .forme: "Ripeti la melodia"
         case .coppie: "Trova le foto uguali"
+        case .cosaManca: "Quale foto è sparita?"
+        case .proverbi: "Completa il proverbio"
         case .quiz: "Trova la foto giusta"
         case .sìNo: "Rispondi con una forma"
         }
@@ -35,6 +39,8 @@ enum Gioco: CaseIterable, Identifiable {
         switch self {
         case .forme: FormeImpostazioniView()
         case .coppie: CoppieImpostazioniView()
+        case .cosaManca: CosaMancaImpostazioniView()
+        case .proverbi: ProverbiImpostazioniView()
         case .quiz: ElencoQuizView(modo: .foto)
         case .sìNo: ElencoQuizView(modo: .sìNo)
         }
@@ -50,17 +56,32 @@ enum Gioco: CaseIterable, Identifiable {
                 }
             }
             .padding(28)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Tema.celeste.opacity(0.35))
+            .sfondoAnteprima()
         case .coppie:
-            HStack(spacing: 12) {
-                carta(.risorsa("foto_marinara"))
-                carta(nil)
-                carta(.risorsa("foto_marinara"))
+            IllustrazioneCoppia(conCarteCoperte: false)
+                .padding(.horizontal, 32).padding(.vertical, 20)
+                .sfondoAnteprima()
+        case .cosaManca:
+            HStack(spacing: 14) {
+                scheda(.risorsa("foto_gatto"))
+                RoundedRectangle(cornerRadius: 18, style: .continuous).fill(Tema.blu)
+                    .aspectRatio(1.3, contentMode: .fit)
+                    .overlay(Text("?").testo(DimensioneTesto.grande).foregroundStyle(.white))
+                scheda(.risorsa("foto_pizza"))
             }
-            .padding(20)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Tema.celeste.opacity(0.35))
+            .padding(24)
+            .sfondoAnteprima()
+        case .proverbi:
+            VStack(spacing: 14) {
+                Text("Chi dorme …").testo(DimensioneTesto.medio).foregroundStyle(Tema.testo)
+                    .lineLimit(1).minimumScaleFactor(0.5)
+                Text("non piglia pesci").testo(DimensioneTesto.normale).foregroundStyle(.white)
+                    .lineLimit(1).minimumScaleFactor(0.5)
+                    .padding(.horizontal, 24).frame(minHeight: 60)
+                    .background(Tema.verde, in: Capsule())
+            }
+            .padding(24)
+            .sfondoAnteprima()
         case .quiz:
             // due metà una sopra l'altra, ognuna in orizzontale come una foto vera
             VStack(spacing: 4) {
@@ -79,13 +100,17 @@ enum Gioco: CaseIterable, Identifiable {
         Color.clear.overlay { FotoView(foto: foto, intera: false) }.clipped()
     }
 
-    @ViewBuilder private func carta(_ foto: FotoQuiz?) -> some View {
-        if let foto {
-            FotoView(foto: foto).clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-        } else {
-            RoundedRectangle(cornerRadius: 16, style: .continuous).fill(Tema.blu)
-                .overlay(Text("?").testo(DimensioneTesto.grande).foregroundStyle(.white))
-        }
+    private func scheda(_ foto: FotoQuiz) -> some View {
+        FotoView(foto: foto, intera: false)
+            .aspectRatio(1.3, contentMode: .fit)
+            .clipShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+    }
+}
+
+private extension View {
+    /// Fondo azzurro chiaro per le anteprime fatte di disegni (le foto invece riempiono tutto).
+    func sfondoAnteprima() -> some View {
+        frame(maxWidth: .infinity, maxHeight: .infinity).background(Tema.celeste.opacity(0.35))
     }
 }
 

@@ -42,40 +42,56 @@ struct SiNoView: View {
         .onDisappear { modello.ferma() }
     }
 
+    /// Foto e pulsanti hanno la stessa altezza: il bordo in alto e quello in basso sono sulla stessa linea.
     private var partita: some View {
         VStack(spacing: 16) {
             BannerTurno(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
 
-            HStack(spacing: 28) {
-                FotoView(foto: modello.quesito.foto, intera: true)
-                    .aspectRatio(Configurazione.formaFoto, contentMode: .fit)
-                    .clipShape(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
-                    .shadow(color: Tema.testo.opacity(0.2), radius: 12, y: 6)
-                    .grandezzaFoto()
-                    .id(modello.quesito.id)
-                    .transition(.opacity)
-                    .accessibilityHidden(true)
+            GeometryReader { spazio in
+                let colonna: CGFloat = 520, distanza: CGFloat = 28
+                let larghezzaMassima = spazio.size.width - colonna - distanza
+                // la foto è 3:2: l'altezza comune è quella che ci sta in larghezza, o tutta quella libera
+                let altezza = min(spazio.size.height - 100, larghezzaMassima / Configurazione.formaFoto)
+                let larghezza = altezza * Configurazione.formaFoto
 
-                VStack(spacing: 18) {
-                    Text("Nella foto c'è:")
-                        .testo(DimensioneTesto.medio)
-                        .foregroundStyle(Tema.testoSecondario)
-                    Text(modello.quesito.nome)
-                        .testo(DimensioneTesto.titolo)
-                        .foregroundStyle(Tema.testo)
-                        .multilineTextAlignment(.center)
-                        .lineLimit(3).minimumScaleFactor(0.5)
-                        .accessibilityAddTraits(.isHeader)
+                HStack(alignment: .top, spacing: distanza) {
+                    FotoView(foto: modello.quesito.foto, intera: true)
+                        .frame(width: larghezza, height: altezza)
+                        .clipShape(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
+                        .shadow(color: Tema.testo.opacity(0.2), radius: 12, y: 6)
+                        .id(modello.quesito.id)
+                        .transition(.opacity)
+                        .accessibilityHidden(true)
 
-                    HStack(spacing: 20) {
-                        pulsante(sì: true)
-                        pulsante(sì: false)
+                    VStack(spacing: 16) {
+                        VStack(spacing: 12) {
+                            Text("Nella foto c'è:")
+                                .testo(DimensioneTesto.medio)
+                                .foregroundStyle(Tema.testoSecondario)
+                            Text(modello.quesito.nome)
+                                .testo(DimensioneTesto.titolo)
+                                .foregroundStyle(Tema.testo)
+                                .multilineTextAlignment(.center)
+                                .lineLimit(2).minimumScaleFactor(0.5)
+                                .accessibilityAddTraits(.isHeader)
+                        }
+                        .frame(height: 190)
+
+                        HStack(spacing: 20) {
+                            pulsante(sì: true)
+                            pulsante(sì: false)
+                        }
+                        .frame(maxHeight: .infinity)
                     }
-                    BottoneVoce(testo: modello.testoParlato, etichetta: "Ascolta", altezza: 76)
+                    .frame(width: colonna, height: altezza)
                 }
-                .frame(width: 520)
+                .frame(maxWidth: .infinity)
+                .overlay(alignment: .bottomTrailing) {
+                    BottoneVoce(testo: modello.testoParlato, etichetta: "Ascolta", altezza: 76)
+                        .frame(width: colonna)
+                        .offset(y: 92)
+                }
             }
-            .frame(maxHeight: .infinity)
         }
         .padding(.horizontal, 40).padding(.bottom, 24)
     }

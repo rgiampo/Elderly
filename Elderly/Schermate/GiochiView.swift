@@ -53,7 +53,7 @@ private struct RigaCategoria: View {
     }
 }
 
-/// Seconda scelta: i giochi di una categoria, due schede grandi affiancate.
+/// Seconda scelta: i giochi di una categoria, due schede per riga, tutte della stessa grandezza e senza scorrere.
 struct GiochiDellaCategoriaView: View {
     let categoria: Categoria
     @Environment(Sessione.self) private var sessione
@@ -62,15 +62,24 @@ struct GiochiDellaCategoriaView: View {
         ZStack {
             SfondoCielo()
 
-            HStack(spacing: 32) {
-                ForEach(categoria.giochi) { gioco in
-                    NavigationLink(destination: gioco.destinazione) { SchedaGioco(gioco: gioco) }
-                        .buttonStyle(StilePremuto())
+            Grid(horizontalSpacing: 32, verticalSpacing: 28) {
+                ForEach(Array(righe.enumerated()), id: \.offset) { _, riga in
+                    GridRow {
+                        ForEach(riga) { gioco in
+                            NavigationLink(destination: gioco.destinazione) { SchedaGioco(gioco: gioco) }
+                                .buttonStyle(StilePremuto())
+                        }
+                    }
                 }
             }
             .padding(.horizontal, 60).padding(.bottom, 40)
         }
         .conIndietro(titolo: categoria.titolo) { BarraGiocatori(giocatori: sessione.giocatori) }
+    }
+
+    /// I giochi a due a due.
+    private var righe: [[Gioco]] {
+        stride(from: 0, to: categoria.giochi.count, by: 2).map { Array(categoria.giochi[$0..<min($0 + 2, categoria.giochi.count)]) }
     }
 }
 

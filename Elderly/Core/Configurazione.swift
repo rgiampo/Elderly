@@ -18,6 +18,15 @@ enum Configurazione {
     /// Quante coppie di foto ci sono nel gioco delle coppie, per ogni difficoltà.
     static let coppieFacile = 3, coppieMedio = 4, coppieDifficile = 6
 
+    /// Proverbi: quanti per partita e quante fini tra cui scegliere, per ogni difficoltà.
+    static let turniProverbiFacile = 5, turniProverbiMedio = 7, turniProverbiDifficile = 10
+    static let opzioniProverbiFacile = 2, opzioniProverbiMedio = 3, opzioniProverbiDifficile = 3
+    static let pausaProverbio = 3.0   // secondi per leggere il proverbio completo
+
+    /// "Cosa manca?": quante foto si guardano e quante partite per ogni difficoltà.
+    static let fotoCosaMancaFacile = 3, fotoCosaMancaMedio = 4, fotoCosaMancaDifficile = 6
+    static let turniCosaManca = 5
+
     /// Secondi in cui due carte diverse restano scoperte, prima di girarsi di nuovo.
     static let pausaCarteDiverse = 1.6
 

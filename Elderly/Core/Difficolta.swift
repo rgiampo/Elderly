@@ -32,5 +32,32 @@ enum Difficolta: CaseIterable, Identifiable {
         }
     }
 
+    /// Quanti proverbi ha una partita.
+    var turniProverbi: Int {
+        switch self {
+        case .facile: Configurazione.turniProverbiFacile
+        case .medio: Configurazione.turniProverbiMedio
+        case .difficile: Configurazione.turniProverbiDifficile
+        }
+    }
+
+    /// Tra quante fini scegliere (la giusta più le sbagliate).
+    var opzioniProverbi: Int {
+        switch self {
+        case .facile: Configurazione.opzioniProverbiFacile
+        case .medio: Configurazione.opzioniProverbiMedio
+        case .difficile: Configurazione.opzioniProverbiDifficile
+        }
+    }
+
+    /// Quante foto si guardano nel gioco "Cosa manca?".
+    var fotoCosaManca: Int {
+        switch self {
+        case .facile: Configurazione.fotoCosaMancaFacile
+        case .medio: Configurazione.fotoCosaMancaMedio
+        case .difficile: Configurazione.fotoCosaMancaDifficile
+        }
+    }
+
     var forme: [Forma] { Array(Forma.allCases.prefix(numeroForme)) }
 }
