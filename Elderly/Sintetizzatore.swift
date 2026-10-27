@@ -72,7 +72,7 @@ final class Sintetizzatore {
     func buzz() {
         guard UserDefaults.standard.object(forKey: "suoniAttivi") as? Bool ?? true else { return }
         if buzzLettore == nil { buzzLettore = try? AVAudioPlayer(data: datiBuzz()) }
-        buzzLettore?.volume = 0.55
+        buzzLettore?.volume = 0.2   // piano: deve avvisare, non far sobbalzare
         buzzLettore?.currentTime = 0
         buzzLettore?.play()
     }
@@ -80,7 +80,7 @@ final class Sintetizzatore {
     private var buzzLettore: AVAudioPlayer?
 
     private func datiBuzz() -> Data {
-        let note: [(inizio: Double, durata: Double, frequenza: Double)] = [(0.0, 0.32, 392), (0.26, 0.5, 311)]
+        let note: [(inizio: Double, durata: Double, frequenza: Double)] = [(0.0, 0.3, 330), (0.24, 0.45, 262)]
         let totale = 0.26 + 0.5
         let campioni = Int(frequenzaCampionamento * totale)
         var onda = [Float](repeating: 0, count: campioni)
@@ -88,10 +88,10 @@ final class Sintetizzatore {
             let t = Double(n) / frequenzaCampionamento
             for i in note where t >= i.inizio && t < i.inizio + i.durata {
                 let l = t - i.inizio
-                let attacco = min(1, l / 0.03)                       // attacco dolce
+                let attacco = min(1, l / 0.08)                       // attacco lento, senza colpo
                 let coda = min(1, (i.durata - l) / 0.12)             // sfuma piano
                 let corpo = sin(2 * .pi * i.frequenza * l) + 0.25 * sin(2 * .pi * i.frequenza * 2 * l)
-                onda[n] += Float(0.35 * corpo * attacco * coda)
+                onda[n] += Float(0.3 * corpo * attacco * coda)
             }
         }
         return datiWav(da: onda)
