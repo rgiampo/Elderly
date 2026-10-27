@@ -1,0 +1,245 @@
+{
+ "titolo": "Tradizioni e gusti",
+ "domande": [
+  {
+   "testo": "Cosa si mangia la domenica a Napoli?",
+   "risposte": [
+    {
+     "testo": "Ragù",
+     "foto": "foto_ragu",
+     "giusta": true
+    },
+    {
+     "testo": "Hamburger",
+     "foto": "foto_hamburger",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia a Natale a Napoli?",
+   "risposte": [
+    {
+     "testo": "Spaghetti",
+     "foto": "foto_spaghetti",
+     "giusta": false
+    },
+    {
+     "testo": "Struffoli",
+     "foto": "foto_struffoli",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si prepara a Natale a Napoli?",
+   "risposte": [
+    {
+     "testo": "Presepe",
+     "foto": "foto_presepe",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Con cosa si gioca a scopa?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    },
+    {
+     "testo": "Carte napoletane",
+     "foto": "foto_carte_napoletane",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il vino rosso?",
+   "risposte": [
+    {
+     "testo": "Vino rosso",
+     "foto": "foto_vino_rosso",
+     "giusta": true
+    },
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si beve dopo pranzo?",
+   "risposte": [
+    {
+     "testo": "Pane",
+     "foto": "foto_pane",
+     "giusta": false
+    },
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce è tipico di Napoli?",
+   "risposte": [
+    {
+     "testo": "Babà",
+     "foto": "foto_baba",
+     "giusta": true
+    },
+    {
+     "testo": "Pizza",
+     "foto": "foto_pizza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il vulcano di Napoli?",
+   "risposte": [
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": false
+    },
+    {
+     "testo": "Vesuvio",
+     "foto": "foto_vesuvio",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Con cosa si gioca a tombola?",
+   "risposte": [
+    {
+     "testo": "Tombola",
+     "foto": "foto_tombola",
+     "giusta": true
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale piatto tipico di Napoli si mangia in pizzeria?",
+   "risposte": [
+    {
+     "testo": "Hamburger",
+     "foto": "foto_hamburger",
+     "giusta": false
+    },
+    {
+     "testo": "Pizza marinara",
+     "foto": "foto_marinara",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale piatto è di mare?",
+   "risposte": [
+    {
+     "testo": "Vongole",
+     "foto": "foto_vongole",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce si mangia a Natale in tutta Italia?",
+   "risposte": [
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": false
+    },
+    {
+     "testo": "Panettone",
+     "foto": "foto_panettone",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si beve la mattina al bar a Napoli?",
+   "risposte": [
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": true
+    },
+    {
+     "testo": "Vino rosso",
+     "foto": "foto_vino_rosso",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il castello sul mare di Napoli?",
+   "risposte": [
+    {
+     "testo": "Vesuvio",
+     "foto": "foto_vesuvio",
+     "giusta": false
+    },
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale piatto di pasta al forno si mangia la domenica?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": true
+    },
+    {
+     "testo": "Hamburger",
+     "foto": "foto_hamburger",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce si mangia in estate?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    },
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": true
+    }
+   ]
+  }
+ ]
+}

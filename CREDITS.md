@@ -44,7 +44,7 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 
 | Nome nell'app | File | Autore | Licenza | Pagina |
 |---|---|---|---|---|
-| foto_rosa | Rose 729509.jpg | Bessi | CC0 | https://commons.wikimedia.org/wiki/File:Rose_729509.jpg |
+| foto_rosa | Colombian red rose in garden.jpg | Sabalo22 | CC0 | https://commons.wikimedia.org/wiki/File:Colombian_red_rose_in_garden.jpg |
 | foto_tulipano | Tulip blossom1.jpg | A. G. Erdogan | CC0 | https://commons.wikimedia.org/wiki/File:Tulip_blossom1.jpg |
 | foto_papavero | Papaver rhoeas 2025 - Papaver rhoeas.jpg | Publicdomainmoon | CC0 | https://commons.wikimedia.org/wiki/File:Papaver_rhoeas_2025_-_Papaver_rhoeas.jpg |
 | foto_albero | Pear tree in bloom, Orlen.jpg | Gerda Arendt | CC0 | https://commons.wikimedia.org/wiki/File:Pear_tree_in_bloom,_Orlen.jpg |
@@ -69,5 +69,15 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | foto_candela | Candle-Vela.jpg | ViajeroExtraviado | CC0 | https://commons.wikimedia.org/wiki/File:Candle-Vela.jpg |
 | foto_lampada | Light bulb on Sagano SK200-1.jpg | Hahifuheho | CC0 | https://commons.wikimedia.org/wiki/File:Light_bulb_on_Sagano_SK200-1.jpg |
 | foto_posate | Fork, knife and spoon made of bamboo on a plate.jpg | Cupofjoy | CC0 | https://commons.wikimedia.org/wiki/File:Fork,_knife_and_spoon_made_of_bamboo_on_a_plate.jpg |
+| foto_ragu | Spaghetti bolognese - Enzo's 2026-04-21.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Spaghetti_bolognese_-_Enzo%27s_2026-04-21.jpg |
+| foto_hamburger | Hamburger tasty.jpg | Skitterphoto | CC0 | https://commons.wikimedia.org/wiki/File:Hamburger_tasty.jpg |
+| foto_panettone | Panettone en avril 2022.JPG | Benoît Prieur | CC0 | https://commons.wikimedia.org/wiki/File:Panettone_en_avril_2022.JPG |
+| foto_presepe | Belén Napolitano - Neapolitan Nativity Scene - Palau de Cevelló - Valencia Spain - 2025.jpg | MCAE Consulting | CC0 | https://commons.wikimedia.org/wiki/File:Bel%C3%A9n_Napolitano_-_Neapolitan_Nativity_Scene_-_Palau_de_Cevell%C3%B3_-_Valencia_Spain_-_2025.jpg |
+| foto_struffoli | Struffoli2.JPG | Steve-081 | Public domain | https://commons.wikimedia.org/wiki/File:Struffoli2.JPG |
+| foto_carte_napoletane | Carte napoletane al completo.jpg | Florixc | Public domain | https://commons.wikimedia.org/wiki/File:Carte_napoletane_al_completo.jpg |
+| foto_tombola | Lotto Tombola Lotteria game, Musée du jouet de Colmar.JPG | Alf van Beem | CC0 | https://commons.wikimedia.org/wiki/File:Lotto_Tombola_Lotteria_game,_Mus%C3%A9e_du_jouet_de_Colmar.JPG |
+| foto_baba | Rhum Baba - Giuseppes 2026-06-11.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Rhum_Baba_-_Giuseppes_2026-06-11.jpg |
+| foto_vino_rosso | Bottle and glass of red wine.jpg | congerdesign | CC0 | https://commons.wikimedia.org/wiki/File:Bottle_and_glass_of_red_wine.jpg |
+| foto_vesuvio | Vesuvio Alba.jpg | Corryx | CC0 | https://commons.wikimedia.org/wiki/File:Vesuvio_Alba.jpg |
 
 Tutte le foto sono ritagliate al centro in formato 16:9. Prima di aggiungere una foto nuova: controllare la licenza nella pagina del file e aggiungere qui una riga.
