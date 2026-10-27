@@ -56,28 +56,22 @@ private struct Titolo: View {
 
     var body: some View {
         VStack(spacing: 10) {
-            // "E" azzurra con le strisce ai lati, come linee di velocità, poi il resto del nome
-            HStack(spacing: 0) {
-                EConStrisce(corpo: 150)
-                Text("lderly")
-                    .font(.system(size: 150, weight: .bold))
-                    .tracking(-3)
-                    .foregroundStyle(Tema.testo)
-            }
-            .padding(.leading, 150 * 0.3)   // lo spazio delle strisce a sinistra: il nome resta al centro della linea sotto
-            .shadow(color: Tema.testo.opacity(0.22), radius: 14, y: 10)
-            .lineLimit(1).minimumScaleFactor(0.4)
-            .opacity(entrato ? 1 : 0)
-            .offset(y: entrato ? 0 : 30)
-            .animation(.spring(duration: 0.7, bounce: 0.3), value: entrato)
-            .accessibilityElement(children: .ignore)
-            .accessibilityLabel("Elderly")
-            .accessibilityAddTraits(.isHeader)
+            // il nome in San Francisco bold; sotto, la linea con la "v" e i ghirigori ai lati
+            Text("Elderly")
+                .font(.system(size: 150, weight: .bold))
+                .tracking(-3)
+                .foregroundStyle(Tema.testo)
+                .shadow(color: Tema.testo.opacity(0.22), radius: 14, y: 10)
+                .lineLimit(1).minimumScaleFactor(0.4)
+                .opacity(entrato ? 1 : 0)
+                .offset(y: entrato ? 0 : 30)
+                .animation(.spring(duration: 0.7, bounce: 0.3), value: entrato)
+                .accessibilityAddTraits(.isHeader)
 
-            StrisciaV()
+            Ghirigoro()
                 .trim(from: 0, to: entrato ? 1 : 0)
-                .stroke(Tema.blu, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
-                .frame(height: 40)
+                .stroke(Tema.blu, style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .round))
+                .frame(height: 80)
                 .animation(.easeInOut(duration: 0.9).delay(0.4), value: entrato)
                 .accessibilityHidden(true)
         }
@@ -115,20 +109,44 @@ private struct EConStrisce: View {
     }
 }
 
-/// Una linea orizzontale con, al centro, una piccola "v" morbida: ——v——
-private struct StrisciaV: Shape {
+/// La linea sotto il nome: dritta, con una piccola "v" morbida al centro e un ghirigoro (un ricciolo) a ciascuna estremità: @-----v-----@
+private struct Ghirigoro: Shape {
     func path(in rect: CGRect) -> Path {
-        let y = rect.minY + rect.height * 0.25            // altezza della linea
-        let fondo = rect.maxY                              // punta della "v"
+        let y = rect.midY
         let centro = rect.midX
-        let apertura = rect.width * 0.09                   // quanto è larga la "v"
+        let apertura = rect.width * 0.045
+        let ricciolo: CGFloat = rect.height * 0.5            // grandezza dei ghirigori
+        let margine = ricciolo * 2.2                          // spazio per il ricciolo ai lati
         var p = Path()
-        p.move(to: CGPoint(x: rect.minX, y: y))
+
+        // lato sinistro: parte dal ricciolo e va verso il centro
+        p.move(to: CGPoint(x: rect.minX + margine, y: y))
+        riccio(&p, da: CGPoint(x: rect.minX + margine, y: y), verso: -1, misura: ricciolo)
+
+        p.move(to: CGPoint(x: rect.minX + margine, y: y))
         p.addLine(to: CGPoint(x: centro - apertura * 1.6, y: y))
-        p.addQuadCurve(to: CGPoint(x: centro, y: fondo), control: CGPoint(x: centro - apertura * 0.5, y: y))
+        // la "v"
+        p.addQuadCurve(to: CGPoint(x: centro, y: y + rect.height * 0.42), control: CGPoint(x: centro - apertura * 0.5, y: y))
         p.addQuadCurve(to: CGPoint(x: centro + apertura * 1.6, y: y), control: CGPoint(x: centro + apertura * 0.5, y: y))
-        p.addLine(to: CGPoint(x: rect.maxX, y: y))
+        p.addLine(to: CGPoint(x: rect.maxX - margine, y: y))
+
+        // lato destro
+        riccio(&p, da: CGPoint(x: rect.maxX - margine, y: y), verso: 1, misura: ricciolo)
         return p
+    }
+
+    /// Un ricciolo: la linea sale di lato e si arrotola su se stessa, come una spirale che si stringe.
+    private func riccio(_ p: inout Path, da inizio: CGPoint, verso d: CGFloat, misura m: CGFloat) {
+        let raggio = m * 1.1
+        let centro = CGPoint(x: inizio.x + d * raggio, y: inizio.y - raggio)   // il punto di partenza è in fondo al cerchio
+        p.move(to: inizio)
+        let passi = 80
+        for k in 1...passi {
+            let t = CGFloat(k) / CGFloat(passi)
+            let angolo = .pi / 2 - d * 2.5 * .pi * t            // un giro e un quarto
+            let r = raggio * (1 - 0.78 * t)                     // il raggio si restringe
+            p.addLine(to: CGPoint(x: centro.x + d * r * cos(angolo) * d, y: centro.y + r * sin(angolo)))
+        }
     }
 }
 
