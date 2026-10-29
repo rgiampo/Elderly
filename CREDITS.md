@@ -5,8 +5,8 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 
 | Nome nell'app | File | Autore | Licenza | Pagina |
 |---|---|---|---|---|
-| foto_pizza | Pizza 14.jpg | Kurt Kaiser | CC0 | https://commons.wikimedia.org/wiki/File:Pizza_14.jpg |
-| foto_spaghetti | Spaghetti2.jpg | Popo le Chien | CC0 | https://commons.wikimedia.org/wiki/File:Spaghetti2.jpg |
+| foto_pizza | L'Oro di Napoli - January 2025 - Sarah Stierch 17.jpg | Missvain | CC0 | https://commons.wikimedia.org/wiki/File:L%27Oro_di_Napoli_-_January_2025_-_Sarah_Stierch_17.jpg |
+| foto_spaghetti | Spaghetti-prepared.jpg | Sconosciuto | Public domain | https://commons.wikimedia.org/wiki/File:Spaghetti-prepared.jpg |
 | foto_pomodori | Tomatoes.jpg | Wilfredor | CC0 | https://commons.wikimedia.org/wiki/File:Tomatoes.jpg |
 | foto_limone | Citrus x limon, lemon on tree, Coín, Spain.jpg | Bj.schoenmakers | CC0 | https://commons.wikimedia.org/wiki/File:Citrus_x_limon,_lemon_on_tree,_Co%C3%ADn,_Spain.jpg |
 | foto_cappuccino | Cappuccino - Wai Kika Moo Kau 2024-01-13.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Cappuccino_-_Wai_Kika_Moo_Kau_2024-01-13.jpg |
@@ -15,7 +15,7 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | foto_arancia | Oranges a fruit.jpg | safaritravelplus | CC0 | https://commons.wikimedia.org/wiki/File:Oranges_a_fruit.jpg |
 | foto_uva | Grapes 1.jpg | Couleur | CC0 | https://commons.wikimedia.org/wiki/File:Grapes_1.jpg |
 | foto_marinara | Pizza marinara (Napoli).jpg | Ruthven | CC0 | https://commons.wikimedia.org/wiki/File:Pizza_marinara_(Napoli).jpg |
-| foto_polpo | Purpo arrustuto - Naples.jpg | Ruthven | CC0 | https://commons.wikimedia.org/wiki/File:Purpo_arrustuto_-_Naples.jpg |
+| foto_polpo | Polpo - Wiki Loves Sicilia.jpg | 8w9d | CC0 | https://commons.wikimedia.org/wiki/File:Polpo_-_Wiki_Loves_Sicilia.jpg |
 | foto_patate | Pasta Patate e Provola.jpg | Mojmir Churavy | CC0 | https://commons.wikimedia.org/wiki/File:Pasta_Patate_e_Provola.jpg |
 | foto_caffe | CaffèNapoletano.jpg | AnticoMu90 | CC0 | https://commons.wikimedia.org/wiki/File:Caff%C3%A8Napoletano.jpg |
 | foto_calzone | Pizzeria Bella Italia (Crépieux-la-Pape) - Calzone (octobre 2022).jpg | Benoît Prieur | CC0 | https://commons.wikimedia.org/wiki/File:Pizzeria_Bella_Italia_(Cr%C3%A9pieux-la-Pape)_-_Calzone_(octobre_2022).jpg |
@@ -38,9 +38,9 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | foto_carote | Carrots (Unsplash).jpg | Mink Mingle minkmingle | CC0 | https://commons.wikimedia.org/wiki/File:Carrots_(Unsplash).jpg |
 | foto_zucchine | Zucchini-572542.jpg | Steve Buissinne | CC0 | https://commons.wikimedia.org/wiki/File:Zucchini-572542.jpg |
 | foto_lasagne | Lasagna Serving.jpg | Miansari66 | CC0 | https://commons.wikimedia.org/wiki/File:Lasagna_Serving.jpg |
-| foto_cannoli | Cannoli assortiti.jpg | Prof.lumacorno | CC0 | https://commons.wikimedia.org/wiki/File:Cannoli_assortiti.jpg |
+| foto_cannoli | Cannoli sicily.jpg | AnnaVie | CC0 | https://commons.wikimedia.org/wiki/File:Cannoli_sicily.jpg |
 | foto_castel_ovo | Castel dell'Ovo, Naples - 2021.jpg | stefygo54 | CC0 | https://commons.wikimedia.org/wiki/File:Castel_dell%27Ovo,_Naples_-_2021.jpg |
-| foto_gelato | Ice Cream Dessert (Unsplash).jpg | Alex Jones alexjones | CC0 | https://commons.wikimedia.org/wiki/File:Ice_Cream_Dessert_(Unsplash).jpg |
+| foto_gelato | Gelato ice cream.jpg | rawpixel | CC0 | https://commons.wikimedia.org/wiki/File:Gelato_ice_cream.jpg |
 
 | Nome nell'app | File | Autore | Licenza | Pagina |
 |---|---|---|---|---|
@@ -81,3 +81,13 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | foto_vesuvio | Vesuvio Alba.jpg | Corryx | CC0 | https://commons.wikimedia.org/wiki/File:Vesuvio_Alba.jpg |
 
 Tutte le foto sono ritagliate al centro in formato 16:9. Prima di aggiungere una foto nuova: controllare la licenza nella pagina del file e aggiungere qui una riga.
+| foto_mozzarella | Mozzarella cheese (1).jpg | Jon Sullivan | Public domain | https://commons.wikimedia.org/wiki/File:Mozzarella_cheese_(1).jpg |
+| foto_frittata | Frittata 1.jpg | Edward (autore non indicato) | Public domain | https://commons.wikimedia.org/wiki/File:Frittata_1.jpg |
+| foto_taralli | Tarallini2.JPG | Haragayato | Public domain | https://commons.wikimedia.org/wiki/File:Tarallini2.JPG |
+| foto_lupini | Ciotola di lupini.jpg | Lupino | CC0 | https://commons.wikimedia.org/wiki/File:Ciotola_di_lupini.jpg |
+| foto_frutta_secca | Pecans, hazelnuts, walnuts, almonds, Brazil nuts on a table with logs 2.jpg | Baileynorwood | CC0 | https://commons.wikimedia.org/wiki/File:Pecans,_hazelnuts,_walnuts,_almonds,_Brazil_nuts_on_a_table_with_logs_2.jpg |
+| foto_noci | Pecans, hazelnuts, walnuts, almonds, Brazil nuts on a table with logs 3.jpg | Baileynorwood | CC0 | https://commons.wikimedia.org/wiki/File:Pecans,_hazelnuts,_walnuts,_almonds,_Brazil_nuts_on_a_table_with_logs_3.jpg |
+| foto_uova_pasqua | Chocolate Easter Eggs April 14 2024.jpg | ChadPerez49 | CC0 | https://commons.wikimedia.org/wiki/File:Chocolate_Easter_Eggs_April_14_2024.jpg |
+| foto_moka | Moka Pot (55013301353).jpg | ajay_suresh | CC0 | https://commons.wikimedia.org/wiki/File:Moka_Pot_(55013301353).jpg |
+| foto_ricotta | Ricotta fresca (Wiki Loves Sicilia).jpg | 8w9d | CC0 | https://commons.wikimedia.org/wiki/File:Ricotta_fresca_(Wiki_Loves_Sicilia).jpg |
+| foto_salumi | Italian traditional salami.jpg | Fumikas Sagisavas | CC0 | https://commons.wikimedia.org/wiki/File:Italian_traditional_salami.jpg |

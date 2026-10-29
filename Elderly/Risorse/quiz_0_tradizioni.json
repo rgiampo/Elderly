@@ -1,0 +1,1445 @@
+{
+ "titolo": "Tradizioni e gusti",
+ "domande": [
+  {
+   "testo": "Cosa si mangia la domenica a Napoli?",
+   "risposte": [
+    {
+     "testo": "Ragù",
+     "foto": "foto_ragu",
+     "giusta": true
+    },
+    {
+     "testo": "Hamburger",
+     "foto": "foto_hamburger",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia a Natale a Napoli?",
+   "risposte": [
+    {
+     "testo": "Spaghetti",
+     "foto": "foto_spaghetti",
+     "giusta": false
+    },
+    {
+     "testo": "Struffoli",
+     "foto": "foto_struffoli",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si prepara a Natale a Napoli?",
+   "risposte": [
+    {
+     "testo": "Presepe",
+     "foto": "foto_presepe",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Con cosa si gioca a scopa?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    },
+    {
+     "testo": "Carte napoletane",
+     "foto": "foto_carte_napoletane",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il vino rosso?",
+   "risposte": [
+    {
+     "testo": "Vino rosso",
+     "foto": "foto_vino_rosso",
+     "giusta": true
+    },
+    {
+     "testo": "Latte",
+     "foto": "foto_latte",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si beve dopo pranzo?",
+   "risposte": [
+    {
+     "testo": "Pane",
+     "foto": "foto_pane",
+     "giusta": false
+    },
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce è tipico di Napoli?",
+   "risposte": [
+    {
+     "testo": "Babà",
+     "foto": "foto_baba",
+     "giusta": true
+    },
+    {
+     "testo": "Pizza",
+     "foto": "foto_pizza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il vulcano di Napoli?",
+   "risposte": [
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": false
+    },
+    {
+     "testo": "Vesuvio",
+     "foto": "foto_vesuvio",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Con cosa si gioca a tombola?",
+   "risposte": [
+    {
+     "testo": "Tombola",
+     "foto": "foto_tombola",
+     "giusta": true
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale piatto tipico di Napoli si mangia in pizzeria?",
+   "risposte": [
+    {
+     "testo": "Hamburger",
+     "foto": "foto_hamburger",
+     "giusta": false
+    },
+    {
+     "testo": "Pizza marinara",
+     "foto": "foto_marinara",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale piatto è di mare?",
+   "risposte": [
+    {
+     "testo": "Vongole",
+     "foto": "foto_vongole",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce si mangia a Natale in tutta Italia?",
+   "risposte": [
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": false
+    },
+    {
+     "testo": "Panettone",
+     "foto": "foto_panettone",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si beve la mattina al bar a Napoli?",
+   "risposte": [
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": true
+    },
+    {
+     "testo": "Vino rosso",
+     "foto": "foto_vino_rosso",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il castello sul mare di Napoli?",
+   "risposte": [
+    {
+     "testo": "Vesuvio",
+     "foto": "foto_vesuvio",
+     "giusta": false
+    },
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale piatto di pasta al forno si mangia la domenica?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": true
+    },
+    {
+     "testo": "Hamburger",
+     "foto": "foto_hamburger",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce si mangia in estate?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    },
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia a Pasqua?",
+   "risposte": [
+    {
+     "testo": "Polpette",
+     "foto": "foto_polpette",
+     "giusta": false
+    },
+    {
+     "testo": "Uova di Pasqua",
+     "foto": "foto_uova_pasqua",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce si regala a Pasqua?",
+   "risposte": [
+    {
+     "testo": "Uova di Pasqua",
+     "foto": "foto_uova_pasqua",
+     "giusta": true
+    },
+    {
+     "testo": "Panettone",
+     "foto": "foto_panettone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il formaggio fresco di Napoli?",
+   "risposte": [
+    {
+     "testo": "Salame",
+     "foto": "foto_salumi",
+     "giusta": false
+    },
+    {
+     "testo": "Mozzarella",
+     "foto": "foto_mozzarella",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale formaggio è bianco e morbido?",
+   "risposte": [
+    {
+     "testo": "Mozzarella",
+     "foto": "foto_mozzarella",
+     "giusta": true
+    },
+    {
+     "testo": "Pane",
+     "foto": "foto_pane",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia con la mozzarella?",
+   "risposte": [
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": false
+    },
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mette sulla pizza margherita?",
+   "risposte": [
+    {
+     "testo": "Mozzarella",
+     "foto": "foto_mozzarella",
+     "giusta": true
+    },
+    {
+     "testo": "Banana",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa c'è dentro la pastiera?",
+   "risposte": [
+    {
+     "testo": "Cipolla",
+     "foto": "foto_cipolla",
+     "giusta": false
+    },
+    {
+     "testo": "Ricotta",
+     "foto": "foto_ricotta",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale formaggio si mangia a colazione al sud?",
+   "risposte": [
+    {
+     "testo": "Ricotta",
+     "foto": "foto_ricotta",
+     "giusta": true
+    },
+    {
+     "testo": "Polpo",
+     "foto": "foto_polpo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia a Pasquetta?",
+   "risposte": [
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": false
+    },
+    {
+     "testo": "Frittata",
+     "foto": "foto_frittata",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si fa con le uova?",
+   "risposte": [
+    {
+     "testo": "Frittata",
+     "foto": "foto_frittata",
+     "giusta": true
+    },
+    {
+     "testo": "Mela",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si porta in gita a Pasquetta?",
+   "risposte": [
+    {
+     "testo": "Hamburger",
+     "foto": "foto_hamburger",
+     "giusta": false
+    },
+    {
+     "testo": "Frittata",
+     "foto": "foto_frittata",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è lo snack salato di Napoli?",
+   "risposte": [
+    {
+     "testo": "Taralli",
+     "foto": "foto_taralli",
+     "giusta": true
+    },
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia con un bicchiere di vino?",
+   "risposte": [
+    {
+     "testo": "Banana",
+     "foto": "foto_banana",
+     "giusta": false
+    },
+    {
+     "testo": "Taralli",
+     "foto": "foto_taralli",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia per aperitivo?",
+   "risposte": [
+    {
+     "testo": "Salame",
+     "foto": "foto_salumi",
+     "giusta": true
+    },
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mette nel panino?",
+   "risposte": [
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": false
+    },
+    {
+     "testo": "Salame",
+     "foto": "foto_salumi",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il salame?",
+   "risposte": [
+    {
+     "testo": "Salame",
+     "foto": "foto_salumi",
+     "giusta": true
+    },
+    {
+     "testo": "Mela",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si sgranocchia a Natale?",
+   "risposte": [
+    {
+     "testo": "Spaghetti",
+     "foto": "foto_spaghetti",
+     "giusta": false
+    },
+    {
+     "testo": "Frutta secca",
+     "foto": "foto_frutta_secca",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia dopo cena a Natale?",
+   "risposte": [
+    {
+     "testo": "Frutta secca",
+     "foto": "foto_frutta_secca",
+     "giusta": true
+    },
+    {
+     "testo": "Cipolla",
+     "foto": "foto_cipolla",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si rompe con lo schiaccianoci?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    },
+    {
+     "testo": "Noci",
+     "foto": "foto_noci",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale frutta secca c'è nel cestino delle feste?",
+   "risposte": [
+    {
+     "testo": "Noci",
+     "foto": "foto_noci",
+     "giusta": true
+    },
+    {
+     "testo": "Patate",
+     "foto": "foto_patate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia alle feste di paese?",
+   "risposte": [
+    {
+     "testo": "Hamburger",
+     "foto": "foto_hamburger",
+     "giusta": false
+    },
+    {
+     "testo": "Lupini",
+     "foto": "foto_lupini",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale legume si sgranocchia per strada?",
+   "risposte": [
+    {
+     "testo": "Lupini",
+     "foto": "foto_lupini",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Con cosa si fa il caffè in casa?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    },
+    {
+     "testo": "Moka",
+     "foto": "foto_moka",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mette sul fuoco per il caffè?",
+   "risposte": [
+    {
+     "testo": "Moka",
+     "foto": "foto_moka",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa usa la nonna per il caffè?",
+   "risposte": [
+    {
+     "testo": "Chiavi",
+     "foto": "foto_chiavi",
+     "giusta": false
+    },
+    {
+     "testo": "Moka",
+     "foto": "foto_moka",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si gioca a Natale in famiglia?",
+   "risposte": [
+    {
+     "testo": "Tombola",
+     "foto": "foto_tombola",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa serve per giocare con i numeri?",
+   "risposte": [
+    {
+     "testo": "Pane",
+     "foto": "foto_pane",
+     "giusta": false
+    },
+    {
+     "testo": "Tombola",
+     "foto": "foto_tombola",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Con cosa si gioca a briscola?",
+   "risposte": [
+    {
+     "testo": "Carte napoletane",
+     "foto": "foto_carte_napoletane",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa serve per giocare a tressette?",
+   "risposte": [
+    {
+     "testo": "Pane",
+     "foto": "foto_pane",
+     "giusta": false
+    },
+    {
+     "testo": "Carte napoletane",
+     "foto": "foto_carte_napoletane",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si usa per giocare al bar?",
+   "risposte": [
+    {
+     "testo": "Carte napoletane",
+     "foto": "foto_carte_napoletane",
+     "giusta": true
+    },
+    {
+     "testo": "Lampada",
+     "foto": "foto_lampada",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mette sul tavolo per giocare a carte?",
+   "risposte": [
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    },
+    {
+     "testo": "Carte napoletane",
+     "foto": "foto_carte_napoletane",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si fa a Natale in casa?",
+   "risposte": [
+    {
+     "testo": "Presepe",
+     "foto": "foto_presepe",
+     "giusta": true
+    },
+    {
+     "testo": "Lampada",
+     "foto": "foto_lampada",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa ricorda la nascita di Gesù?",
+   "risposte": [
+    {
+     "testo": "Chiavi",
+     "foto": "foto_chiavi",
+     "giusta": false
+    },
+    {
+     "testo": "Presepe",
+     "foto": "foto_presepe",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce si mangia a Natale con il miele?",
+   "risposte": [
+    {
+     "testo": "Struffoli",
+     "foto": "foto_struffoli",
+     "giusta": true
+    },
+    {
+     "testo": "Patate",
+     "foto": "foto_patate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce di Natale è fritto?",
+   "risposte": [
+    {
+     "testo": "Hamburger",
+     "foto": "foto_hamburger",
+     "giusta": false
+    },
+    {
+     "testo": "Struffoli",
+     "foto": "foto_struffoli",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce si mangia a Natale a Milano?",
+   "risposte": [
+    {
+     "testo": "Panettone",
+     "foto": "foto_panettone",
+     "giusta": true
+    },
+    {
+     "testo": "Polpo",
+     "foto": "foto_polpo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce di Natale è alto e soffice?",
+   "risposte": [
+    {
+     "testo": "Pizza",
+     "foto": "foto_pizza",
+     "giusta": false
+    },
+    {
+     "testo": "Panettone",
+     "foto": "foto_panettone",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce è bagnato col rum?",
+   "risposte": [
+    {
+     "testo": "Babà",
+     "foto": "foto_baba",
+     "giusta": true
+    },
+    {
+     "testo": "Vongole",
+     "foto": "foto_vongole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce è morbido e a forma di fungo?",
+   "risposte": [
+    {
+     "testo": "Polpette",
+     "foto": "foto_polpette",
+     "giusta": false
+    },
+    {
+     "testo": "Babà",
+     "foto": "foto_baba",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce è siciliano?",
+   "risposte": [
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": true
+    },
+    {
+     "testo": "Hamburger",
+     "foto": "foto_hamburger",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale dolce è croccante e ripieno?",
+   "risposte": [
+    {
+     "testo": "Patate",
+     "foto": "foto_patate",
+     "giusta": false
+    },
+    {
+     "testo": "Cannoli",
+     "foto": "foto_cannoli",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia in estate al mare?",
+   "risposte": [
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": true
+    },
+    {
+     "testo": "Ragù",
+     "foto": "foto_ragu",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia passeggiando d'estate?",
+   "risposte": [
+    {
+     "testo": "Polpette",
+     "foto": "foto_polpette",
+     "giusta": false
+    },
+    {
+     "testo": "Gelato",
+     "foto": "foto_gelato",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si inzuppa nel cappuccino?",
+   "risposte": [
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": true
+    },
+    {
+     "testo": "Cipolla",
+     "foto": "foto_cipolla",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia a colazione con il latte?",
+   "risposte": [
+    {
+     "testo": "Spaghetti",
+     "foto": "foto_spaghetti",
+     "giusta": false
+    },
+    {
+     "testo": "Biscotti",
+     "foto": "foto_biscotti",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si porta per un compleanno?",
+   "risposte": [
+    {
+     "testo": "Torta",
+     "foto": "foto_torta",
+     "giusta": true
+    },
+    {
+     "testo": "Polpo",
+     "foto": "foto_polpo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si beve a colazione al bar?",
+   "risposte": [
+    {
+     "testo": "Spaghetti",
+     "foto": "foto_spaghetti",
+     "giusta": false
+    },
+    {
+     "testo": "Cappuccino",
+     "foto": "foto_cappuccino",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si beve a tavola con la pasta?",
+   "risposte": [
+    {
+     "testo": "Vino rosso",
+     "foto": "foto_vino_rosso",
+     "giusta": true
+    },
+    {
+     "testo": "Cappuccino",
+     "foto": "foto_cappuccino",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Da cosa si ottiene il vino?",
+   "risposte": [
+    {
+     "testo": "Patate",
+     "foto": "foto_patate",
+     "giusta": false
+    },
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale frutto si vendemmia?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale frutto cresce a Sorrento?",
+   "risposte": [
+    {
+     "testo": "Banana",
+     "foto": "foto_banana",
+     "giusta": false
+    },
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale frutto è giallo e aspro?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
+    },
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si usa per il limoncello?",
+   "risposte": [
+    {
+     "testo": "Cipolla",
+     "foto": "foto_cipolla",
+     "giusta": false
+    },
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si raccoglie in primavera nei campi?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "Patate",
+     "foto": "foto_patate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si usa per fare il sugo?",
+   "risposte": [
+    {
+     "testo": "Banana",
+     "foto": "foto_banana",
+     "giusta": false
+    },
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mette nella pizza marinara?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    },
+    {
+     "testo": "Mela",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Con cosa si fa la parmigiana?",
+   "risposte": [
+    {
+     "testo": "Banana",
+     "foto": "foto_banana",
+     "giusta": false
+    },
+    {
+     "testo": "Melanzane",
+     "foto": "foto_melanzana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si frigge in estate nell'orto?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "Mela",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia ripieno?",
+   "risposte": [
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": false
+    },
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia la sera della Vigilia?",
+   "risposte": [
+    {
+     "testo": "Pesce",
+     "foto": "foto_pesce",
+     "giusta": true
+    },
+    {
+     "testo": "Hamburger",
+     "foto": "foto_hamburger",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si pesca in mare?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    },
+    {
+     "testo": "Pesce",
+     "foto": "foto_pesce",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia a Ferragosto al mare?",
+   "risposte": [
+    {
+     "testo": "Polpo",
+     "foto": "foto_polpo",
+     "giusta": true
+    },
+    {
+     "testo": "Hamburger",
+     "foto": "foto_hamburger",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si mangia con gli spaghetti al mare?",
+   "risposte": [
+    {
+     "testo": "Patate",
+     "foto": "foto_patate",
+     "giusta": false
+    },
+    {
+     "testo": "Vongole",
+     "foto": "foto_vongole",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale pasta si mangia con il sugo?",
+   "risposte": [
+    {
+     "testo": "Spaghetti",
+     "foto": "foto_spaghetti",
+     "giusta": true
+    },
+    {
+     "testo": "Banana",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa cuoce piano sul fuoco la domenica?",
+   "risposte": [
+    {
+     "testo": "Mela",
+     "foto": "foto_mela",
+     "giusta": false
+    },
+    {
+     "testo": "Ragù",
+     "foto": "foto_ragu",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si fa con la carne macinata?",
+   "risposte": [
+    {
+     "testo": "Polpette",
+     "foto": "foto_polpette",
+     "giusta": true
+    },
+    {
+     "testo": "Banana",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale piatto di Napoli è ripieno?",
+   "risposte": [
+    {
+     "testo": "Vongole",
+     "foto": "foto_vongole",
+     "giusta": false
+    },
+    {
+     "testo": "Calzone",
+     "foto": "foto_calzone",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il piatto più famoso di Napoli?",
+   "risposte": [
+    {
+     "testo": "Pizza",
+     "foto": "foto_pizza",
+     "giusta": true
+    },
+    {
+     "testo": "Hamburger",
+     "foto": "foto_hamburger",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il vulcano?",
+   "risposte": [
+    {
+     "testo": "Mare",
+     "foto": "foto_mare",
+     "giusta": false
+    },
+    {
+     "testo": "Vesuvio",
+     "foto": "foto_vesuvio",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il castello di Napoli?",
+   "risposte": [
+    {
+     "testo": "Castel dell'Ovo",
+     "foto": "foto_castel_ovo",
+     "giusta": true
+    },
+    {
+     "testo": "Montagna",
+     "foto": "foto_montagna",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si accende per ricordare i defunti?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si accende in chiesa?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si usa per leggere il giornale?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si usa per vedere bene?",
+   "risposte": [
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si usa per aprire la porta?",
+   "risposte": [
+    {
+     "testo": "Lampada",
+     "foto": "foto_lampada",
+     "giusta": false
+    },
+    {
+     "testo": "Chiavi",
+     "foto": "foto_chiavi",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si usa per tagliare la stoffa?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si accende la sera per fare luce?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    },
+    {
+     "testo": "Lampada",
+     "foto": "foto_lampada",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si usa per bere il caffè?",
+   "risposte": [
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    },
+    {
+     "testo": "Chiavi",
+     "foto": "foto_chiavi",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si compra dal fornaio?",
+   "risposte": [
+    {
+     "testo": "Cipolla",
+     "foto": "foto_cipolla",
+     "giusta": false
+    },
+    {
+     "testo": "Pane",
+     "foto": "foto_pane",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Cosa si usa per fare la scarpetta nel sugo?",
+   "risposte": [
+    {
+     "testo": "Pane",
+     "foto": "foto_pane",
+     "giusta": true
+    },
+    {
+     "testo": "Banana",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  }
+ ]
+}
