@@ -2,7 +2,11 @@
 
 App SwiftUI per iPad pensata per le persone anziane nelle case di riposo. Contiene giochi di memoria e quiz con le foto, da fare insieme: tocchi grandi, testi grandi in italiano, nessun timer e nessuna sconfitta. La configurazione è per iPad in orizzontale.
 
+![Home](docs/screenshot/01-home.png)
+
 ## I giochi
+
+![Giochi di memoria](docs/screenshot/03-giochi-memoria.png)
 
 **Giochi di memoria**
 - **Suona le forme:** si ripete insieme la melodia suonata dalle forme.
@@ -15,6 +19,8 @@ App SwiftUI per iPad pensata per le persone anziane nelle case di riposo. Contie
 - **Sì o no:** si risponde con un segno.
 
 Chi accompagna il gioco può anche creare i propri quiz, con le foto, dalla sezione **Crea o modifica quiz**. Si gioca senza nome oppure in una o due persone salvate in **Utenti**.
+
+![Una partita a Trova le coppie](docs/screenshot/05-coppie-gioco.png)
 
 ## Aprire ed eseguire
 
