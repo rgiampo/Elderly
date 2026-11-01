@@ -1,10 +1,65 @@
 import SwiftUI
 
-/// Prima schermata del gioco: prende i giocatori della sessione, come fanno le impostazioni degli altri giochi.
+/// Prima schermata del gioco: spiega come si gioca, in tre passi, poi "Giochiamo!".
 struct AnimaliIngressoView: View {
     @Environment(Sessione.self) private var sessione
 
-    var body: some View { AnimaliView(giocatori: sessione.giocatori) }
+    private let passi = [
+        "Chi gioca dice un animale a voce",
+        "Chi accompagna lo tocca sullo schermo",
+        "Si va avanti finché non ne vengono più in mente",
+    ]
+
+    var body: some View {
+        ZStack {
+            SfondoCielo()
+
+            HStack(alignment: .top, spacing: 40) {
+                VStack(alignment: .leading, spacing: 20) {
+                    Text("Quanti animali conosci? Uno dice, l'altro tocca.")
+                        .testo(DimensioneTesto.medio)
+                        .foregroundStyle(Tema.testo)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    VStack(alignment: .leading, spacing: 28) {
+                        ForEach(Array(passi.enumerated()), id: \.offset) { numero, passo in
+                            HStack(spacing: 24) {
+                                Text("\(numero + 1)")
+                                    .testo(DimensioneTesto.grande)
+                                    .foregroundStyle(.white)
+                                    .frame(width: 88, height: 88)
+                                    .background(Tema.blu, in: Circle())
+                                Text(passo)
+                                    .testo(DimensioneTesto.medio)
+                                    .foregroundStyle(Tema.testo)
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                        }
+                        Text("Non c'è fretta e non si perde mai.")
+                            .testo(DimensioneTesto.normale)
+                            .foregroundStyle(Tema.testoSecondario)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    .padding(32)
+                    .scheda()
+
+                    BottoneVoce(testo: Istruzioni.animali, etichetta: "Ascolta come si gioca")
+                }
+                .frame(maxWidth: .infinity)
+
+                VStack {
+                    Spacer(minLength: 0)
+                    NavigationLink(destination: AnimaliView(giocatori: sessione.giocatori)) {
+                        PulsantePrincipale(titolo: "Giochiamo!", colore: Tema.verde, altezza: 130)
+                    }
+                    .buttonStyle(StilePremuto())
+                }
+                .frame(width: 420)
+            }
+            .padding(.horizontal, 40).padding(.bottom, 32)
+        }
+        .conIndietro(titolo: "Nomina gli animali") { BarraGiocatori(giocatori: sessione.giocatori) }
+    }
 }
 
 /// "Nomina gli animali": una griglia di animali grandi da toccare quando vengono nominati, senza tempo.
