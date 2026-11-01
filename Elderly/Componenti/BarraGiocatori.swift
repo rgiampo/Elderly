@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Mostra chi gioca (una o due persone), chi ha il turno (nel suo colore) e quanti punti ha.
-/// Se nessuno ha un nome non mostra niente.
+/// Se nessuno ha un nome mostra solo i punti (se ci sono), altrimenti niente.
 struct BarraGiocatori: View {
     let giocatori: [Partecipante]
     var turno: Int?            // chi ha il turno; nil quando non si sta giocando
@@ -21,7 +21,24 @@ struct BarraGiocatori: View {
                            punti: posizione < punti.count ? punti[posizione] : nil)
                 }
             }
+        } else if turno != nil, !punti.isEmpty {
+            PuntiSenzaNome(totale: punti.reduce(0, +))
         }
+    }
+}
+
+/// I punti di chi gioca senza nome: una sola pastiglia con la stella.
+private struct PuntiSenzaNome: View {
+    let totale: Int
+
+    var body: some View {
+        Label("\(totale)", systemImage: "star.fill")
+            .testo(DimensioneTesto.normale)
+            .foregroundStyle(Tema.testo)
+            .padding(.vertical, 10).padding(.horizontal, 20)
+            .vetro(.white.opacity(0.78))
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("\(totale) punti")
     }
 }
 
