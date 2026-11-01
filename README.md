@@ -4,6 +4,8 @@ App SwiftUI per iPad pensata per le persone anziane nelle case di riposo. Contie
 
 ![Home](docs/screenshot/01-home.png)
 
+![Apertura dell'app](docs/screenshot/apertura.gif)
+
 ## I giochi
 
 ![Giochi di memoria](docs/screenshot/03-giochi-memoria.png)
