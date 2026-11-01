@@ -1,6 +1,20 @@
 # Elderly
 
-App SwiftUI per iPad con il gioco «Suona le forme», note sintetizzate e una schermata iniziale dedicata. La configurazione corrente, già presente su GitHub, è per iPad in orizzontale.
+App SwiftUI per iPad pensata per le persone anziane nelle case di riposo. Contiene giochi di memoria e quiz con le foto, da fare insieme: tocchi grandi, testi grandi in italiano, nessun timer e nessuna sconfitta. La configurazione è per iPad in orizzontale.
+
+## I giochi
+
+**Giochi di memoria**
+- **Suona le forme:** si ripete insieme la melodia suonata dalle forme.
+- **Trova le coppie:** si girano due carte alla volta per trovare le foto uguali.
+- **Cosa manca?:** si indovina quale foto è sparita.
+- **Proverbi:** si completa il proverbio.
+
+**Quiz con le foto**
+- **Scegli la foto:** si trova la foto giusta tra quelle proposte.
+- **Sì o no:** si risponde con un segno.
+
+Chi accompagna il gioco può anche creare i propri quiz, con le foto, dalla sezione **Crea o modifica quiz**. Si gioca senza nome oppure in una o due persone salvate in **Utenti**.
 
 ## Aprire ed eseguire
 
