@@ -115,6 +115,8 @@ enum Istruzioni {
         + "Se la fine è giusta, diventa verde. Se è sbagliata, puoi riprovare."
     static let animali = "Chi gioca dice un animale a voce. Chi accompagna lo tocca sullo schermo. "
         + "Si va avanti finché non ne vengono più in mente. Non c'è fretta e non si perde mai."
+    static let simboli = "In alto c'è la chiave: ogni forma ha il suo numero. "
+        + "Guarda la forma grande e tocca il numero giusto. Se sbagli, riprova senza fretta."
     static let cosaManca = "Guarda bene le foto, poi toccando il pulsante verde le nascondo e ne tolgo una. "
         + "Devi dire quale foto è sparita."
     static let sìNo = "Guarda la foto e rispondi alla domanda. "

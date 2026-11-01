@@ -1,64 +1,20 @@
 import SwiftUI
 
-/// Prima schermata del gioco: spiega come si gioca, in tre passi, poi "Giochiamo!".
+/// Prima schermata del gioco: spiega come si gioca, poi "Giochiamo!".
 struct AnimaliIngressoView: View {
     @Environment(Sessione.self) private var sessione
 
-    private let passi = [
-        "Chi gioca dice un animale a voce",
-        "Chi accompagna lo tocca sullo schermo",
-        "Si va avanti finché non ne vengono più in mente",
-    ]
-
     var body: some View {
-        ZStack {
-            SfondoCielo()
-
-            HStack(alignment: .top, spacing: 40) {
-                VStack(alignment: .leading, spacing: 20) {
-                    Text("Quanti animali conosci? Uno dice, l'altro tocca.")
-                        .testo(DimensioneTesto.medio)
-                        .foregroundStyle(Tema.testo)
-                        .fixedSize(horizontal: false, vertical: true)
-
-                    VStack(alignment: .leading, spacing: 28) {
-                        ForEach(Array(passi.enumerated()), id: \.offset) { numero, passo in
-                            HStack(spacing: 24) {
-                                Text("\(numero + 1)")
-                                    .testo(DimensioneTesto.grande)
-                                    .foregroundStyle(.white)
-                                    .frame(width: 88, height: 88)
-                                    .background(Tema.blu, in: Circle())
-                                Text(passo)
-                                    .testo(DimensioneTesto.medio)
-                                    .foregroundStyle(Tema.testo)
-                                    .fixedSize(horizontal: false, vertical: true)
-                            }
-                        }
-                        Text("Non c'è fretta e non si perde mai.")
-                            .testo(DimensioneTesto.normale)
-                            .foregroundStyle(Tema.testoSecondario)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                    .padding(32)
-                    .scheda()
-
-                    BottoneVoce(testo: Istruzioni.animali, etichetta: "Ascolta come si gioca")
-                }
-                .frame(maxWidth: .infinity)
-
-                VStack {
-                    Spacer(minLength: 0)
-                    NavigationLink(destination: AnimaliView(giocatori: sessione.giocatori)) {
-                        PulsantePrincipale(titolo: "Giochiamo!", colore: Tema.verde, altezza: 130)
-                    }
-                    .buttonStyle(StilePremuto())
-                }
-                .frame(width: 420)
-            }
-            .padding(.horizontal, 40).padding(.bottom, 32)
-        }
-        .conIndietro(titolo: "Nomina gli animali") { BarraGiocatori(giocatori: sessione.giocatori) }
+        IstruzioniGiocoView(
+            titolo: "Nomina gli animali",
+            descrizione: "Quanti animali conosci? Uno dice, l'altro tocca.",
+            passi: [
+                "Chi gioca dice un animale a voce",
+                "Chi accompagna lo tocca sullo schermo",
+                "Si va avanti finché non ne vengono più in mente",
+            ],
+            voce: Istruzioni.animali,
+            partita: { AnimaliView(giocatori: sessione.giocatori) })
     }
 }
 

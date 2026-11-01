@@ -2,14 +2,14 @@ import SwiftUI
 
 /// L'elenco dei giochi. Per aggiungerne uno: un nuovo caso qui, e la sua schermata.
 enum Gioco: CaseIterable, Identifiable {
-    case forme, coppie, cosaManca, proverbi, animali, quiz, sìNo
+    case forme, coppie, cosaManca, proverbi, animali, simboli, quiz, sìNo
 
     var id: Self { self }
 
     var categoria: Categoria {
         switch self {
         case .forme, .coppie, .cosaManca, .proverbi: .memoria
-        case .animali: .mente
+        case .animali, .simboli: .mente
         case .quiz, .sìNo: .foto
         }
     }
@@ -21,6 +21,7 @@ enum Gioco: CaseIterable, Identifiable {
         case .cosaManca: "Cosa manca?"
         case .proverbi: "Proverbi"
         case .animali: "Nomina gli animali"
+        case .simboli: "Simboli e numeri"
         case .quiz: "Scegli la foto"
         case .sìNo: "Sì o no"
         }
@@ -33,6 +34,7 @@ enum Gioco: CaseIterable, Identifiable {
         case .cosaManca: "Quale foto è sparita?"
         case .proverbi: "Completa il proverbio"
         case .animali: "Quanti ne conosci?"
+        case .simboli: "Trova il numero giusto"
         case .quiz: "Trova la foto giusta"
         case .sìNo: "Rispondi con un segno"
         }
@@ -45,6 +47,7 @@ enum Gioco: CaseIterable, Identifiable {
         case .cosaManca: CosaMancaImpostazioniView()
         case .proverbi: ProverbiImpostazioniView()
         case .animali: AnimaliIngressoView()
+        case .simboli: SimboliIngressoView()
         case .quiz: ElencoQuizView(modo: .foto)
         case .sìNo: ElencoQuizView(modo: .sìNo)
         }
@@ -91,6 +94,17 @@ enum Gioco: CaseIterable, Identifiable {
                 ForEach(["🐶", "🐱", "🐴", "🦁"], id: \.self) { Text($0).font(.system(size: 80)) }
             }
             .padding(24)
+            .sfondoAnteprima()
+        case .simboli:
+            HStack(spacing: 14) {
+                ForEach(Array(zip(SimboliModello.simboli.prefix(3), 1...3)), id: \.1) { forma, numero in
+                    VStack(spacing: 8) {
+                        forma.sagoma.fill(forma.colore).aspectRatio(1, contentMode: .fit)
+                        Text("\(numero)").testo(DimensioneTesto.medio).foregroundStyle(Tema.testo)
+                    }
+                }
+            }
+            .padding(28)
             .sfondoAnteprima()
         case .quiz:
             // una sola foto, grande
