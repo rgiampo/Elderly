@@ -2,13 +2,14 @@ import SwiftUI
 
 /// L'elenco dei giochi. Per aggiungerne uno: un nuovo caso qui, e la sua schermata.
 enum Gioco: CaseIterable, Identifiable {
-    case forme, coppie, cosaManca, proverbi, quiz, sìNo
+    case forme, coppie, cosaManca, proverbi, animali, quiz, sìNo
 
     var id: Self { self }
 
     var categoria: Categoria {
         switch self {
         case .forme, .coppie, .cosaManca, .proverbi: .memoria
+        case .animali: .mente
         case .quiz, .sìNo: .foto
         }
     }
@@ -19,6 +20,7 @@ enum Gioco: CaseIterable, Identifiable {
         case .coppie: "Trova le coppie"
         case .cosaManca: "Cosa manca?"
         case .proverbi: "Proverbi"
+        case .animali: "Nomina gli animali"
         case .quiz: "Scegli la foto"
         case .sìNo: "Sì o no"
         }
@@ -30,6 +32,7 @@ enum Gioco: CaseIterable, Identifiable {
         case .coppie: "Trova le foto uguali"
         case .cosaManca: "Quale foto è sparita?"
         case .proverbi: "Completa il proverbio"
+        case .animali: "Quanti ne conosci?"
         case .quiz: "Trova la foto giusta"
         case .sìNo: "Rispondi con un segno"
         }
@@ -41,6 +44,7 @@ enum Gioco: CaseIterable, Identifiable {
         case .coppie: CoppieImpostazioniView()
         case .cosaManca: CosaMancaImpostazioniView()
         case .proverbi: ProverbiImpostazioniView()
+        case .animali: AnimaliIngressoView()
         case .quiz: ElencoQuizView(modo: .foto)
         case .sìNo: ElencoQuizView(modo: .sìNo)
         }
@@ -82,6 +86,12 @@ enum Gioco: CaseIterable, Identifiable {
             }
             .padding(24)
             .sfondoAnteprima()
+        case .animali:
+            HStack(spacing: 14) {
+                ForEach(["🐶", "🐱", "🐴", "🦁"], id: \.self) { Text($0).font(.system(size: 80)) }
+            }
+            .padding(24)
+            .sfondoAnteprima()
         case .quiz:
             // una sola foto, grande
             metà(.risorsa("foto_gatto"))
@@ -114,7 +124,7 @@ private extension View {
 
 /// Le due famiglie di giochi, più la sezione per creare i quiz. Sono la prima scelta, una sola cosa alla volta.
 enum Categoria: CaseIterable, Identifiable {
-    case memoria, foto, crea
+    case memoria, foto, mente, crea
 
     var id: Self { self }
 
@@ -122,6 +132,7 @@ enum Categoria: CaseIterable, Identifiable {
         switch self {
         case .memoria: "Giochi di memoria"
         case .foto: "Quiz con le foto"
+        case .mente: "Giochi per la mente"
         case .crea: "Crea o modifica quiz"
         }
     }
@@ -142,6 +153,10 @@ enum Categoria: CaseIterable, Identifiable {
                 FotoView(foto: .risorsa("foto_marinara")).clipShape(Circle())
                 FotoView(foto: .risorsa("foto_gatto")).clipShape(Circle())
                 FotoView(foto: .risorsa("foto_arancia")).clipShape(Circle())
+            }
+        case .mente:
+            HStack(spacing: 14) {
+                ForEach(["🐶", "🐱", "🦁"], id: \.self) { Text($0).font(.system(size: 80)).minimumScaleFactor(0.5) }
             }
         case .crea:
             Image(systemName: "plus.circle.fill")
