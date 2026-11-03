@@ -10,28 +10,32 @@ struct ContentView: View {
                 SfondoCielo()
                 DecorazioniHome()
 
-                VStack(spacing: 56) {
-                    Titolo(entrato: entrato)
+                // la home non scorre mai: sugli schermi bassi (iPad mini) tutto si stringe in proporzione
+                GeometryReader { schermo in
+                    let s = min(1, schermo.size.height / 860)
+                    VStack(spacing: 56 * s) {
+                        Titolo(entrato: entrato, scala: s)
 
-                    VStack(spacing: 20) {
-                        NavigationLink(destination: ChiGiocaView()) {
-                            PulsantePrincipale(titolo: "Gioca", altezza: 130)
+                        VStack(spacing: 20 * s) {
+                            NavigationLink(destination: ChiGiocaView()) {
+                                PulsantePrincipale(titolo: "Gioca", altezza: 130 * s)
+                            }
+                            .appari(entrato, ritardo: 1.0)
+                            NavigationLink(destination: UtentiView()) {
+                                PulsanteSecondario(titolo: "Utenti", altezza: 110 * s)
+                            }
+                            .appari(entrato, ritardo: 1.2)
+                            NavigationLink(destination: OpzioniView()) {
+                                PulsanteSecondario(titolo: "Opzioni", altezza: 110 * s)
+                            }
+                            .appari(entrato, ritardo: 1.4)
                         }
-                        .appari(entrato, ritardo: 1.0)
-                        NavigationLink(destination: UtentiView()) {
-                            PulsanteSecondario(titolo: "Utenti", altezza: 110)
-                        }
-                        .appari(entrato, ritardo: 1.2)
-                        NavigationLink(destination: OpzioniView()) {
-                            PulsanteSecondario(titolo: "Opzioni", altezza: 110)
-                        }
-                        .appari(entrato, ritardo: 1.4)
+                        .buttonStyle(StilePremuto())
+                        .frame(maxWidth: 640)
                     }
-                    .buttonStyle(StilePremuto())
-                    .frame(maxWidth: 640)
+                    .padding(40 * s)
+                    .frame(width: schermo.size.width, height: schermo.size.height)
                 }
-                .padding(40)
-                .scorriSeServe()
             }
         }
         .task {
@@ -54,12 +58,13 @@ extension View {
 /// È largo quanto i pulsanti. (Il logo con i due nonni resta l'icona dell'app.)
 private struct Titolo: View {
     let entrato: Bool
+    var scala: CGFloat = 1
 
     var body: some View {
         VStack(spacing: 10) {
             // il nome in San Francisco bold; sotto, la linea con la "v" e i ghirigori ai lati
             Text("Elderly")
-                .font(.system(size: 150, weight: .regular))
+                .font(.system(size: 150 * scala, weight: .regular))
                 .tracking(-3)
                 .foregroundStyle(Tema.testo)
                 .shadow(color: Tema.testo.opacity(0.22), radius: 14, y: 10)
@@ -71,7 +76,7 @@ private struct Titolo: View {
             Ghirigoro()
                 .trim(from: 0, to: entrato ? 1 : 0)
                 .stroke(Tema.blu, style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .round))
-                .frame(height: 80)
+                .frame(height: 80 * scala)
                 .animation(.easeInOut(duration: 0.9).delay(0.4), value: entrato)
                 .accessibilityHidden(true)
         }
