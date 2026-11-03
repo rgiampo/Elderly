@@ -32,6 +32,7 @@ struct ListaAlfabetica<Riga: View>: View {
                         }
                     }
                     .padding(.vertical, 8)
+                    .padding(.horizontal, 12)   // margine per il bordo di selezione e le ombre: la lista che scorre taglia ai lati
                 }
 
                 if gruppi.count > 1 { barra(proxy) }
