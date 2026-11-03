@@ -14,6 +14,7 @@ struct GiochiView: View {
                         RigaCategoria(categoria: categoria)
                     }
                     .buttonStyle(StilePremuto())
+                    .entrataAScaletta(posizione)
                 }
             }
             .padding(.horizontal, 60).padding(.bottom, 40)
@@ -74,6 +75,7 @@ struct GiochiDellaCategoriaView: View {
                             ForEach(Array(riga.enumerated()), id: \.element) { colonna, gioco in
                                 NavigationLink(destination: gioco.destinazione) { SchedaGioco(gioco: gioco) }
                                     .buttonStyle(StilePremuto())
+                                    .entrataAScaletta(numeroRiga * 2 + colonna)
                             }
                         }
                     }

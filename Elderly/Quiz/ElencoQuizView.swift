@@ -56,6 +56,7 @@ struct ElencoQuizView: View {
                     }
                     .buttonStyle(StilePremuto())
                     .accessibilityLabel("Gioca con \(quiz.titolo)")
+                    .entrataAScaletta(posizione)
                 }
             }
             .padding(.horizontal, 40).padding(.bottom, 40)

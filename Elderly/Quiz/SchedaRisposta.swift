@@ -17,8 +17,20 @@ struct SchedaRisposta: View {
             .overlay(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous).stroke(stato == .sbagliata ? Tema.rosso : Tema.verde, lineWidth: stato == .normale ? 0 : 10))
             .shadow(color: Tema.testo.opacity(0.2), radius: 12, y: 6)
 
-            .scaleEffect(stato == .giusta ? 1.02 : 1)
-            .animation(.spring(duration: 0.35, bounce: 0.3), value: stato)
+            .scaleEffect(stato == .giusta ? 1.04 : 1)
+            .animation(.spring(duration: 0.45, bounce: 0.55), value: stato)
+            // sbagliata: oscilla piano a destra e sinistra, come chi fa "no" con la testa
+            .keyframeAnimator(initialValue: CGFloat(0), trigger: stato == .sbagliata) { vista, x in
+                vista.offset(x: x)
+            } keyframes: { _ in
+                KeyframeTrack {
+                    SpringKeyframe(0, duration: 0.01)
+                    SpringKeyframe(stato == .sbagliata ? 14 : 0, duration: 0.08)
+                    SpringKeyframe(stato == .sbagliata ? -12 : 0, duration: 0.1)
+                    SpringKeyframe(stato == .sbagliata ? 8 : 0, duration: 0.1)
+                    SpringKeyframe(0, duration: 0.15)
+                }
+            }
     }
 
     private var nomeSulla: some View {
@@ -42,6 +54,8 @@ struct SchedaRisposta: View {
         Image(systemName: "checkmark.circle.fill")
             .font(.system(size: 64))
             .foregroundStyle(.white, Tema.verde)
+            .symbolEffect(.bounce.up, options: .nonRepeating, value: stato)
+            .transition(.scale(scale: 0.2).combined(with: .opacity))
             .padding(16)
     }
 }

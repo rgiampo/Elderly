@@ -21,13 +21,15 @@ struct RisultatoPartitaView: View {
             Text(Frasi.bravi(giocatori))
                 .testo(DimensioneTesto.enorme)
                 .accessibilityAddTraits(.isHeader)
+                .entrataAScaletta(0)
 
             Text(sommario)
                 .testo(DimensioneTesto.grande)
                 .multilineTextAlignment(.center)
                 .minimumScaleFactor(0.6)
+                .entrataAScaletta(2)
 
-            if plurale { BarraGiocatori(giocatori: giocatori, punti: punti) }
+            if plurale { BarraGiocatori(giocatori: giocatori, punti: punti).entrataAScaletta(3) }
 
             HStack(spacing: 28) {
                 Button(action: ricomincia) { PulsantePrincipale(titolo: "Gioca ancora") }
@@ -36,12 +38,15 @@ struct RisultatoPartitaView: View {
                     .buttonStyle(StilePremuto())
             }
             .frame(maxWidth: 1000)
+            .entrataAScaletta(5)
             Spacer(minLength: 0)
         }
         .foregroundStyle(Tema.testo)
         .padding(.horizontal, 60)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .scorriSeServe()
+        // festa: i coriandoli cadono una volta, sopra a tutto, senza bloccare i pulsanti
+        .overlay { Coriandoli().allowsHitTesting(false).accessibilityHidden(true) }
         .onAppear {
             AccessibilityNotification.Announcement("\(Frasi.bravi(giocatori)) La partita è finita").post()
             Risultato.salva(gioco: gioco, giocatori: giocatori, punti: punti, squadra: squadra, totale: totale, in: contesto)
