@@ -121,23 +121,18 @@ private struct Riflesso: View {
 private struct Titolo: View {
     let entrato: Bool
     var scala: CGFloat = 1
-    @Environment(\.accessibilityReduceMotion) private var pocoMovimento
 
     var body: some View {
         VStack(spacing: 10) {
             // il nome in San Francisco bold; sotto, la linea con la "v" e i ghirigori ai lati
-            Text("Elderly")
-                .font(.system(size: 150 * scala, weight: .bold))   // grassetto sempre, su ogni iPad
-                .tracking(-3)
-                .foregroundStyle(Tema.testo)
-                .lineLimit(1).minimumScaleFactor(0.4)
-                // entra dall'alto, sfocato e un po' più grande, e si "posa": l'ombra sotto cresce mentre arriva
+            // le lettere cadono una dopo l'altra, con un rimbalzo; poi intorno al nome scoppiano delle stelline
+            LettereCadenti(testo: "Elderly", corpo: 150 * scala, entrato: entrato)
+                .overlay { Scintille(attiva: entrato, ritardo: 0.9) }
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("Elderly")
+                // mentre le lettere atterrano, l'ombra sotto si stringe e si fa netta
                 .shadow(color: Tema.testo.opacity(entrato ? 0.22 : 0), radius: entrato ? 14 : 40, y: entrato ? 10 : 40)
-                .blur(radius: entrato || pocoMovimento ? 0 : 14)
-                .scaleEffect(entrato || pocoMovimento ? 1 : 1.25)
-                .offset(y: entrato || pocoMovimento ? 0 : -40)
-                .opacity(entrato ? 1 : 0)
-                .animation(pocoMovimento ? .easeIn(duration: 0.6) : .spring(duration: 0.9, bounce: 0.3), value: entrato)
+                .animation(.easeOut(duration: 1.0), value: entrato)
                 .accessibilityAddTraits(.isHeader)
 
             Ghirigoro()
@@ -148,6 +143,68 @@ private struct Titolo: View {
                 .accessibilityHidden(true)
         }
         .frame(maxWidth: 640)   // la stessa larghezza dei pulsanti
+    }
+}
+
+/// Il nome scritto lettera per lettera: ogni lettera cade dall'alto ruotando un poco e si posa con un rimbalzo.
+private struct LettereCadenti: View {
+    let testo: String
+    let corpo: CGFloat
+    let entrato: Bool
+    @Environment(\.accessibilityReduceMotion) private var pocoMovimento
+
+    var body: some View {
+        HStack(spacing: -corpo * 0.02) {
+            ForEach(Array(testo.enumerated()), id: \.offset) { n, lettera in
+                Text(String(lettera))
+                    .font(.system(size: corpo, weight: .bold))   // grassetto sempre, su ogni iPad
+                    .foregroundStyle(Tema.testo)
+                    .offset(y: entrato || pocoMovimento ? 0 : -corpo * 0.9)
+                    .rotationEffect(.degrees(entrato || pocoMovimento ? 0 : (n.isMultiple(of: 2) ? -25 : 25)))
+                    .opacity(entrato ? 1 : 0)
+                    .animation(pocoMovimento ? .easeIn(duration: 0.6) : .spring(duration: 0.6, bounce: 0.5).delay(0.07 * Double(n)), value: entrato)
+            }
+        }
+        .lineLimit(1)
+        .fixedSize()
+    }
+}
+
+/// Stelline che partono dal centro del nome e si allontanano svanendo, una volta sola: un piccolo "fuoco d'artificio".
+private struct Scintille: View {
+    let attiva: Bool
+    let ritardo: Double
+    @State private var via = false
+    @State private var partite = false
+    @Environment(\.accessibilityReduceMotion) private var pocoMovimento
+    private let colori: [Color] = [Forma.cerchio.colore, Forma.quadrato.colore, Forma.triangolo.colore, Forma.stella.colore, Forma.cuore.colore]
+
+    var body: some View {
+        GeometryReader { spazio in
+            ZStack {
+                ForEach(0..<14, id: \.self) { n in
+                    let angolo = Double(n) / 14 * 2 * .pi
+                    let distanza = max(spazio.size.width, spazio.size.height) * (n.isMultiple(of: 2) ? 0.62 : 0.48)
+                    Forma.stella.sagoma
+                        .fill(colori[n % colori.count])
+                        .frame(width: n.isMultiple(of: 3) ? 30 : 20, height: n.isMultiple(of: 3) ? 30 : 20)
+                        .rotationEffect(.degrees(via ? 220 : 0))
+                        .scaleEffect(via ? 0.3 : 1.1)
+                        .offset(x: via ? cos(angolo) * distanza : 0, y: via ? sin(angolo) * distanza * 0.55 : 0)
+                        .opacity(via ? 0 : 1)
+                }
+            }
+            .frame(width: spazio.size.width, height: spazio.size.height)
+            .opacity(partite && !pocoMovimento ? 1 : 0)   // si vedono solo mentre volano via, non prima
+        }
+        .allowsHitTesting(false)
+        .accessibilityHidden(true)
+        .task(id: attiva) {
+            guard attiva, !pocoMovimento else { return }
+            try? await Task.sleep(for: .seconds(ritardo))
+            partite = true
+            withAnimation(.easeOut(duration: 1.3)) { via = true }
+        }
     }
 }
 
