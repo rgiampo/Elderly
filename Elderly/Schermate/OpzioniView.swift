@@ -41,9 +41,20 @@ struct OpzioniView: View {
                         } else {
                             Label("Sull'iPad c'è solo la voce di base, che suona più robotica.", systemImage: "exclamationmark.triangle.fill")
                                 .foregroundStyle(Tema.rosso)
-                            Text("Per una voce molto più naturale: Impostazioni, Accessibilità, Contenuto letto, Voci, Italiano, poi scarica una voce \"Migliorata\" o \"Premium\" (per esempio Alice o Luca). Torna qui e viene usata da sola.")
+                            Text("Per una voce molto più naturale scaricane una «Migliorata» o «Premium» (Impostazioni, Accessibilità, Lettura e voce, Voci, Italiano): in fondo a questa pagina c'è la guida passo per passo.")
                         }
                     }
+                }
+
+                // in fondo a tutto: l'aiuto per scaricare la voce, con la guida animata
+                Section {
+                    NavigationLink(destination: GuidaVoceView()) {
+                        Label("Clicca qui per aiuto: come scaricare una voce più naturale", systemImage: "questionmark.circle.fill")
+                            .foregroundStyle(Tema.blu)
+                            .frame(minHeight: 64)
+                    }
+                } header: {
+                    Text("Aiuto")
                 }
             }
             .testo(DimensioneTesto.normale)
