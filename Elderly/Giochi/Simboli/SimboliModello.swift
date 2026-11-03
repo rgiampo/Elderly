@@ -42,7 +42,7 @@ final class SimboliModello {
 
     /// Mostra la chiave per qualche secondo, poi la nasconde di nuovo.
     func rivediChiave() {
-        guard !staMemorizzando else { return }
+        guard !staMemorizzando, !trovata else { return }   // durante la pausa si sta già passando alla prossima
         rivista = true
         chiaveVisibile = true
         nascondi?.cancel()
@@ -64,6 +64,9 @@ final class SimboliModello {
                 guard !Task.isCancelled else { return }
                 indice += 1
                 sbagliati = []; trovata = false; errori = 0; rivista = false
+                // la chiave rivista vale solo per la domanda di prima: non deve restare aperta sulla nuova
+                nascondi?.cancel()
+                chiaveVisibile = false
             }
         } else {
             errori += 1

@@ -95,6 +95,7 @@ struct SimboliView: View {
                             .scheda()
                     }
                     .buttonStyle(StilePremuto())
+                    .disabled(modello.trovata)
                     .transition(.opacity)
                 }
             }
