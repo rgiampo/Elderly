@@ -17,7 +17,7 @@ struct GiochiView: View {
                 }
             }
             .padding(.horizontal, 60).padding(.bottom, 40)
-            .frame(maxWidth: 1100)
+            .frame(maxWidth: 1240)
             .scorriSeServe()
         }
         .conIndietro(titolo: "Scegli") { BarraGiocatori(giocatori: sessione.giocatori) }
@@ -38,7 +38,6 @@ private struct RigaCategoria: View {
     var body: some View {
         HStack(spacing: 32) {
             categoria.anteprima
-                .frame(width: 330, height: 130)
             Text(categoria.titolo)
                 .testo(DimensioneTesto.grande)
                 .lineLimit(2).minimumScaleFactor(0.5)

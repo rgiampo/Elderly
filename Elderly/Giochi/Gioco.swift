@@ -181,29 +181,7 @@ enum Categoria: CaseIterable, Identifiable {
         }
     }
 
-    /// Tre immagini grandi che fanno capire di cosa si tratta, senza leggere.
-    @ViewBuilder var anteprima: some View {
-        switch self {
-        case .memoria:
-            HStack(spacing: 14) {
-                Circle().fill(Forma.cerchio.colore).aspectRatio(1, contentMode: .fit)
-                Rectangle().fill(Forma.quadrato.colore).aspectRatio(1, contentMode: .fit)
-                SagomaTriangolo().fill(Forma.triangolo.colore).aspectRatio(1, contentMode: .fit)
-            }
-        case .foto:
-            HStack(spacing: 14) {
-                FotoView(foto: .risorsa("foto_marinara")).clipShape(Circle())
-                FotoView(foto: .risorsa("foto_gatto")).clipShape(Circle())
-                FotoView(foto: .risorsa("foto_arancia")).clipShape(Circle())
-            }
-        case .mente:
-            HStack(spacing: 14) {
-                ForEach(["🐶", "🐱", "🦁"], id: \.self) { Text($0).font(.system(size: 80)).minimumScaleFactor(0.5) }
-            }
-        case .crea:
-            Image(systemName: "plus.circle.fill")
-                .font(.system(size: 120))
-                .foregroundStyle(Tema.blu)
-        }
+    /// Il logo della categoria (vedi `LogoCategoria`).
+    var anteprima: some View { LogoCategoria(categoria: self)
     }
 }
