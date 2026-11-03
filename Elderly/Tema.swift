@@ -137,18 +137,25 @@ extension View {
 
     /// Se la schermata non ci sta (iPad più piccoli, testo grande) si può scorrere.
     /// Se ci sta resta identica, ferma e con gli elementi che riempiono lo spazio.
-    func scorriSeServe() -> some View {
-        ViewThatFits(in: .vertical) {
-            self
-            ScrollView { self }
-                .scrollBounceBehavior(.basedOnSize)
-                .clipped()   // il contenuto non passa sotto la barra con il titolo
-        }
-    }
+    func scorriSeServe() -> some View { modifier(ScorriSeServe()) }
 
     /// Pulsante in vetro colorato, con il testo bianco o scuro a seconda del colore.
     func vetro(_ colore: Color, in forma: some Shape = Capsule()) -> some View {
         glassEffect(.regular.tint(colore), in: forma)
             .contentShape(forma)   // senza questo il tocco funziona solo sopra le lettere
+    }
+}
+
+private struct ScorriSeServe: ViewModifier {
+    func body(content: Content) -> some View {
+        ViewThatFits(in: .vertical) {
+            content
+            // largo quanto lo schermo, così la barra di scorrimento sta sul bordo destro e non accanto al contenuto
+            ScrollView { content.frame(maxWidth: .infinity) }
+                .scrollBounceBehavior(.basedOnSize)
+                .scrollIndicators(.visible)
+                .scrollIndicatorsFlash(onAppear: true)   // appena si apre si vede la barra: si capisce che si può scorrere
+                .clipped()   // il contenuto non passa sotto la barra con il titolo
+        }
     }
 }
