@@ -102,7 +102,8 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
                 .sfondoAnteprima()
         case .animali:
             HStack(spacing: 14) {
-                ForEach(["🐶", "🐱", "🐴", "🦁"], id: \.self) { Text($0).font(.system(size: 80)) }
+                // una riga sola che si adatta allo spazio: le emoji restano grandi quanto la scheda permette
+                Text("🐶🐱🐴🦁").font(.system(size: 120)).lineLimit(1).minimumScaleFactor(0.3)
             }
             .padding(24)
             .sfondoAnteprima()

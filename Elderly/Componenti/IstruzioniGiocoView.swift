@@ -48,12 +48,14 @@ struct IstruzioniGiocoView<Partita: View>: View {
                 }
                 .frame(maxWidth: .infinity)
 
+                // in alto, accanto alle istruzioni: si vede subito anche sugli schermi piccoli, senza scorrere
                 VStack {
-                    Spacer(minLength: 0)
                     Button { partite += 1; gioca = true } label: {
                         PulsantePrincipale(titolo: "Giochiamo!", colore: Tema.verde, altezza: 130)
                     }
                     .buttonStyle(StilePremuto())
+                    .padding(.top, 60)
+                    Spacer(minLength: 0)
                 }
                 .frame(width: 420)
             }

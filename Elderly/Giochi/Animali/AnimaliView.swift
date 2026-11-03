@@ -44,27 +44,33 @@ struct AnimaliView: View {
                 partita
             }
         }
-        .conIndietro { if !modello.finito { BarraGiocatori(giocatori: modello.giocatori) } }
+        .conIndietro {
+            if !modello.finito {
+                // il messaggio sta nella barra in alto: tutto lo schermo resta per la griglia degli animali
+                Text(modello.messaggio)
+                    .testo(DimensioneTesto.grande)
+                    .foregroundStyle(Tema.testo)
+                    .lineLimit(1).minimumScaleFactor(0.5)
+                    .contentTransition(.numericText())
+                    .animation(.easeInOut, value: modello.totale)
+                    .accessibilityAddTraits(.isHeader)
+                Spacer(minLength: 12)
+                BarraGiocatori(giocatori: modello.giocatori)
+            }
+        }
         .sensoryFeedback(.success, trigger: modello.totale) { prima, dopo in dopo > prima }
     }
 
     private var partita: some View {
         VStack(spacing: 16) {
-            Text(modello.messaggio)
-                .testo(DimensioneTesto.titolo)
-                .foregroundStyle(Tema.testo)
-                .lineLimit(1).minimumScaleFactor(0.5)
-                .frame(maxWidth: .infinity, minHeight: 90)
-                .contentTransition(.numericText())
-                .animation(.easeInOut, value: modello.totale)
-                .accessibilityAddTraits(.isHeader)
-
             GeometryReader { geometria in
                 let altezza = (geometria.size.height - spazio * CGFloat(righe - 1)) / CGFloat(righe)
                 LazyVGrid(columns: colonne, spacing: spazio) {
                     ForEach(modello.animali) { animale in
                         Button { modello.tocca(animale) } label: {
-                            SchedaAnimale(animale: animale, nominato: modello.nominati.contains(animale.id))
+                            // sugli schermi piccoli (iPad mini) le schede sono basse: solo l'emoji, grande quanto la scheda
+                            SchedaAnimale(animale: animale, nominato: modello.nominati.contains(animale.id),
+                                          altezza: altezza, conNome: altezza >= 120)
                                 .frame(height: altezza)
                         }
                         .buttonStyle(StilePremuto())
@@ -84,7 +90,7 @@ struct AnimaliView: View {
                     .opacity(modello.totale == 0 ? 0.5 : 1)
             }
         }
-        .padding(.horizontal, 40).padding(.bottom, 24)
+        .padding(.horizontal, 24).padding(.bottom, 20)
     }
 }
 
@@ -92,13 +98,23 @@ struct AnimaliView: View {
 private struct SchedaAnimale: View {
     let animale: Animale
     let nominato: Bool
+    var altezza: CGFloat = 150
+    var conNome = true
 
     var body: some View {
         VStack(spacing: 4) {
-            Text(animale.emoji).font(.system(size: 70))
-            Text(animale.nome)
-                .testo(DimensioneTesto.normale)
-                .lineLimit(1).minimumScaleFactor(0.5)
+            // l'emoji si ingrandisce fino a riempire lo spazio della scheda (in alto se c'è anche il nome)
+            Text(animale.emoji)
+                .font(.system(size: 200))
+                .minimumScaleFactor(0.05)
+                .lineLimit(1)
+                .frame(maxHeight: conNome ? altezza * 0.5 : altezza * 0.9)
+            if conNome {
+                Text(animale.nome)
+                    .testo(DimensioneTesto.normale)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .lineLimit(1).minimumScaleFactor(0.5)
+            }
         }
         .foregroundStyle(nominato ? .white : Tema.testo)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
