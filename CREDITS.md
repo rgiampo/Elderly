@@ -6,7 +6,7 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | Nome nell'app | File | Autore | Licenza | Pagina |
 |---|---|---|---|---|
 | foto_pizza | L'Oro di Napoli - January 2025 - Sarah Stierch 17.jpg | Missvain | CC0 | https://commons.wikimedia.org/wiki/File:L%27Oro_di_Napoli_-_January_2025_-_Sarah_Stierch_17.jpg |
-| foto_spaghetti | Spaghetti-prepared.jpg | Sconosciuto | Public domain | https://commons.wikimedia.org/wiki/File:Spaghetti-prepared.jpg |
+| foto_spaghetti | Spaghettata.JPG | Dr.Conati | Public domain | https://commons.wikimedia.org/wiki/File:Spaghettata.JPG |
 | foto_pomodori | Tomatoes.jpg | Wilfredor | CC0 | https://commons.wikimedia.org/wiki/File:Tomatoes.jpg |
 | foto_limone | Citrus x limon, lemon on tree, Coín, Spain.jpg | Bj.schoenmakers | CC0 | https://commons.wikimedia.org/wiki/File:Citrus_x_limon,_lemon_on_tree,_Co%C3%ADn,_Spain.jpg |
 | foto_cappuccino | Cappuccino - Wai Kika Moo Kau 2024-01-13.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Cappuccino_-_Wai_Kika_Moo_Kau_2024-01-13.jpg |
@@ -16,7 +16,6 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | foto_uva | Grapes 1.jpg | Couleur | CC0 | https://commons.wikimedia.org/wiki/File:Grapes_1.jpg |
 | foto_marinara | Pizza marinara (Napoli).jpg | Ruthven | CC0 | https://commons.wikimedia.org/wiki/File:Pizza_marinara_(Napoli).jpg |
 | foto_polpo | Polpo - Wiki Loves Sicilia.jpg | 8w9d | CC0 | https://commons.wikimedia.org/wiki/File:Polpo_-_Wiki_Loves_Sicilia.jpg |
-| foto_patate | Pasta Patate e Provola.jpg | Mojmir Churavy | CC0 | https://commons.wikimedia.org/wiki/File:Pasta_Patate_e_Provola.jpg |
 | foto_caffe | CaffèNapoletano.jpg | AnticoMu90 | CC0 | https://commons.wikimedia.org/wiki/File:Caff%C3%A8Napoletano.jpg |
 | foto_calzone | Pizzeria Bella Italia (Crépieux-la-Pape) - Calzone (octobre 2022).jpg | Benoît Prieur | CC0 | https://commons.wikimedia.org/wiki/File:Pizzeria_Bella_Italia_(Cr%C3%A9pieux-la-Pape)_-_Calzone_(octobre_2022).jpg |
 | foto_polpette | Polpette Al Sugo - Nanninella.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Polpette_Al_Sugo_-_Nanninella.jpg |
@@ -37,7 +36,7 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | foto_fragole | Strawberries-1239306.jpg | Robert Owen-Wahl (Meditations) | CC0 | https://commons.wikimedia.org/wiki/File:Strawberries-1239306.jpg |
 | foto_carote | Carrots (Unsplash).jpg | Mink Mingle minkmingle | CC0 | https://commons.wikimedia.org/wiki/File:Carrots_(Unsplash).jpg |
 | foto_zucchine | Zucchini-572542.jpg | Steve Buissinne | CC0 | https://commons.wikimedia.org/wiki/File:Zucchini-572542.jpg |
-| foto_lasagne | Lasagna Serving.jpg | Miansari66 | CC0 | https://commons.wikimedia.org/wiki/File:Lasagna_Serving.jpg |
+| foto_lasagne | Lasagna food.jpg | Jon Sullivan | Public domain | https://commons.wikimedia.org/wiki/File:Lasagna_food.jpg |
 | foto_cannoli | Cannoli sicily.jpg | AnnaVie | CC0 | https://commons.wikimedia.org/wiki/File:Cannoli_sicily.jpg |
 | foto_castel_ovo | Castel dell'Ovo, Naples - 2021.jpg | stefygo54 | CC0 | https://commons.wikimedia.org/wiki/File:Castel_dell%27Ovo,_Naples_-_2021.jpg |
 | foto_gelato | Gelato ice cream.jpg | rawpixel | CC0 | https://commons.wikimedia.org/wiki/File:Gelato_ice_cream.jpg |
@@ -91,3 +90,9 @@ Tutte le foto sono ritagliate al centro in formato 16:9. Prima di aggiungere una
 | foto_moka | Moka Pot (55013301353).jpg | ajay_suresh | CC0 | https://commons.wikimedia.org/wiki/File:Moka_Pot_(55013301353).jpg |
 | foto_ricotta | Ricotta fresca (Wiki Loves Sicilia).jpg | 8w9d | CC0 | https://commons.wikimedia.org/wiki/File:Ricotta_fresca_(Wiki_Loves_Sicilia).jpg |
 | foto_salumi | Italian traditional salami.jpg | Fumikas Sagisavas | CC0 | https://commons.wikimedia.org/wiki/File:Italian_traditional_salami.jpg |
+| foto_sfogliatella | Sfogliatella, Il Poggetto.jpg | 9002Jack | CC0 | https://commons.wikimedia.org/wiki/File:Sfogliatella%2C_Il_Poggetto.jpg |
+| foto_pasta_fagioli | Pasta e fagioli - minestra.jpg | valtercirillo | CC0 | https://commons.wikimedia.org/wiki/File:Pasta_e_fagioli_-_minestra.jpg |
+| foto_parmigiana | Parmiggiana - Pizza 500 2024-11-16.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Parmiggiana_-_Pizza_500_2024-11-16.jpg |
+| foto_pizza_fritta | Pizzette fritte.jpg | Ruthven | CC0 | https://commons.wikimedia.org/wiki/File:Pizzette_fritte.jpg |
+| foto_caprese | Ensalada caprese, Mazatlán, 17 de mayo de 2023.jpg | El Nuevo Doge | CC0 | https://commons.wikimedia.org/wiki/File:Ensalada_caprese%2C_Mazatl%C3%A1n%2C_17_de_mayo_de_2023.jpg |
+| foto_mozzarella_carrozza | Mozzarella in Carrozza - Tavola Di Famiglia 2026-02-27.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Mozzarella_in_Carrozza_-_Tavola_Di_Famiglia_2026-02-27.jpg |

@@ -535,8 +535,8 @@
      "giusta": true
     },
     {
-     "testo": "Patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     }
    ]
@@ -745,8 +745,8 @@
      "giusta": true
     },
     {
-     "testo": "Patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     }
    ]
@@ -845,8 +845,8 @@
    "testo": "Quale dolce è croccante e ripieno?",
    "risposte": [
     {
-     "testo": "Patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     },
     {
@@ -965,8 +965,8 @@
    "testo": "Da cosa si ottiene il vino?",
    "risposte": [
     {
-     "testo": "Patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     },
     {
@@ -1045,8 +1045,8 @@
      "giusta": true
     },
     {
-     "testo": "Patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     }
    ]
@@ -1175,8 +1175,8 @@
    "testo": "Cosa si mangia con gli spaghetti al mare?",
    "risposte": [
     {
-     "testo": "Patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     },
     {

@@ -40,8 +40,8 @@
      "giusta": true
     },
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     }
    ]
@@ -160,8 +160,8 @@
      "giusta": true
     },
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     }
    ]
@@ -280,8 +280,8 @@
      "giusta": true
     },
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     }
    ]
@@ -362,11 +362,11 @@
    ]
   },
   {
-   "testo": "Quale è la pasta e patate?",
+   "testo": "Quale è la pasta e fagioli?",
    "risposte": [
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": true
     },
     {
@@ -377,11 +377,11 @@
    ]
   },
   {
-   "testo": "Quale è la pasta e patate?",
+   "testo": "Quale è la pasta e fagioli?",
    "risposte": [
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": true
     },
     {
@@ -392,11 +392,11 @@
    ]
   },
   {
-   "testo": "Quale è la pasta e patate?",
+   "testo": "Quale è la pasta e fagioli?",
    "risposte": [
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": true
     },
     {
@@ -407,11 +407,11 @@
    ]
   },
   {
-   "testo": "Quale è la pasta e patate?",
+   "testo": "Quale è la pasta e fagioli?",
    "risposte": [
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": true
     },
     {
@@ -422,11 +422,11 @@
    ]
   },
   {
-   "testo": "Quale è la pasta e patate?",
+   "testo": "Quale è la pasta e fagioli?",
    "risposte": [
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": true
     },
     {
@@ -437,11 +437,11 @@
    ]
   },
   {
-   "testo": "Quale è la pasta e patate?",
+   "testo": "Quale è la pasta e fagioli?",
    "risposte": [
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": true
     },
     {
@@ -452,11 +452,11 @@
    ]
   },
   {
-   "testo": "Quale è la pasta e patate?",
+   "testo": "Quale è la pasta e fagioli?",
    "risposte": [
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": true
     },
     {
@@ -467,11 +467,11 @@
    ]
   },
   {
-   "testo": "Quale è la pasta e patate?",
+   "testo": "Quale è la pasta e fagioli?",
    "risposte": [
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": true
     },
     {
@@ -535,8 +535,8 @@
      "giusta": true
     },
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     }
    ]
@@ -655,8 +655,8 @@
      "giusta": true
     },
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     }
    ]
@@ -775,8 +775,8 @@
      "giusta": true
     },
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     }
    ]
@@ -895,8 +895,8 @@
      "giusta": true
     },
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     }
    ]
@@ -1015,8 +1015,8 @@
      "giusta": true
     },
     {
-     "testo": "Pasta e patate",
-     "foto": "foto_patate",
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
      "giusta": false
     }
    ]
@@ -1077,6 +1077,906 @@
     {
      "testo": "Lasagne",
      "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la parmigiana di melanzane?",
+   "risposte": [
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": true
+    },
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la parmigiana di melanzane?",
+   "risposte": [
+    {
+     "testo": "Calzone",
+     "foto": "foto_calzone",
+     "giusta": false
+    },
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la parmigiana di melanzane?",
+   "risposte": [
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la parmigiana di melanzane?",
+   "risposte": [
+    {
+     "testo": "Pasta alle vongole",
+     "foto": "foto_vongole",
+     "giusta": false
+    },
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la parmigiana di melanzane?",
+   "risposte": [
+    {
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
+     "giusta": false
+    },
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la parmigiana di melanzane?",
+   "risposte": [
+    {
+     "testo": "Pizza marinara",
+     "foto": "foto_marinara",
+     "giusta": false
+    },
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la parmigiana di melanzane?",
+   "risposte": [
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": true
+    },
+    {
+     "testo": "Polpette al sugo",
+     "foto": "foto_polpette",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la parmigiana di melanzane?",
+   "risposte": [
+    {
+     "testo": "Polpo arrosto",
+     "foto": "foto_polpo",
+     "giusta": false
+    },
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la parmigiana di melanzane?",
+   "risposte": [
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": false
+    },
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la parmigiana di melanzane?",
+   "risposte": [
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": false
+    },
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la parmigiana di melanzane?",
+   "risposte": [
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": false
+    },
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la parmigiana di melanzane?",
+   "risposte": [
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": true
+    },
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pizzette fritte?",
+   "risposte": [
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": true
+    },
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pizzette fritte?",
+   "risposte": [
+    {
+     "testo": "Calzone",
+     "foto": "foto_calzone",
+     "giusta": false
+    },
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pizzette fritte?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    },
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pizzette fritte?",
+   "risposte": [
+    {
+     "testo": "Pasta alle vongole",
+     "foto": "foto_vongole",
+     "giusta": false
+    },
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pizzette fritte?",
+   "risposte": [
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": true
+    },
+    {
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pizzette fritte?",
+   "risposte": [
+    {
+     "testo": "Pizza marinara",
+     "foto": "foto_marinara",
+     "giusta": false
+    },
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pizzette fritte?",
+   "risposte": [
+    {
+     "testo": "Polpette al sugo",
+     "foto": "foto_polpette",
+     "giusta": false
+    },
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pizzette fritte?",
+   "risposte": [
+    {
+     "testo": "Polpo arrosto",
+     "foto": "foto_polpo",
+     "giusta": false
+    },
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pizzette fritte?",
+   "risposte": [
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": false
+    },
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pizzette fritte?",
+   "risposte": [
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": true
+    },
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pizzette fritte?",
+   "risposte": [
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": false
+    },
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pizzette fritte?",
+   "risposte": [
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": false
+    },
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la caprese?",
+   "risposte": [
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": false
+    },
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la caprese?",
+   "risposte": [
+    {
+     "testo": "Calzone",
+     "foto": "foto_calzone",
+     "giusta": false
+    },
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la caprese?",
+   "risposte": [
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la caprese?",
+   "risposte": [
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": true
+    },
+    {
+     "testo": "Pasta alle vongole",
+     "foto": "foto_vongole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la caprese?",
+   "risposte": [
+    {
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
+     "giusta": false
+    },
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la caprese?",
+   "risposte": [
+    {
+     "testo": "Pizza marinara",
+     "foto": "foto_marinara",
+     "giusta": false
+    },
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la caprese?",
+   "risposte": [
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": true
+    },
+    {
+     "testo": "Polpette al sugo",
+     "foto": "foto_polpette",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la caprese?",
+   "risposte": [
+    {
+     "testo": "Polpo arrosto",
+     "foto": "foto_polpo",
+     "giusta": false
+    },
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la caprese?",
+   "risposte": [
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": false
+    },
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la caprese?",
+   "risposte": [
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": false
+    },
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la caprese?",
+   "risposte": [
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": true
+    },
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la caprese?",
+   "risposte": [
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": false
+    },
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mozzarella in carrozza?",
+   "risposte": [
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": false
+    },
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mozzarella in carrozza?",
+   "risposte": [
+    {
+     "testo": "Calzone",
+     "foto": "foto_calzone",
+     "giusta": false
+    },
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mozzarella in carrozza?",
+   "risposte": [
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    },
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mozzarella in carrozza?",
+   "risposte": [
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": true
+    },
+    {
+     "testo": "Pasta alle vongole",
+     "foto": "foto_vongole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mozzarella in carrozza?",
+   "risposte": [
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": true
+    },
+    {
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mozzarella in carrozza?",
+   "risposte": [
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": true
+    },
+    {
+     "testo": "Pizza marinara",
+     "foto": "foto_marinara",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mozzarella in carrozza?",
+   "risposte": [
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": true
+    },
+    {
+     "testo": "Polpette al sugo",
+     "foto": "foto_polpette",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mozzarella in carrozza?",
+   "risposte": [
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": true
+    },
+    {
+     "testo": "Polpo arrosto",
+     "foto": "foto_polpo",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mozzarella in carrozza?",
+   "risposte": [
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": true
+    },
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mozzarella in carrozza?",
+   "risposte": [
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": true
+    },
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mozzarella in carrozza?",
+   "risposte": [
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": false
+    },
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la mozzarella in carrozza?",
+   "risposte": [
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": false
+    },
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sfogliatella?",
+   "risposte": [
+    {
+     "testo": "Caffè",
+     "foto": "foto_caffe",
+     "giusta": false
+    },
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sfogliatella?",
+   "risposte": [
+    {
+     "testo": "Calzone",
+     "foto": "foto_calzone",
+     "giusta": false
+    },
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sfogliatella?",
+   "risposte": [
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": true
+    },
+    {
+     "testo": "Lasagne",
+     "foto": "foto_lasagne",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sfogliatella?",
+   "risposte": [
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": true
+    },
+    {
+     "testo": "Pasta alle vongole",
+     "foto": "foto_vongole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sfogliatella?",
+   "risposte": [
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": true
+    },
+    {
+     "testo": "Pasta e fagioli",
+     "foto": "foto_pasta_fagioli",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sfogliatella?",
+   "risposte": [
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": true
+    },
+    {
+     "testo": "Pizza marinara",
+     "foto": "foto_marinara",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sfogliatella?",
+   "risposte": [
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": true
+    },
+    {
+     "testo": "Polpette al sugo",
+     "foto": "foto_polpette",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sfogliatella?",
+   "risposte": [
+    {
+     "testo": "Polpo arrosto",
+     "foto": "foto_polpo",
+     "giusta": false
+    },
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sfogliatella?",
+   "risposte": [
+    {
+     "testo": "Parmigiana",
+     "foto": "foto_parmigiana",
+     "giusta": false
+    },
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sfogliatella?",
+   "risposte": [
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": true
+    },
+    {
+     "testo": "Pizzette fritte",
+     "foto": "foto_pizza_fritta",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sfogliatella?",
+   "risposte": [
+    {
+     "testo": "Caprese",
+     "foto": "foto_caprese",
+     "giusta": false
+    },
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sfogliatella?",
+   "risposte": [
+    {
+     "testo": "Sfogliatella",
+     "foto": "foto_sfogliatella",
+     "giusta": true
+    },
+    {
+     "testo": "Mozzarella in carrozza",
+     "foto": "foto_mozzarella_carrozza",
      "giusta": false
     }
    ]
