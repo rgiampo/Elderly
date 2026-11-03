@@ -71,5 +71,14 @@ enum Difficolta: CaseIterable, Identifiable {
         }
     }
 
+    /// Quante foto si guardano in "Ricorda le parole".
+    var numeroParole: Int {
+        switch self {
+        case .facile: Configurazione.paroleFacile
+        case .medio: Configurazione.paroleMedio
+        case .difficile, .maestro: Configurazione.paroleDifficile
+        }
+    }
+
     var forme: [Forma] { Array(Forma.allCases.prefix(numeroForme)) }
 }

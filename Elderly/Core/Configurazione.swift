@@ -26,6 +26,10 @@ enum Configurazione {
     static let opzioniProverbiFacile = 2, opzioniProverbiMedio = 3, opzioniProverbiDifficile = 3
     static let pausaProverbio = 3.0   // secondi per leggere il proverbio completo
 
+    /// "Ricorda le parole": quante foto si guardano per ogni difficoltà (poi se ne mostrano altrettante nuove).
+    static let paroleFacile = 5, paroleMedio = 7, paroleDifficile = 10
+    static let pausaParole = 1.8   // secondi per vedere se la risposta era giusta
+
     /// "Simboli e numeri": quanti simboli per partita e secondi di pausa dopo la risposta giusta.
     static let turniSimboli = 8
     static let pausaSimboli = 1.2

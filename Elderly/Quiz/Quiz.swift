@@ -96,6 +96,16 @@ enum CatalogoQuiz {
         return pronti().flatMap(\.domande).flatMap(\.risposte).compactMap(\.foto).filter { viste.insert($0).inserted }
     }
 
+    /// Le foto dell'app con il loro nome, senza ripetizioni (servono a "Ricorda le parole").
+    /// Si tengono solo i nomi brevi, che si leggono bene sotto la foto.
+    static func paroleDellApp() -> [(nome: String, foto: FotoQuiz)] {
+        var viste = Set<FotoQuiz>()
+        return pronti().flatMap(\.domande).flatMap(\.risposte).compactMap { risposta in
+            guard let foto = risposta.foto, risposta.testo.count <= 18, viste.insert(foto).inserted else { return nil }
+            return (risposta.testo, foto)
+        }
+    }
+
     /// Legge tutti i file `quiz_*.json` presenti nell'app.
     static func pronti() -> [Quiz] {
         let file = Bundle.main.urls(forResourcesWithExtension: "json", subdirectory: nil) ?? []

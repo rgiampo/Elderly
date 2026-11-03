@@ -117,6 +117,8 @@ enum Istruzioni {
         + "Si va avanti finché non ne vengono più in mente. Non c'è fretta e non si perde mai."
     static let simboli = "In alto c'è la chiave: ogni forma ha il suo numero. "
         + "Guarda la forma grande e tocca il numero giusto. Se sbagli, riprova senza fretta."
+    static let parole = "Prima guardi alcune foto, una alla volta, con il loro nome: cerca di ricordarle. "
+        + "Poi ti mostro altre foto: per ognuna dimmi se l'avevi già vista. Tocca la spunta verde per sì, la X rossa per no."
     static let cosaManca = "Guarda bene le foto, poi toccando il pulsante verde le nascondo e ne tolgo una. "
         + "Devi dire quale foto è sparita."
     static let sìNo = "Guarda la foto e rispondi alla domanda. "

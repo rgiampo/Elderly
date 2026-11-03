@@ -2,14 +2,14 @@ import SwiftUI
 
 /// L'elenco dei giochi. Per aggiungerne uno: un nuovo caso qui, e la sua schermata.
 enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva nei risultati: non rinominarlo
-    case forme, coppie, cosaManca, proverbi, animali, simboli, quiz, sìNo
+    case forme, coppie, cosaManca, proverbi, animali, simboli, parole, quiz, sìNo
 
     var id: Self { self }
 
     var categoria: Categoria {
         switch self {
         case .forme, .coppie, .cosaManca, .proverbi: .memoria
-        case .animali, .simboli: .mente
+        case .animali, .simboli, .parole: .mente
         case .quiz, .sìNo: .foto
         }
     }
@@ -22,6 +22,7 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
         case .proverbi: "Proverbi"
         case .animali: "Nomina gli animali"
         case .simboli: "Simboli e numeri"
+        case .parole: "Ricorda le parole"
         case .quiz: "Scegli la foto"
         case .sìNo: "Sì o no"
         }
@@ -35,6 +36,7 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
         case .proverbi: "Completa il proverbio"
         case .animali: "Quanti ne conosci?"
         case .simboli: "Trova il numero giusto"
+        case .parole: "Quali foto hai visto?"
         case .quiz: "Trova la foto giusta"
         case .sìNo: "Rispondi con un segno"
         }
@@ -48,6 +50,7 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
         case .proverbi: ProverbiImpostazioniView()
         case .animali: AnimaliIngressoView()
         case .simboli: SimboliIngressoView()
+        case .parole: ParoleImpostazioniView()
         case .quiz: ElencoQuizView(modo: .foto)
         case .sìNo: ElencoQuizView(modo: .sìNo)
         }
@@ -105,6 +108,15 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
                 }
             }
             .padding(28)
+            .sfondoAnteprima()
+        case .parole:
+            HStack(spacing: 14) {
+                scheda(.risorsa("foto_gatto"))
+                scheda(.risorsa("foto_arancia"))
+                Image(systemName: "questionmark.circle.fill")
+                    .font(.system(size: 70)).foregroundStyle(Tema.blu)
+            }
+            .padding(24)
             .sfondoAnteprima()
         case .quiz:
             // una sola foto, grande
