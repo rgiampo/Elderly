@@ -97,9 +97,10 @@ struct BannerTurno: View {
                 Avatar(utente: giocatore.utente, dimensione: altezza - 24)
                 Text("Tocca a \(giocatore.nome)")
                     .testo(DimensioneTesto.titolo)
-                    .lineLimit(1).minimumScaleFactor(0.5)
+                    .lineLimit(1).minimumScaleFactor(0.3)
                 Spacer(minLength: 12)
-                if !punti.isEmpty { puntiDiTutti }
+                // i punti non si tagliano mai: se manca spazio si rimpicciolisce il nome, non il punteggio
+                if !punti.isEmpty { puntiDiTutti.fixedSize().layoutPriority(1) }
             }
             .foregroundStyle(.white)
             .padding(12).padding(.trailing, 28)
@@ -113,14 +114,25 @@ struct BannerTurno: View {
         }
     }
 
-    /// "Pino 2   Rosa 1": i punti di ognuno, con il nome.
+    /// I punti di ognuno: la sua foto (o le iniziali) e il numero con la stella. Corti, così ci stanno sempre.
     private var puntiDiTutti: some View {
-        HStack(spacing: 22) {
+        HStack(spacing: 18) {
             ForEach(Array(giocatori.enumerated()), id: \.element.id) { posizione, g in
-                Label("\(g.nome) \(posizione < punti.count ? punti[posizione] : 0)", systemImage: "star.fill")
-                    .testo(DimensioneTesto.medio)
+                HStack(spacing: 8) {
+                    Avatar(utente: g.utente, dimensione: 48)
+                    let suoi = posizione < punti.count ? punti[posizione] : 0
+                    HStack(spacing: 4) {
+                        Image(systemName: "star.fill").symbolEffect(.bounce, value: suoi)
+                        Text("\(suoi)").contentTransition(.numericText(value: Double(suoi)))
+                    }
+                    .font(.system(size: 34, weight: .heavy, design: .rounded))
                     .lineLimit(1)
-                    .opacity(posizione == turno ? 1 : 0.7)
+                    .animation(.spring(duration: 0.4), value: suoi)
+                }
+                .padding(.trailing, 10).padding(4)
+                .background(.white.opacity(posizione == turno ? 0.3 : 0.12), in: Capsule())
+                .accessibilityElement(children: .ignore)
+                .accessibilityLabel("\(g.nome): \(posizione < punti.count ? punti[posizione] : 0) punti")
             }
         }
     }

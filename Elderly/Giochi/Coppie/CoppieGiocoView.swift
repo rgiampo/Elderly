@@ -27,11 +27,14 @@ struct CoppieGiocoView: View {
         .conIndietro {
             if !modello.finito {
                 // messaggio e "Ascolta" stanno nella barra in alto: tutto il resto dello schermo è per le carte
-                Text(modello.messaggio)
-                    .testo(DimensioneTesto.medio)
-                    .foregroundStyle(Tema.testo)
-                    .lineLimit(1).minimumScaleFactor(0.5)
-                Spacer(minLength: 12)
+                // con due persone c'è il banner grande "Tocca a…": il messaggio gli toglierebbe spazio
+                if modello.giocatori.count < 2 {
+                    Text(modello.messaggio)
+                        .testo(DimensioneTesto.medio)
+                        .foregroundStyle(Tema.testo)
+                        .lineLimit(1).minimumScaleFactor(0.5)
+                    Spacer(minLength: 12)
+                }
                 BottoneVoce(testo: Istruzioni.coppie, etichetta: "Ascolta", altezza: 64)
                 BarraGiocatori(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
             }
@@ -72,6 +75,7 @@ struct CoppieGiocoView: View {
 /// Una carta: coperta è blu con un punto interrogativo, scoperta mostra la foto. Si gira come una carta vera.
 private struct CartaView: View {
     let carta: Carta
+    @Environment(\.turnoGioco) private var turno   // con due persone le carte coperte prendono il colore di chi gioca
     private var visibile: Bool { carta.scoperta || carta.trovata }
     private let forma = RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous)
 
@@ -81,11 +85,22 @@ private struct CartaView: View {
             fronte.opacity(visibile ? 1 : 0).rotation3DEffect(.degrees(180), axis: (0, 1, 0))
         }
         .rotation3DEffect(.degrees(visibile ? 180 : 0), axis: (0, 1, 0))
+        // coppia trovata: un saltello di festa
+        .keyframeAnimator(initialValue: CGFloat(1), trigger: carta.trovata) { vista, scala in
+            vista.scaleEffect(scala)
+        } keyframes: { _ in
+            KeyframeTrack {
+                SpringKeyframe(1, duration: 0.01)
+                SpringKeyframe(carta.trovata ? 1.12 : 1, duration: 0.18)
+                SpringKeyframe(1, duration: 0.35, spring: .bouncy)
+            }
+        }
         .animation(.spring(duration: 0.5, bounce: 0.2), value: visibile)
     }
 
     private var retro: some View {
-        forma.fill(Tema.blu)
+        forma.fill(turno.map(Tema.coloreGiocatore) ?? Tema.blu)
+            .animation(.easeInOut(duration: 0.5), value: turno)
             .overlay(Text("?").testo(DimensioneTesto.enorme).foregroundStyle(.white))
             .shadow(color: Tema.testo.opacity(0.2), radius: 8, y: 4)
     }
@@ -99,6 +114,7 @@ private struct CartaView: View {
                     Image(systemName: "checkmark.circle.fill")
                         .font(.system(size: 44))
                         .foregroundStyle(.white, Tema.verde)
+                        .transition(.scale(scale: 0.2).combined(with: .opacity))
                         .padding(10)
                 }
             }

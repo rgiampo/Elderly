@@ -103,7 +103,8 @@ struct CosaMancaView: View {
     @ViewBuilder private func carta(_ numero: Int) -> some View {
         let forma = RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous)
         if numero == modello.posizioneMancante && modello.fase == .scegli {
-            forma.fill(Tema.blu)
+            // con due persone la carta "?" prende il colore di chi gioca
+            forma.fill(modello.giocatori.count > 1 ? Tema.coloreGiocatore(modello.turno) : Tema.blu)
                 .overlay(Text("?").testo(DimensioneTesto.enorme).foregroundStyle(.white))
                 .shadow(color: Tema.testo.opacity(0.2), radius: 8, y: 4)
         } else {
