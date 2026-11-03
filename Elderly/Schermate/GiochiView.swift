@@ -63,12 +63,19 @@ struct GiochiDellaCategoriaView: View {
         ZStack {
             SfondoCielo()
 
-            Grid(horizontalSpacing: 32, verticalSpacing: 28) {
-                ForEach(Array(righe.enumerated()), id: \.offset) { numeroRiga, riga in
-                    GridRow {
-                        ForEach(Array(riga.enumerated()), id: \.element) { colonna, gioco in
-                            NavigationLink(destination: gioco.destinazione) { SchedaGioco(gioco: gioco) }
-                                .buttonStyle(StilePremuto())
+            VStack(alignment: .leading, spacing: 20) {
+                // una frase che dice cosa fare in questa schermata
+                Label(categoria.cosaFare, systemImage: "hand.tap.fill")
+                    .testo(DimensioneTesto.medio)
+                    .foregroundStyle(Tema.testo)
+                    .fixedSize(horizontal: false, vertical: true)
+                Grid(horizontalSpacing: 32, verticalSpacing: 28) {
+                    ForEach(Array(righe.enumerated()), id: \.offset) { numeroRiga, riga in
+                        GridRow {
+                            ForEach(Array(riga.enumerated()), id: \.element) { colonna, gioco in
+                                NavigationLink(destination: gioco.destinazione) { SchedaGioco(gioco: gioco) }
+                                    .buttonStyle(StilePremuto())
+                            }
                         }
                     }
                 }

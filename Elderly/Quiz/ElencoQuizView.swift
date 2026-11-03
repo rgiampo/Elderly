@@ -7,6 +7,12 @@ enum ModoQuiz {
 
     var titolo: String { self == .foto ? "Scegli la foto" : "Sì o no" }
 
+    /// La frase in cima all'elenco: dice cosa fare adesso e come sarà il gioco.
+    var spiegazione: String {
+        self == .foto ? "Tocca un argomento per cominciare. Poi, per ogni domanda, toccherai la foto giusta."
+                      : "Tocca un argomento per cominciare. Poi, per ogni foto, risponderai sì o no."
+    }
+
     @ViewBuilder func vista(_ quiz: Quiz, _ giocatori: [Partecipante]) -> some View {
         switch self {
         case .foto: QuizView(quiz: quiz, giocatori: giocatori)
@@ -28,21 +34,32 @@ struct ElencoQuizView: View {
         ZStack {
             SfondoCielo()
 
-            ScrollView {
-                VStack(alignment: .leading, spacing: 18) {
-                    ForEach(Array((pronti + creati.map(\.comeQuiz)).enumerated()), id: \.element.id) { posizione, quiz in
-                        NavigationLink(destination: modo.vista(quiz, sessione.giocatori)) {
-                            RigaQuiz(quiz: quiz) {
-                                Image(systemName: "chevron.right").font(.system(size: 32, weight: .bold))
-                            }
+            VStack(alignment: .leading, spacing: 18) {
+                Text(modo.spiegazione)
+                    .testo(DimensioneTesto.medio)
+                    .foregroundStyle(Tema.testo)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .padding(.bottom, 6)
+                ForEach(Array((pronti + creati.map(\.comeQuiz)).enumerated()), id: \.element.id) { posizione, quiz in
+                    NavigationLink(destination: modo.vista(quiz, sessione.giocatori)) {
+                        RigaQuiz(quiz: quiz) {
+                            // un pulsante vero, verde come "Giochiamo!": si capisce che qui si comincia
+                            Label("Gioca", systemImage: "play.fill")
+                                .testo(DimensioneTesto.medio)
+                                .foregroundStyle(.white)
+                                .padding(.horizontal, 30).frame(minHeight: 84)
+                                .vetro(Tema.verde)
+                                .fixedSize()
                         }
-                        .buttonStyle(StilePremuto())
                     }
+                    .buttonStyle(StilePremuto())
+                    .accessibilityLabel("Gioca con \(quiz.titolo)")
                 }
-                .padding(.horizontal, 40).padding(.bottom, 40)
-                .frame(maxWidth: 1100)
-                .frame(maxWidth: .infinity)
             }
+            .padding(.horizontal, 40).padding(.bottom, 40)
+            .frame(maxWidth: 1100)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+            .scorriSeServe()
         }
         .conIndietro(titolo: modo.titolo) { BarraGiocatori(giocatori: sessione.giocatori) }
     }

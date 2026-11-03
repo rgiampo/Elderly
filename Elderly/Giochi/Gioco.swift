@@ -39,8 +39,8 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
         case .animali: "Quanti ne conosci?"
         case .simboli: "Trova il numero giusto"
         case .parole: "Quali foto hai visto?"
-        case .quiz: "Trova la foto giusta"
-        case .sìNo: "Rispondi con un segno"
+        case .quiz: "Leggi la domanda, tocca la foto giusta"
+        case .sìNo: "Guarda la foto, rispondi sì o no"
         }
     }
 
@@ -172,6 +172,14 @@ enum Categoria: CaseIterable, Identifiable {
     }
 
     var giochi: [Gioco] { Gioco.allCases.filter { $0.categoria == self } }
+
+    /// La frase in cima alla schermata della categoria.
+    var cosaFare: String {
+        switch self {
+        case .foto: "Scegli come vuoi giocare: tocca una delle due schede."
+        default: "Tocca il gioco che vuoi fare."
+        }
+    }
 
     /// Tre immagini grandi che fanno capire di cosa si tratta, senza leggere.
     @ViewBuilder var anteprima: some View {
