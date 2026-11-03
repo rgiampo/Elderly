@@ -140,7 +140,9 @@ extension View {
     func scorriSeServe() -> some View {
         ViewThatFits(in: .vertical) {
             self
-            ScrollView { self }.scrollBounceBehavior(.basedOnSize)
+            ScrollView { self }
+                .scrollBounceBehavior(.basedOnSize)
+                .clipped()   // il contenuto non passa sotto la barra con il titolo
         }
     }
 
