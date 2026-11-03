@@ -148,6 +148,7 @@ extension View {
 
 private struct ScorriSeServe: ViewModifier {
     @State private var altroSotto = false
+    @State private var scorre = false       // il contenuto è più alto dello schermo
     @State private var posizione = ScrollPosition(edge: .top)
 
     func body(content: Content) -> some View {
@@ -162,6 +163,13 @@ private struct ScorriSeServe: ViewModifier {
             .scrollBounceBehavior(.basedOnSize)
             .scrollIndicators(.visible)
             .scrollIndicatorsFlash(onAppear: true)
+            // se si scorre, in fondo c'è spazio libero: l'ultimo elemento non resta sotto il pulsante "Scorri in giù"
+            .contentMargins(.bottom, scorre ? 110 : 0, for: .scrollContent)
+            .onScrollGeometryChange(for: Bool.self) { g in
+                g.contentSize.height > g.containerSize.height + 1
+            } action: { _, nuovo in
+                scorre = nuovo
+            }
             .onScrollGeometryChange(for: Bool.self) { g in
                 g.visibleRect.maxY < g.contentSize.height - 24   // c'è ancora contenuto sotto il bordo dello schermo
             } action: { _, nuovo in
