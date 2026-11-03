@@ -68,8 +68,8 @@ private struct RigaForme: View {
 
     var body: some View {
         GeometryReader { spazio in
-            // più di cinque forme vanno su più righe: restano grandi
-            let righe = partita.forme.count > 8 ? 3 : (partita.forme.count > 5 ? 2 : 1)
+            // più di cinque forme vanno su due righe (il Maestro: due righe da sei, sfruttano lo schermo largo)
+            let righe = partita.forme.count > 5 ? 2 : 1
             let perRiga = (partita.forme.count + righe - 1) / righe
             let distanza: CGFloat = 32
             // 0.88: la forma illuminata cresce un po' e non deve uscire dallo schermo
