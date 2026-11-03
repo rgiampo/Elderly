@@ -5,6 +5,7 @@ import SwiftUI
 struct DecorazioniHome: View {
     @Environment(\.accessibilityReduceMotion) private var pocoMovimento
     @State private var inMovimento = false
+    @State private var comparsi = false   // all'apertura le forme spuntano una dopo l'altra, poi fluttuano
 
     /// Dove stanno (in percentuale dello schermo), quanto sono grandi e quanto si muovono.
     private struct Pezzo {
@@ -40,12 +41,15 @@ struct DecorazioniHome: View {
                     .shadow(color: Tema.notte.opacity(0.22), radius: 18, x: 0, y: 14)
                     .scaleEffect(inMovimento ? 1.08 : 0.94)
                     .offset(x: inMovimento ? p.spostamento.width * ampiezza : 0, y: inMovimento ? p.spostamento.height * ampiezza : 0)
-                    .position(x: p.x * spazio.size.width, y: p.y * spazio.size.height)
                     .animation(pocoMovimento ? nil : .easeInOut(duration: p.durata).repeatForever(autoreverses: true), value: inMovimento)
+                    .scaleEffect(comparsi || pocoMovimento ? 1 : 0.01)
+                    .opacity(comparsi ? 1 : 0)
+                    .animation(.spring(duration: 0.8, bounce: 0.5).delay(0.15 + 0.12 * Double(i)), value: comparsi)
+                    .position(x: p.x * spazio.size.width, y: p.y * spazio.size.height)
             }
         }
         .allowsHitTesting(false)
         .accessibilityHidden(true)
-        .onAppear { inMovimento = true }
+        .onAppear { inMovimento = true; comparsi = true }
     }
 }

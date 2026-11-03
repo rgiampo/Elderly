@@ -19,6 +19,8 @@ struct ContentView: View {
                         VStack(spacing: 20 * s) {
                             NavigationLink(destination: ChiGiocaView()) {
                                 PulsantePrincipale(titolo: "Gioca", altezza: 130 * s)
+                                    .overlay { Riflesso(attivo: entrato, ritardo: 1.9) }
+                                    .modifier(Respiro(attivo: entrato))
                             }
                             .appari(entrato, ritardo: 1.0)
                             NavigationLink(destination: UtentiView()) {
@@ -47,10 +49,70 @@ struct ContentView: View {
 }
 
 extension View {
-    /// Compare a dissolvenza, con un piccolo ritardo (per far comparire le cose una dopo l'altra).
+    /// Sale dal basso con un rimbalzo e un'ombra che si allarga, come se si appoggiasse sullo schermo.
+    /// Uno dopo l'altro secondo il ritardo. Con "Riduci movimento" compare solo a dissolvenza.
     fileprivate func appari(_ entrato: Bool, ritardo: Double) -> some View {
-        opacity(entrato ? 1 : 0)
-            .animation(.easeIn(duration: 0.6).delay(ritardo), value: entrato)
+        modifier(Appari(entrato: entrato, ritardo: ritardo))
+    }
+}
+
+private struct Appari: ViewModifier {
+    let entrato: Bool
+    let ritardo: Double
+    @Environment(\.accessibilityReduceMotion) private var pocoMovimento
+
+    func body(content: Content) -> some View {
+        content
+            .shadow(color: Tema.notte.opacity(entrato ? 0.22 : 0), radius: entrato ? 18 : 0, y: entrato ? 12 : 0)
+            .scaleEffect(entrato || pocoMovimento ? 1 : 0.85)
+            .offset(y: entrato || pocoMovimento ? 0 : 70)
+            .opacity(entrato ? 1 : 0)
+            .animation(pocoMovimento ? .easeIn(duration: 0.6).delay(ritardo) : .spring(duration: 0.7, bounce: 0.4).delay(ritardo), value: entrato)
+    }
+}
+
+/// Il pulsante cresce e torna piano ogni pochi secondi: invita a toccarlo, senza fretta.
+private struct Respiro: ViewModifier {
+    let attivo: Bool
+    @Environment(\.accessibilityReduceMotion) private var pocoMovimento
+
+    func body(content: Content) -> some View {
+        content
+            .task(id: attivo) {
+                // dopo l'entrata, un "respiro" ogni 4 secondi finché si resta nella home
+                guard attivo, !pocoMovimento else { return }
+                try? await Task.sleep(for: .seconds(2.8))
+                while !Task.isCancelled {
+                    respiri += 1
+                    try? await Task.sleep(for: .seconds(4))
+                }
+            }
+            .phaseAnimator([false, true, false], trigger: respiri) { vista, grande in
+                vista.scaleEffect(grande && !pocoMovimento ? 1.04 : 1)
+            } animation: { _ in .easeInOut(duration: 1.1) }
+    }
+
+    @State private var respiri = 0
+}
+
+/// Un lampo di luce che attraversa il pulsante una volta sola, da sinistra a destra.
+private struct Riflesso: View {
+    let attivo: Bool
+    let ritardo: Double
+    @Environment(\.accessibilityReduceMotion) private var pocoMovimento
+
+    var body: some View {
+        GeometryReader { spazio in
+            LinearGradient(colors: [.white.opacity(0), .white.opacity(0.55), .white.opacity(0)], startPoint: .leading, endPoint: .trailing)
+                .frame(width: spazio.size.width * 0.3)
+                .rotationEffect(.degrees(20))
+                .offset(x: attivo ? spazio.size.width * 1.2 : -spazio.size.width * 0.5)
+                .animation(pocoMovimento ? nil : .easeInOut(duration: 0.9).delay(ritardo), value: attivo)
+        }
+        .clipShape(Capsule())
+        .allowsHitTesting(false)
+        .accessibilityHidden(true)
+        .opacity(pocoMovimento ? 0 : 1)
     }
 }
 
@@ -59,18 +121,23 @@ extension View {
 private struct Titolo: View {
     let entrato: Bool
     var scala: CGFloat = 1
+    @Environment(\.accessibilityReduceMotion) private var pocoMovimento
 
     var body: some View {
         VStack(spacing: 10) {
             // il nome in San Francisco bold; sotto, la linea con la "v" e i ghirigori ai lati
             Text("Elderly")
-                .font(.system(size: 150 * scala, weight: .regular))
+                .font(.system(size: 150 * scala, weight: .bold))   // grassetto sempre, su ogni iPad
                 .tracking(-3)
                 .foregroundStyle(Tema.testo)
-                .shadow(color: Tema.testo.opacity(0.22), radius: 14, y: 10)
                 .lineLimit(1).minimumScaleFactor(0.4)
+                // entra dall'alto, sfocato e un po' più grande, e si "posa": l'ombra sotto cresce mentre arriva
+                .shadow(color: Tema.testo.opacity(entrato ? 0.22 : 0), radius: entrato ? 14 : 40, y: entrato ? 10 : 40)
+                .blur(radius: entrato || pocoMovimento ? 0 : 14)
+                .scaleEffect(entrato || pocoMovimento ? 1 : 1.25)
+                .offset(y: entrato || pocoMovimento ? 0 : -40)
                 .opacity(entrato ? 1 : 0)
-                .animation(.easeIn(duration: 0.6), value: entrato)
+                .animation(pocoMovimento ? .easeIn(duration: 0.6) : .spring(duration: 0.9, bounce: 0.3), value: entrato)
                 .accessibilityAddTraits(.isHeader)
 
             Ghirigoro()
