@@ -11,6 +11,8 @@ struct ImpostazioniGiocoView<Anteprima: View, Partita: View>: View {
     @ViewBuilder let partita: (Difficolta) -> Partita
 
     @State private var difficolta = Difficolta.facile
+    @State private var gioca = false
+    @State private var partite = 0   // cambia a ogni "Giochiamo!": la partita nasce nuova
 
     var body: some View {
         ZStack {
@@ -49,7 +51,7 @@ struct ImpostazioniGiocoView<Anteprima: View, Partita: View>: View {
                         .accessibilityAddTraits(difficolta == livello ? .isSelected : [])
                     }
                     Spacer(minLength: 0)
-                    NavigationLink(destination: partita(difficolta)) {
+                    Button { partite += 1; gioca = true } label: {
                         PulsantePrincipale(titolo: "Giochiamo!", colore: Tema.verde, altezza: 130)
                     }
                     .buttonStyle(StilePremuto())
@@ -60,5 +62,7 @@ struct ImpostazioniGiocoView<Anteprima: View, Partita: View>: View {
             .scorriSeServe()
         }
         .conIndietro(titolo: titolo)
+        // senza un'identità nuova SwiftUI riusa lo stato della partita di prima (si rientrava a metà)
+        .navigationDestination(isPresented: $gioca) { partita(difficolta).id(partite) }
     }
 }

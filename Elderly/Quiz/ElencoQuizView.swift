@@ -27,6 +27,8 @@ struct ElencoQuizView: View {
 
     @Environment(Sessione.self) private var sessione
     @Query(sort: \QuizCreato.creatoIl) private var creati: [QuizCreato]
+    @State private var scelto: Quiz?
+    @State private var partite = 0   // cambia a ogni "Gioca": la partita nasce nuova
 
     private let pronti = CatalogoQuiz.pronti()
 
@@ -41,7 +43,7 @@ struct ElencoQuizView: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .padding(.bottom, 6)
                 ForEach(Array((pronti + creati.map(\.comeQuiz)).enumerated()), id: \.element.id) { posizione, quiz in
-                    NavigationLink(destination: modo.vista(quiz, sessione.giocatori)) {
+                    Button { partite += 1; scelto = quiz } label: {
                         RigaQuiz(quiz: quiz) {
                             // un pulsante vero, verde come "Giochiamo!": si capisce che qui si comincia
                             Label("Gioca", systemImage: "play.fill")
@@ -61,6 +63,8 @@ struct ElencoQuizView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
             .scorriSeServe()
         }
+        // senza un'identità nuova SwiftUI riusa lo stato della partita di prima (si rientrava a metà)
+        .navigationDestination(item: $scelto) { quiz in modo.vista(quiz, sessione.giocatori).id(partite) }
         .conIndietro(titolo: modo.titolo) { BarraGiocatori(giocatori: sessione.giocatori) }
     }
 }

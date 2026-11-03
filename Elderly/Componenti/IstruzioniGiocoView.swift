@@ -8,6 +8,8 @@ struct IstruzioniGiocoView<Partita: View>: View {
     let voce: String
     @ViewBuilder let partita: () -> Partita
     @Environment(Sessione.self) private var sessione
+    @State private var gioca = false
+    @State private var partite = 0   // cambia a ogni "Giochiamo!": la partita nasce nuova
 
     var body: some View {
         ZStack {
@@ -48,7 +50,7 @@ struct IstruzioniGiocoView<Partita: View>: View {
 
                 VStack {
                     Spacer(minLength: 0)
-                    NavigationLink(destination: partita()) {
+                    Button { partite += 1; gioca = true } label: {
                         PulsantePrincipale(titolo: "Giochiamo!", colore: Tema.verde, altezza: 130)
                     }
                     .buttonStyle(StilePremuto())
@@ -59,5 +61,7 @@ struct IstruzioniGiocoView<Partita: View>: View {
             .scorriSeServe()
         }
         .conIndietro(titolo: titolo) { BarraGiocatori(giocatori: sessione.giocatori) }
+        // senza un'identità nuova SwiftUI riusa lo stato della partita di prima (si rientrava a metà)
+        .navigationDestination(isPresented: $gioca) { partita().id(partite) }
     }
 }
