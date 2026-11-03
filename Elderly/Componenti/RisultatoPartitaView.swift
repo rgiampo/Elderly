@@ -41,6 +41,7 @@ struct RisultatoPartitaView: View {
         .foregroundStyle(Tema.testo)
         .padding(.horizontal, 60)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .scorriSeServe()
         .onAppear {
             AccessibilityNotification.Announcement("\(Frasi.bravi(giocatori)) La partita è finita").post()
             Risultato.salva(gioco: gioco, giocatori: giocatori, punti: punti, squadra: squadra, totale: totale, in: contesto)

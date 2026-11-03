@@ -18,6 +18,7 @@ struct GiochiView: View {
             }
             .padding(.horizontal, 60).padding(.bottom, 40)
             .frame(maxWidth: 1100)
+            .scorriSeServe()
         }
         .conIndietro(titolo: "Scegli") { BarraGiocatori(giocatori: sessione.giocatori) }
     }
@@ -73,6 +74,7 @@ struct GiochiDellaCategoriaView: View {
                 }
             }
             .padding(.horizontal, 60).padding(.bottom, 40)
+            .scorriSeServe()
         }
         .conIndietro(titolo: categoria.titolo) { BarraGiocatori(giocatori: sessione.giocatori) }
     }

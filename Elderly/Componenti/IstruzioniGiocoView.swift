@@ -56,6 +56,7 @@ struct IstruzioniGiocoView<Partita: View>: View {
                 .frame(width: 420)
             }
             .padding(.horizontal, 40).padding(.bottom, 32)
+            .scorriSeServe()
         }
         .conIndietro(titolo: titolo) { BarraGiocatori(giocatori: sessione.giocatori) }
     }

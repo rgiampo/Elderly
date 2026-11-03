@@ -35,6 +35,7 @@ struct ContentView: View {
                     .frame(maxWidth: 640)
                 }
                 .padding(40)
+                .scorriSeServe()
             }
         }
         .task {

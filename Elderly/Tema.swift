@@ -135,6 +135,15 @@ extension View {
             .contentShape(RoundedRectangle(cornerRadius: raggio, style: .continuous))
     }
 
+    /// Se la schermata non ci sta (iPad più piccoli, testo grande) si può scorrere.
+    /// Se ci sta resta identica, ferma e con gli elementi che riempiono lo spazio.
+    func scorriSeServe() -> some View {
+        ViewThatFits(in: .vertical) {
+            self
+            ScrollView { self }.scrollBounceBehavior(.basedOnSize)
+        }
+    }
+
     /// Pulsante in vetro colorato, con il testo bianco o scuro a seconda del colore.
     func vetro(_ colore: Color, in forma: some Shape = Capsule()) -> some View {
         glassEffect(.regular.tint(colore), in: forma)
