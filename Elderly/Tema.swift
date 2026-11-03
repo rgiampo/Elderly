@@ -164,7 +164,7 @@ private struct ScorriSeServe: ViewModifier {
             .scrollIndicators(.visible)
             .scrollIndicatorsFlash(onAppear: true)
             // se si scorre, in fondo c'è spazio libero: l'ultimo elemento non resta sotto il pulsante "Scorri in giù"
-            .contentMargins(.bottom, scorre ? 110 : 0, for: .scrollContent)
+            .contentMargins(.bottom, scorre ? 40 : 0, for: .scrollContent)
             .onScrollGeometryChange(for: Bool.self) { g in
                 g.contentSize.height > g.containerSize.height + 1
             } action: { _, nuovo in
@@ -177,18 +177,30 @@ private struct ScorriSeServe: ViewModifier {
             }
             .clipped()   // il contenuto non passa sotto la barra con il titolo
             // la barra di scorrimento è sottile e sparisce: finché c'è altro sotto lo diciamo chiaramente
+            // finché c'è altro sotto: il bordo in basso sfuma (si vede che le cose continuano) e nell'angolo
+            // c'è una freccia tonda che si muove piano. Non copre più i pulsanti al centro dello schermo.
             .overlay(alignment: .bottom) {
                 if altroSotto {
+                    LinearGradient(colors: [Tema.celeste.opacity(0), Tema.celeste.opacity(0.9)], startPoint: .top, endPoint: .bottom)
+                        .frame(height: 90)
+                        .allowsHitTesting(false)
+                        .transition(.opacity)
+                }
+            }
+            .overlay(alignment: .bottomTrailing) {
+                if altroSotto {
                     Button { withAnimation(.easeInOut(duration: 0.5)) { posizione.scrollTo(edge: .bottom) } } label: {
-                        Label("Scorri in giù, c'è altro", systemImage: "chevron.down")
-                            .testo(DimensioneTesto.normale)
+                        Image(systemName: "chevron.down")
+                            .font(.system(size: 34, weight: .bold))
                             .foregroundStyle(.white)
-                            .padding(.horizontal, 32).frame(minHeight: 72)
-                            .vetro(Tema.blu)
+                            .symbolEffect(.bounce.down, options: .repeat(.periodic(delay: 1.5)))
+                            .frame(width: 76, height: 76)
+                            .vetro(Tema.blu, in: Circle())
                     }
                     .buttonStyle(StilePremuto())
-                    .padding(.bottom, 20)
-                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                    .accessibilityLabel("Scorri in giù, c'è altro")
+                    .padding(.trailing, 28).padding(.bottom, 20)
+                    .transition(.scale.combined(with: .opacity))
                 }
             }
         }
