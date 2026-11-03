@@ -26,6 +26,11 @@ enum Configurazione {
     static let opzioniProverbiFacile = 2, opzioniProverbiMedio = 3, opzioniProverbiDifficile = 3
     static let pausaProverbio = 3.0   // secondi per leggere il proverbio completo
 
+    /// Puzzle: in quanti pezzi si divide la foto (colonne × righe) e quante foto per partita.
+    static let puzzleFacile = (colonne: 2, righe: 2), puzzleMedio = (colonne: 3, righe: 2), puzzleDifficile = (colonne: 3, righe: 3)
+    static let fotoPerPartitaPuzzle = 3
+    static let pausaPuzzle = 2.5   // secondi per guardare la foto intera, prima della prossima
+
     /// "Ricorda le parole": quante foto si guardano per ogni difficoltà (poi se ne mostrano altrettante nuove).
     static let paroleFacile = 5, paroleMedio = 7, paroleDifficile = 10
     static let pausaParole = 1.8   // secondi per vedere se la risposta era giusta
@@ -33,6 +38,7 @@ enum Configurazione {
     /// "Simboli e numeri": quanti simboli per partita e secondi di pausa dopo la risposta giusta.
     static let turniSimboli = 8
     static let pausaSimboli = 1.2
+    static let chiaveSimboliVisibile = 4.0   // secondi in cui si rivede la chiave, a richiesta
 
     /// "Cosa manca?": quante foto si guardano e quante partite per ogni difficoltà.
     static let fotoCosaMancaFacile = 3, fotoCosaMancaMedio = 4, fotoCosaMancaDifficile = 6

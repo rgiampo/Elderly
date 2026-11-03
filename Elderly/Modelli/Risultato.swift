@@ -31,6 +31,7 @@ final class Risultato {
         case .coppie: "Coppie trovate"
         case .cosaManca: "Foto riconosciute al primo colpo"
         case .proverbi: "Proverbi giusti al primo colpo"
+        case .puzzle: "Puzzle completati"
         case .animali: "Animali detti"
         case .simboli: "Giusti al primo colpo"
         case .parole: "Foto riconosciute"

@@ -7,11 +7,11 @@ struct SimboliIngressoView: View {
     var body: some View {
         IstruzioniGiocoView(
             titolo: "Simboli e numeri",
-            descrizione: "Ogni forma ha il suo numero. Trova quello giusto.",
+            descrizione: "Ricorda quale numero ha ogni forma.",
             passi: [
-                "In alto c'è la chiave: ogni forma ha un numero",
-                "Guarda la forma grande al centro",
-                "Tocca il suo numero",
+                "Guarda la chiave e ricorda i numeri delle forme",
+                "Poi la chiave si nasconde",
+                "Per ogni forma grande tocca il suo numero, a memoria",
             ],
             voce: Istruzioni.simboli,
             partita: { SimboliView(giocatori: sessione.giocatori) })
@@ -41,7 +41,7 @@ struct SimboliView: View {
             }
         }
         .conIndietro {
-            if !modello.finito {
+            if !modello.finito && !modello.staMemorizzando {
                 BarraGiocatori(giocatori: modello.giocatori)
                 Text("\(modello.indice + 1) di \(modello.totale)")
                     .testo(DimensioneTesto.medio)
@@ -54,9 +54,52 @@ struct SimboliView: View {
         .onDisappear { modello.ferma() }
     }
 
-    private var partita: some View {
+    @ViewBuilder private var partita: some View {
+        if modello.staMemorizzando { memorizza } else { gioco }
+    }
+
+    /// Prima di giocare: la chiave grande al centro, da guardare con calma.
+    private var memorizza: some View {
+        VStack(spacing: 32) {
+            Text("Ricorda il numero di ogni forma")
+                .testo(DimensioneTesto.titolo)
+                .foregroundStyle(Tema.testo)
+                .lineLimit(1).minimumScaleFactor(0.5)
+                .accessibilityAddTraits(.isHeader)
+            chiave(lato: 130)
+                .frame(maxHeight: .infinity)
+            HStack(spacing: 24) {
+                BottoneVoce(testo: Istruzioni.simboli, etichetta: "Ascolta", altezza: 96)
+                Button { withAnimation(.spring(duration: 0.4)) { modello.hoMemorizzato() } } label: {
+                    PulsantePrincipale(titolo: "Ho memorizzato, giochiamo!", colore: Tema.verde, altezza: 110)
+                }
+                .buttonStyle(StilePremuto())
+            }
+        }
+        .padding(.horizontal, 40).padding(.bottom, 24)
+    }
+
+    private var gioco: some View {
         VStack(spacing: 20) {
-            chiave
+            // la chiave è nascosta: si rivede per qualche secondo solo se serve
+            ZStack {
+                if modello.chiaveVisibile {
+                    chiave(lato: 70).transition(.opacity)
+                } else {
+                    Button { withAnimation { modello.rivediChiave() } } label: {
+                        Label("Non ricordi? Rivedi i numeri", systemImage: "eye")
+                            .testo(DimensioneTesto.medio)
+                            .foregroundStyle(Tema.testo)
+                            .lineLimit(1).minimumScaleFactor(0.5)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .scheda()
+                    }
+                    .buttonStyle(StilePremuto())
+                    .transition(.opacity)
+                }
+            }
+            .frame(height: 140)
+            .animation(.easeInOut(duration: 0.3), value: modello.chiaveVisibile)
 
             // la forma da riconoscere, grande
             modello.corrente.sagoma
@@ -84,12 +127,12 @@ struct SimboliView: View {
         .padding(.horizontal, 40).padding(.bottom, 24)
     }
 
-    /// La chiave: sopra ogni forma il suo numero, sempre visibile.
-    private var chiave: some View {
+    /// La chiave: sotto ogni forma il suo numero.
+    private func chiave(lato: CGFloat) -> some View {
         HStack(spacing: 16) {
             ForEach(Array(modello.chiave.enumerated()), id: \.element) { posizione, forma in
                 VStack(spacing: 6) {
-                    forma.sagoma.fill(forma.colore).aspectRatio(1, contentMode: .fit).frame(height: 70)
+                    forma.sagoma.fill(forma.colore).aspectRatio(1, contentMode: .fit).frame(height: lato)
                     Text("\(posizione + 1)").testo(DimensioneTesto.grande).foregroundStyle(Tema.testo)
                 }
                 .frame(maxWidth: .infinity)

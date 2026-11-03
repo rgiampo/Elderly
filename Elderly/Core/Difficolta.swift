@@ -71,6 +71,15 @@ enum Difficolta: CaseIterable, Identifiable {
         }
     }
 
+    /// In quanti pezzi si divide la foto del puzzle.
+    var grigliaPuzzle: (colonne: Int, righe: Int) {
+        switch self {
+        case .facile: Configurazione.puzzleFacile
+        case .medio: Configurazione.puzzleMedio
+        case .difficile, .maestro: Configurazione.puzzleDifficile
+        }
+    }
+
     /// Quante foto si guardano in "Ricorda le parole".
     var numeroParole: Int {
         switch self {

@@ -2,13 +2,13 @@ import SwiftUI
 
 /// L'elenco dei giochi. Per aggiungerne uno: un nuovo caso qui, e la sua schermata.
 enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva nei risultati: non rinominarlo
-    case forme, coppie, cosaManca, proverbi, animali, simboli, parole, quiz, sìNo
+    case forme, coppie, cosaManca, proverbi, puzzle, animali, simboli, parole, quiz, sìNo
 
     var id: Self { self }
 
     var categoria: Categoria {
         switch self {
-        case .forme, .coppie, .cosaManca, .proverbi: .memoria
+        case .forme, .coppie, .cosaManca, .proverbi, .puzzle: .memoria
         case .animali, .simboli, .parole: .mente
         case .quiz, .sìNo: .foto
         }
@@ -20,6 +20,7 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
         case .coppie: "Trova le coppie"
         case .cosaManca: "Cosa manca?"
         case .proverbi: "Proverbi"
+        case .puzzle: "Puzzle"
         case .animali: "Nomina gli animali"
         case .simboli: "Simboli e numeri"
         case .parole: "Ricorda le parole"
@@ -34,6 +35,7 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
         case .coppie: "Trova le foto uguali"
         case .cosaManca: "Quale foto è sparita?"
         case .proverbi: "Completa il proverbio"
+        case .puzzle: "Rimetti a posto la foto"
         case .animali: "Quanti ne conosci?"
         case .simboli: "Trova il numero giusto"
         case .parole: "Quali foto hai visto?"
@@ -48,6 +50,7 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
         case .coppie: CoppieImpostazioniView()
         case .cosaManca: CosaMancaImpostazioniView()
         case .proverbi: ProverbiImpostazioniView()
+        case .puzzle: PuzzleImpostazioniView()
         case .animali: AnimaliIngressoView()
         case .simboli: SimboliIngressoView()
         case .parole: ParoleImpostazioniView()
@@ -92,6 +95,11 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
             }
             .padding(24)
             .sfondoAnteprima()
+        case .puzzle:
+            AnteprimaPuzzle(foto: .risorsa("foto_gatto"), colonne: 3, righe: 2)
+                .aspectRatio(Configurazione.formaFoto, contentMode: .fit)
+                .padding(20)
+                .sfondoAnteprima()
         case .animali:
             HStack(spacing: 14) {
                 ForEach(["🐶", "🐱", "🐴", "🦁"], id: \.self) { Text($0).font(.system(size: 80)) }
