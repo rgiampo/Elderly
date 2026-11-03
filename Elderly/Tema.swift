@@ -148,14 +148,17 @@ extension View {
 
 private struct ScorriSeServe: ViewModifier {
     func body(content: Content) -> some View {
-        ViewThatFits(in: .vertical) {
-            content
+        GeometryReader { schermo in
+            // alto almeno quanto lo schermo: se ci sta lo riempie come prima, se è più lungo si scorre.
             // largo quanto lo schermo, così la barra di scorrimento sta sul bordo destro e non accanto al contenuto
-            ScrollView { content.frame(maxWidth: .infinity) }
-                .scrollBounceBehavior(.basedOnSize)
-                .scrollIndicators(.visible)
-                .scrollIndicatorsFlash(onAppear: true)   // appena si apre si vede la barra: si capisce che si può scorrere
-                .clipped()   // il contenuto non passa sotto la barra con il titolo
+            ScrollView {
+                content.frame(width: schermo.size.width, height: nil)
+                    .frame(minHeight: schermo.size.height)
+            }
+            .scrollBounceBehavior(.basedOnSize)
+            .scrollIndicators(.visible)
+            .scrollIndicatorsFlash(onAppear: true)   // appena si apre si vede la barra, se si può scorrere
+            .clipped()   // il contenuto non passa sotto la barra con il titolo
         }
     }
 }
