@@ -32,9 +32,10 @@ struct SimboliView: View {
             SfondoCielo()
             if modello.finito {
                 RisultatoPartitaView(
+                    gioco: .simboli,
                     giocatori: modello.giocatori, punti: [],
                     sommario: "Giusti al primo colpo: \(modello.punti) su \(modello.totale)",
-                    ricomincia: modello.ricomincia, esci: { chiudi() })
+                    totale: modello.totale, squadra: modello.punti, ricomincia: modello.ricomincia, esci: { chiudi() })
             } else {
                 partita
             }

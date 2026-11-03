@@ -14,6 +14,7 @@ struct CoppieGiocoView: View {
             SfondoCielo()
             if modello.finito {
                 RisultatoPartitaView(
+                    gioco: .coppie,
                     giocatori: modello.giocatori, punti: modello.punti,
                     sommario: modello.giocatori.count > 1
                         ? "Insieme avete trovato \(modello.puntiTotali) coppie"

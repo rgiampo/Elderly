@@ -36,9 +36,10 @@ struct AnimaliView: View {
             SfondoCielo()
             if modello.finito {
                 RisultatoPartitaView(
+                    gioco: .animali,
                     giocatori: modello.giocatori, punti: [],
                     sommario: "Animali detti: \(modello.totale)",
-                    ricomincia: modello.ricomincia, esci: { chiudi() })
+                    squadra: modello.totale, ricomincia: modello.ricomincia, esci: { chiudi() })
             } else {
                 partita
             }

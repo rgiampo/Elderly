@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// La prima schermata: il logo, il titolo e tre pulsanti enormi. All'apertura tutto entra in sequenza.
+/// La prima schermata: il logo, il titolo e quattro pulsanti enormi. All'apertura tutto entra in sequenza.
 struct ContentView: View {
     @State private var entrato = false
 
@@ -22,10 +22,14 @@ struct ContentView: View {
                             PulsanteSecondario(titolo: "Utenti", altezza: 110)
                         }
                         .appari(entrato, ritardo: 1.2)
+                        NavigationLink(destination: RisultatiView()) {
+                            PulsanteSecondario(titolo: "Risultati", altezza: 110)
+                        }
+                        .appari(entrato, ritardo: 1.4)
                         NavigationLink(destination: OpzioniView()) {
                             PulsanteSecondario(titolo: "Opzioni", altezza: 110)
                         }
-                        .appari(entrato, ritardo: 1.4)
+                        .appari(entrato, ritardo: 1.6)
                     }
                     .buttonStyle(StilePremuto())
                     .frame(maxWidth: 640)

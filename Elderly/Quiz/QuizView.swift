@@ -15,11 +15,12 @@ struct QuizView: View {
             SfondoCielo()
             if modello.finito {
                 RisultatoPartitaView(
+                    gioco: .quiz,
                     giocatori: modello.giocatori, punti: modello.punti,
                     sommario: modello.giocatori.count > 1
                         ? "Insieme: \(modello.puntiTotali) risposte giuste su \(modello.totale)"
                         : "Risposte giuste al primo colpo: \(modello.puntiTotali) su \(modello.totale)",
-                    ricomincia: modello.ricomincia, esci: { chiudi() })
+                    totale: modello.totale, ricomincia: modello.ricomincia, esci: { chiudi() })
             } else {
                 partita
             }

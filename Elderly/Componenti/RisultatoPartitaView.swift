@@ -1,12 +1,17 @@
 import SwiftUI
+import SwiftData
 
 /// Fine partita, uguale per tutti i giochi: si festeggia insieme, senza classifiche.
 struct RisultatoPartitaView: View {
+    let gioco: Gioco
     let giocatori: [Partecipante]
     let punti: [Int]
     let sommario: String          // per esempio "Insieme: 5 risposte giuste su 6"
+    var totale: Int? = nil        // il massimo possibile, salvato nei risultati
+    var squadra: Int? = nil       // punteggio unico di tutti, nei giochi senza turni
     let ricomincia: () -> Void
     let esci: () -> Void
+    @Environment(\.modelContext) private var contesto
 
     private var plurale: Bool { giocatori.count > 1 }
 
@@ -36,6 +41,9 @@ struct RisultatoPartitaView: View {
         .foregroundStyle(Tema.testo)
         .padding(.horizontal, 60)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onAppear { AccessibilityNotification.Announcement("\(Frasi.bravi(giocatori)) La partita è finita").post() }
+        .onAppear {
+            AccessibilityNotification.Announcement("\(Frasi.bravi(giocatori)) La partita è finita").post()
+            Risultato.salva(gioco: gioco, giocatori: giocatori, punti: punti, squadra: squadra, totale: totale, in: contesto)
+        }
     }
 }

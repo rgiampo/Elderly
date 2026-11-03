@@ -21,6 +21,8 @@ final class Utente {
     /// Salvato come testo (opzionale): le persone create prima di questa scelta restano valide.
     var genereSalvato: String?
     @Attribute(.externalStorage) var foto: Data?
+    /// Le partite finite. Se si elimina la persona, spariscono anche i suoi risultati.
+    @Relationship(deleteRule: .cascade, inverse: \Risultato.utente) var risultati: [Risultato] = []
 
     var genere: Genere? {
         get { genereSalvato.flatMap(Genere.init(rawValue:)) }

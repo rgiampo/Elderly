@@ -14,11 +14,12 @@ struct ProverbiView: View {
             SfondoCielo()
             if modello.finito {
                 RisultatoPartitaView(
+                    gioco: .proverbi,
                     giocatori: modello.giocatori, punti: modello.punti,
                     sommario: modello.giocatori.count > 1
                         ? "Insieme: \(modello.puntiTotali) proverbi giusti su \(modello.totale)"
                         : "Proverbi giusti al primo colpo: \(modello.puntiTotali) su \(modello.totale)",
-                    ricomincia: modello.ricomincia, esci: { chiudi() })
+                    totale: modello.totale, ricomincia: modello.ricomincia, esci: { chiudi() })
             } else {
                 partita
             }

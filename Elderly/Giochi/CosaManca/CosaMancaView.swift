@@ -14,11 +14,12 @@ struct CosaMancaView: View {
             SfondoCielo()
             if modello.finito {
                 RisultatoPartitaView(
+                    gioco: .cosaManca,
                     giocatori: modello.giocatori, punti: modello.punti,
                     sommario: modello.giocatori.count > 1
                         ? "Insieme: \(modello.puntiTotali) foto riconosciute su \(modello.totale)"
                         : "Foto riconosciute al primo colpo: \(modello.puntiTotali) su \(modello.totale)",
-                    ricomincia: modello.ricomincia, esci: { chiudi() })
+                    totale: modello.totale, ricomincia: modello.ricomincia, esci: { chiudi() })
             } else {
                 partita
             }

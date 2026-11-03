@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// L'elenco dei giochi. Per aggiungerne uno: un nuovo caso qui, e la sua schermata.
-enum Gioco: CaseIterable, Identifiable {
+enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva nei risultati: non rinominarlo
     case forme, coppie, cosaManca, proverbi, animali, simboli, quiz, sìNo
 
     var id: Self { self }

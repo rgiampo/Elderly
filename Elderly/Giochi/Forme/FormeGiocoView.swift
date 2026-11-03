@@ -1,9 +1,11 @@
 import SwiftUI
+import SwiftData
 
 /// "Suona le forme", tutto in una schermata: sopra chi gioca, al centro le forme grandi, sotto il messaggio.
 struct FormeGiocoView: View {
     @State private var partita: PartitaModello
     @Environment(\.dismiss) private var chiudi
+    @Environment(\.modelContext) private var contesto
 
     private let giocatori: [Partecipante]
 
@@ -50,7 +52,13 @@ struct FormeGiocoView: View {
         .sensoryFeedback(trigger: partita.fase) { _, nuova in nuova == .festa ? .success : nil }
         .onChange(of: partita.messaggio) { _, nuovo in AccessibilityNotification.Announcement(nuovo).post() }
         .onAppear { partita.inizia() }
-        .onDisappear { partita.ferma() }
+        .onDisappear {
+            partita.ferma()
+            // il gioco non ha una fine: si salva la sequenza più lunga quando si esce
+            if partita.record > 0 {
+                Risultato.salva(gioco: .forme, giocatori: giocatori, punti: [], squadra: partita.record, in: contesto)
+            }
+        }
     }
 }
 

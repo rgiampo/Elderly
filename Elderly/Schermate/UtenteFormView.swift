@@ -39,7 +39,18 @@ struct UtenteFormView: View {
                 if conosceNascita { sceltaData } else { ContatoreGrande(valore: $eta, intervallo: 40...120) }
             }
 
-            if utente != nil {
+            if let utente {
+                NavigationLink(destination: RisultatiUtenteView(utente: utente)) {
+                    Label("Vedi i risultati", systemImage: "star.fill")
+                        .testo(DimensioneTesto.medio)
+                        .foregroundStyle(.white)
+                        .lineLimit(1).minimumScaleFactor(0.5)
+                        .frame(maxWidth: .infinity, minHeight: MisureModulo.altezzaControllo)
+                        .vetro(Tema.blu)
+                }
+                .buttonStyle(StilePremuto())
+                .padding(.top, 20)
+
                 Button { chiediEliminazione = true } label: {
                     Text("Elimina questa persona")
                         .testo(DimensioneTesto.medio)

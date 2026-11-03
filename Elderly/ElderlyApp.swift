@@ -15,7 +15,7 @@ struct ElderlyApp: App {
                 .persistentSystemOverlays(.hidden)           // nasconde anche la barra in basso
                 .tint(Tema.blu)
         }
-        // crea e gestisce il database: persone e quiz creati
-        .modelContainer(for: [Utente.self, QuizCreato.self])
+        // crea e gestisce il database: persone, quiz creati e risultati delle partite
+        .modelContainer(for: [Utente.self, QuizCreato.self, Risultato.self])
     }
 }
