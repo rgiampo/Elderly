@@ -36,10 +36,10 @@ struct OpzioniView: View {
                 } footer: {
                     VStack(alignment: .leading, spacing: 8) {
                         if Voce.èVoceDiQualitàInstallata {
-                            Label("Sul tablet c'è una voce di qualità alta: la usiamo noi.", systemImage: "checkmark.seal.fill")
+                            Label("Sull'iPad c'è una voce di qualità alta: la usiamo noi.", systemImage: "checkmark.seal.fill")
                                 .foregroundStyle(Tema.verde)
                         } else {
-                            Label("Sul tablet c'è solo la voce di base, che suona più robotica.", systemImage: "exclamationmark.triangle.fill")
+                            Label("Sull'iPad c'è solo la voce di base, che suona più robotica.", systemImage: "exclamationmark.triangle.fill")
                                 .foregroundStyle(Tema.rosso)
                             Text("Per una voce molto più naturale: Impostazioni, Accessibilità, Contenuto letto, Voci, Italiano, poi scarica una voce \"Migliorata\" o \"Premium\" (per esempio Alice o Luca). Torna qui e viene usata da sola.")
                         }
