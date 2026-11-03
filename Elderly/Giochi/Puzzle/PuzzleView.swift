@@ -6,7 +6,7 @@ struct PuzzleImpostazioniView: View {
     var body: some View {
         ImpostazioniGiocoView(
             titolo: "Puzzle",
-            descrizione: "Trascina i pezzi sulla foto, ognuno nel suo posto.",
+            descrizione: "Metti i pezzi sulla foto, ognuno nel suo posto: trascinali, oppure tocca il pezzo e poi il posto.",
             istruzioni: Istruzioni.puzzle,
             anteprima: { difficolta in
                 let griglia = difficolta.grigliaPuzzle
@@ -92,6 +92,18 @@ struct PuzzleView: View {
                 .offset(x: m.origineTavola.x, y: m.origineTavola.y)
                 .animation(.easeInOut(duration: 0.5), value: modello.completato)
                 .accessibilityHidden(true)
+            // toccare la foto, con un pezzo scelto, lo mette nel posto toccato
+            Color.clear
+                .frame(width: m.tavola.width, height: m.tavola.height)
+                .contentShape(Rectangle())
+                // il tocco va letto prima di spostare la zona: dopo, le coordinate includerebbero lo spostamento
+                .onTapGesture { punto in
+                    let colonna = min(m.colonne - 1, max(0, Int(punto.x / m.cella.width)))
+                    let riga = min(m.righe - 1, max(0, Int(punto.y / m.cella.height)))
+                    withAnimation(.spring(duration: 0.4, bounce: 0.25)) { modello.tocca(posto: riga * m.colonne + colonna) }
+                }
+                .offset(x: m.origineTavola.x, y: m.origineTavola.y)
+                .accessibilityHidden(true)
             if !modello.completato {
                 ForEach(0..<modello.numeroPezzi, id: \.self) { n in
                     SagomaPezzo(lati: modello.lati[n], margine: m.margine)
@@ -113,18 +125,21 @@ struct PuzzleView: View {
 
     private func pezzo(_ n: Int, _ m: Misure) -> some View {
         let posato = modello.posati.contains(n)
-        let inMano = preso == n
+        let scelto = modello.scelto == n
+        let inMano = preso == n || scelto
         let casella = modello.vassoio.firstIndex(of: n) ?? 0
         let centro = posato ? m.centroSulTavolo(n) : m.centroNelVassoio(casella)
-        let scala = posato || inMano ? 1 : m.scalaVassoio
+        let scala = posato || preso == n ? 1 : (scelto ? m.scalaVassoio * 1.12 : m.scalaVassoio)
 
         return PezzoPuzzle(foto: modello.fotoCorrente, numero: n, lati: modello.lati[n], misure: m, inMano: inMano, posato: posato,
-                           completato: modello.completato)
+                           scelto: scelto, completato: modello.completato)
             .scaleEffect(scala)
-            .position(x: centro.x + (inMano ? spostamento.width : 0), y: centro.y + (inMano ? spostamento.height : 0))
+            .position(x: centro.x + (preso == n ? spostamento.width : 0), y: centro.y + (preso == n ? spostamento.height : 0))
             .animation(inMano ? nil : .spring(duration: 0.4, bounce: 0.25), value: posato)
             .animation(.spring(duration: 0.3), value: inMano)
-            .gesture(posato ? nil : DragGesture(minimumDistance: 0)
+            .onTapGesture { withAnimation(.spring(duration: 0.3)) { modello.scegli(n) } }
+            // basta spostare il dito di poco per trascinare; un tocco senza muoversi sceglie il pezzo
+            .gesture(posato ? nil : DragGesture(minimumDistance: 8)
                 .onChanged { valore in
                     if preso != n { preso = n }
                     spostamento = valore.translation
@@ -205,6 +220,7 @@ private struct PezzoPuzzle: View {
     let misure: Misure
     let inMano: Bool
     let posato: Bool
+    let scelto: Bool
     let completato: Bool
 
     var body: some View {
@@ -219,7 +235,8 @@ private struct PezzoPuzzle: View {
                     .offset(x: -origine.x, y: -origine.y)
             }
             .clipShape(sagoma)
-            .overlay { sagoma.stroke(.white, lineWidth: completato ? 0 : 3) }
+            // il pezzo scelto con un tocco ha il bordo blu spesso (non solo il colore: è anche più grande e sollevato)
+            .overlay { sagoma.stroke(scelto ? Tema.blu : .white, lineWidth: completato ? 0 : (scelto ? 9 : 3)) }
             .contentShape(sagoma)
             .shadow(color: Tema.testo.opacity(posato ? 0 : (inMano ? 0.5 : 0.3)), radius: inMano ? 18 : 6, y: inMano ? 10 : 3)
     }

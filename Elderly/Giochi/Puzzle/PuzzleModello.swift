@@ -18,6 +18,9 @@ final class PuzzleModello {
     /// L'ordine dei pezzi nel vassoio: `vassoio[n]` è il pezzo nella casella n.
     private(set) var vassoio: [Int] = []
     private(set) var completato = false
+    /// Il pezzo toccato nel vassoio, in attesa di toccare il posto dove va (in alternativa al trascinare).
+    private(set) var scelto: Int?
+    private(set) var postoSbagliato = false   // per un attimo, dopo aver toccato il posto sbagliato
     private var attesa: Task<Void, Never>?
 
     init(giocatori: [Partecipante], difficolta: Difficolta) {
@@ -33,12 +36,33 @@ final class PuzzleModello {
 
     var messaggio: String {
         if completato { return "Bravi, è completo!" }
-        return posati.isEmpty ? "Trascina i pezzi sulla foto" : "Pezzi al loro posto: \(posati.count) su \(numeroPezzi)"
+        if postoSbagliato { return "Non va lì, prova un altro posto" }
+        if scelto != nil { return "Ora tocca il posto sulla foto" }
+        return posati.isEmpty ? "Trascina un pezzo, oppure toccalo" : "Pezzi al loro posto: \(posati.count) su \(numeroPezzi)"
+    }
+
+    /// Tocca un pezzo del vassoio: lo sceglie, oppure lo lascia se era già scelto.
+    func scegli(_ pezzo: Int) {
+        guard !completato, !posati.contains(pezzo) else { return }
+        scelto = scelto == pezzo ? nil : pezzo
+        postoSbagliato = false
+    }
+
+    /// Tocca un posto sulla foto con un pezzo scelto: se è il suo si incastra, se no resta scelto e si riprova.
+    func tocca(posto: Int) {
+        guard let pezzo = scelto, !posati.contains(posto) else { return }
+        if posto == pezzo {
+            posa(pezzo)
+        } else {
+            postoSbagliato = true
+        }
     }
 
     /// Il pezzo è arrivato al suo posto: resta lì.
     func posa(_ pezzo: Int) {
         guard !completato, !posati.contains(pezzo) else { return }
+        if scelto == pezzo { scelto = nil }
+        postoSbagliato = false
         posati.insert(pezzo)
         Sintetizzatore.condiviso.suona(Forma.cuore.frequenza, volume: 0.5)
         if posati.count == numeroPezzi { finisci() }
@@ -68,6 +92,8 @@ final class PuzzleModello {
     private func prepara() {
         completato = false
         posati = []
+        scelto = nil
+        postoSbagliato = false
         var nuovi = Array(repeating: Lati(), count: numeroPezzi)
         for riga in 0..<righe {
             for colonna in 0..<colonne {
