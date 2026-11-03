@@ -147,6 +147,9 @@ extension View {
 }
 
 private struct ScorriSeServe: ViewModifier {
+    @State private var altroSotto = false
+    @State private var posizione = ScrollPosition(edge: .top)
+
     func body(content: Content) -> some View {
         GeometryReader { schermo in
             // alto almeno quanto lo schermo: se ci sta lo riempie come prima, se è più lungo si scorre.
@@ -155,10 +158,31 @@ private struct ScorriSeServe: ViewModifier {
                 content.frame(width: schermo.size.width, height: nil)
                     .frame(minHeight: schermo.size.height)
             }
+            .scrollPosition($posizione)
             .scrollBounceBehavior(.basedOnSize)
             .scrollIndicators(.visible)
-            .scrollIndicatorsFlash(onAppear: true)   // appena si apre si vede la barra, se si può scorrere
+            .scrollIndicatorsFlash(onAppear: true)
+            .onScrollGeometryChange(for: Bool.self) { g in
+                g.visibleRect.maxY < g.contentSize.height - 24   // c'è ancora contenuto sotto il bordo dello schermo
+            } action: { _, nuovo in
+                withAnimation(.easeInOut(duration: 0.3)) { altroSotto = nuovo }
+            }
             .clipped()   // il contenuto non passa sotto la barra con il titolo
+            // la barra di scorrimento è sottile e sparisce: finché c'è altro sotto lo diciamo chiaramente
+            .overlay(alignment: .bottom) {
+                if altroSotto {
+                    Button { withAnimation(.easeInOut(duration: 0.5)) { posizione.scrollTo(edge: .bottom) } } label: {
+                        Label("Scorri in giù, c'è altro", systemImage: "chevron.down")
+                            .testo(DimensioneTesto.normale)
+                            .foregroundStyle(.white)
+                            .padding(.horizontal, 32).frame(minHeight: 72)
+                            .vetro(Tema.blu)
+                    }
+                    .buttonStyle(StilePremuto())
+                    .padding(.bottom, 20)
+                    .transition(.move(edge: .bottom).combined(with: .opacity))
+                }
+            }
         }
     }
 }
