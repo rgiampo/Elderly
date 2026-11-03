@@ -6,6 +6,10 @@ final class Sintetizzatore {
 
     private let frequenzaCampionamento = 44100.0
     private var voci: [Double: [AVAudioPlayer]] = [:]
+    /// Cresce a ogni cambio di scena: le note già programmate della scena di prima non suonano più.
+    private var scena = 0
+    /// Subito dopo il cambio di scena, per un attimo, nessuna nuova nota: quelle in corso sfumano in silenzio.
+    private var silenzioFino = Date.distantPast
 
     private init() {
         try? AVAudioSession.sharedInstance().setCategory(.playback)
@@ -15,6 +19,7 @@ final class Sintetizzatore {
     func suona(_ frequenza: Double, volume: Float = 0.8) {
         // L'interruttore "Suoni" è nelle Opzioni; di base è acceso.
         guard UserDefaults.standard.object(forKey: "suoniAttivi") as? Bool ?? true else { return }
+        guard Date.now >= silenzioFino else { return }
         if voci[frequenza] == nil {
             // due lettori per nota: la stessa nota può risuonare mentre l'eco della precedente svanisce
             let dati = wav(per: frequenza)
@@ -30,20 +35,33 @@ final class Sintetizzatore {
         lettore.play()
     }
 
-    /// Cambio scena: i suoni in corso sfumano in 0,2 secondi e poi si fermano.
+    /// Cambio scena (si esce da un gioco): tutti i suoni sfumano dolcemente in mezzo secondo e poi si fermano.
+    /// Le note programmate della scena di prima vengono scartate, così dopo non si sente più niente.
     func fermaConDissolvenza() {
-        let inCorso = (voci.values.flatMap { $0 } + []).filter(\.isPlaying)
-        for lettore in inCorso { lettore.setVolume(0, fadeDuration: 0.2) }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+        scena += 1
+        let durata = 0.5
+        silenzioFino = .now + durata
+        let inCorso = voci.values.flatMap { $0 }.filter(\.isPlaying)
+        for lettore in inCorso { lettore.setVolume(0, fadeDuration: durata) }
+        DispatchQueue.main.asyncAfter(deadline: .now() + durata + 0.05) {
             // se nel frattempo la nuova scena ha rifatto suonare questo lettore, il volume non è più 0
             for lettore in inCorso where lettore.volume == 0 { lettore.stop() }
+        }
+    }
+
+    /// Suona una nota fra poco, solo se nel frattempo non si è cambiata scena.
+    private func suonaDopo(_ secondi: Double, _ frequenza: Double, volume: Float) {
+        let questa = scena
+        DispatchQueue.main.asyncAfter(deadline: .now() + secondi) {
+            guard self.scena == questa else { return }
+            self.suona(frequenza, volume: volume)
         }
     }
 
     /// Tre note ascendenti (do, mi, sol) per festeggiare una risposta giusta.
     func accordoDiFesta() {
         for (n, nota) in [523.25, 659.25, 783.99].enumerated() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + Double(n) * 0.12) { self.suona(nota, volume: 0.6) }
+            suonaDopo(Double(n) * 0.12, nota, volume: 0.6)
         }
     }
 
@@ -71,7 +89,7 @@ final class Sintetizzatore {
     /// Il suono dello sbaglio: due note di marimba che scendono ("uh-oh" gentile), le stesse note morbide del gioco, così non spaventa.
     func buzz() {
         suona(329.63, volume: 0.6)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.22) { self.suona(261.63, volume: 0.6) }
+        suonaDopo(0.22, 261.63, volume: 0.6)
     }
 
     private func datiWav(da onda: [Float]) -> Data {

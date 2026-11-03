@@ -79,13 +79,13 @@ final class PartitaModello {
         posizione = 0
         messaggio = "Guarda bene…"
         esegui {
-            try? await Task.sleep(for: .seconds(1))
+            try await Task.sleep(for: .seconds(1))
             // nelle melodie le note si susseguono più svelte, come in una canzone
             let passo = await self.melodiaCorrente != nil ? 0.6 : 1.0
             for forma in await self.sequenza {
                 await self.accendi(forma, durata: passo * 0.7)
                 await AccessibilityNotification.Announcement(forma.nome).post()
-                try? await Task.sleep(for: .seconds(passo))
+                try await Task.sleep(for: .seconds(passo))
             }
             await self.iniziaTurno()
         }
@@ -102,20 +102,20 @@ final class PartitaModello {
         let finita = melodiaCorrente.map { sequenza.count >= $0.note.count } ?? false
         messaggio = finita ? "Hai suonato \(titoloMelodia ?? "la melodia")!" : Frasi.bravi([giocatori[giocatoreCorrente]])
         esegui {
-            try? await Task.sleep(for: .seconds(0.4))
+            try await Task.sleep(for: .seconds(0.4))
             if finita {
                 // la melodia intera, senza pause, come una canzone
                 for forma in await self.sequenza {
                     await self.accendi(forma, durata: 0.35)
-                    try? await Task.sleep(for: .seconds(0.42))
+                    try await Task.sleep(for: .seconds(0.42))
                 }
-                try? await Task.sleep(for: .seconds(1.5))
+                try await Task.sleep(for: .seconds(1.5))
             } else {
                 for forma in await self.forme {
                     await self.suona(forma, volume: 0.6)
-                    try? await Task.sleep(for: .seconds(0.12))
+                    try await Task.sleep(for: .seconds(0.12))
                 }
-                try? await Task.sleep(for: .seconds(1.8))
+                try await Task.sleep(for: .seconds(1.8))
             }
             await self.passaAlProssimo(lunghezzaNuova: finita ? self.lunghezzaIniziale : await self.lunghezza + self.passo, nuovaMelodia: finita)
         }
@@ -126,7 +126,7 @@ final class PartitaModello {
         fase = .guarda
         messaggio = "Riproviamo insieme"
         esegui {
-            try? await Task.sleep(for: .seconds(1.5))
+            try await Task.sleep(for: .seconds(1.5))
             await self.passaAlProssimo(lunghezzaNuova: await self.lunghezza, nuovaMelodia: false, stessaSequenza: true)
         }
     }
@@ -143,9 +143,11 @@ final class PartitaModello {
 
     // MARK: - Aiuti
 
-    private func esegui(_ lavoro: @escaping @Sendable () async -> Void) {
+    /// Le pause dentro `lavoro` sono `try await`: quando il compito viene annullato (si esce dal gioco)
+    /// la prima pausa lancia l'errore e il resto non suona più. Con `try?` il ciclo andava avanti a suonare.
+    private func esegui(_ lavoro: @escaping @Sendable () async throws -> Void) {
         compito?.cancel()
-        compito = Task { await lavoro() }
+        compito = Task { try? await lavoro() }
     }
 
     private func suona(_ forma: Forma, volume: Float = 0.8) {
