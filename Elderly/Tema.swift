@@ -6,21 +6,22 @@ import SwiftUI
 ///   cielo (sfondo)  ·  azzurro (pulsanti vivaci)  ·  azzurro scuro (azione principale)  ·  notte (rari accenti)
 /// Due colori "di significato", usati solo quando serve dire sì/no o giusto/sbagliato:
 ///   verde (sì, giusto)  ·  rosso (no)
-/// Più il petrolio, un azzurro-verde scuro, per il secondo giocatore. Il testo è marrone scuro quasi nero.
+/// Il secondo giocatore è invece caldo (pesca e arancio): così il cambio di turno si vede subito, anche da lontano. Il testo è marrone scuro quasi nero.
 /// Tutti i colori con il testo bianco sopra hanno un contrasto di almeno 5:1.
 enum Tema {
     // — Sfondi
     static let celeste = Color(hex: 0xA9D8FF)         // cielo: sfondo di tutte le schermate (con il testo scuro: 11:1)
     static let celesteChiaro = Color(hex: 0xC4E6FF)   // cielo più chiaro: sfumature e riquadri
-    static let celesteMenta = Color(hex: 0xA6E3D4)       // sfondo del secondo giocatore: verde acqua chiaro (testo scuro sopra: 12:1)
-    static let celesteMentaChiaro = Color(hex: 0xC2EFE3)
+    static let pesca = Color(hex: 0xFFCF9E)              // sfondo del secondo giocatore: pesca, l'opposto del celeste (testo scuro sopra: 12:1)
+    static let pescaChiaro = Color(hex: 0xFFE2C2)
     static let carta = Color.white                    // schede e campi
 
     // — Azzurri (testo bianco sopra)
     static let azzurro = Color(hex: 0x1C6FBF)         // pulsanti vivaci, per esempio "Ascolta" (5,2:1)
     static let blu = Color(hex: 0x0A4595)             // azione principale e primo giocatore (9,1:1)
     static let notte = Color(hex: 0x072B5B)           // accenti rari e molto scuri (13,9:1)
-    static let petrolio = Color(hex: 0x0B6E86)        // secondo giocatore: azzurro-verde scuro (5,9:1)
+    static let petrolio = Color(hex: 0x0B6E86)        // accenti: azzurro-verde scuro (5,9:1)
+    static let arancio = Color(hex: 0xB3500C)         // secondo giocatore: arancio scuro (testo bianco sopra: 5,3:1)
 
     // — Colori di significato
     static let verde = Color(hex: 0x0B7A54)           // sì, giusto (5,3:1)
@@ -30,8 +31,8 @@ enum Tema {
     static let testo = Color(hex: 0x2A1A12)
     static let testoSecondario = Color(hex: 0x4B3326)
 
-    /// Il colore di ogni giocatore: il primo azzurro scuro, il secondo petrolio.
-    static func coloreGiocatore(_ posizione: Int) -> Color { posizione == 0 ? blu : petrolio }
+    /// Il colore di ogni giocatore: il primo azzurro scuro, il secondo arancio scuro.
+    static func coloreGiocatore(_ posizione: Int) -> Color { posizione == 0 ? blu : arancio }
 
     static let raggio: CGFloat = 40   // angoli di schede e pulsanti (morbidi, come nelle app Apple)
 }
@@ -67,8 +68,8 @@ struct SfondoCielo: View {
     @Environment(\.colorSchemeContrast) private var contrasto
     @Environment(\.turnoGioco) private var turno
 
-    private var base: Color { turno == 1 ? Tema.celesteMenta : Tema.celeste }
-    private var chiaro: Color { turno == 1 ? Tema.celesteMentaChiaro : Tema.celesteChiaro }
+    private var base: Color { turno == 1 ? Tema.pesca : Tema.celeste }
+    private var chiaro: Color { turno == 1 ? Tema.pescaChiaro : Tema.celesteChiaro }
 
     var body: some View {
         Group {
@@ -204,5 +205,27 @@ private struct ScorriSeServe: ViewModifier {
                 }
             }
         }
+    }
+}
+
+extension View {
+    /// Entra da sotto, crescendo un poco, con un piccolo rimbalzo: uno dopo l'altro secondo `posizione`.
+    /// Con "Riduci movimento" attivo compare solo a dissolvenza.
+    func entrataAScaletta(_ posizione: Int) -> some View { modifier(EntrataAScaletta(posizione: posizione)) }
+}
+
+private struct EntrataAScaletta: ViewModifier {
+    let posizione: Int
+    @State private var dentro = false
+    @Environment(\.accessibilityReduceMotion) private var pocoMovimento
+
+    func body(content: Content) -> some View {
+        content
+            .opacity(dentro ? 1 : 0)
+            .scaleEffect(dentro || pocoMovimento ? 1 : 0.9)
+            .offset(y: dentro || pocoMovimento ? 0 : 40)
+            .onAppear {
+                withAnimation(.spring(duration: 0.55, bounce: 0.35).delay(0.08 * Double(posizione))) { dentro = true }
+            }
     }
 }

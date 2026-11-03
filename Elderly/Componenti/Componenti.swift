@@ -97,7 +97,7 @@ private struct SfondoBarra: ViewModifier {
     @Environment(\.turnoGioco) private var turno
 
     func body(content: Content) -> some View {
-        let colore = turno == 1 ? Tema.celesteMenta : Tema.celeste
+        let colore = turno == 1 ? Tema.pesca : Tema.celeste
         content.background {
             LinearGradient(stops: [.init(color: colore, location: 0), .init(color: colore, location: 0.72),
                                    .init(color: colore.opacity(0), location: 1)],
