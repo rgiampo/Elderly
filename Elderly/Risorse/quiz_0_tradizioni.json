@@ -347,7 +347,7 @@
    ]
   },
   {
-   "testo": "Quale formaggio si mangia a colazione al sud?",
+   "testo": "Quale formaggio si mette nella pastiera?",
    "risposte": [
     {
      "testo": "Ricotta",
@@ -365,8 +365,8 @@
    "testo": "Cosa si mangia a Pasquetta?",
    "risposte": [
     {
-     "testo": "Gelato",
-     "foto": "foto_gelato",
+     "testo": "Panettone",
+     "foto": "foto_panettone",
      "giusta": false
     },
     {
@@ -395,8 +395,8 @@
    "testo": "Cosa si porta in gita a Pasquetta?",
    "risposte": [
     {
-     "testo": "Hamburger",
-     "foto": "foto_hamburger",
+     "testo": "Struffoli",
+     "foto": "foto_struffoli",
      "giusta": false
     },
     {
@@ -767,11 +767,11 @@
    ]
   },
   {
-   "testo": "Quale dolce si mangia a Natale a Milano?",
+   "testo": "Quale dolce si mangia a Natale a Napoli?",
    "risposte": [
     {
-     "testo": "Panettone",
-     "foto": "foto_panettone",
+     "testo": "Struffoli",
+     "foto": "foto_struffoli",
      "giusta": true
     },
     {
@@ -1157,16 +1157,16 @@
    ]
   },
   {
-   "testo": "Cosa si mangia a Ferragosto al mare?",
+   "testo": "Cosa si mangia d'estate per rinfrescarsi?",
    "risposte": [
     {
-     "testo": "Polpo",
-     "foto": "foto_polpo",
+     "testo": "Gelato",
+     "foto": "foto_gelato",
      "giusta": true
     },
     {
-     "testo": "Hamburger",
-     "foto": "foto_hamburger",
+     "testo": "Ragù",
+     "foto": "foto_ragu",
      "giusta": false
     }
    ]

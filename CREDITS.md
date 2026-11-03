@@ -11,7 +11,7 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | foto_limone | Citrus x limon, lemon on tree, Coín, Spain.jpg | Bj.schoenmakers | CC0 | https://commons.wikimedia.org/wiki/File:Citrus_x_limon,_lemon_on_tree,_Co%C3%ADn,_Spain.jpg |
 | foto_cappuccino | Cappuccino - Wai Kika Moo Kau 2024-01-13.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Cappuccino_-_Wai_Kika_Moo_Kau_2024-01-13.jpg |
 | foto_pane | Loaf Of Bread.jpg | congerdesign | CC0 | https://commons.wikimedia.org/wiki/File:Loaf_Of_Bread.jpg |
-| foto_melanzana | Round eggplant (1).jpg | Fumikas Sagisavas | CC0 | https://commons.wikimedia.org/wiki/File:Round_eggplant_(1).jpg |
+| foto_melanzana | Purple eggplants 2017 A.jpg | Fructibus | CC0 | https://commons.wikimedia.org/wiki/File:Purple_eggplants_2017_A.jpg |
 | foto_arancia | Oranges a fruit.jpg | safaritravelplus | CC0 | https://commons.wikimedia.org/wiki/File:Oranges_a_fruit.jpg |
 | foto_uva | Grapes 1.jpg | Couleur | CC0 | https://commons.wikimedia.org/wiki/File:Grapes_1.jpg |
 | foto_marinara | Pizza marinara (Napoli).jpg | Ruthven | CC0 | https://commons.wikimedia.org/wiki/File:Pizza_marinara_(Napoli).jpg |
@@ -62,14 +62,14 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | foto_margherita | Daisy Flower Variety.jpg | Alabama Extension | CC0 | https://commons.wikimedia.org/wiki/File:Daisy_Flower_Variety.jpg |
 | foto_mare | Komos site baie Crète.jpg | Jebulon | CC0 | https://commons.wikimedia.org/wiki/File:Komos_site_baie_Cr%C3%A8te.jpg |
 | foto_montagna | Snow-capped mountain range.jpg | Mshuang2 | CC0 | https://commons.wikimedia.org/wiki/File:Snow-capped_mountain_range.jpg |
-| foto_mucca | A Cow Grazing Nonchalantly in a Field of Wildflowers.jpg | Bánhmỳchảo | CC0 | https://commons.wikimedia.org/wiki/File:A_Cow_Grazing_Nonchalantly_in_a_Field_of_Wildflowers.jpg |
+| foto_mucca | Black and white cow.jpg | dcoop27 | CC0 | https://commons.wikimedia.org/wiki/File:Black_and_white_cow.jpg |
 | foto_maiale | Sus scrofa domesticus, miniature pig, juvenile.jpg | Johan Spaedtke | CC0 | https://commons.wikimedia.org/wiki/File:Sus_scrofa_domesticus,_miniature_pig,_juvenile.jpg |
 | foto_pesce | Carassius auratus 197778318.jpg | Jackson Kusack | CC0 | https://commons.wikimedia.org/wiki/File:Carassius_auratus_197778318.jpg |
 | foto_cipolla | Red onions - San Francisco, CA.jpg | Daderot | CC0 | https://commons.wikimedia.org/wiki/File:Red_onions_-_San_Francisco,_CA.jpg |
 | foto_candela | Candle-Vela.jpg | ViajeroExtraviado | CC0 | https://commons.wikimedia.org/wiki/File:Candle-Vela.jpg |
 | foto_lampada | Light bulb on Sagano SK200-1.jpg | Hahifuheho | CC0 | https://commons.wikimedia.org/wiki/File:Light_bulb_on_Sagano_SK200-1.jpg |
 | foto_posate | Fork, knife and spoon made of bamboo on a plate.jpg | Cupofjoy | CC0 | https://commons.wikimedia.org/wiki/File:Fork,_knife_and_spoon_made_of_bamboo_on_a_plate.jpg |
-| foto_ragu | Spaghetti bolognese - Enzo's 2026-04-21.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Spaghetti_bolognese_-_Enzo%27s_2026-04-21.jpg |
+| foto_ragu | Beef and pork ragu with fettucine and parmigiano reggiano cheese.jpg | Lechonero | CC0 | https://commons.wikimedia.org/wiki/File:Beef_and_pork_ragu_with_fettucine_and_parmigiano_reggiano_cheese.jpg |
 | foto_hamburger | Hamburger tasty.jpg | Skitterphoto | CC0 | https://commons.wikimedia.org/wiki/File:Hamburger_tasty.jpg |
 | foto_panettone | Panettone en avril 2022.JPG | Benoît Prieur | CC0 | https://commons.wikimedia.org/wiki/File:Panettone_en_avril_2022.JPG |
 | foto_presepe | Belén Napolitano - Neapolitan Nativity Scene - Palau de Cevelló - Valencia Spain - 2025.jpg | MCAE Consulting | CC0 | https://commons.wikimedia.org/wiki/File:Bel%C3%A9n_Napolitano_-_Neapolitan_Nativity_Scene_-_Palau_de_Cevell%C3%B3_-_Valencia_Spain_-_2025.jpg |
@@ -82,12 +82,12 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 
 Tutte le foto sono ritagliate al centro in formato 16:9. Prima di aggiungere una foto nuova: controllare la licenza nella pagina del file e aggiungere qui una riga.
 | foto_mozzarella | Mozzarella cheese (1).jpg | Jon Sullivan | Public domain | https://commons.wikimedia.org/wiki/File:Mozzarella_cheese_(1).jpg |
-| foto_frittata | Frittata 1.jpg | Edward (autore non indicato) | Public domain | https://commons.wikimedia.org/wiki/File:Frittata_1.jpg |
-| foto_taralli | Tarallini2.JPG | Haragayato | Public domain | https://commons.wikimedia.org/wiki/File:Tarallini2.JPG |
+| foto_frittata | Frittata - Bam's Kitchen 2024-04-02.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Frittata_-_Bam's_Kitchen_2024-04-02.jpg |
+| foto_taralli | Taralli Dolci ai Semi di Anice.jpg | DinaBenedettoFerrandina | CC0 | https://commons.wikimedia.org/wiki/File:Taralli_Dolci_ai_Semi_di_Anice.jpg |
 | foto_lupini | Ciotola di lupini.jpg | Lupino | CC0 | https://commons.wikimedia.org/wiki/File:Ciotola_di_lupini.jpg |
 | foto_frutta_secca | Pecans, hazelnuts, walnuts, almonds, Brazil nuts on a table with logs 2.jpg | Baileynorwood | CC0 | https://commons.wikimedia.org/wiki/File:Pecans,_hazelnuts,_walnuts,_almonds,_Brazil_nuts_on_a_table_with_logs_2.jpg |
 | foto_noci | Pecans, hazelnuts, walnuts, almonds, Brazil nuts on a table with logs 3.jpg | Baileynorwood | CC0 | https://commons.wikimedia.org/wiki/File:Pecans,_hazelnuts,_walnuts,_almonds,_Brazil_nuts_on_a_table_with_logs_3.jpg |
-| foto_uova_pasqua | Chocolate Easter Eggs April 14 2024.jpg | ChadPerez49 | CC0 | https://commons.wikimedia.org/wiki/File:Chocolate_Easter_Eggs_April_14_2024.jpg |
+| foto_uova_pasqua | Giant Golden Easter Egg sealed Chocolate with Pattens.jpg | Brassluff | CC0 | https://commons.wikimedia.org/wiki/File:Giant_Golden_Easter_Egg_sealed_Chocolate_with_Pattens.jpg |
 | foto_moka | Moka Pot (55013301353).jpg | ajay_suresh | CC0 | https://commons.wikimedia.org/wiki/File:Moka_Pot_(55013301353).jpg |
 | foto_ricotta | Ricotta fresca (Wiki Loves Sicilia).jpg | 8w9d | CC0 | https://commons.wikimedia.org/wiki/File:Ricotta_fresca_(Wiki_Loves_Sicilia).jpg |
 | foto_salumi | Italian traditional salami.jpg | Fumikas Sagisavas | CC0 | https://commons.wikimedia.org/wiki/File:Italian_traditional_salami.jpg |
