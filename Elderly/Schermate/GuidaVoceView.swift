@@ -34,7 +34,11 @@ struct GuidaVoceView: View {
     var body: some View {
         ZStack {
             SfondoCielo()
-            HStack(alignment: .top, spacing: 40) {
+            GeometryReader { schermo in
+            // la colonna a destra è disegnata a misura fissa (600 × 688) e poi rimpicciolita tutta insieme
+            // sugli schermi piccoli (iPad mini): l'iPad finto resta proporzionato e i pulsanti stanno sotto
+            let s = min(1, schermo.size.height / 688, schermo.size.width * 0.5 / 600)
+            HStack(alignment: .top, spacing: 40 * s) {
                 // a sinistra la spiegazione grande
                 VStack(alignment: .leading, spacing: 24) {
                     Text("Passo \(passo + 1) di \(passi.count)")
@@ -78,6 +82,10 @@ struct GuidaVoceView: View {
                     .buttonStyle(StilePremuto())
                     .frame(width: 600)
                 }
+                .frame(width: 600, height: 688)
+                .scaleEffect(s, anchor: .topTrailing)
+                .frame(width: 600 * s, height: 688 * s, alignment: .topTrailing)
+            }
             }
             .padding(.horizontal, 40).padding(.bottom, 32)
         }
