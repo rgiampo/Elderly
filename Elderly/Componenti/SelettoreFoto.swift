@@ -6,6 +6,7 @@ import PhotosUI
 struct SelettoreFoto<Etichetta: View>: View {
     @Binding var foto: Data?
     var latoMassimo: CGFloat = Configurazione.latoFotoSalvata
+    var sagomaPersona = false      // nella fotocamera mostra dove mettere il viso (foto delle persone)
     @ViewBuilder let etichetta: Etichetta
 
     @State private var menuAperto = false
@@ -18,14 +19,14 @@ struct SelettoreFoto<Etichetta: View>: View {
             .buttonStyle(.plain)
             .confirmationDialog("Aggiungi una foto", isPresented: $menuAperto, titleVisibility: .visible) {
                 if Fotocamera.èDisponibile {
-                    Button("Scatta una foto") { fotocameraAperta = true }
+                    Button("Scatta una foto con la fotocamera") { fotocameraAperta = true }
                 }
-                Button("Scegli dalla libreria") { libreriaAperta = true }
+                Button("Scegli una foto già salvata") { libreriaAperta = true }
                 Button("Annulla", role: .cancel) {}
             }
             .photosPicker(isPresented: $libreriaAperta, selection: $scelta, matching: .images)
             .fullScreenCover(isPresented: $fotocameraAperta) {
-                Fotocamera { dati in foto = Immagini.jpegRidotto(da: dati, latoMassimo: latoMassimo) }
+                Fotocamera(sagomaPersona: sagomaPersona) { dati in foto = Immagini.jpegRidotto(da: dati, latoMassimo: latoMassimo) }
                     .ignoresSafeArea()
             }
             .onChange(of: scelta) { _, nuova in

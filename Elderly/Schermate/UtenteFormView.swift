@@ -83,7 +83,7 @@ struct UtenteFormView: View {
     private var sezioneFoto: some View {
         HStack(spacing: 28) {
             Avatar(utente: anteprima, dimensione: 130)
-            SelettoreFoto(foto: $foto, latoMassimo: Configurazione.latoFotoProfilo) {
+            SelettoreFoto(foto: $foto, latoMassimo: Configurazione.latoFotoProfilo, sagomaPersona: true) {
                 Text(foto == nil ? "Aggiungi una foto" : "Cambia la foto")
                     .testo(DimensioneTesto.medio)
                     .foregroundStyle(Tema.testo)
