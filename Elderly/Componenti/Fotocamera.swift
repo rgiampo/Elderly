@@ -50,16 +50,21 @@ struct Fotocamera: UIViewControllerRepresentable {
 private struct GuidaScatto: View {
     var body: some View {
         GeometryReader { schermo in
-            let altezza = min(schermo.size.height * 0.62, schermo.size.width * 0.7)
-            VStack(spacing: 20) {
+            // grande: occupa quasi tutta l'altezza, così si vede bene dove mettere il viso
+            let altezza = min(schermo.size.height * 0.72, schermo.size.width * 0.8)
+            VStack(spacing: 16) {
                 Text("Metti il viso dentro la sagoma")
                     .font(.system(size: 34, weight: .bold))
                     .foregroundStyle(.white)
                     .padding(.horizontal, 28).padding(.vertical, 14)
                     .background(.black.opacity(0.55), in: Capsule())
                 SagomaPersona()
-                    .stroke(.white, style: StrokeStyle(lineWidth: 6, lineCap: .round, dash: [18, 12]))
-                    .shadow(color: .black.opacity(0.5), radius: 6)
+                    .fill(.white.opacity(0.15))
+                    .overlay {
+                        SagomaPersona()
+                            .stroke(.white, style: StrokeStyle(lineWidth: 10, lineCap: .round, dash: [24, 14]))
+                    }
+                    .shadow(color: .black.opacity(0.6), radius: 8)
                     .frame(width: altezza * 0.85, height: altezza)
                 Text("Tieni l'iPad fermo, poi tocca il pulsante bianco")
                     .font(.system(size: 26, weight: .bold))
@@ -83,6 +88,7 @@ private struct SagomaPersona: Shape {
         p.addCurve(to: CGPoint(x: r.maxX, y: r.maxY),
                    control1: CGPoint(x: r.minX + r.width * 0.05, y: r.minY + r.height * 0.62),
                    control2: CGPoint(x: r.maxX - r.width * 0.05, y: r.minY + r.height * 0.62))
+        p.closeSubpath()   // chiusa lungo il bordo in basso, così si può anche riempire
         return p
     }
 }
