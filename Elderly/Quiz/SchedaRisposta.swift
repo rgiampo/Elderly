@@ -15,8 +15,8 @@ struct SchedaRisposta: View {
             .overlay { if stato == .sbagliata { Tema.rosso.opacity(0.5).allowsHitTesting(false) } }
             .clipShape(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous).stroke(stato == .sbagliata ? Tema.rosso : Tema.verde, lineWidth: stato == .normale ? 0 : 10))
+            .coloreDelTurno(attivo: stato == .normale)
             .shadow(color: Tema.testo.opacity(0.2), radius: 12, y: 6)
-
             .scaleEffect(stato == .giusta ? 1.04 : 1)
             .animation(.spring(duration: 0.45, bounce: 0.55), value: stato)
             // sbagliata: oscilla piano a destra e sinistra, come chi fa "no" con la testa

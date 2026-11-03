@@ -86,7 +86,7 @@ struct SfondoCielo: View {
         .ignoresSafeArea()
         .animation(.easeInOut(duration: 0.7), value: turno)   // il cambio di colore è una dissolvenza lenta
         .accessibilityHidden(true)
-        .onDisappear { Sintetizzatore.condiviso.fermaConDissolvenza() }   // cambio scena: i suoni sfumano in 0,2 s
+        .onDisappear { Sintetizzatore.condiviso.fermaConDissolvenza() }   // cambio scena: i suoni sfumano in mezzo secondo
     }
 
     private func punti(_ t: TimeInterval) -> [SIMD2<Float>] {
@@ -227,5 +227,28 @@ private struct EntrataAScaletta: ViewModifier {
             .onAppear {
                 withAnimation(.spring(duration: 0.55, bounce: 0.35).delay(0.08 * Double(posizione))) { dentro = true }
             }
+    }
+}
+
+extension View {
+    /// Con due persone in partita la scheda prende il colore di chi gioca: un bordo spesso e una velatura leggera.
+    /// Da soli resta com'è. Si mette su schede, foto e risposte, così tutto lo schermo dice di chi è il turno.
+    func coloreDelTurno(raggio: CGFloat = Tema.raggio, attivo: Bool = true) -> some View {
+        modifier(ColoreDelTurno(raggio: raggio, attivo: attivo))
+    }
+}
+
+private struct ColoreDelTurno: ViewModifier {
+    let raggio: CGFloat
+    let attivo: Bool
+    @Environment(\.turnoGioco) private var turno
+
+    func body(content: Content) -> some View {
+        let colore = turno.map(Tema.coloreGiocatore)
+        let forma = RoundedRectangle(cornerRadius: raggio, style: .continuous)
+        content
+            .overlay { if attivo, let colore { forma.fill(colore.opacity(0.08)).allowsHitTesting(false) } }
+            .overlay { if attivo, let colore { forma.strokeBorder(colore, lineWidth: 6).allowsHitTesting(false) } }
+            .animation(.easeInOut(duration: 0.5), value: turno)
     }
 }

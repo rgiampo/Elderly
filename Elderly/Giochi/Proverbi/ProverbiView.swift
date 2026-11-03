@@ -45,7 +45,7 @@ struct ProverbiView: View {
         VStack(spacing: 20) {
             // l'inizio del proverbio, e dopo la risposta giusta il proverbio intero
             VStack(spacing: 8) {
-                Text(modello.trovata ? modello.proverbio.completo : modello.proverbio.inizio + " …")
+                Text(modello.trovata ? modello.proverbio.completo : modello.proverbio.inizio + "\u{00A0}…")   // spazio che non va a capo: i puntini restano attaccati all'ultima parola
                     .testo(DimensioneTesto.enorme)
                     .foregroundStyle(Tema.testo)
                     .multilineTextAlignment(.center)
@@ -56,6 +56,7 @@ struct ProverbiView: View {
             .frame(maxWidth: .infinity, minHeight: 190)
             .padding(.horizontal, 32).padding(.vertical, 20)
             .scheda()
+            .coloreDelTurno()
             .animation(.easeInOut(duration: 0.4), value: modello.trovata)
 
             VStack(spacing: 16) {
@@ -97,6 +98,7 @@ private struct SchedaOpzione: View {
             .padding(.horizontal, 32)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(stato == .giusta ? Tema.verde : (stato == .sbagliata ? Tema.rosso : Tema.carta), in: RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
+            .coloreDelTurno(attivo: stato == .normale)
             .shadow(color: Tema.testo.opacity(0.12), radius: 10, y: 5)
             .overlay(alignment: .trailing) {
                 if stato != .normale {

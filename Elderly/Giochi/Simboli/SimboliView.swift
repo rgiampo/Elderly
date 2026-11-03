@@ -84,7 +84,7 @@ struct SimboliView: View {
             // la chiave è nascosta: si rivede per qualche secondo solo se serve
             ZStack {
                 if modello.chiaveVisibile {
-                    chiave(lato: 70).transition(.opacity)
+                    chiave(lato: 48).transition(.opacity)   // forme più piccole: la chiave sta tutta nella fascia
                 } else {
                     Button { withAnimation { modello.rivediChiave() } } label: {
                         Label("Non ricordi? Rivedi i numeri", systemImage: "eye")
@@ -134,7 +134,7 @@ struct SimboliView: View {
             ForEach(Array(modello.chiave.enumerated()), id: \.element) { posizione, forma in
                 VStack(spacing: 6) {
                     forma.sagoma.fill(forma.colore).aspectRatio(1, contentMode: .fit).frame(height: lato)
-                    Text("\(posizione + 1)").testo(DimensioneTesto.grande).foregroundStyle(Tema.testo)
+                    Text("\(posizione + 1)").testo(lato < 60 ? DimensioneTesto.medio : DimensioneTesto.grande).foregroundStyle(Tema.testo)
                 }
                 .frame(maxWidth: .infinity)
                 .accessibilityElement(children: .ignore)

@@ -54,6 +54,7 @@ struct SiNoView: View {
                     FotoView(foto: modello.quesito.foto)
                         .frame(width: larghezza, height: larghezza / Configurazione.formaFoto)
                         .clipShape(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
+                        .coloreDelTurno()
                         .shadow(color: Tema.testo.opacity(0.2), radius: 12, y: 6)
                         .id(modello.quesito.id)
                         .transition(.opacity)

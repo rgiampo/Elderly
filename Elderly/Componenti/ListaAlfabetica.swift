@@ -35,7 +35,8 @@ struct ListaAlfabetica<Riga: View>: View {
                     .padding(.horizontal, 12)   // margine per il bordo di selezione e le ombre: la lista che scorre taglia ai lati
                 }
 
-                if gruppi.count > 1 { barra(proxy) }
+                // la barra delle lettere serve solo quando le persone sono tante: con poche si vedono già tutte
+                if utenti.count > 8, gruppi.count > 1 { barra(proxy) }
             }
         }
     }
