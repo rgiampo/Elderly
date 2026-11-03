@@ -31,11 +31,10 @@ final class QuizModello {
     var risposte: [RispostaQuiz] { domanda.risposte }
     var puntiTotali: Int { punti.reduce(0, +) }
 
-    /// Il testo che la voce legge: di chi è il turno, la domanda e le risposte.
+    /// Il testo che la voce legge: di chi è il turno e la domanda (le risposte sono foto, si guardano).
     var testoParlato: String {
-        var testo = giocatori.count > 1 && giocatori[turno].haNome ? "Tocca a \(giocatori[turno].nome). " : ""
-        testo += domanda.testo + " Le risposte sono: " + risposte.map(\.testo).joined(separator: ", oppure ")
-        return testo
+        let chi = giocatori.count > 1 && giocatori[turno].haNome ? "Tocca a \(giocatori[turno].nome). " : ""
+        return chi + domanda.testo
     }
 
     func scegli(_ risposta: RispostaQuiz) {

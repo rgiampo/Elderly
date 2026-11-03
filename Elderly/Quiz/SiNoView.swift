@@ -47,7 +47,7 @@ struct SiNoView: View {
     private var partita: some View {
         GeometryReader { spazio in
             let colonna: CGFloat = 380, distanza: CGFloat = 28
-            let larghezza = min(spazio.size.width - colonna - distanza, spazio.size.height * 0.62 * Configurazione.formaFoto)
+            let larghezza = min(spazio.size.width - colonna - distanza, spazio.size.height * 0.56 * Configurazione.formaFoto)
 
             HStack(alignment: .top, spacing: distanza) {
                 VStack(spacing: 16) {
@@ -60,7 +60,7 @@ struct SiNoView: View {
                         .accessibilityHidden(true)
 
                     Text("Nella foto c'è:")
-                        .testo(DimensioneTesto.titolo)
+                        .testo(DimensioneTesto.medio)
                         .foregroundStyle(Tema.testoSecondario)
                     Text(modello.quesito.nome)
                         .testo(DimensioneTesto.enorme)
