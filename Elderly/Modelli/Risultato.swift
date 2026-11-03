@@ -37,6 +37,7 @@ final class Risultato {
         case .parole: "Foto riconosciute"
         case .quiz: "Risposte giuste al primo colpo"
         case .sìNo: "Risposte giuste"
+        case .figure: "Figure riconosciute al primo colpo"
         case nil: "Punti"
         }
     }

@@ -2,14 +2,14 @@ import SwiftUI
 
 /// L'elenco dei giochi. Per aggiungerne uno: un nuovo caso qui, e la sua schermata.
 enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva nei risultati: non rinominarlo
-    case forme, coppie, cosaManca, proverbi, puzzle, animali, simboli, parole, quiz, sìNo
+    case forme, coppie, cosaManca, proverbi, puzzle, animali, simboli, parole, quiz, sìNo, figure
 
     var id: Self { self }
 
     var categoria: Categoria {
         switch self {
         case .forme, .coppie, .cosaManca, .proverbi, .puzzle: .memoria
-        case .animali, .simboli, .parole: .mente
+        case .animali, .simboli, .parole, .figure: .mente   // i giochi presi dai test (CERAD): allenano la memoria
         case .quiz, .sìNo: .foto
         }
     }
@@ -26,6 +26,7 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
         case .parole: "Ricorda le parole"
         case .quiz: "Scegli la foto"
         case .sìNo: "Sì o no"
+        case .figure: "Ricorda le figure"
         }
     }
 
@@ -41,6 +42,7 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
         case .parole: "Quali foto hai visto?"
         case .quiz: "Leggi la domanda, tocca la foto giusta"
         case .sìNo: "Guarda la foto, rispondi sì o no"
+        case .figure: "Quale figura hai visto?"
         }
     }
 
@@ -56,6 +58,7 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
         case .parole: ParoleImpostazioniView()
         case .quiz: ElencoQuizView(modo: .foto)
         case .sìNo: ElencoQuizView(modo: .sìNo)
+        case .figure: FigureImpostazioniView()
         }
     }
 
@@ -136,6 +139,14 @@ enum Gioco: String, CaseIterable, Identifiable {   // il nome del caso si salva 
                 Tema.verde.overlay(Image(systemName: "checkmark").font(.system(size: 120, weight: .heavy)).foregroundStyle(.white))
                 Tema.rosso.overlay(Image(systemName: "xmark").font(.system(size: 120, weight: .heavy)).foregroundStyle(.white))
             }
+        case .figure:
+            HStack(spacing: 24) {
+                ForEach([Figura.cerchio, .rombo, .cubo], id: \.self) { figura in
+                    figura.disegno(spessore: 8)
+                }
+            }
+            .padding(28)
+            .sfondoAnteprima()
         }
     }
 

@@ -125,4 +125,6 @@ enum Istruzioni {
         + "Devi dire quale foto è sparita."
     static let sìNo = "Guarda la foto e rispondi alla domanda. "
         + "Tocca il cerchio verde per dire sì, il triangolo rosso per dire no."
+    static let figure = "Guarda bene la figura disegnata, poi tocca il pulsante verde. "
+        + "Vedrai altre figure simili: tocca quella che hai visto. Non c'è fretta."
 }

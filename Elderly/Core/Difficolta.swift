@@ -89,5 +89,14 @@ enum Difficolta: CaseIterable, Identifiable {
         }
     }
 
+    /// Tra quante figure scegliere in "Ricorda le figure" (la vista più le simili).
+    var scelteFigure: Int {
+        switch self {
+        case .facile: Configurazione.scelteFigureFacile
+        case .medio: Configurazione.scelteFigureMedio
+        case .difficile, .maestro: Configurazione.scelteFigureDifficile
+        }
+    }
+
     var forme: [Forma] { Array(Forma.allCases.prefix(numeroForme)) }
 }

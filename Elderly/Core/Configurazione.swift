@@ -44,6 +44,10 @@ enum Configurazione {
     static let fotoCosaMancaFacile = 3, fotoCosaMancaMedio = 4, fotoCosaMancaDifficile = 6
     static let turniCosaManca = 5
 
+    /// "Ricorda le figure": quante figure per partita e tra quante scegliere, per ogni difficoltà.
+    static let figurePerPartita = 6
+    static let scelteFigureFacile = 2, scelteFigureMedio = 3, scelteFigureDifficile = 4
+
     /// Secondi in cui due carte diverse restano scoperte, prima di girarsi di nuovo.
     static let pausaCarteDiverse = 1.6
 
