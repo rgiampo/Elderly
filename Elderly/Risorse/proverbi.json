@@ -270,5 +270,229 @@
    "raccoglie grano",
    "raccoglie fiori"
   ]
+ },
+ {
+  "inizio": "Cu 'e chiacchiere",
+  "fine": "nun se fanno 'e frittelle",
+  "sbagliate": [
+   "se fa 'o ragù",
+   "se fa notte"
+  ]
+ },
+ {
+  "inizio": "Chi nasce tunno",
+  "fine": "nun pò murì quadrato",
+  "sbagliate": [
+   "more cuntento",
+   "campa cient'anne"
+  ]
+ },
+ {
+  "inizio": "'O pesce fète",
+  "fine": "d' 'a capa",
+  "sbagliate": [
+   "d' 'a coda",
+   "quanno chiove"
+  ]
+ },
+ {
+  "inizio": "Addò ce sta gusto",
+  "fine": "nun ce sta perdenza",
+  "sbagliate": [
+   "ce sta 'o mare",
+   "ce sta 'a festa"
+  ]
+ },
+ {
+  "inizio": "Pure 'e pulce",
+  "fine": "tènono 'a tosse",
+  "sbagliate": [
+   "vanno a mare",
+   "cantano 'a sera"
+  ]
+ },
+ {
+  "inizio": "Chi va pe' chisti mare",
+  "fine": "chisti pisce piglia",
+  "sbagliate": [
+   "se perde 'a strada",
+   "torna 'a casa"
+  ]
+ },
+ {
+  "inizio": "Nun c'è sabato",
+  "fine": "senza sole",
+  "sbagliate": [
+   "senza ragù",
+   "senza pioggia"
+  ]
+ },
+ {
+  "inizio": "Quanno 'o diavulo t'accarezza",
+  "fine": "vò ll'anema",
+  "sbagliate": [
+   "te porta 'o ccafè",
+   "vò fa pace"
+  ]
+ },
+ {
+  "inizio": "'A lengua nun tene ossa",
+  "fine": "ma rompe ll'osse",
+  "sbagliate": [
+   "e nun parla",
+   "ma fa male 'e diente"
+  ]
+ },
+ {
+  "inizio": "Chi tene 'a mamma",
+  "fine": "nun chiagne",
+  "sbagliate": [
+   "nun dorme",
+   "mangia buono"
+  ]
+ },
+ {
+  "inizio": "Tre so' 'e putiente:",
+  "fine": "'o Papa, 'o Re e chi nun tene niente",
+  "sbagliate": [
+   "'o sole, 'a luna e 'o mare",
+   "'o pate, 'a mamma e 'o figlio"
+  ]
+ },
+ {
+  "inizio": "Chi la fa",
+  "fine": "l'aspetti",
+  "sbagliate": [
+   "la mangia",
+   "la vende"
+  ]
+ },
+ {
+  "inizio": "Paese che vai",
+  "fine": "usanza che trovi",
+  "sbagliate": [
+   "amico che perdi",
+   "casa che lasci"
+  ]
+ },
+ {
+  "inizio": "Chi tace",
+  "fine": "acconsente",
+  "sbagliate": [
+   "dorme bene",
+   "non sbaglia mai"
+  ]
+ },
+ {
+  "inizio": "Il buon giorno",
+  "fine": "si vede dal mattino",
+  "sbagliate": [
+   "si dice alla sera",
+   "porta la pioggia"
+  ]
+ },
+ {
+  "inizio": "Moglie e buoi",
+  "fine": "dei paesi tuoi",
+  "sbagliate": [
+   "in campagna",
+   "al mercato"
+  ]
+ },
+ {
+  "inizio": "Chi troppo vuole",
+  "fine": "nulla stringe",
+  "sbagliate": [
+   "tutto mangia",
+   "presto si stanca"
+  ]
+ },
+ {
+  "inizio": "Occhio non vede,",
+  "fine": "cuore non duole",
+  "sbagliate": [
+   "mano non tocca",
+   "bocca non parla"
+  ]
+ },
+ {
+  "inizio": "Chi cerca",
+  "fine": "trova",
+  "sbagliate": [
+   "si stanca",
+   "si perde"
+  ]
+ },
+ {
+  "inizio": "Tutto è bene",
+  "fine": "quel che finisce bene",
+  "sbagliate": [
+   "quel che costa poco",
+   "quel che si mangia"
+  ]
+ },
+ {
+  "inizio": "Sbagliando",
+  "fine": "s'impara",
+  "sbagliate": [
+   "si piange",
+   "si dorme"
+  ]
+ },
+ {
+  "inizio": "L'erba del vicino",
+  "fine": "è sempre più verde",
+  "sbagliate": [
+   "non si taglia mai",
+   "è sempre bagnata"
+  ]
+ },
+ {
+  "inizio": "Anno nuovo,",
+  "fine": "vita nuova",
+  "sbagliate": [
+   "casa nuova",
+   "scarpe nuove"
+  ]
+ },
+ {
+  "inizio": "Ride bene",
+  "fine": "chi ride ultimo",
+  "sbagliate": [
+   "chi mangia tanto",
+   "chi dorme poco"
+  ]
+ },
+ {
+  "inizio": "Dimmi con chi vai",
+  "fine": "e ti dirò chi sei",
+  "sbagliate": [
+   "e ti dirò dove abiti",
+   "e ti offrirò un caffè"
+  ]
+ },
+ {
+  "inizio": "Meglio un uovo oggi",
+  "fine": "che una gallina domani",
+  "sbagliate": [
+   "che una frittata stasera",
+   "che un pulcino ieri"
+  ]
+ },
+ {
+  "inizio": "Gallina vecchia",
+  "fine": "fa buon brodo",
+  "sbagliate": [
+   "non fa più uova",
+   "canta la mattina"
+  ]
+ },
+ {
+  "inizio": "Patti chiari,",
+  "fine": "amicizia lunga",
+  "sbagliate": [
+   "conti salati",
+   "porta aperta"
+  ]
  }
 ]

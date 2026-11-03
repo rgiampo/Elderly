@@ -17,7 +17,7 @@ struct ProverbiImpostazioniView: View {
                         RoundedRectangle(cornerRadius: 22, style: .continuous)
                             .fill(numero == 0 ? Tema.verde : Tema.celeste.opacity(0.7))
                             .frame(height: 64)
-                            .overlay(Text(["non piglia pesci", "vive cent'anni", "mangia sempre bene"][numero])
+                            .overlay(Text(["non piglia pesci", "vive cent'anni", "mangia sempre bene", "va sano e va lontano"][numero])
                                 .testo(DimensioneTesto.normale)
                                 .foregroundStyle(numero == 0 ? .white : Tema.testo))
                     }

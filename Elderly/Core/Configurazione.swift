@@ -23,7 +23,7 @@ enum Configurazione {
 
     /// Proverbi: quanti per partita e quante fini tra cui scegliere, per ogni difficoltà.
     static let turniProverbiFacile = 5, turniProverbiMedio = 7, turniProverbiDifficile = 10
-    static let opzioniProverbiFacile = 2, opzioniProverbiMedio = 3, opzioniProverbiDifficile = 3
+    static let opzioniProverbiFacile = 2, opzioniProverbiMedio = 3, opzioniProverbiDifficile = 4
     static let pausaProverbio = 3.0   // secondi per leggere il proverbio completo
 
     /// Puzzle: in quanti pezzi si divide la foto (colonne × righe) e quante foto per partita.

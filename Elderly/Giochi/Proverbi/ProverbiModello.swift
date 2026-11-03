@@ -84,7 +84,11 @@ final class ProverbiModello {
         guard !finito else { return }
         sbagliate = []; trovata = false; errori = 0
         let p = proverbi[indice]
-        let sbagliateScelte = p.sbagliate.shuffled().prefix(numeroOpzioni - 1)
+        // le scelte sbagliate cambiano a ogni partita: da facile solo le sue (buffe, si scartano subito);
+        // da medio in su anche le fini di altri proverbi, che "suonano" giuste e fanno pensare di più
+        let altreFini = Proverbio.tutti().map(\.fine).filter { $0 != p.fine }.shuffled()
+        let candidate = numeroOpzioni <= 2 ? p.sbagliate.shuffled() : (p.sbagliate.shuffled().prefix(1) + altreFini.prefix(numeroOpzioni)).shuffled()
+        let sbagliateScelte = candidate.prefix(numeroOpzioni - 1)
         opzioni = ([Opzione(testo: p.fine, giusta: true)] + sbagliateScelte.map { Opzione(testo: $0, giusta: false) }).shuffled()
     }
 }
