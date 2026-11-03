@@ -25,7 +25,16 @@ struct CoppieGiocoView: View {
             }
         }
         .conIndietro {
-            if !modello.finito { BarraGiocatori(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti) }
+            if !modello.finito {
+                // messaggio e "Ascolta" stanno nella barra in alto: tutto il resto dello schermo è per le carte
+                Text(modello.messaggio)
+                    .testo(DimensioneTesto.medio)
+                    .foregroundStyle(Tema.testo)
+                    .lineLimit(1).minimumScaleFactor(0.5)
+                Spacer(minLength: 12)
+                BottoneVoce(testo: Istruzioni.coppie, etichetta: "Ascolta", altezza: 64)
+                BarraGiocatori(giocatori: modello.giocatori, turno: modello.turno, punti: modello.punti)
+            }
         }
         .coloreSfondoDelTurno(modello.giocatori, turno: modello.turno)
         .animation(.spring(duration: 0.5), value: modello.turno)
@@ -38,9 +47,9 @@ struct CoppieGiocoView: View {
     }
 
     private var partita: some View {
-        VStack(spacing: 16) {
-            GeometryReader { spazio in
-                let distanza: CGFloat = 20
+        GeometryReader { spazio in
+                // sugli schermi piccoli le carte si avvicinano: lo spazio va alle foto, non ai bordi
+                let distanza: CGFloat = spazio.size.height < 600 ? 12 : 20
                 let larghezza = (spazio.size.width - distanza * CGFloat(modello.colonne - 1)) / CGFloat(modello.colonne)
                 let altezza = (spazio.size.height - distanza * CGFloat(modello.righe - 1)) / CGFloat(modello.righe)
                 LazyVGrid(columns: Array(repeating: GridItem(.fixed(larghezza), spacing: distanza), count: modello.colonne),
@@ -54,19 +63,9 @@ struct CoppieGiocoView: View {
                     }
                 }
                 .frame(width: spazio.size.width, height: spazio.size.height)
-            }
-            .grandezzaFoto()
-
-            HStack(spacing: 24) {
-                Text(modello.messaggio)
-                    .testo(DimensioneTesto.grande)
-                    .foregroundStyle(Tema.testo)
-                    .lineLimit(1).minimumScaleFactor(0.5)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                BottoneVoce(testo: Istruzioni.coppie, etichetta: "Ascolta come si gioca", altezza: 76)
-            }
         }
-        .padding(.horizontal, 40).padding(.bottom, 24)
+        .grandezzaFoto()
+        .padding(.horizontal, 24).padding(.bottom, 20)
     }
 }
 

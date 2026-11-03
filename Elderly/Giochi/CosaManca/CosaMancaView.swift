@@ -43,24 +43,30 @@ struct CosaMancaView: View {
     }
 
     private var partita: some View {
-        VStack(spacing: 16) {
-            Text(titolo)
-                .testo(DimensioneTesto.enorme)
-                .foregroundStyle(Tema.testo)
-                .lineLimit(1).minimumScaleFactor(0.5)
-                .accessibilityAddTraits(.isHeader)
+        GeometryReader { schermo in
+            // la fascia in basso è grande quanto serve: per "Ho guardato" basta poco, le due foto da scegliere
+            // hanno bisogno di più spazio. Il resto va tutto alle foto da guardare.
+            let conScelte = modello.fase == .scegli || (modello.fase == .trovata && !modello.sbagliate.isEmpty)
+            let fascia = conScelte ? schermo.size.height * 0.32 : min(130, schermo.size.height * 0.2)
+            VStack(spacing: 12) {
+                Text(titolo)
+                    .testo(DimensioneTesto.titolo)
+                    .foregroundStyle(Tema.testo)
+                    .lineLimit(1).minimumScaleFactor(0.5)
+                    .accessibilityAddTraits(.isHeader)
 
-            griglia.frame(maxHeight: .infinity)
+                griglia.frame(maxHeight: .infinity)
 
-            HStack(spacing: 24) {
-                if modello.fase == .scegli || (modello.fase == .trovata && !modello.sbagliate.isEmpty) { scelte } else if modello.fase == .guarda { pulsanteGuardato }
-                else { Spacer() }
-                BottoneVoce(testo: modello.testoParlato, etichetta: "Ascolta", altezza: 76)
-                    .fixedSize()
+                HStack(spacing: 24) {
+                    if conScelte { scelte } else if modello.fase == .guarda { pulsanteGuardato }
+                    else { Spacer() }
+                    BottoneVoce(testo: modello.testoParlato, etichetta: "Ascolta", altezza: 76)
+                        .fixedSize()
+                }
+                .frame(height: fascia)
             }
-            .frame(height: 230)
         }
-        .padding(.horizontal, 40).padding(.bottom, 24)
+        .padding(.horizontal, 24).padding(.bottom, 20)
     }
 
     private var titolo: String {
@@ -76,7 +82,7 @@ struct CosaMancaView: View {
         GeometryReader { spazio in
             let colonne = modello.foto.count == 4 ? 4 : 3
             let righe = (modello.foto.count + colonne - 1) / colonne
-            let distanza: CGFloat = 20
+            let distanza: CGFloat = spazio.size.height < 450 ? 12 : 20
             let larghezza = (spazio.size.width - distanza * CGFloat(colonne - 1)) / CGFloat(colonne)
             let altezza = (spazio.size.height - distanza * CGFloat(righe - 1)) / CGFloat(righe)
             let lato = min(larghezza, altezza * Configurazione.formaFoto)
@@ -110,7 +116,7 @@ struct CosaMancaView: View {
 
     private var pulsanteGuardato: some View {
         Button { modello.hoGuardato() } label: {
-            PulsantePrincipale(titolo: "Ho guardato", colore: Tema.verde, altezza: 130)
+            PulsantePrincipale(titolo: "Ho guardato", colore: Tema.verde, altezza: 110)
         }
         .buttonStyle(StilePremuto())
     }
