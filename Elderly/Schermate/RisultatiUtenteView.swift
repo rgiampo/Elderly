@@ -1,43 +1,6 @@
 import SwiftUI
 import SwiftData
 
-/// Dalla home: l'elenco delle persone, si tocca una persona per vedere le sue partite.
-struct RisultatiView: View {
-    @Query(sort: \Utente.nome) private var utenti: [Utente]
-
-    var body: some View {
-        ZStack {
-            SfondoCielo()
-
-            VStack(spacing: 24) {
-                if utenti.isEmpty {
-                    Text("Non c'è nessuna persona.\nI risultati si salvano per chi gioca con il nome.")
-                        .testo(DimensioneTesto.medio)
-                        .foregroundStyle(Tema.testo)
-                        .multilineTextAlignment(.center)
-                        .padding(.vertical, 40)
-                    Spacer(minLength: 0)
-                } else {
-                    ListaAlfabetica(utenti: utenti) { utente in
-                        NavigationLink(destination: RisultatiUtenteView(utente: utente)) {
-                            RigaUtente(utente: utente) {
-                                Text(utente.risultati.count == 1 ? "1 partita" : "\(utente.risultati.count) partite")
-                                    .testo(DimensioneTesto.medio)
-                                    .foregroundStyle(Tema.testoSecondario)
-                                Image(systemName: "chevron.right").font(.system(size: 32, weight: .bold))
-                            }
-                        }
-                        .buttonStyle(StilePremuto())
-                    }
-                }
-            }
-            .padding(.horizontal, 40).padding(.bottom, 32)
-            .frame(maxWidth: 1100)
-        }
-        .conIndietro(titolo: "Risultati")
-    }
-}
-
 /// Le partite di una persona, dalla più recente. I giochi per la mente stanno in alto, a parte.
 struct RisultatiUtenteView: View {
     let utente: Utente
@@ -93,14 +56,21 @@ private struct RigaRisultato: View {
                 Text(risultato.gioco?.titolo ?? "Gioco")
                     .testo(DimensioneTesto.medio)
                     .lineLimit(1).minimumScaleFactor(0.5)
-                Text(risultato.data.formatted(.dateTime.day().month(.wide).year().hour().minute()))
+                Text("\(risultato.data.formatted(.dateTime.day().month(.wide).year())), \(risultato.data.formatted(date: .omitted, time: .shortened))")
                     .testo(DimensioneTesto.normale)
                     .foregroundStyle(Tema.testoSecondario)
+                    .lineLimit(1).minimumScaleFactor(0.5)
             }
-            Spacer(minLength: 0)
-            Label(risultato.testo, systemImage: "star.fill")
-                .testo(DimensioneTesto.grande)
-                .lineLimit(1)
+            Spacer(minLength: 16)
+            VStack(alignment: .trailing, spacing: 4) {
+                Text(risultato.cosaConta)
+                    .testo(DimensioneTesto.normale)
+                    .foregroundStyle(Tema.testoSecondario)
+                    .lineLimit(1).minimumScaleFactor(0.5)
+                Text(risultato.testo)
+                    .testo(DimensioneTesto.grande)
+                    .lineLimit(1)
+            }
         }
         .foregroundStyle(Tema.testo)
         .padding(.horizontal, 28).padding(.vertical, 20)

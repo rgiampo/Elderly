@@ -24,6 +24,22 @@ final class Risultato {
     /// "7 su 10", oppure solo "7" se il gioco non ha un massimo.
     var testo: String { totale.map { "\(punti) su \($0)" } ?? "\(punti)" }
 
+    /// Cosa conta il numero, gioco per gioco: senza questo "7" non vuol dire niente.
+    var cosaConta: String {
+        switch gioco {
+        case .forme: "Sequenza più lunga"
+        case .coppie: "Coppie trovate"
+        case .cosaManca: "Foto riconosciute al primo colpo"
+        case .proverbi: "Proverbi giusti al primo colpo"
+        case .animali: "Animali detti"
+        case .simboli: "Giusti al primo colpo"
+        case .parole: "Foto riconosciute"
+        case .quiz: "Risposte giuste al primo colpo"
+        case .sìNo: "Risposte giuste"
+        case nil: "Punti"
+        }
+    }
+
     /// Un risultato per ogni persona con il nome. Con `squadra` tutti prendono lo stesso punteggio
     /// (giochi fatti insieme, senza turni); altrimenti ognuno i suoi `punti`.
     static func salva(gioco: Gioco, giocatori: [Partecipante], punti: [Int], squadra: Int? = nil,

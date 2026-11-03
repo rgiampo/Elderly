@@ -25,6 +25,19 @@ struct UtenteFormView: View {
         ModuloView(titolo: utente == nil ? "Nuova persona" : "Modifica",
                    annulla: { if haScritto && utente == nil { chiediUscita = true } else { chiudi() } },
                    salva: salva, puòSalvare: puòSalvare) {
+            if let utente {
+                // in alto, così si trova subito: i risultati delle partite stanno qui, nella scheda della persona
+                NavigationLink(destination: RisultatiUtenteView(utente: utente)) {
+                    Label(utente.risultati.isEmpty ? "Risultati: nessuna partita" : "Vedi i risultati (\(utente.risultati.count))",
+                          systemImage: "star.fill")
+                        .testo(DimensioneTesto.medio)
+                        .foregroundStyle(.white)
+                        .lineLimit(1).minimumScaleFactor(0.5)
+                        .frame(maxWidth: .infinity, minHeight: MisureModulo.altezzaControllo)
+                        .vetro(Tema.blu)
+                }
+                .buttonStyle(StilePremuto())
+            }
             sezioneFoto
             CampoTesto(titolo: "Nome", testo: $nome, esempio: "Per esempio: Pino")
             CampoTesto(titolo: "Cognome", testo: $cognome, esempio: "Per esempio: Mauro")
@@ -39,18 +52,7 @@ struct UtenteFormView: View {
                 if conosceNascita { sceltaData } else { ContatoreGrande(valore: $eta, intervallo: 40...120) }
             }
 
-            if let utente {
-                NavigationLink(destination: RisultatiUtenteView(utente: utente)) {
-                    Label("Vedi i risultati", systemImage: "star.fill")
-                        .testo(DimensioneTesto.medio)
-                        .foregroundStyle(.white)
-                        .lineLimit(1).minimumScaleFactor(0.5)
-                        .frame(maxWidth: .infinity, minHeight: MisureModulo.altezzaControllo)
-                        .vetro(Tema.blu)
-                }
-                .buttonStyle(StilePremuto())
-                .padding(.top, 20)
-
+            if utente != nil {
                 Button { chiediEliminazione = true } label: {
                     Text("Elimina questa persona")
                         .testo(DimensioneTesto.medio)

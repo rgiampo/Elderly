@@ -22,6 +22,14 @@ struct UtentiView: View {
                     ListaAlfabetica(utenti: utenti) { utente in
                         NavigationLink(destination: UtenteFormView(utente: utente)) {
                             RigaUtente(utente: utente) {
+                                // quante partite ha finito: i risultati si vedono aprendo la persona
+                                if !utente.risultati.isEmpty {
+                                    Label("\(utente.risultati.count)", systemImage: "star.fill")
+                                        .testo(DimensioneTesto.medio)
+                                        .foregroundStyle(Tema.testoSecondario)
+                                        .fixedSize()
+                                        .accessibilityLabel(utente.risultati.count == 1 ? "1 partita" : "\(utente.risultati.count) partite")
+                                }
                                 Image(systemName: "chevron.right").font(.system(size: 32, weight: .bold))
                             }
                         }
