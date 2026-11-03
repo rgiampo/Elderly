@@ -50,7 +50,8 @@ private struct Pedina: View {
     let mostraTurno: Bool
     let punti: Int?
 
-    private var inEvidenza: Bool { mostraTurno && attivo }
+    /// Pieno del suo colore: quando è il suo turno, oppure sempre fuori dalla partita (in "Scegli" si vede chi gioca e di che colore è).
+    private var inEvidenza: Bool { mostraTurno ? attivo : true }
 
     var body: some View {
         HStack(spacing: 14) {
