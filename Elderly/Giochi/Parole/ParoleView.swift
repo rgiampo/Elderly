@@ -70,56 +70,84 @@ struct ParoleView: View {
         .onDisappear { modello.ferma() }
     }
 
-    private var partita: some View {
-        GeometryReader { spazio in
-            let colonna: CGFloat = 380, distanza: CGFloat = 28
-            let larghezza = min(spazio.size.width - colonna - distanza, spazio.size.height * 0.58 * Configurazione.formaFoto)
+    @ViewBuilder private var partita: some View {
+        if modello.fase == .guarda { guarda } else { ricorda }
+    }
 
+    /// Mentre si guarda: la foto grande quanto lo schermo permette, sotto il nome e "Avanti" a destra.
+    private var guarda: some View {
+        VStack(spacing: 12) {
+            Text(modello.messaggio)
+                .testo(DimensioneTesto.medio)
+                .foregroundStyle(Tema.testoSecondario)
+                .lineLimit(1).minimumScaleFactor(0.5)
+            foto
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            HStack(spacing: 24) {
+                BottoneVoce(testo: modello.testoParlato, etichetta: "Ascolta", altezza: 96)
+                Text(modello.corrente.nome)
+                    .testo(DimensioneTesto.enorme)
+                    .foregroundStyle(Tema.testo)
+                    .lineLimit(1).minimumScaleFactor(0.4)
+                    .frame(maxWidth: .infinity)
+                    .accessibilityAddTraits(.isHeader)
+                Button { modello.avanti() } label: {
+                    Label("Avanti", systemImage: "arrow.right")
+                        .labelStyle(.titleAndIcon)
+                        .testo(DimensioneTesto.grande)
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 40).frame(minHeight: 110)
+                        .vetro(Tema.blu)
+                        .fixedSize()
+                }
+                .buttonStyle(StilePremuto())
+            }
+        }
+        .padding(.horizontal, 28).padding(.bottom, 20)
+    }
+
+    /// Mentre si risponde: la foto con il nome a sinistra, la spunta e la X grandi a destra.
+    private var ricorda: some View {
+        GeometryReader { spazio in
+            let colonna = min(380, spazio.size.width * 0.32), distanza: CGFloat = 24
             HStack(alignment: .top, spacing: distanza) {
-                VStack(spacing: 14) {
+                VStack(spacing: 12) {
                     Text(modello.messaggio)
-                        .testo(DimensioneTesto.titolo)
+                        .testo(DimensioneTesto.medio)
                         .foregroundStyle(Tema.testoSecondario)
                         .lineLimit(1).minimumScaleFactor(0.5)
                         .contentTransition(.opacity)
-                    FotoView(foto: modello.corrente.foto)
-                        .frame(width: larghezza, height: larghezza / Configurazione.formaFoto)
-                        .clipShape(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
-                        .shadow(color: Tema.testo.opacity(0.2), radius: 12, y: 6)
-                        .id(modello.corrente.id)
-                        .transition(.opacity)
-                        .accessibilityHidden(true)
+                    foto
+                        .frame(maxHeight: .infinity)
                     Text(modello.corrente.nome)
-                        .testo(DimensioneTesto.enorme)
+                        .testo(DimensioneTesto.grande)
                         .foregroundStyle(Tema.testo)
                         .lineLimit(1).minimumScaleFactor(0.5)
                         .accessibilityAddTraits(.isHeader)
-                    Spacer(minLength: 0)
                     BottoneVoce(testo: modello.testoParlato, etichetta: "Ascolta", altezza: 76)
                 }
-                .frame(width: larghezza, height: spazio.size.height)
-                .animation(.easeInOut(duration: 0.3), value: modello.corrente.id)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
 
                 VStack(spacing: 20) {
-                    if modello.fase == .guarda {
-                        Button { modello.avanti() } label: {
-                            Label("Avanti", systemImage: "arrow.right")
-                                .testo(DimensioneTesto.grande)
-                                .foregroundStyle(.white)
-                                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                .background(Tema.blu, in: RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
-                        }
-                        .buttonStyle(StilePremuto())
-                    } else {
-                        pulsante(vista: true)
-                        pulsante(vista: false)
-                    }
+                    pulsante(vista: true)
+                    pulsante(vista: false)
                 }
                 .frame(width: colonna, height: spazio.size.height)
             }
-            .frame(maxWidth: .infinity)
         }
-        .padding(.horizontal, 40).padding(.bottom, 24)
+        .padding(.horizontal, 28).padding(.bottom, 20)
+    }
+
+    /// La foto in 16:9, il più grande possibile nello spazio che ha.
+    private var foto: some View {
+        FotoView(foto: modello.corrente.foto)
+            .aspectRatio(Configurazione.formaFoto, contentMode: .fit)
+            .clipShape(RoundedRectangle(cornerRadius: Tema.raggio, style: .continuous))
+            .shadow(color: Tema.testo.opacity(0.2), radius: 12, y: 6)
+            .id(modello.corrente.id)
+            .transition(.opacity)
+            .animation(.easeInOut(duration: 0.3), value: modello.corrente.id)
+            .accessibilityHidden(true)
     }
 
     /// Spunta verde = l'ho vista, X rossa = è nuova. Dopo la risposta resta in evidenza quella giusta.
