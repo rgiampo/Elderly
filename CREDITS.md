@@ -5,7 +5,7 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 
 | Nome nell'app | File | Autore | Licenza | Pagina |
 |---|---|---|---|---|
-| foto_pizza | L'Oro di Napoli - January 2025 - Sarah Stierch 17.jpg | Missvain | CC0 | https://commons.wikimedia.org/wiki/File:L%27Oro_di_Napoli_-_January_2025_-_Sarah_Stierch_17.jpg |
+| foto_pizza | Margarita Pizza.jpg | Douglas Perkins | CC0 | https://commons.wikimedia.org/wiki/File:Margarita_Pizza.jpg |
 | foto_spaghetti | Spaghettata.JPG | Dr.Conati | Public domain | https://commons.wikimedia.org/wiki/File:Spaghettata.JPG |
 | foto_pomodori | Tomatoes.jpg | Wilfredor | CC0 | https://commons.wikimedia.org/wiki/File:Tomatoes.jpg |
 | foto_limone | Citrus x limon, lemon on tree, Coín, Spain.jpg | Bj.schoenmakers | CC0 | https://commons.wikimedia.org/wiki/File:Citrus_x_limon,_lemon_on_tree,_Co%C3%ADn,_Spain.jpg |
@@ -23,20 +23,20 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 
 | foto_gatto | Domestic shorthair cat portrait in grass.jpg | vedi pagina del file | CC0 | https://commons.wikimedia.org/wiki/File:Domestic_shorthair_cat_portrait_in_grass.jpg |
 | foto_cane | Portrait of a labrador retriever.jpg | Dktue | CC0 | https://commons.wikimedia.org/wiki/File:Portrait_of_a_labrador_retriever.jpg |
-| foto_gallina | Blue andalusian Hens.jpg | France01100 | CC0 | https://commons.wikimedia.org/wiki/File:Blue_andalusian_Hens.jpg |
+| foto_gallina | SH gelb Henne.jpg | Pedalito | CC0 | https://commons.wikimedia.org/wiki/File:SH_gelb_Henne.jpg |
 | foto_cavallo | Horse in Tárcoles River.jpg | Bernard Gagnon | CC0 | https://commons.wikimedia.org/wiki/File:Horse_in_T%C3%A1rcoles_River.jpg |
 
 | foto_mela | Apples fruit.jpg | safaritravelplus | CC0 | https://commons.wikimedia.org/wiki/File:Apples_fruit.jpg |
-| foto_pecora | Sheep lounging in the shade of a tree at Röe Castle.jpg | W.carter | CC0 | https://commons.wikimedia.org/wiki/File:Sheep_lounging_in_the_shade_of_a_tree_at_R%C3%B6e_Castle.jpg |
+| foto_pecora | Meadow-animals-sheep-wool (23958982779).jpg | www.Pixel.la Free Stock Photos | CC0 | https://commons.wikimedia.org/wiki/File:Meadow-animals-sheep-wool_(23958982779).jpg |
 | foto_anatra | Sleeping duck on the grass.jpg | PxHere | CC0 | https://commons.wikimedia.org/wiki/File:Sleeping_duck_on_the_grass.jpg |
 | foto_coniglio | Rabbit - wild rabbit leaping.jpg | Yu-Chan Chen | CC0 | https://commons.wikimedia.org/wiki/File:Rabbit_-_wild_rabbit_leaping.jpg |
-| foto_capra | Goat of Margarita.jpg | Wilfredor | CC0 | https://commons.wikimedia.org/wiki/File:Goat_of_Margarita.jpg |
+| foto_capra | Brown-goat-award.jpg | Martin Vorel | CC0 | https://commons.wikimedia.org/wiki/File:Brown-goat-award.jpg |
 | foto_farfalla | Monarch butterfly on butterfly bush flower.jpg | Shocksingularity | CC0 | https://commons.wikimedia.org/wiki/File:Monarch_butterfly_on_butterfly_bush_flower.jpg |
 | foto_banana | Bunch of bananas on sale.jpg | Wilfredor | CC0 | https://commons.wikimedia.org/wiki/File:Bunch_of_bananas_on_sale.jpg |
 | foto_fragole | Strawberries-1239306.jpg | Robert Owen-Wahl (Meditations) | CC0 | https://commons.wikimedia.org/wiki/File:Strawberries-1239306.jpg |
 | foto_carote | Carrots (Unsplash).jpg | Mink Mingle minkmingle | CC0 | https://commons.wikimedia.org/wiki/File:Carrots_(Unsplash).jpg |
 | foto_zucchine | Zucchini-572542.jpg | Steve Buissinne | CC0 | https://commons.wikimedia.org/wiki/File:Zucchini-572542.jpg |
-| foto_lasagne | Lasagna food.jpg | Jon Sullivan | Public domain | https://commons.wikimedia.org/wiki/File:Lasagna_food.jpg |
+| foto_lasagne | Slice of Lasagna.jpg | Roundhere44 | CC0 | https://commons.wikimedia.org/wiki/File:Slice_of_Lasagna.jpg |
 | foto_cannoli | Cannoli sicily.jpg | AnnaVie | CC0 | https://commons.wikimedia.org/wiki/File:Cannoli_sicily.jpg |
 | foto_castel_ovo | Castel dell'Ovo, Naples - 2021.jpg | stefygo54 | CC0 | https://commons.wikimedia.org/wiki/File:Castel_dell%27Ovo,_Naples_-_2021.jpg |
 | foto_gelato | Gelato ice cream.jpg | rawpixel | CC0 | https://commons.wikimedia.org/wiki/File:Gelato_ice_cream.jpg |
@@ -61,7 +61,7 @@ Le citiamo comunque per trasparenza. Fonte: Wikimedia Commons.
 | foto_margherita | Daisy Flower Variety.jpg | Alabama Extension | CC0 | https://commons.wikimedia.org/wiki/File:Daisy_Flower_Variety.jpg |
 | foto_mare | Komos site baie Crète.jpg | Jebulon | CC0 | https://commons.wikimedia.org/wiki/File:Komos_site_baie_Cr%C3%A8te.jpg |
 | foto_montagna | Snow-capped mountain range.jpg | Mshuang2 | CC0 | https://commons.wikimedia.org/wiki/File:Snow-capped_mountain_range.jpg |
-| foto_mucca | Black and white cow.jpg | dcoop27 | CC0 | https://commons.wikimedia.org/wiki/File:Black_and_white_cow.jpg |
+| foto_mucca | Крава, Bos taurus Bovidae.jpg | Делфина | CC0 | https://commons.wikimedia.org/wiki/File:%D0%9A%D1%80%D0%B0%D0%B2%D0%B0,_Bos_taurus_Bovidae.jpg |
 | foto_maiale | Sus scrofa domesticus, miniature pig, juvenile.jpg | Johan Spaedtke | CC0 | https://commons.wikimedia.org/wiki/File:Sus_scrofa_domesticus,_miniature_pig,_juvenile.jpg |
 | foto_pesce | Carassius auratus 197778318.jpg | Jackson Kusack | CC0 | https://commons.wikimedia.org/wiki/File:Carassius_auratus_197778318.jpg |
 | foto_cipolla | Red onions - San Francisco, CA.jpg | Daderot | CC0 | https://commons.wikimedia.org/wiki/File:Red_onions_-_San_Francisco,_CA.jpg |
@@ -96,3 +96,30 @@ Tutte le foto sono ritagliate al centro in formato 16:9. Prima di aggiungere una
 | foto_pizza_fritta | Pizzette fritte.jpg | Ruthven | CC0 | https://commons.wikimedia.org/wiki/File:Pizzette_fritte.jpg |
 | foto_caprese | Ensalada caprese, Mazatlán, 17 de mayo de 2023.jpg | El Nuevo Doge | CC0 | https://commons.wikimedia.org/wiki/File:Ensalada_caprese%2C_Mazatl%C3%A1n%2C_17_de_mayo_de_2023.jpg |
 | foto_mozzarella_carrozza | Mozzarella in Carrozza - Tavola Di Famiglia 2026-02-27.jpg | Andy Li | CC0 | https://commons.wikimedia.org/wiki/File:Mozzarella_in_Carrozza_-_Tavola_Di_Famiglia_2026-02-27.jpg |
+| foto_anguria | Water melon 2015.jpg | MBargo | CC0 | https://commons.wikimedia.org/wiki/File:Water_melon_2015.jpg |
+| foto_arcobaleno | Rainbow over Whitchurch.jpg | Micheal1evans | CC0 | https://commons.wikimedia.org/wiki/File:Rainbow_over_Whitchurch.jpg |
+| foto_asino | Menorca - 50131186937.jpg | Nicolas Vigier | CC0 | https://commons.wikimedia.org/wiki/File:Menorca_-_50131186937.jpg |
+| foto_bicchiere | SZ 深圳 Shenzhen 南山區 Nanshan 常興路 ChangXing Road Rainbow mall shop Pizza Hut Restaurant glass cup of water September 2025 R12S 02.jpg | WEN Menualp TongaUU | CC0 | https://commons.wikimedia.org/wiki/File:SZ_%E6%B7%B1%E5%9C%B3_Shenzhen_%E5%8D%97%E5%B1%B1%E5%8D%80_Nanshan_%E5%B8%B8%E8%88%88%E8%B7%AF_ChangXing_Road_Rainbow_mall_shop_Pizza_Hut_Restaurant_glass_cup_of_water_September_2025_R12S_02.jpg |
+| foto_canarino | 2 domestic canaries (serinus).jpg | Yavor Uzunov | CC0 | https://commons.wikimedia.org/wiki/File:2_domestic_canaries_(serinus).jpg |
+| foto_cascata | Peaceful waterfall (Unsplash).jpg | Jeffrey  Workman jeffreyp | CC0 | https://commons.wikimedia.org/wiki/File:Peaceful_waterfall_(Unsplash).jpg |
+| foto_cioccolato | Green and Black's dark chocolate bar 2.jpg | Mx. Granger | CC0 | https://commons.wikimedia.org/wiki/File:Green_and_Black%27s_dark_chocolate_bar_2.jpg |
+| foto_cornetto | Croissant-Petr Kratochvil.jpg | Petr Kratochvil | CC0 | https://commons.wikimedia.org/wiki/File:Croissant-Petr_Kratochvil.jpg |
+| foto_ferro | Elektrisch strijkijzer van het merk Kalorik - INDUS V08959.jpg | vedi pagina del file | CC0 | https://commons.wikimedia.org/wiki/File:Elektrisch_strijkijzer_van_het_merk_Kalorik_-_INDUS_V08959.jpg |
+| foto_garofano | Prepared boutonniere.jpg | Nbarth | CC0 | https://commons.wikimedia.org/wiki/File:Prepared_boutonniere.jpg |
+| foto_geranio | Geranienblüte, Wanfried, Hessen, Deutschland, IMG 0062 edit.jpg | Christoph Braun | CC0 | https://commons.wikimedia.org/wiki/File:Geranienbl%C3%BCte,_Wanfried,_Hessen,_Deutschland,_IMG_0062_edit.jpg |
+| foto_gnocchi | Plat de Gnocchi à Venise en décembre 2022.JPG | Benoît Prieur | CC0 | https://commons.wikimedia.org/wiki/File:Plat_de_Gnocchi_%C3%A0_Venise_en_d%C3%A9cembre_2022.JPG |
+| foto_lavanda | Lavender field (Unsplash).jpg | Annie Spratt anniespratt | CC0 | https://commons.wikimedia.org/wiki/File:Lavender_field_(Unsplash).jpg |
+| foto_luna | Full Moon on Buddha purnima.jpg | Kasyap | CC0 | https://commons.wikimedia.org/wiki/File:Full_Moon_on_Buddha_purnima.jpg |
+| foto_macchina_cucire | Vintage sewing machine (Unsplash).jpg | Clem Onojeghuo clemono2 | CC0 | https://commons.wikimedia.org/wiki/File:Vintage_sewing_machine_(Unsplash).jpg |
+| foto_pentola | Cadmium orange cast iron pot.JPG | Pixelmaniac pictures (Leave a reply) | CC0 | https://commons.wikimedia.org/wiki/File:Cadmium_orange_cast_iron_pot.JPG |
+| foto_pera | 3 x Conference pear 2017 A.jpg | Fructibus | CC0 | https://commons.wikimedia.org/wiki/File:3_x_Conference_pear_2017_A.jpg |
+| foto_pollo | Chicken leg quarter 20260412 145303.jpg | Vauia Rex | CC0 | https://commons.wikimedia.org/wiki/File:Chicken_leg_quarter_20260412_145303.jpg |
+| foto_pulcino | Small Chicks.jpg | Petr Kratochvil | CC0 | https://commons.wikimedia.org/wiki/File:Small_Chicks.jpg |
+| foto_radio | Nazilli Etnoğrafya Müzesi 20160712 135409.jpg | Erdalkara | CC0 | https://commons.wikimedia.org/wiki/File:Nazilli_Etno%C4%9Frafya_M%C3%BCzesi_20160712_135409.jpg |
+| foto_scopa | Broom in hand.jpg | Ahmed brens | CC0 | https://commons.wikimedia.org/wiki/File:Broom_in_hand.jpg |
+| foto_sveglia | Roman numerals on alarm clock (Unsplash).jpg | Ales Krivec aleskrivec | CC0 | https://commons.wikimedia.org/wiki/File:Roman_numerals_on_alarm_clock_(Unsplash).jpg |
+| foto_tartaruga | Specimen at Natural History Museum, Gothenburg 78.jpg | Netha Hussain | CC0 | https://commons.wikimedia.org/wiki/File:Specimen_at_Natural_History_Museum,_Gothenburg_78.jpg |
+| foto_telefono | Telephone, Model 102, designed by Henry Dreyfuss, Western Electric Company, New York City, 1928, Bakelite case, metal - Museum für Angewandte Kunst Köln - Cologne, Germany - DSC09623.jpg | Daderot | CC0 | https://commons.wikimedia.org/wiki/File:Telephone,_Model_102,_designed_by_Henry_Dreyfuss,_Western_Electric_Company,_New_York_City,_1928,_Bakelite_case,_metal_-_Museum_f%C3%BCr_Angewandte_Kunst_K%C3%B6ln_-_Cologne,_Germany_-_DSC09623.jpg |
+| foto_tiramisu | Tiramisu au Restaurant il Fornello Napolitano (Genève) en mars 2023.jpg | Benoît Prieur | CC0 | https://commons.wikimedia.org/wiki/File:Tiramisu_au_Restaurant_il_Fornello_Napolitano_(Gen%C3%A8ve)_en_mars_2023.jpg |
+| foto_tortellini | Lean Cuisine Tortellini microwaved, June 2018.jpg | Thomson200 | CC0 | https://commons.wikimedia.org/wiki/File:Lean_Cuisine_Tortellini_microwaved,_June_2018.jpg |
+| foto_tramonto | Sea Sunset (153313449).jpeg | Aleksandr Aleksandrov | CC0 | https://commons.wikimedia.org/wiki/File:Sea_Sunset_(153313449).jpeg |

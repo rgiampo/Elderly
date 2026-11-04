@@ -20,14 +20,14 @@
    "testo": "Quale è la tazza?",
    "risposte": [
     {
-     "testo": "Tazza",
-     "foto": "foto_tazza",
-     "giusta": true
-    },
-    {
      "testo": "Occhiali",
      "foto": "foto_occhiali",
      "giusta": false
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
     }
    ]
   },
@@ -50,13 +50,103 @@
    "testo": "Quale è la tazza?",
    "risposte": [
     {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
      "testo": "Tazza",
      "foto": "foto_tazza",
      "giusta": true
     },
     {
-     "testo": "Teiera",
-     "foto": "foto_teiera",
+     "testo": "Pentola",
+     "foto": "foto_pentola",
      "giusta": false
     }
    ]
@@ -70,8 +160,8 @@
      "giusta": true
     },
     {
-     "testo": "Candela",
-     "foto": "foto_candela",
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
      "giusta": false
     }
    ]
@@ -85,9 +175,24 @@
      "giusta": true
     },
     {
-     "testo": "Lampadina",
-     "foto": "foto_lampada",
+     "testo": "Scopa",
+     "foto": "foto_scopa",
      "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
     }
    ]
   },
@@ -100,9 +205,24 @@
      "giusta": true
     },
     {
-     "testo": "Posate",
-     "foto": "foto_posate",
+     "testo": "Radio",
+     "foto": "foto_radio",
      "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la tazza?",
+   "risposte": [
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": false
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": true
     }
    ]
   },
@@ -110,14 +230,14 @@
    "testo": "Quale è la chiave?",
    "risposte": [
     {
-     "testo": "Chiave",
-     "foto": "foto_chiavi",
-     "giusta": true
-    },
-    {
      "testo": "Tazza",
      "foto": "foto_tazza",
      "giusta": false
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
     }
    ]
   },
@@ -155,14 +275,14 @@
    "testo": "Quale è la chiave?",
    "risposte": [
     {
-     "testo": "Chiave",
-     "foto": "foto_chiavi",
-     "giusta": true
-    },
-    {
      "testo": "Teiera",
      "foto": "foto_teiera",
      "giusta": false
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
     }
    ]
   },
@@ -185,13 +305,118 @@
    "testo": "Quale è la chiave?",
    "risposte": [
     {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
      "testo": "Chiave",
      "foto": "foto_chiavi",
      "giusta": true
     },
     {
-     "testo": "Lampadina",
-     "foto": "foto_lampada",
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
      "giusta": false
     }
    ]
@@ -205,8 +430,23 @@
      "giusta": true
     },
     {
-     "testo": "Posate",
-     "foto": "foto_posate",
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la chiave?",
+   "risposte": [
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": true
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
      "giusta": false
     }
    ]
@@ -317,17 +557,137 @@
    ]
   },
   {
-   "testo": "Quali sono le forbici?",
+   "testo": "Quali sono gli occhiali?",
    "risposte": [
     {
-     "testo": "Forbici",
-     "foto": "foto_forbici",
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
      "giusta": true
     },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    },
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono gli occhiali?",
+   "risposte": [
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": true
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
     {
      "testo": "Tazza",
      "foto": "foto_tazza",
      "giusta": false
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
     }
    ]
   },
@@ -350,14 +710,14 @@
    "testo": "Quali sono le forbici?",
    "risposte": [
     {
-     "testo": "Forbici",
-     "foto": "foto_forbici",
-     "giusta": true
-    },
-    {
      "testo": "Occhiali",
      "foto": "foto_occhiali",
      "giusta": false
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
     }
    ]
   },
@@ -365,14 +725,14 @@
    "testo": "Quali sono le forbici?",
    "risposte": [
     {
-     "testo": "Forbici",
-     "foto": "foto_forbici",
-     "giusta": true
-    },
-    {
      "testo": "Teiera",
      "foto": "foto_teiera",
      "giusta": false
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
     }
    ]
   },
@@ -395,14 +755,14 @@
    "testo": "Quali sono le forbici?",
    "risposte": [
     {
-     "testo": "Forbici",
-     "foto": "foto_forbici",
-     "giusta": true
-    },
-    {
      "testo": "Lampadina",
      "foto": "foto_lampada",
      "giusta": false
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
     }
    ]
   },
@@ -422,17 +782,137 @@
    ]
   },
   {
-   "testo": "Quale è la teiera?",
+   "testo": "Quali sono le forbici?",
    "risposte": [
     {
-     "testo": "Teiera",
-     "foto": "foto_teiera",
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
      "giusta": true
     },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le forbici?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": true
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
     {
      "testo": "Tazza",
      "foto": "foto_tazza",
      "giusta": false
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
     }
    ]
   },
@@ -485,13 +965,43 @@
    "testo": "Quale è la teiera?",
    "risposte": [
     {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
      "testo": "Teiera",
      "foto": "foto_teiera",
      "giusta": true
     },
     {
-     "testo": "Candela",
-     "foto": "foto_candela",
+     "testo": "Posate",
+     "foto": "foto_posate",
      "giusta": false
     }
    ]
@@ -505,8 +1015,8 @@
      "giusta": true
     },
     {
-     "testo": "Lampadina",
-     "foto": "foto_lampada",
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
      "giusta": false
     }
    ]
@@ -520,9 +1030,99 @@
      "giusta": true
     },
     {
-     "testo": "Posate",
-     "foto": "foto_posate",
+     "testo": "Telefono",
+     "foto": "foto_telefono",
      "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    },
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la teiera?",
+   "risposte": [
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": false
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": true
     }
    ]
   },
@@ -590,14 +1190,14 @@
    "testo": "Quale è la candela?",
    "risposte": [
     {
-     "testo": "Candela",
-     "foto": "foto_candela",
-     "giusta": true
-    },
-    {
      "testo": "Teiera",
      "foto": "foto_teiera",
      "giusta": false
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
     }
    ]
   },
@@ -605,14 +1205,14 @@
    "testo": "Quale è la candela?",
    "risposte": [
     {
-     "testo": "Candela",
-     "foto": "foto_candela",
-     "giusta": true
-    },
-    {
      "testo": "Lampadina",
      "foto": "foto_lampada",
      "giusta": false
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
     }
    ]
   },
@@ -627,6 +1227,126 @@
     {
      "testo": "Posate",
      "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    },
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    },
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la candela?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": true
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
      "giusta": false
     }
    ]
@@ -650,14 +1370,14 @@
    "testo": "Quale è la lampadina?",
    "risposte": [
     {
-     "testo": "Lampadina",
-     "foto": "foto_lampada",
-     "giusta": true
-    },
-    {
      "testo": "Chiave",
      "foto": "foto_chiavi",
      "giusta": false
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
     }
    ]
   },
@@ -665,14 +1385,14 @@
    "testo": "Quale è la lampadina?",
    "risposte": [
     {
-     "testo": "Lampadina",
-     "foto": "foto_lampada",
-     "giusta": true
-    },
-    {
      "testo": "Occhiali",
      "foto": "foto_occhiali",
      "giusta": false
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
     }
    ]
   },
@@ -695,14 +1415,14 @@
    "testo": "Quale è la lampadina?",
    "risposte": [
     {
-     "testo": "Lampadina",
-     "foto": "foto_lampada",
-     "giusta": true
-    },
-    {
      "testo": "Teiera",
      "foto": "foto_teiera",
      "giusta": false
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
     }
    ]
   },
@@ -710,14 +1430,14 @@
    "testo": "Quale è la lampadina?",
    "risposte": [
     {
-     "testo": "Lampadina",
-     "foto": "foto_lampada",
-     "giusta": true
-    },
-    {
      "testo": "Candela",
      "foto": "foto_candela",
      "giusta": false
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
     }
    ]
   },
@@ -732,6 +1452,126 @@
     {
      "testo": "Posate",
      "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    },
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    },
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la lampadina?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": true
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
      "giusta": false
     }
    ]
@@ -770,14 +1610,14 @@
    "testo": "Quali sono le posate?",
    "risposte": [
     {
-     "testo": "Posate",
-     "foto": "foto_posate",
-     "giusta": true
-    },
-    {
      "testo": "Occhiali",
      "foto": "foto_occhiali",
      "giusta": false
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
     }
    ]
   },
@@ -838,6 +1678,1926 @@
      "testo": "Lampadina",
      "foto": "foto_lampada",
      "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    },
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le posate?",
+   "risposte": [
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": false
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    },
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    },
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    },
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    },
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la sveglia?",
+   "risposte": [
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": true
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    },
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    },
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    },
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    },
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    },
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    },
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    },
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il telefono?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": true
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    },
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la pentola?",
+   "risposte": [
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": false
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    },
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    },
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    },
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    },
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    },
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    },
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    },
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il ferro da stiro?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": true
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    },
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    },
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    },
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    },
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    },
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    },
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    },
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    },
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    },
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la scopa?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": true
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    },
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    },
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    },
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il bicchiere d'acqua?",
+   "risposte": [
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": false
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    },
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    },
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    },
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    },
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    },
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    },
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    },
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    },
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    },
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    },
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    },
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la radio?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": true
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    },
+    {
+     "testo": "Tazza",
+     "foto": "foto_tazza",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    },
+    {
+     "testo": "Chiave",
+     "foto": "foto_chiavi",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Occhiali",
+     "foto": "foto_occhiali",
+     "giusta": false
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Forbici",
+     "foto": "foto_forbici",
+     "giusta": false
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Teiera",
+     "foto": "foto_teiera",
+     "giusta": false
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Candela",
+     "foto": "foto_candela",
+     "giusta": false
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Lampadina",
+     "foto": "foto_lampada",
+     "giusta": false
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    },
+    {
+     "testo": "Posate",
+     "foto": "foto_posate",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Sveglia",
+     "foto": "foto_sveglia",
+     "giusta": false
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    },
+    {
+     "testo": "Telefono",
+     "foto": "foto_telefono",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Pentola",
+     "foto": "foto_pentola",
+     "giusta": false
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Ferro da stiro",
+     "foto": "foto_ferro",
+     "giusta": false
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Scopa",
+     "foto": "foto_scopa",
+     "giusta": false
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
+    },
+    {
+     "testo": "Bicchiere d'acqua",
+     "foto": "foto_bicchiere",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la macchina da cucire?",
+   "risposte": [
+    {
+     "testo": "Radio",
+     "foto": "foto_radio",
+     "giusta": false
+    },
+    {
+     "testo": "Macchina da cucire",
+     "foto": "foto_macchina_cucire",
+     "giusta": true
     }
    ]
   }

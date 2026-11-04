@@ -5,13 +5,58 @@
    "testo": "Quale è l'arancia?",
    "risposte": [
     {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": false
+    },
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'arancia?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    },
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'arancia?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    },
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'arancia?",
+   "risposte": [
+    {
      "testo": "Arancia",
      "foto": "foto_arancia",
      "giusta": true
     },
     {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
      "giusta": false
     }
    ]
@@ -25,51 +70,6 @@
      "giusta": true
     },
     {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è l'arancia?",
-   "risposte": [
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": true
-    },
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è l'arancia?",
-   "risposte": [
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": true
-    },
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è l'arancia?",
-   "risposte": [
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": true
-    },
-    {
      "testo": "Mele",
      "foto": "foto_mela",
      "giusta": false
@@ -95,14 +95,14 @@
    "testo": "Quale è l'arancia?",
    "risposte": [
     {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": true
-    },
-    {
      "testo": "Fragole",
      "foto": "foto_fragole",
      "giusta": false
+    },
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": true
     }
    ]
   },
@@ -125,1769 +125,14 @@
    "testo": "Quale è l'arancia?",
    "risposte": [
     {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": true
-    },
-    {
      "testo": "Zucchine",
      "foto": "foto_zucchine",
      "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è la melanzana?",
-   "risposte": [
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": true
     },
     {
      "testo": "Arancia",
      "foto": "foto_arancia",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è la melanzana?",
-   "risposte": [
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
      "giusta": true
-    },
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è la melanzana?",
-   "risposte": [
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": true
-    },
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è la melanzana?",
-   "risposte": [
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": true
-    },
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è la melanzana?",
-   "risposte": [
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": true
-    },
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è la melanzana?",
-   "risposte": [
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": true
-    },
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è la melanzana?",
-   "risposte": [
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": true
-    },
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è la melanzana?",
-   "risposte": [
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": true
-    },
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è la melanzana?",
-   "risposte": [
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": true
-    },
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è il limone?",
-   "risposte": [
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": true
-    },
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è il limone?",
-   "risposte": [
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": true
-    },
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è il limone?",
-   "risposte": [
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": true
-    },
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è il limone?",
-   "risposte": [
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": true
-    },
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è il limone?",
-   "risposte": [
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": true
-    },
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è il limone?",
-   "risposte": [
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": true
-    },
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è il limone?",
-   "risposte": [
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": true
-    },
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è il limone?",
-   "risposte": [
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": true
-    },
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è il limone?",
-   "risposte": [
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": true
-    },
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è l'uva?",
-   "risposte": [
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": true
-    },
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è l'uva?",
-   "risposte": [
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": true
-    },
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è l'uva?",
-   "risposte": [
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": true
-    },
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è l'uva?",
-   "risposte": [
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": true
-    },
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è l'uva?",
-   "risposte": [
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": true
-    },
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è l'uva?",
-   "risposte": [
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": true
-    },
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è l'uva?",
-   "risposte": [
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": true
-    },
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è l'uva?",
-   "risposte": [
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": true
-    },
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quale è l'uva?",
-   "risposte": [
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": true
-    },
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i pomodori?",
-   "risposte": [
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": true
-    },
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i pomodori?",
-   "risposte": [
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": true
-    },
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i pomodori?",
-   "risposte": [
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": true
-    },
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i pomodori?",
-   "risposte": [
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": true
-    },
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i pomodori?",
-   "risposte": [
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": true
-    },
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i pomodori?",
-   "risposte": [
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": true
-    },
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i pomodori?",
-   "risposte": [
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": true
-    },
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i pomodori?",
-   "risposte": [
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": true
-    },
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i pomodori?",
-   "risposte": [
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": true
-    },
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le mele?",
-   "risposte": [
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": true
-    },
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le mele?",
-   "risposte": [
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": true
-    },
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le mele?",
-   "risposte": [
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": true
-    },
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le mele?",
-   "risposte": [
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": true
-    },
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le mele?",
-   "risposte": [
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": true
-    },
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le mele?",
-   "risposte": [
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": true
-    },
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le mele?",
-   "risposte": [
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": true
-    },
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le mele?",
-   "risposte": [
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": true
-    },
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le mele?",
-   "risposte": [
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": true
-    },
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le banane?",
-   "risposte": [
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": true
-    },
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le banane?",
-   "risposte": [
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": true
-    },
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le banane?",
-   "risposte": [
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": true
-    },
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le banane?",
-   "risposte": [
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": true
-    },
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le banane?",
-   "risposte": [
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": true
-    },
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le banane?",
-   "risposte": [
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": true
-    },
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le banane?",
-   "risposte": [
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": true
-    },
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le banane?",
-   "risposte": [
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": true
-    },
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le banane?",
-   "risposte": [
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": true
-    },
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le fragole?",
-   "risposte": [
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": true
-    },
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le fragole?",
-   "risposte": [
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": true
-    },
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le fragole?",
-   "risposte": [
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": true
-    },
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le fragole?",
-   "risposte": [
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": true
-    },
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le fragole?",
-   "risposte": [
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": true
-    },
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le fragole?",
-   "risposte": [
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": true
-    },
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le fragole?",
-   "risposte": [
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": true
-    },
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le fragole?",
-   "risposte": [
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": true
-    },
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le fragole?",
-   "risposte": [
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": true
-    },
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le carote?",
-   "risposte": [
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": true
-    },
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le carote?",
-   "risposte": [
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": true
-    },
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le carote?",
-   "risposte": [
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": true
-    },
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le carote?",
-   "risposte": [
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": true
-    },
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le carote?",
-   "risposte": [
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": true
-    },
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le carote?",
-   "risposte": [
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": true
-    },
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le carote?",
-   "risposte": [
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": true
-    },
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le carote?",
-   "risposte": [
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": true
-    },
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le carote?",
-   "risposte": [
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": true
-    },
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le zucchine?",
-   "risposte": [
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": true
-    },
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le zucchine?",
-   "risposte": [
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": true
-    },
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le zucchine?",
-   "risposte": [
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": true
-    },
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le zucchine?",
-   "risposte": [
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": true
-    },
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le zucchine?",
-   "risposte": [
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": true
-    },
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le zucchine?",
-   "risposte": [
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": true
-    },
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le zucchine?",
-   "risposte": [
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": true
-    },
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le zucchine?",
-   "risposte": [
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": true
-    },
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le zucchine?",
-   "risposte": [
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": true
-    },
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le ciliegie?",
-   "risposte": [
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": true
-    },
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le ciliegie?",
-   "risposte": [
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": true
-    },
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le ciliegie?",
-   "risposte": [
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": true
-    },
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le ciliegie?",
-   "risposte": [
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": true
-    },
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le ciliegie?",
-   "risposte": [
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": true
-    },
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le ciliegie?",
-   "risposte": [
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": true
-    },
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le ciliegie?",
-   "risposte": [
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": true
-    },
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le ciliegie?",
-   "risposte": [
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": true
-    },
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le ciliegie?",
-   "risposte": [
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": true
-    },
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le ciliegie?",
-   "risposte": [
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": true
-    },
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le ciliegie?",
-   "risposte": [
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": true
-    },
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le ciliegie?",
-   "risposte": [
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": true
-    },
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i peperoni?",
-   "risposte": [
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": true
-    },
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i peperoni?",
-   "risposte": [
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": true
-    },
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i peperoni?",
-   "risposte": [
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": true
-    },
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i peperoni?",
-   "risposte": [
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": true
-    },
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i peperoni?",
-   "risposte": [
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": true
-    },
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i peperoni?",
-   "risposte": [
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": true
-    },
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i peperoni?",
-   "risposte": [
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": true
-    },
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i peperoni?",
-   "risposte": [
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": true
-    },
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i peperoni?",
-   "risposte": [
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": true
-    },
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i peperoni?",
-   "risposte": [
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": true
-    },
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i peperoni?",
-   "risposte": [
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": true
-    },
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono i peperoni?",
-   "risposte": [
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": true
-    },
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le cipolle?",
-   "risposte": [
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": true
-    },
-    {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le cipolle?",
-   "risposte": [
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": true
-    },
-    {
-     "testo": "Melanzana",
-     "foto": "foto_melanzana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le cipolle?",
-   "risposte": [
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": true
-    },
-    {
-     "testo": "Limone",
-     "foto": "foto_limone",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le cipolle?",
-   "risposte": [
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": true
-    },
-    {
-     "testo": "Uva",
-     "foto": "foto_uva",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le cipolle?",
-   "risposte": [
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": true
-    },
-    {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le cipolle?",
-   "risposte": [
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": true
-    },
-    {
-     "testo": "Mele",
-     "foto": "foto_mela",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le cipolle?",
-   "risposte": [
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": true
-    },
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le cipolle?",
-   "risposte": [
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": true
-    },
-    {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le cipolle?",
-   "risposte": [
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": true
-    },
-    {
-     "testo": "Carote",
-     "foto": "foto_carote",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le cipolle?",
-   "risposte": [
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": true
-    },
-    {
-     "testo": "Zucchine",
-     "foto": "foto_zucchine",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le cipolle?",
-   "risposte": [
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": true
-    },
-    {
-     "testo": "Ciliegie",
-     "foto": "foto_ciliegie",
-     "giusta": false
-    }
-   ]
-  },
-  {
-   "testo": "Quali sono le cipolle?",
-   "risposte": [
-    {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
-     "giusta": true
-    },
-    {
-     "testo": "Peperoni",
-     "foto": "foto_peperoni",
-     "giusta": false
     }
    ]
   },
@@ -1895,14 +140,14 @@
    "testo": "Quale è l'arancia?",
    "risposte": [
     {
-     "testo": "Arancia",
-     "foto": "foto_arancia",
-     "giusta": true
-    },
-    {
      "testo": "Ciliegie",
      "foto": "foto_ciliegie",
      "giusta": false
+    },
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": true
     }
    ]
   },
@@ -1937,6 +182,66 @@
    ]
   },
   {
+   "testo": "Quale è l'arancia?",
+   "risposte": [
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": true
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'arancia?",
+   "risposte": [
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": true
+    },
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": false
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": true
+    }
+   ]
+  },
+  {
    "testo": "Quale è la melanzana?",
    "risposte": [
     {
@@ -1945,9 +250,114 @@
      "giusta": true
     },
     {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": false
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": true
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
      "testo": "Ciliegie",
      "foto": "foto_ciliegie",
      "giusta": false
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": true
     }
    ]
   },
@@ -1982,6 +392,36 @@
    ]
   },
   {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": true
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è la melanzana?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": true
+    }
+   ]
+  },
+  {
    "testo": "Quale è il limone?",
    "risposte": [
     {
@@ -1990,9 +430,144 @@
      "giusta": true
     },
     {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
+    },
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": false
+    },
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    },
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    },
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
      "testo": "Ciliegie",
      "foto": "foto_ciliegie",
      "giusta": false
+    },
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
     }
    ]
   },
@@ -2023,6 +598,171 @@
      "testo": "Cipolle",
      "foto": "foto_cipolla",
      "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": false
+    },
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è il limone?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    },
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": false
+    },
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": true
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    },
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": false
+    },
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    },
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    },
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": true
     }
    ]
   },
@@ -2072,6 +812,171 @@
    ]
   },
   {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": false
+    },
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'uva?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": true
+    },
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    },
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    },
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    },
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    },
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    },
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    },
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    }
+   ]
+  },
+  {
    "testo": "Quali sono i pomodori?",
    "risposte": [
     {
@@ -2090,14 +995,14 @@
    "testo": "Quali sono i pomodori?",
    "risposte": [
     {
-     "testo": "Pomodori",
-     "foto": "foto_pomodori",
-     "giusta": true
-    },
-    {
      "testo": "Peperoni",
      "foto": "foto_peperoni",
      "giusta": false
+    },
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
     }
    ]
   },
@@ -2105,13 +1010,73 @@
    "testo": "Quali sono i pomodori?",
    "risposte": [
     {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": false
+    },
+    {
      "testo": "Pomodori",
      "foto": "foto_pomodori",
      "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": false
     },
     {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i pomodori?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    },
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": false
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
      "giusta": false
     }
    ]
@@ -2125,9 +1090,114 @@
      "giusta": true
     },
     {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": false
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
      "testo": "Ciliegie",
      "foto": "foto_ciliegie",
      "giusta": false
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
     }
    ]
   },
@@ -2150,13 +1220,58 @@
    "testo": "Quali sono le mele?",
    "risposte": [
     {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": false
+    },
+    {
      "testo": "Mele",
      "foto": "foto_mela",
      "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": false
     },
     {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le mele?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
      "giusta": false
     }
    ]
@@ -2169,25 +1284,160 @@
      "foto": "foto_banana",
      "giusta": true
     },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": false
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
     {
      "testo": "Ciliegie",
      "foto": "foto_ciliegie",
      "giusta": false
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
     }
    ]
   },
   {
    "testo": "Quali sono le banane?",
    "risposte": [
-    {
-     "testo": "Banane",
-     "foto": "foto_banana",
-     "giusta": true
-    },
     {
      "testo": "Peperoni",
      "foto": "foto_peperoni",
      "giusta": false
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": false
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
     }
    ]
   },
@@ -2200,9 +1450,159 @@
      "giusta": true
     },
     {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
+     "testo": "Pere",
+     "foto": "foto_pera",
      "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le banane?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": true
+    },
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": false
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": false
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
     }
    ]
   },
@@ -2225,14 +1625,14 @@
    "testo": "Quali sono le fragole?",
    "risposte": [
     {
-     "testo": "Fragole",
-     "foto": "foto_fragole",
-     "giusta": true
-    },
-    {
      "testo": "Peperoni",
      "foto": "foto_peperoni",
      "giusta": false
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
     }
    ]
   },
@@ -2252,6 +1652,51 @@
    ]
   },
   {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le fragole?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": false
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    }
+   ]
+  },
+  {
    "testo": "Quali sono le carote?",
    "risposte": [
     {
@@ -2260,9 +1705,129 @@
      "giusta": true
     },
     {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
      "testo": "Ciliegie",
      "foto": "foto_ciliegie",
      "giusta": false
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
     }
    ]
   },
@@ -2285,14 +1850,179 @@
    "testo": "Quali sono le carote?",
    "risposte": [
     {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": false
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
      "testo": "Carote",
      "foto": "foto_carote",
      "giusta": true
     },
     {
-     "testo": "Cipolle",
-     "foto": "foto_cipolla",
+     "testo": "Pere",
+     "foto": "foto_pera",
      "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le carote?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": true
+    },
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": false
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
     }
    ]
   },
@@ -2330,14 +2060,1094 @@
    "testo": "Quali sono le zucchine?",
    "risposte": [
     {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": false
+    },
+    {
      "testo": "Zucchine",
      "foto": "foto_zucchine",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le zucchine?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    },
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    },
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    },
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    },
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    },
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    },
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    },
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": false
+    },
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": false
+    },
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le ciliegie?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    },
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    },
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": false
+    },
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    },
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    },
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    },
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    },
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    },
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    },
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": false
+    },
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": false
+    },
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono i peperoni?",
+   "risposte": [
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": true
+    },
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": false
+    },
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    },
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    },
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    },
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    },
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    },
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    },
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": false
+    },
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    },
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le cipolle?",
+   "risposte": [
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": true
+    },
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": true
+    },
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": true
+    },
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": true
+    },
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": true
+    },
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": false
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": true
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": false
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": false
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
      "giusta": true
     },
     {
      "testo": "Cipolle",
      "foto": "foto_cipolla",
      "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quali sono le pere?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": false
+    },
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Arancia",
+     "foto": "foto_arancia",
+     "giusta": false
+    },
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Melanzana",
+     "foto": "foto_melanzana",
+     "giusta": false
+    },
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
+    },
+    {
+     "testo": "Limone",
+     "foto": "foto_limone",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Uva",
+     "foto": "foto_uva",
+     "giusta": false
+    },
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
+    },
+    {
+     "testo": "Pomodori",
+     "foto": "foto_pomodori",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
+    },
+    {
+     "testo": "Mele",
+     "foto": "foto_mela",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
+    },
+    {
+     "testo": "Banane",
+     "foto": "foto_banana",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
+    },
+    {
+     "testo": "Fragole",
+     "foto": "foto_fragole",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
+    },
+    {
+     "testo": "Carote",
+     "foto": "foto_carote",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
+    },
+    {
+     "testo": "Zucchine",
+     "foto": "foto_zucchine",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Ciliegie",
+     "foto": "foto_ciliegie",
+     "giusta": false
+    },
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
+    },
+    {
+     "testo": "Peperoni",
+     "foto": "foto_peperoni",
+     "giusta": false
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Cipolle",
+     "foto": "foto_cipolla",
+     "giusta": false
+    },
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
+    }
+   ]
+  },
+  {
+   "testo": "Quale è l'anguria?",
+   "risposte": [
+    {
+     "testo": "Pere",
+     "foto": "foto_pera",
+     "giusta": false
+    },
+    {
+     "testo": "Anguria",
+     "foto": "foto_anguria",
+     "giusta": true
     }
    ]
   }
