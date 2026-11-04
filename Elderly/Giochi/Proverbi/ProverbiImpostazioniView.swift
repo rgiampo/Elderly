@@ -9,17 +9,24 @@ struct ProverbiImpostazioniView: View {
             descrizione: "Leggi l'inizio del proverbio e scegli come finisce.",
             istruzioni: Istruzioni.proverbi,
             anteprima: { difficolta in
-                VStack(spacing: 16) {
+                // come nel gioco: con tre o quattro fini, due per riga (così l'anteprima resta bassa e "Giochiamo!" si vede)
+                let numero = difficolta.opzioniProverbi
+                let perRiga = numero > 2 ? 2 : 1
+                VStack(spacing: 14) {
                     Text("Chi dorme …")
                         .testo(DimensioneTesto.titolo)
                         .foregroundStyle(Tema.testo)
-                    ForEach(0..<difficolta.opzioniProverbi, id: \.self) { numero in
-                        RoundedRectangle(cornerRadius: 22, style: .continuous)
-                            .fill(numero == 0 ? Tema.verde : Tema.celeste.opacity(0.7))
-                            .frame(height: 64)
-                            .overlay(Text(["non piglia pesci", "vive cent'anni", "mangia sempre bene", "va sano e va lontano"][numero])
+                        .lineLimit(1).minimumScaleFactor(0.5)
+                    LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 12), count: perRiga), spacing: 12) {
+                        ForEach(0..<numero, id: \.self) { n in
+                            Text(["non piglia pesci", "vive cent'anni", "mangia sempre bene", "va sano e va lontano"][n])
                                 .testo(DimensioneTesto.normale)
-                                .foregroundStyle(numero == 0 ? .white : Tema.testo))
+                                .foregroundStyle(n == 0 ? .white : Tema.testo)
+                                .lineLimit(1).minimumScaleFactor(0.5)
+                                .padding(.horizontal, 10)
+                                .frame(maxWidth: .infinity, minHeight: 60)
+                                .background(n == 0 ? Tema.verde : Tema.celeste.opacity(0.7), in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+                        }
                     }
                 }
                 .animation(.spring(duration: 0.4), value: difficolta)

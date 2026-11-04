@@ -42,28 +42,36 @@ struct ProverbiView: View {
     }
 
     private var partita: some View {
-        VStack(spacing: 20) {
-            // l'inizio del proverbio, e dopo la risposta giusta il proverbio intero
-            VStack(spacing: 8) {
+        VStack(spacing: 16) {
+            // l'inizio del proverbio, e dopo la risposta giusta il proverbio intero. Il testo vecchio sparisce
+            // prima che arrivi il nuovo: se si sovrappongono, per un attimo le due frasi si leggono una sull'altra.
+            ZStack {
                 Text(modello.trovata ? modello.proverbio.completo : modello.proverbio.inizio + "\u{00A0}…")   // spazio che non va a capo: i puntini restano attaccati all'ultima parola
                     .testo(DimensioneTesto.enorme)
                     .foregroundStyle(Tema.testo)
                     .multilineTextAlignment(.center)
-                    .lineLimit(3).minimumScaleFactor(0.5)
-                    .contentTransition(.opacity)
+                    .lineLimit(3).minimumScaleFactor(0.4)
+                    .id("\(modello.indice)-\(modello.trovata)")
+                    .transition(.asymmetric(insertion: .opacity.animation(.easeIn(duration: 0.3).delay(0.2)),
+                                            removal: .opacity.animation(.easeOut(duration: 0.15))))
                     .accessibilityAddTraits(.isHeader)
             }
-            .frame(maxWidth: .infinity, minHeight: 190)
-            .padding(.horizontal, 32).padding(.vertical, 20)
+            .frame(maxWidth: .infinity, minHeight: 140, maxHeight: 220)
+            .padding(.horizontal, 32).padding(.vertical, 16)
             .scheda()
             .coloreDelTurno()
-            .animation(.easeInOut(duration: 0.4), value: modello.trovata)
 
-            VStack(spacing: 16) {
-                ForEach(modello.opzioni) { opzione in
-                    Button { modello.scegli(opzione) } label: { SchedaOpzione(opzione: opzione, stato: stato(opzione)) }
-                        .buttonStyle(StilePremuto())
-                        .accessibilityLabel(opzione.testo)
+            // con tre o quattro fini, due per riga: le schede restano alte e si toccano bene anche sull'iPad mini
+            let perRiga = modello.opzioni.count > 2 ? 2 : 1
+            Grid(horizontalSpacing: 16, verticalSpacing: 16) {
+                ForEach(Array(stride(from: 0, to: modello.opzioni.count, by: perRiga)), id: \.self) { inizio in
+                    GridRow {
+                        ForEach(modello.opzioni[inizio..<min(inizio + perRiga, modello.opzioni.count)]) { opzione in
+                            Button { modello.scegli(opzione) } label: { SchedaOpzione(opzione: opzione, stato: stato(opzione)) }
+                                .buttonStyle(StilePremuto())
+                                .accessibilityLabel(opzione.testo)
+                        }
+                    }
                 }
             }
             .frame(maxHeight: .infinity)
@@ -73,7 +81,7 @@ struct ProverbiView: View {
                 BottoneVoce(testo: modello.testoParlato, etichetta: "Ascolta", altezza: 76)
             }
         }
-        .padding(.horizontal, 40).padding(.bottom, 24)
+        .padding(.horizontal, 32).padding(.bottom, 20)
     }
 
     private func stato(_ opzione: ProverbiModello.Opzione) -> SchedaOpzione.Stato {
