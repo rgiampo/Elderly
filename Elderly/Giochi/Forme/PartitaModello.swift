@@ -3,6 +3,7 @@ import SwiftUI
 enum Fase { case guarda, tocca, festa }
 
 /// Logica del gioco: si ripete insieme una sequenza di forme, a turno, senza penalità.
+/// Se chi gioca non tocca niente per qualche secondo, una mano gli indica la forma giusta.
 @MainActor @Observable
 final class PartitaModello {
     let forme: [Forma]
@@ -11,81 +12,54 @@ final class PartitaModello {
     private(set) var giocatoreCorrente = 0
     private(set) var fase = Fase.guarda
     private(set) var formaAccesa: Forma?
+    private(set) var formaSuggerita: Forma?
     private(set) var messaggio = ""
     private(set) var record = 0
 
     private var sequenza: [Forma] = []
-    private let melodie: [Melodia]
-    private var numeroMelodia = 0
-    private(set) var titoloMelodia: String?        // se si sta suonando una melodia conosciuta
     private var posizione = 0
-    private let passo: Int
-    private let lunghezzaIniziale: Int
     private var lunghezza: Int
     private var compito: Task<Void, Never>?
+    private var suggerimento: Task<Void, Never>?
 
     init(giocatori: [Partecipante], difficolta: Difficolta) {
         self.giocatori = giocatori
-        self.forme = difficolta.forme
-        passo = difficolta.passoForme
-        lunghezzaIniziale = max(2, passo)
-        lunghezza = max(2, passo)
-        // le melodie intere ci sono solo nel livello Maestro; negli altri le sequenze sono a caso
-        melodie = difficolta == .maestro ? Melodia.tutte : []
+        forme = difficolta.forme
+        lunghezza = difficolta.inizioForme
     }
 
     func inizia() { nuovaSequenza() }
-    func ferma() { compito?.cancel() }
+    func ferma() { compito?.cancel(); suggerimento?.cancel() }
 
     func tocca(_ forma: Forma) {
         guard fase == .tocca else { return }
         accendi(forma)
         if forma == sequenza[posizione] {
             posizione += 1
-            if posizione == sequenza.count { successo() }
-        } else if melodiaCorrente != nil {
-            aiuta()
+            if posizione == sequenza.count { successo() } else { aspettaSuggerimento() }
         } else {
             errore()
         }
     }
 
-    /// Nelle melodie un errore non fa ricominciare: si accende la forma giusta, si dice "Questa!" e si va avanti da lì,
-    /// così chi sta imparando una canzone la ascolta e la impara tocco dopo tocco.
-    private func aiuta() {
-        let giusta = sequenza[posizione]
-        messaggio = "Questa! Continua"
-        accendi(giusta, durata: 0.8)
-        posizione += 1
-        if posizione == sequenza.count { successo() }
-    }
-
     // MARK: - Passi del gioco
 
     private func nuovaSequenza() {
-        if let melodia = melodiaCorrente {
-            // si riascolta l'inizio della melodia, un po' più lungo a ogni giro
-            titoloMelodia = melodia.titolo
-            sequenza = melodia.note.prefix(lunghezza).map { forme[$0] }
-        } else {
-            titoloMelodia = nil
-            sequenza = (0..<lunghezza).map { _ in forme.randomElement()! }
-        }
+        sequenza = (0..<lunghezza).map { _ in forme.randomElement()! }
         mostra()
     }
 
     private func mostra() {
         fase = .guarda
         posizione = 0
+        formaSuggerita = nil
         messaggio = "Guarda bene…"
         esegui {
             try await Task.sleep(for: .seconds(1))
-            // nelle melodie le note si susseguono più svelte, come in una canzone
-            let passo = await self.melodiaCorrente != nil ? 0.6 : 1.0
             for forma in await self.sequenza {
-                await self.accendi(forma, durata: passo * 0.7)
+                await self.accendi(forma, durata: Configurazione.pausaTraForme * 0.7)
                 await AccessibilityNotification.Announcement(forma.nome).post()
-                try await Task.sleep(for: .seconds(passo))
+                try await Task.sleep(for: .seconds(Configurazione.pausaTraForme))
             }
             await self.iniziaTurno()
         }
@@ -94,52 +68,56 @@ final class PartitaModello {
     private func iniziaTurno() {
         fase = .tocca
         messaggio = "Tocca a te!"
+        aspettaSuggerimento()
+    }
+
+    /// Se per qualche secondo non si tocca niente, la mano indica la forma da toccare adesso.
+    private func aspettaSuggerimento() {
+        suggerimento?.cancel()
+        formaSuggerita = nil
+        suggerimento = Task {
+            try? await Task.sleep(for: .seconds(Configurazione.attesaSuggerimento))
+            guard !Task.isCancelled, fase == .tocca else { return }
+            withAnimation(.spring(duration: 0.5)) { formaSuggerita = sequenza[posizione] }
+            messaggio = "Tocca qui!"
+        }
     }
 
     private func successo() {
+        suggerimento?.cancel()
+        formaSuggerita = nil
         fase = .festa
         record = max(record, sequenza.count)
-        let finita = melodiaCorrente.map { sequenza.count >= $0.note.count } ?? false
-        messaggio = finita ? "Hai suonato \(titoloMelodia ?? "la melodia")!" : Frasi.bravi([giocatori[giocatoreCorrente]])
+        messaggio = Frasi.bravi([giocatori[giocatoreCorrente]])
         esegui {
             try await Task.sleep(for: .seconds(0.4))
-            if finita {
-                // la melodia intera, senza pause, come una canzone
-                for forma in await self.sequenza {
-                    await self.accendi(forma, durata: 0.35)
-                    try await Task.sleep(for: .seconds(0.42))
-                }
-                try await Task.sleep(for: .seconds(1.5))
-            } else {
-                for forma in self.forme {
-                    await self.suona(forma, volume: 0.6)
-                    try await Task.sleep(for: .seconds(0.12))
-                }
-                try await Task.sleep(for: .seconds(1.8))
+            for forma in self.forme {
+                await self.suona(forma, volume: 0.6)
+                try await Task.sleep(for: .seconds(0.12))
             }
-            await self.passaAlProssimo(lunghezzaNuova: finita ? self.lunghezzaIniziale : await self.lunghezza + self.passo, nuovaMelodia: finita)
+            try await Task.sleep(for: .seconds(1.8))
+            await self.passaAlProssimo(lunghezzaNuova: await self.lunghezza + 1)
         }
     }
 
     /// Un errore non penalizza: si dice "Riproviamo" e tocca all'altra persona (o di nuovo a chi gioca da solo), con la stessa sequenza.
     private func errore() {
+        suggerimento?.cancel()
+        formaSuggerita = nil
         fase = .guarda
         messaggio = "Riproviamo insieme"
         esegui {
             try await Task.sleep(for: .seconds(1.5))
-            await self.passaAlProssimo(lunghezzaNuova: await self.lunghezza, nuovaMelodia: false, stessaSequenza: true)
+            await self.passaAlProssimo(lunghezzaNuova: await self.lunghezza, stessaSequenza: true)
         }
     }
 
-    /// Cambia il turno (a ogni giro, giusto o sbagliato). Dopo una melodia finita si passa alla prossima.
-    private func passaAlProssimo(lunghezzaNuova: Int, nuovaMelodia: Bool, stessaSequenza: Bool = false) {
+    /// Cambia il turno (a ogni giro, giusto o sbagliato).
+    private func passaAlProssimo(lunghezzaNuova: Int, stessaSequenza: Bool = false) {
         lunghezza = lunghezzaNuova
         giocatoreCorrente = (giocatoreCorrente + 1) % giocatori.count
-        if nuovaMelodia, !melodie.isEmpty { numeroMelodia += 1 }
         if stessaSequenza { mostra() } else { nuovaSequenza() }
     }
-
-    private var melodiaCorrente: Melodia? { melodie.isEmpty ? nil : melodie[numeroMelodia % melodie.count] }
 
     // MARK: - Aiuti
 

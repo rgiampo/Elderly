@@ -31,7 +31,7 @@ struct FormeGiocoView: View {
                     .frame(maxHeight: .infinity)
 
                 HStack(spacing: 24) {
-                    Text(partita.titoloMelodia.map { "Melodia: \($0)" } ?? "Sequenza più lunga insieme: \(partita.record)")
+                    Text("Sequenza più lunga insieme: \(partita.record)")
                         .testo(DimensioneTesto.medio)
                         .foregroundStyle(Tema.testoSecondario)
                         .lineLimit(1).minimumScaleFactor(0.5)
@@ -68,21 +68,14 @@ private struct RigaForme: View {
 
     var body: some View {
         GeometryReader { spazio in
-            // più di cinque forme vanno su due righe (il Maestro: due righe da sei, sfruttano lo schermo largo)
-            let righe = partita.forme.count > 5 ? 2 : 1
-            let perRiga = (partita.forme.count + righe - 1) / righe
             let distanza: CGFloat = 32
             // 0.88: la forma illuminata cresce un po' e non deve uscire dallo schermo
-            let lato = min((spazio.size.height - distanza * CGFloat(righe - 1)) / CGFloat(righe),
-                           (spazio.size.width - distanza * CGFloat(perRiga - 1)) / CGFloat(perRiga)) * 0.88
-            VStack(spacing: distanza) {
-                ForEach(0..<righe, id: \.self) { r in
-                    HStack(spacing: distanza) {
-                        ForEach(Array(partita.forme.dropFirst(r * perRiga).prefix(perRiga))) { forma in
-                            FormaBottone(forma: forma, accesa: partita.formaAccesa == forma, lato: lato) {
-                                partita.tocca(forma)
-                            }
-                        }
+            let numero = CGFloat(partita.forme.count)
+            let lato = min(spazio.size.height, (spazio.size.width - distanza * (numero - 1)) / numero) * 0.88
+            HStack(spacing: distanza) {
+                ForEach(partita.forme) { forma in
+                    FormaBottone(forma: forma, accesa: partita.formaAccesa == forma, suggerita: partita.formaSuggerita == forma, lato: lato) {
+                        partita.tocca(forma)
                     }
                 }
             }
@@ -95,6 +88,7 @@ private struct RigaForme: View {
 struct FormaBottone: View {
     let forma: Forma
     let accesa: Bool
+    var suggerita = false
     let lato: CGFloat
     let azione: () -> Void
 
@@ -117,6 +111,24 @@ struct FormaBottone: View {
                 .opacity((1 - onda) * 0.7)
                 .allowsHitTesting(false)
         }
+        // la mano che indica la forma da toccare: scende e preme, piano, finché non si tocca
+        .overlay(alignment: .bottomTrailing) {
+            if suggerita {
+                Image(systemName: "hand.point.up.left.fill")
+                    .font(.system(size: lato * 0.42))
+                    .foregroundStyle(.white, Tema.testo)
+                    .shadow(color: .black.opacity(0.35), radius: 8, y: 4)
+                    .phaseAnimator([false, true]) { mano, giu in
+                        mano.offset(x: lato * 0.12, y: giu ? lato * 0.02 : lato * 0.18).scaleEffect(giu ? 0.9 : 1)
+                    } animation: { _ in .easeInOut(duration: 0.6) }
+                    .transition(.scale.combined(with: .opacity))
+                    .allowsHitTesting(false)
+                    .accessibilityHidden(true)
+            }
+        }
+        .phaseAnimator([false, true], trigger: suggerita) { vista, luce in
+            vista.brightness(suggerita && luce ? 0.12 : 0)
+        } animation: { _ in .easeInOut(duration: 0.6) }
         .brightness(accesa ? 0.18 : 0)
         .scaleEffect(accesa ? 1.12 : 1)
         .shadow(color: forma.colore.opacity(accesa ? 0.7 : 0.2), radius: accesa ? 36 : 8, y: 6)
@@ -127,7 +139,7 @@ struct FormaBottone: View {
             withAnimation(.easeOut(duration: 0.8)) { onda = 1 }
         }
         .accessibilityLabel(forma.nome)
-        .accessibilityHint("Tocca per suonare")
+        .accessibilityHint(suggerita ? "Tocca questa" : "Tocca per suonare")
     }
 }
 

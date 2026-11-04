@@ -2,7 +2,7 @@ import Foundation
 
 /// I tre livelli, uguali per tutti i giochi. Quanto è difficile lo decidono i numeri in `Configurazione`.
 enum Difficolta: CaseIterable, Identifiable {
-    case facile, medio, difficile, maestro   // il maestro esiste solo nel gioco delle forme
+    case facile, medio, difficile   // "Suona le forme" usa solo facile e medio
 
     var id: Self { self }
 
@@ -11,36 +11,21 @@ enum Difficolta: CaseIterable, Identifiable {
         case .facile: "Facile"
         case .medio: "Medio"
         case .difficile: "Difficile"
-        case .maestro: "Maestro"
         }
     }
 
-    /// Quante forme ci sono nel gioco delle forme.
-    var numeroForme: Int {
-        switch self {
-        case .facile: Configurazione.formeFacile
-        case .medio: Configurazione.formeMedio
-        case .difficile: Configurazione.formeDifficile
-        case .maestro: Configurazione.formeMaestro
-        }
-    }
+    /// Quante forme ci sono nel gioco delle forme (il gioco offre solo facile e medio).
+    var numeroForme: Int { self == .facile ? Configurazione.formeFacile : Configurazione.formeMedio }
 
-    /// Di quante note cresce la sequenza a ogni giro.
-    var passoForme: Int {
-        switch self {
-        case .facile: Configurazione.passoFacile
-        case .medio: Configurazione.passoMedio
-        case .difficile: Configurazione.passoDifficile
-        case .maestro: Configurazione.passoMaestro
-        }
-    }
+    /// Con quante note comincia la sequenza nel gioco delle forme.
+    var inizioForme: Int { self == .facile ? Configurazione.inizioFormeFacile : Configurazione.inizioFormeMedio }
 
     /// Quante coppie di carte ci sono nel gioco delle coppie.
     var numeroCoppie: Int {
         switch self {
         case .facile: Configurazione.coppieFacile
         case .medio: Configurazione.coppieMedio
-        case .difficile, .maestro: Configurazione.coppieDifficile
+        case .difficile: Configurazione.coppieDifficile
         }
     }
 
@@ -49,7 +34,7 @@ enum Difficolta: CaseIterable, Identifiable {
         switch self {
         case .facile: Configurazione.turniProverbiFacile
         case .medio: Configurazione.turniProverbiMedio
-        case .difficile, .maestro: Configurazione.turniProverbiDifficile
+        case .difficile: Configurazione.turniProverbiDifficile
         }
     }
 
@@ -58,7 +43,7 @@ enum Difficolta: CaseIterable, Identifiable {
         switch self {
         case .facile: Configurazione.opzioniProverbiFacile
         case .medio: Configurazione.opzioniProverbiMedio
-        case .difficile, .maestro: Configurazione.opzioniProverbiDifficile
+        case .difficile: Configurazione.opzioniProverbiDifficile
         }
     }
 
@@ -67,7 +52,7 @@ enum Difficolta: CaseIterable, Identifiable {
         switch self {
         case .facile: Configurazione.fotoCosaMancaFacile
         case .medio: Configurazione.fotoCosaMancaMedio
-        case .difficile, .maestro: Configurazione.fotoCosaMancaDifficile
+        case .difficile: Configurazione.fotoCosaMancaDifficile
         }
     }
 
@@ -76,7 +61,7 @@ enum Difficolta: CaseIterable, Identifiable {
         switch self {
         case .facile: Configurazione.puzzleFacile
         case .medio: Configurazione.puzzleMedio
-        case .difficile, .maestro: Configurazione.puzzleDifficile
+        case .difficile: Configurazione.puzzleDifficile
         }
     }
 
@@ -85,7 +70,7 @@ enum Difficolta: CaseIterable, Identifiable {
         switch self {
         case .facile: Configurazione.paroleFacile
         case .medio: Configurazione.paroleMedio
-        case .difficile, .maestro: Configurazione.paroleDifficile
+        case .difficile: Configurazione.paroleDifficile
         }
     }
 
@@ -94,7 +79,7 @@ enum Difficolta: CaseIterable, Identifiable {
         switch self {
         case .facile: Configurazione.scelteFigureFacile
         case .medio: Configurazione.scelteFigureMedio
-        case .difficile, .maestro: Configurazione.scelteFigureDifficile
+        case .difficile: Configurazione.scelteFigureDifficile
         }
     }
 

@@ -9,10 +9,9 @@ struct FormeImpostazioniView: View {
             titolo: "Suona le forme",
             descrizione: "Guarda le forme che si accendono e suonano, poi ripetile nello stesso ordine.",
             istruzioni: Istruzioni.forme,
-            livelli: Difficolta.allCases,
+            livelli: [.facile, .medio],
             anteprima: { difficolta in
-                // fino a 5 forme in una riga, il Maestro su due righe da 6: l'anteprima resta bassa
-                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20), count: min(difficolta.numeroForme, difficolta.numeroForme > 5 ? 6 : 5)), spacing: 20) {
+                LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20), count: difficolta.numeroForme), spacing: 20) {
                     ForEach(difficolta.forme) { forma in
                         forma.sagoma.fill(forma.colore)
                             .aspectRatio(1, contentMode: .fit)

@@ -108,7 +108,8 @@ struct BottoneVoce: View {
 /// I testi che la voce legge per spiegare ogni gioco.
 enum Istruzioni {
     static let forme = "Guarda le forme colorate: si accendono e suonano una dopo l'altra. "
-        + "Poi tocca le forme nello stesso ordine. Se sbagli non c'è problema: riproviamo insieme."
+        + "Poi tocca le forme nello stesso ordine. Se non ti ricordi, aspetta: una mano ti indica quale toccare. "
+        + "Se sbagli non c'è problema: riproviamo insieme."
     static let coppie = "Tocca due carte per girarle. Se le due foto sono uguali, hai trovato una coppia. "
         + "Se sono diverse, si rigirano: prova a ricordare dove sono."
     static let proverbi = "Leggi l'inizio del proverbio e scegli come finisce. "
