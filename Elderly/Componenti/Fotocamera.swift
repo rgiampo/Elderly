@@ -18,7 +18,7 @@ struct Fotocamera: UIViewControllerRepresentable {
             let sopra = UIHostingController(rootView: GuidaScatto())
             sopra.view.backgroundColor = .clear
             sopra.view.isUserInteractionEnabled = false   // i tocchi passano ai pulsanti della fotocamera
-            sopra.view.frame = UIScreen.main.bounds
+            sopra.view.frame = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.screen.bounds ?? .zero
             sopra.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
             controllo.cameraOverlayView = sopra.view
             context.coordinator.guida = sopra

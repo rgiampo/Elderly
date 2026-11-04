@@ -51,21 +51,21 @@ struct CoppieGiocoView: View {
 
     private var partita: some View {
         GeometryReader { spazio in
-                // sugli schermi piccoli le carte si avvicinano: lo spazio va alle foto, non ai bordi
-                let distanza: CGFloat = spazio.size.height < 600 ? 12 : 20
-                let larghezza = (spazio.size.width - distanza * CGFloat(modello.colonne - 1)) / CGFloat(modello.colonne)
-                let altezza = (spazio.size.height - distanza * CGFloat(modello.righe - 1)) / CGFloat(modello.righe)
-                LazyVGrid(columns: Array(repeating: GridItem(.fixed(larghezza), spacing: distanza), count: modello.colonne),
-                          spacing: distanza) {
-                    ForEach(modello.carte) { carta in
-                        Button { modello.tocca(carta) } label: {
-                            CartaView(carta: carta).frame(width: larghezza, height: altezza)
-                        }
-                        .buttonStyle(StilePremuto())
-                        .accessibilityLabel(carta.scoperta || carta.trovata ? "Carta scoperta" : "Carta coperta")
+            // sugli schermi piccoli le carte si avvicinano: lo spazio va alle foto, non ai bordi
+            let distanza: CGFloat = spazio.size.height < 600 ? 12 : 20
+            let larghezza = (spazio.size.width - distanza * CGFloat(modello.colonne - 1)) / CGFloat(modello.colonne)
+            let altezza = (spazio.size.height - distanza * CGFloat(modello.righe - 1)) / CGFloat(modello.righe)
+            LazyVGrid(columns: Array(repeating: GridItem(.fixed(larghezza), spacing: distanza), count: modello.colonne),
+                      spacing: distanza) {
+                ForEach(modello.carte) { carta in
+                    Button { modello.tocca(carta) } label: {
+                        CartaView(carta: carta).frame(width: larghezza, height: altezza)
                     }
+                    .buttonStyle(StilePremuto())
+                    .accessibilityLabel(carta.scoperta || carta.trovata ? "Carta scoperta" : "Carta coperta")
                 }
-                .frame(width: spazio.size.width, height: spazio.size.height)
+            }
+            .frame(width: spazio.size.width, height: spazio.size.height)
         }
         .grandezzaFoto()
         .padding(.horizontal, 24).padding(.bottom, 20)

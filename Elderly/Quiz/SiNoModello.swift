@@ -38,7 +38,7 @@ final class SiNoModello {
     var inAttesa: Bool { rispostaData != nil }
 
     var testoParlato: String {
-        var testo = giocatori.count > 1 && giocatori[turno].haNome ? "Tocca a \(giocatori[turno].nome). " : ""
+        let testo = giocatori.count > 1 && giocatori[turno].haNome ? "Tocca a \(giocatori[turno].nome). " : ""
         return testo + "Nella foto c'è: \(quesito.nome)?"
     }
 

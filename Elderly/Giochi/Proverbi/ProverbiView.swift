@@ -106,7 +106,7 @@ private struct SchedaOpzione: View {
                         .font(.system(size: 56)).foregroundStyle(.white).padding(.trailing, 28)
                 }
             }
-                        .scaleEffect(stato == .giusta ? 1.02 : 1)
+            .scaleEffect(stato == .giusta ? 1.02 : 1)
             .animation(.spring(duration: 0.35, bounce: 0.3), value: stato)
     }
 }

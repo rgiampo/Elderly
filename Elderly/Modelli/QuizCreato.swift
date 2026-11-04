@@ -1,7 +1,7 @@
 import SwiftData
 import Foundation
 
-/// Quiz creati da chi accompagna il gioco. SwiftData li salva sul tablet, foto comprese.
+/// Quiz creati da chi accompagna il gioco. SwiftData li salva sull'iPad, foto comprese.
 @Model
 final class QuizCreato {
     var id = UUID()

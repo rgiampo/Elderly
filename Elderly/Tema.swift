@@ -8,7 +8,7 @@ import SwiftUI
 ///   verde (sì, giusto)  ·  rosso (no)
 /// Il secondo giocatore è invece caldo (pesca e arancio): così il cambio di turno si vede subito, anche da lontano. Il testo è marrone scuro quasi nero.
 /// Tutti i colori con il testo bianco sopra hanno un contrasto di almeno 5:1.
-enum Tema {
+nonisolated enum Tema {   // solo costanti: si possono leggere da ovunque
     // — Sfondi
     static let celeste = Color(hex: 0xA9D8FF)         // cielo: sfondo di tutte le schermate (con il testo scuro: 11:1)
     static let celesteChiaro = Color(hex: 0xC4E6FF)   // cielo più chiaro: sfumature e riquadri
@@ -20,7 +20,6 @@ enum Tema {
     static let azzurro = Color(hex: 0x1C6FBF)         // pulsanti vivaci, per esempio "Ascolta" (5,2:1)
     static let blu = Color(hex: 0x0A4595)             // azione principale e primo giocatore (9,1:1)
     static let notte = Color(hex: 0x072B5B)           // accenti rari e molto scuri (13,9:1)
-    static let petrolio = Color(hex: 0x0B6E86)        // accenti: azzurro-verde scuro (5,9:1)
     static let arancio = Color(hex: 0xB3500C)         // secondo giocatore: arancio scuro (testo bianco sopra: 5,3:1)
 
     // — Colori di significato
@@ -39,7 +38,7 @@ enum Tema {
 
 extension Color {
     /// Un colore da un numero esadecimale, per esempio `Color(hex: 0xA9D8FF)`.
-    init(hex: UInt32) {
+    nonisolated init(hex: UInt32) {
         self.init(red: Double((hex >> 16) & 0xFF) / 255, green: Double((hex >> 8) & 0xFF) / 255, blue: Double(hex & 0xFF) / 255)
     }
 }

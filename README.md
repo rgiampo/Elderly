@@ -12,13 +12,20 @@ App SwiftUI per iPad pensata per le persone anziane nelle case di riposo. Contie
 - **Suona le forme:** si ripete insieme la melodia suonata dalle forme.
 - **Trova le coppie:** si girano due carte alla volta per trovare le foto uguali.
 - **Cosa manca?:** si indovina quale foto è sparita.
-- **Proverbi:** si completa il proverbio.
+- **Proverbi:** si completa il proverbio, anche in napoletano.
+- **Puzzle:** si rimettono a posto i pezzi della foto, trascinandoli o toccandoli.
+
+**Giochi per la mente** (ispirati ai test della memoria CERAD, ma senza tempo e senza giudizi)
+- **Nomina gli animali:** chi gioca dice gli animali a voce, chi accompagna li tocca.
+- **Simboli e numeri:** si ricorda il numero di ogni forma.
+- **Ricorda le parole:** si guardano alcune foto, poi si riconoscono tra altre.
+- **Ricorda le figure:** si guarda una figura, poi la si ritrova tra figure simili.
 
 **Quiz con le foto**
 - **Scegli la foto:** si trova la foto giusta tra quelle proposte.
 - **Sì o no:** si risponde con un segno.
 
-Chi accompagna il gioco può anche creare i propri quiz, con le foto, dalla sezione **Crea o modifica quiz**. Si gioca senza nome oppure in una o due persone salvate in **Utenti**.
+Chi accompagna il gioco può anche creare i propri quiz, con le foto, dalla sezione **Crea o modifica quiz**. Si gioca senza nome oppure in una o due persone salvate in **Utenti**: con due persone lo schermo prende il colore di chi ha il turno (celeste o pesca), e i risultati di ogni partita restano nella scheda della persona.
 
 ![Una partita a Trova le coppie](docs/screenshot/05-coppie-gioco.png)
 

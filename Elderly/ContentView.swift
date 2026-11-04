@@ -208,36 +208,6 @@ private struct Scintille: View {
     }
 }
 
-/// La "E" del nome: blu, con tre strisce per lato che seguono le sue tre barre (come linee di velocità).
-private struct EConStrisce: View {
-    let corpo: CGFloat
-    private var altezzaMaiuscola: CGFloat { corpo * 0.71 }
-
-    var body: some View {
-        Text("E")
-            .font(.system(size: corpo, weight: .bold))
-            .tracking(-3)
-            .foregroundStyle(Tema.blu)
-            .overlay(alignment: .leading) { strisce.offset(x: -corpo * 0.42, y: -corpo * 0.015) }
-    }
-
-    /// Tre strisce, una per barra della E (alta, centrale, bassa), di lunghezze diverse.
-    private var strisce: some View {
-        VStack(alignment: .trailing, spacing: 0) {
-            striscia(corpo * 0.34)
-            Spacer(minLength: 0)
-            striscia(corpo * 0.22)
-            Spacer(minLength: 0)
-            striscia(corpo * 0.34)
-        }
-        .frame(width: corpo * 0.36, height: altezzaMaiuscola)
-    }
-
-    private func striscia(_ lunghezza: CGFloat) -> some View {
-        Capsule().fill(Tema.blu.opacity(0.55)).frame(width: lunghezza, height: corpo * 0.1)
-    }
-}
-
 /// La linea sotto il nome: dritta, con una piccola "v" morbida al centro e un ghirigoro (un ricciolo) a ciascuna estremità: @-----v-----@
 private struct Ghirigoro: Shape {
     func path(in rect: CGRect) -> Path {

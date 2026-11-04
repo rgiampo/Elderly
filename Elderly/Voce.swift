@@ -56,7 +56,7 @@ final class Voce: NSObject, AVSpeechSynthesizerDelegate {
         }
     }
 
-    /// C'è sul tablet una voce italiana di qualità alta o migliorata? Se no, la voce suona più "robotica".
+    /// C'è sull'iPad una voce italiana di qualità alta o migliorata? Se no, la voce suona più "robotica".
     static var èVoceDiQualitàInstallata: Bool { vociItaliane().contains { $0.quality != .default } }
 
     /// La voce scelta nelle Opzioni; se non c'è, la migliore tra quelle installate.

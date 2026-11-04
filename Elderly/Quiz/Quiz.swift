@@ -112,7 +112,7 @@ enum CatalogoQuiz {
         return file
             .filter { $0.lastPathComponent.hasPrefix("quiz_") }
             .sorted { $0.lastPathComponent < $1.lastPathComponent }
-            .compactMap(leggi)
+            .compactMap { leggi($0) }
     }
 
     private static func leggi(_ url: URL) -> Quiz? {

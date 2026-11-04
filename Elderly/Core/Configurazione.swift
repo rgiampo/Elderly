@@ -2,7 +2,7 @@ import Foundation
 
 /// Tutti i numeri che si possono voler cambiare stanno qui, non sparsi nel codice.
 enum Configurazione {
-    /// Quante persone possono giocare insieme sullo stesso tablet.
+    /// Quante persone possono giocare insieme sullo stesso iPad.
     static let maxGiocatori = 2
 
     /// Quante domande ha una partita al quiz (le altre restano per la prossima volta).

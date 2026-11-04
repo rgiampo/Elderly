@@ -111,7 +111,7 @@ final class PartitaModello {
                 }
                 try await Task.sleep(for: .seconds(1.5))
             } else {
-                for forma in await self.forme {
+                for forma in self.forme {
                     await self.suona(forma, volume: 0.6)
                     try await Task.sleep(for: .seconds(0.12))
                 }

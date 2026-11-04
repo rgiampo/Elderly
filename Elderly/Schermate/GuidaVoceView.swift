@@ -35,57 +35,57 @@ struct GuidaVoceView: View {
         ZStack {
             SfondoCielo()
             GeometryReader { schermo in
-            // la colonna a destra è disegnata a misura fissa (600 × 688) e poi rimpicciolita tutta insieme
-            // sugli schermi piccoli (iPad mini): l'iPad finto resta proporzionato e i pulsanti stanno sotto
-            let s = min(1, schermo.size.height / 688, schermo.size.width * 0.5 / 600)
-            HStack(alignment: .top, spacing: 40 * s) {
-                // a sinistra la spiegazione grande
-                VStack(alignment: .leading, spacing: 24) {
-                    Text("Passo \(passo + 1) di \(passi.count)")
-                        .testo(DimensioneTesto.medio)
-                        .foregroundStyle(Tema.testoSecondario)
-                    Text(passi[passo].spiegazione)
-                        .testo(DimensioneTesto.grande)
-                        .foregroundStyle(Tema.testo)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .contentTransition(.opacity)
-                        .accessibilityAddTraits(.isHeader)
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-
-                // a destra l'iPad con la schermata di Impostazioni e, sotto, Indietro e Avanti
-                VStack(spacing: 28) {
-                    SchermoFinto(passo: passi[passo], tocca: tocca)
-                        .frame(width: 600, height: 560)
-                        .id(passo)
-                        .transition(.push(from: .trailing))
-                    // due pulsanti della stessa misura, larghi quanto l'iPad: le parole ci stanno intere
-                    HStack(spacing: 24) {
-                        Button { vai(passo - 1) } label: {
-                            Label("Indietro", systemImage: "chevron.left")
-                                .testo(DimensioneTesto.medio)
-                                .foregroundStyle(Tema.testo)
-                                .frame(maxWidth: .infinity, minHeight: 100)
-                                .vetro(.white.opacity(0.85))
-                        }
-                        .disabled(passo == 0).opacity(passo == 0 ? 0.4 : 1)
-                        Button { passo == passi.count - 1 ? chiudi() : vai(passo + 1) } label: {
-                            Label(passo == passi.count - 1 ? "Ho capito" : "Avanti",
-                                  systemImage: passo == passi.count - 1 ? "checkmark" : "chevron.right")
-                                .labelStyle(IconaDopo())
-                                .testo(DimensioneTesto.medio)
-                                .foregroundStyle(.white)
-                                .frame(maxWidth: .infinity, minHeight: 100)
-                                .vetro(Tema.verde)
-                        }
+                // la colonna a destra è disegnata a misura fissa (600 × 688) e poi rimpicciolita tutta insieme
+                // sugli schermi piccoli (iPad mini): l'iPad finto resta proporzionato e i pulsanti stanno sotto
+                let s = min(1, schermo.size.height / 688, schermo.size.width * 0.5 / 600)
+                HStack(alignment: .top, spacing: 40 * s) {
+                    // a sinistra la spiegazione grande
+                    VStack(alignment: .leading, spacing: 24) {
+                        Text("Passo \(passo + 1) di \(passi.count)")
+                            .testo(DimensioneTesto.medio)
+                            .foregroundStyle(Tema.testoSecondario)
+                        Text(passi[passo].spiegazione)
+                            .testo(DimensioneTesto.grande)
+                            .foregroundStyle(Tema.testo)
+                            .fixedSize(horizontal: false, vertical: true)
+                            .contentTransition(.opacity)
+                            .accessibilityAddTraits(.isHeader)
                     }
-                    .buttonStyle(StilePremuto())
-                    .frame(width: 600)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+    
+                    // a destra l'iPad con la schermata di Impostazioni e, sotto, Indietro e Avanti
+                    VStack(spacing: 28) {
+                        SchermoFinto(passo: passi[passo], tocca: tocca)
+                            .frame(width: 600, height: 560)
+                            .id(passo)
+                            .transition(.push(from: .trailing))
+                        // due pulsanti della stessa misura, larghi quanto l'iPad: le parole ci stanno intere
+                        HStack(spacing: 24) {
+                            Button { vai(passo - 1) } label: {
+                                Label("Indietro", systemImage: "chevron.left")
+                                    .testo(DimensioneTesto.medio)
+                                    .foregroundStyle(Tema.testo)
+                                    .frame(maxWidth: .infinity, minHeight: 100)
+                                    .vetro(.white.opacity(0.85))
+                            }
+                            .disabled(passo == 0).opacity(passo == 0 ? 0.4 : 1)
+                            Button { passo == passi.count - 1 ? chiudi() : vai(passo + 1) } label: {
+                                Label(passo == passi.count - 1 ? "Ho capito" : "Avanti",
+                                      systemImage: passo == passi.count - 1 ? "checkmark" : "chevron.right")
+                                    .labelStyle(IconaDopo())
+                                    .testo(DimensioneTesto.medio)
+                                    .foregroundStyle(.white)
+                                    .frame(maxWidth: .infinity, minHeight: 100)
+                                    .vetro(Tema.verde)
+                            }
+                        }
+                        .buttonStyle(StilePremuto())
+                        .frame(width: 600)
+                    }
+                    .frame(width: 600, height: 688)
+                    .scaleEffect(s, anchor: .topTrailing)
+                    .frame(width: 600 * s, height: 688 * s, alignment: .topTrailing)
                 }
-                .frame(width: 600, height: 688)
-                .scaleEffect(s, anchor: .topTrailing)
-                .frame(width: 600 * s, height: 688 * s, alignment: .topTrailing)
-            }
             }
             .padding(.horizontal, 40).padding(.bottom, 32)
         }

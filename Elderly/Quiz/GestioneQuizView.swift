@@ -56,7 +56,7 @@ struct GestioneQuizView: View {
         }
         .conIndietro(titolo: "Crea o modifica quiz")
         .fullScreenCover(isPresented: $nuovoVuoto) { NavigationStack { EditorQuizView(quiz: nil) } }
-        .fullScreenCover(item: Binding(get: { nuovo.map(Copia.init) }, set: { if $0 == nil { nuovo = nil } })) { copia in
+        .fullScreenCover(item: Binding(get: { nuovo.map { Copia($0) } }, set: { if $0 == nil { nuovo = nil } })) { copia in
             NavigationStack { EditorQuizView(quiz: nil, partenza: copia.bozza) }
         }
         .fullScreenCover(item: $daModificare) { quiz in NavigationStack { EditorQuizView(quiz: quiz) } }
